@@ -4,10 +4,10 @@ import { IoIosArrowUp } from "react-icons/io";
 import { TbMenu2 } from "react-icons/tb";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { LanguageToggle } from "@/components/ui/language-toggler";
+import { Link } from "@/navigation";
 
 import Button from "./Button";
 import Container from "./Container";
@@ -23,11 +23,11 @@ export default function Header() {
   const t = useTranslations("Home");
 
   const navData = [
-    { _id: 101, title: "Home", href: "#home" },
-    { _id: 102, title: t("nav-title-journey"), href: "#journey" },
-    { _id: 103, title: t("nav-title-plans"), href: "#account" },
-    { _id: 104, title: t("nav-title-team"), href: "#team" },
-    { _id: 105, title: "Workshops", href: "#workshops" },
+    { _id: 101, title: "Home", href: "/" },
+    { _id: 102, title: t("nav-title-plans"), href: "/plans" },
+    { _id: 103, title: "Startups", href: "/startups" },
+    { _id: 104, title: t("nav-title-experts"), href: "/experts" },
+    { _id: 105, title: "Workshops", href: "/workshops" },
   ];
   return (
     <header className={"w-full sticky z-50 bg-white"}>

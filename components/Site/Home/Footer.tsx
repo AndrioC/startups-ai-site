@@ -5,7 +5,7 @@ export default function Footer() {
   const t = useTranslations("Home");
   return (
     <footer>
-      <div className="flex flex-col text-sm items-center justify-between text-center px-40 py-10 gap-10 lg:h-64 lg:flex-row lg:text-base lg:text-left lg:gap-36 bg-dark-blue">
+      <div className="flex flex-col bottom-0 text-sm items-center justify-between text-center px-40 py-10 gap-10 lg:h-80 lg:flex-row lg:text-base lg:text-left lg:gap-36 bg-dark-blue">
         <div className="flex flex-col gap-3 h-full">
           <span className="font-medium" style={{ color: "#2594EA" }}>
             STARTUPS GLOBAL LINK
@@ -14,7 +14,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} - Startups Global Link
           </p>
         </div>
-        <div className="flex justify-center flex-col gap-3 h-full">
+        <div className="flex flex-col gap-3 h-full">
           <span className="font-medium text-purple-500">
             {t("footer-support-title")}
           </span>

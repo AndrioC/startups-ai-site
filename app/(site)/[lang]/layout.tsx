@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
-import Footer from "@/components/Home/Footer";
-import Header from "@/components/Home/Header";
+import Footer from "@/components/Site/Home/Footer";
+import Header from "@/components/Site/Home/Header";
 
 import "@radix-ui/themes/styles.css";
 import "../../globals.css";

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import heroBg from "../../assets/img/hero-bg.svg";
+import heroBg from "@/assets/img/hero-bg.svg";
 
 import Button from "./Button";
 import CheckCircle from "./CheckCircle";
