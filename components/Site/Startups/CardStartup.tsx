@@ -7,7 +7,7 @@ import sglImage from "@/assets/startups/sgl.svg";
 export default function CardStartup() {
   return (
     <div
-      className="flex flex-col shadow-lg w-[450px] h-[200px] mb-10"
+      className="flex flex-col shadow-lg w-[390px] md:w-[450px] h-[200px] mb-10"
       style={{ position: "relative" }}
     >
       <div className="flex justify-between p-5 items-center">
