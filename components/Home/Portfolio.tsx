@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import portfImage01 from "@/assets/img/portf-img01.svg";
 import portfImage02 from "@/assets/img/portf-img02.svg";
@@ -9,6 +10,7 @@ import Container from "./Container";
 import ExtraLogos from "./ExtraLogos";
 
 export default function Portfolio() {
+  const t = useTranslations("Home");
   return (
     <section id="Portfolio" className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container className="-mt-20">
@@ -21,14 +23,10 @@ export default function Portfolio() {
           </h2>
           <div className="flex flex-col items-center">
             <p className="mt-6 w-96 md:w-3/6 text-lg md:text-2xl lg:text-2xl text-gray-500 gap-7 font-light">
-              O Programa de Aceleração Startups Global Link é uma oportunidade
-              única para startups de todo o mundo se conectarem com outras
-              startups, investidores e clientes, colaborarem e alcançarem o
-              sucesso juntas.
+              {t("portfolio-first-title")}
             </p>
             <p className="mt-6 w-96 md:w-3/6 text-lg md:text-2xl lg:text-2xl text-gray-500 gap-7 font-light">
-              Entre para a nossa Comunidade e mude o seu destino e o mundo por
-              meio da inovação das startups.
+              {t("portfolio-second-title")}
             </p>
           </div>
         </div>

@@ -2,11 +2,10 @@ import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import Footer from "../components/Home/Footer";
-import Header from "../components/Home/Header";
+import SideBar from "@/components/WebApp/Sidebar";
 
 import "@radix-ui/themes/styles.css";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,10 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Theme>
-          <main>
-            <Header />
-            {children}
-            <Footer />
+          <main className="bg-gray-100 min-h-screen">
+            <SideBar>{children}</SideBar>
           </main>
         </Theme>
       </body>

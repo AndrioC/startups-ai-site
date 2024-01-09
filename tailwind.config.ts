@@ -1,54 +1,40 @@
-import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
+import type { Config } from "tailwindcss"
 
-const config: Config = {
+const config = {
+  darkMode: ["class"],
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
-      fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-      },
-      backgroundColor: {
-        "dark-blue": "#0B0D17",
-      },
-      colors: ({ colors }) => ({
-        gray: colors.neutral,
-      }),
-      animation: {
-        "fade-in": "fade-in 0.5s linear forwards",
-        marquee: "marquee var(--marquee-duration) linear infinite",
-        "spin-slow": "spin 4s linear infinite",
-        "spin-slower": "spin 6s linear infinite",
-        "spin-reverse": "spin-reverse 1s linear infinite",
-        "spin-reverse-slow": "spin-reverse 4s linear infinite",
-        "spin-reverse-slower": "spin-reverse 6s linear infinite",
-      },
       keyframes: {
-        "fade-in": {
-          from: {
-            opacity: "0",
-          },
-          to: {
-            opacity: "1",
-          },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
-        marquee: {
-          "100%": {
-            transform: "translateY(-50%)",
-          },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
-        "spin-reverse": {
-          to: {
-            transform: "rotate(-360deg)",
-          },
-        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
+
+export default config

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import whyUsImage01 from "@/assets/img/whyus-image01.svg";
 import whyUsImage02 from "@/assets/img/whyus-image02.svg";
@@ -8,13 +9,14 @@ import Container from "./Container";
 import WhyChooseUsList from "./WhyChooseUsList";
 
 export default function WhyChooseUs() {
+  const t = useTranslations("Home");
   return (
     <section id="WhyChooseUs" className="py-8 sm:py-12 lg:py-20 xl:py-24">
       <Container>
         <div className="w-full flex flex-col lg:flex-row lg:px-32 gap-10">
           <div className="w-full flex flex-col justify-center items-center lg:w-1/2 lg:items-start">
             <h2 className="w-64 text-3xl md:text-5xl lg:text-5xl font-bold text-center lg:text-left lg:w-full">
-              POR QUE <span style={{ color: "#2594EA" }}>NOS</span> ESCOLHER?
+              {t("why-choose-us-title")}
             </h2>
             <WhyChooseUsList />
           </div>

@@ -1,0 +1,71 @@
+{
+  "Home": {
+    "nav-title-journey": "Journey",
+    "nav-title-plans": "Plans",
+    "nav-title-team": "Team",
+
+    "hero-sub-title": "The path for leaders who want to connect with the world.",
+    "hero-first-li": "International Connections",
+    "hero-second-li": "Global Innovation Scouting",
+    "hero-third-li": "Business Matchmaking",
+    "hero-fourth-li": "Open Innovation",
+    "hero-button-subscription": "Subscription",
+
+    "portfolio-first-title": "The Global Link Startups Acceleration Program is a unique opportunity for startups from around the world to connect with other startups, investors, and clients, collaborate, and achieve success together.",
+    "portfolio-second-title": "Join our Community and change your destiny and the world through startup innovation.",
+
+    "why-choose-us-title": "WHY CHOOSE US?",
+    "why-choose-us-first-title": "Global Connections",
+    "why-choose-us-first-sub-title": "We create global connections for startups.",
+    "why-choose-us-second-title": "Global Innovation Scouting",
+    "why-choose-us-second-sub-title": "With just a few clicks, your startup is already registered.",
+    "why-choose-us-third-title": "Win-Win",
+    "why-choose-us-third-sub-title": "All participants win.",
+    "why-choose-us-fourth-title": "Collaboration",
+    "why-choose-us-fourth-sub-title": "We connect you with potential partners.",
+    "why-choose-us-fifth-title": "Specialized Mentorship",
+    "why-choose-us-fifth-sub-title": "Professional mentors who can help you succeed.",
+
+    "subscription-title": "SUBSCRIPTION",
+    "subscription-first-text": "Startups apply and undergo an analysis process by the Program Coordination concerning various eligibility points for inclusion in the 'SGL Journey,' such as being in the operational or traction stage, with a physical or digital product already being marketed, and with recurring traction, among others mentioned earlier.",
+    "subscription-second-text": "Qualified startups will join the 'Free' plan, which gives them the right to display their data on the platform and receive a 'Junior Member Certificate,' and from there, they will continue their journey.",
+    "subscription-startups-subscription-button": "Startups subscription",
+    "subscription-experts-subscription-button": "Experts subscription",
+
+    "about-us-title-first": "ABOUT",
+    "about-us-title-second": "US",
+    "about-us-global-first-text": "We are a startup acceleration ecosystem that offers global connections for startups worldwide. Our goal is to help startups improve their success and survival rates by providing access to specialized mentorship and valuable connections.",
+    "about-us-global-second-text": "Headquartered in São Paulo - Brazil",
+    "about-us-global-third-text": "Connected to major startup, business, and industry ecosystems.",
+
+    "about-us-ifia-first-text": "International Federation of Inventors Associations",
+    "about-us-ifia-first-bullet": "Founded in 1968",
+    "about-us-ifia-second-bullet": "Representation in 84 countries",
+    "about-us-ifia-third-bullet": "Observer seat at WIPO (World Intellectual Property Organization), UN, and Unicef.",
+    "about-us-ifia-second-text": "Headquartered in Geneva - Switzerland. Grants accreditation for 27 innovation events in various countries.",
+    "about-us-ifia-third-text": "Has an institutional space at Google's headquarters in San Francisco - USA.",
+
+    "about-us-abipir-first-bullet": "Brazil International Association of Inventors, Scientists, and Innovative Entrepreneurs",
+    "about-us-abipir-second-bullet": "Founded in 2010",
+    "about-us-abipir-third-bullet": "Representative of IFIA in Latin America",
+    "about-us-abipir-fourth-bullet": "Organized 13 editions of InnovaCities",
+    "about-us-abipir-fifth-bullet": "Has represented PDI, Academic, Researcher, Inventor, and Startup institutions in over 60 international events on 5 continents",
+    "about-us-abipir-first-text": "Headquartered in Espírito Santo - Brazil",
+
+    "contact-us-title-first": "CONTACT",
+    "contact-us-title-second": "US",
+    "contact-us-first-sub-title": "Become a Partner",
+    "contact-us-second-sub-title": "Connect your Company for Open Innovation.",
+    "contact-us-name-placeholder": "Full Name",
+    "contact-us-message-placeholder": "Message",
+    "contact-us-button-text": "Send Message",
+
+    "footer-support-title": "Support",
+    "footer-support-first-text": "Terms and Conditions",
+    "footer-support-second-text": "Privacy Policy",
+    "footer-support-third-text": "Delivery and Timelines Policy for Digital Products",
+    "footer-support-fourth-text": "Exchange, Return, and Refund Policy for Digital Products",
+
+    "footer-social-title": "Social Media"
+  }
+}

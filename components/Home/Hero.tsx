@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import heroBg from "../../assets/img/hero-bg.svg";
 
@@ -7,6 +8,7 @@ import CheckCircle from "./CheckCircle";
 import Container from "./Container";
 
 export default function Hero() {
+  const t = useTranslations("Home");
   return (
     <section
       id="Hero"
@@ -22,37 +24,37 @@ export default function Hero() {
               STARTUPS <span style={{ color: "#2594EA" }}>GLOBAL</span> LINK
             </h2>
             <p className="mt-6 w-96 md:w-5/6 lg:w-11/12 text-lg md:text-2xl lg:text-2xl text-gray-500">
-              O caminho para os líderes que desejam se conectar com o mundo.
+              {t("hero-sub-title")}
             </p>
             <div className="mt-8 lg:mt-10">
               <ul className="md:grid md:grid-cols-2 md:gap-2">
                 <li className="flex items-center">
                   <CheckCircle />
                   <span className="ml-3 text-base text-gray-500">
-                    Conexões Internacionais
+                    {t("hero-first-li")}
                   </span>
                 </li>
                 <li className="flex items-center mt-2 md:mt-0">
                   <CheckCircle />
                   <span className="ml-3 text-base text-gray-500">
-                    Business Matchmaking
+                    {t("hero-second-li")}
                   </span>
                 </li>
                 <li className="flex items-center mt-2 md:mt-0">
                   <CheckCircle />
                   <span className="ml-3 text-base text-gray-500">
-                    Innovation Global Scouting
+                    {t("hero-third-li")}
                   </span>
                 </li>
                 <li className="flex items-center mt-2 md:mt-0">
                   <CheckCircle />
                   <span className="ml-3 text-base text-gray-500">
-                    Open Innovation
+                    {t("hero-fourth-li")}
                   </span>
                 </li>
               </ul>
               <Button variant="solid" color="blue" className="mt-10 w-40">
-                Inscrição
+                {t("hero-button-subscription")}
               </Button>
             </div>
           </div>

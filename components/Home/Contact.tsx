@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import contactImage from "@/assets/img/contact-image.svg";
 
@@ -6,17 +7,23 @@ import Button from "./Button";
 import Container from "./Container";
 
 export default function Contact() {
+  const t = useTranslations("Home");
   return (
     <section id="Contact" className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container className="-mt-20">
         <div className="w-full flex flex-col items-center gap-10">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold">
-              CONTATE-<span style={{ color: "#2594EA" }}>NOS</span>
+              {t("contact-us-title-first")}-
+              <span style={{ color: "#2594EA" }}>
+                {t("contact-us-title-second")}
+              </span>
             </h2>
-            <p className="text-gray-500 font-light">Torne-se um parceiro</p>
             <p className="text-gray-500 font-light">
-              Conecte sua Empresa para Open Innovation.
+              {t("contact-us-first-sub-title")}
+            </p>
+            <p className="text-gray-500 font-light">
+              {t("contact-us-second-sub-title")}
             </p>
           </div>
           <div className="w-full flex flex-col items-center justify-center gap-10 lg:flex-row">
@@ -35,7 +42,7 @@ export default function Contact() {
                     type="text"
                     id="fullName"
                     name="fullName"
-                    placeholder="Nome completo"
+                    placeholder={t("contact-us-name-placeholder")}
                     required
                   />
                 </div>
@@ -56,7 +63,7 @@ export default function Contact() {
                     className="w-full px-3 py-2 border rounded bg-white border-gray-300 h-40 resize-none focus:outline-none focus:border-blue-500"
                     id="message"
                     name="message"
-                    placeholder="Mensagem"
+                    placeholder={t("contact-us-message-placeholder")}
                     required
                   />
                 </div>
@@ -67,7 +74,7 @@ export default function Contact() {
                   className="w-full"
                   type="submit"
                 >
-                  Enviar Mensagem
+                  {t("contact-us-button-text")}
                 </Button>
               </form>
             </div>

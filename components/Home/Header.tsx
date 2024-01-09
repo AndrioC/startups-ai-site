@@ -5,8 +5,9 @@ import { TbMenu2 } from "react-icons/tb";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
-import { navData } from "../../app/data";
+import { LanguageToggle } from "@/components/ui/language-toggler";
 
 import Button from "./Button";
 import Container from "./Container";
@@ -19,6 +20,15 @@ type MobileNavLinksProps = {
 };
 
 export default function Header() {
+  const t = useTranslations("Home");
+
+  const navData = [
+    { _id: 101, title: "Home", href: "#home" },
+    { _id: 102, title: t("nav-title-journey"), href: "#journey" },
+    { _id: 103, title: t("nav-title-plans"), href: "#account" },
+    { _id: 104, title: t("nav-title-team"), href: "#team" },
+    { _id: 105, title: "Workshops", href: "#workshops" },
+  ];
   return (
     <header className={"w-full sticky z-50 bg-white"}>
       <nav>
@@ -33,6 +43,7 @@ export default function Header() {
           </div>
           {/* Buttons */}
           <div className="flex items-center gap-6">
+            <LanguageToggle />
             <Button href="#" variant="outline" className="hidden lg:block">
               Log In
             </Button>

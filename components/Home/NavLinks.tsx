@@ -2,11 +2,19 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-
-import { navData } from "../../app/data";
+import { useTranslations } from "next-intl";
 
 export default function NavLinks() {
+  const t = useTranslations("Home");
   const [hoverIndex, setHoverIndex] = useState(0);
+
+  const navData = [
+    { _id: 101, title: "Home", href: "#home" },
+    { _id: 102, title: t("nav-title-journey"), href: "#journey" },
+    { _id: 103, title: t("nav-title-plans"), href: "#account" },
+    { _id: 104, title: t("nav-title-team"), href: "#team" },
+    { _id: 105, title: "Workshops", href: "#workshops" },
+  ];
   return (
     <>
       {navData.map(({ _id, title, href }) => (
