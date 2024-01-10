@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { startupFlags, StartupProps } from "@/app/(site)/data";
+import startupPlaceHolder from "@/assets/startup-placeholder.png";
 import sglFull from "@/assets/startups/sgl_full.svg";
 import sglJunior from "@/assets/startups/sgl_junior.svg";
 import sglMaster from "@/assets/startups/sgl_master.svg";
@@ -33,19 +34,21 @@ export default function CardStartup({
     >
       <div className="flex justify-between p-5 items-center">
         <div className="flex flex-col">
-          <div className="w-[70px] h-[70px]">
+          <div className="w-[70px] h-[70px] overflow-hidden">
             <Image
               className="flex-shrink-0 object-center"
               width={70}
               height={70}
-              src={logo}
+              src={logo ?? startupPlaceHolder}
               alt="startup-image"
               objectFit=""
             />
           </div>
-          <div className="flex mt-5">
-            <span className="mr-5 font-semibold">{startup_name}</span>
-            <p className="text-gray-400">{foundation_year}</p>
+          <div className="flex flex-col">
+            <span className="mr-5 text-xs font-semibold w-[250px]">
+              {startup_name}
+              <p className="text-gray-400">{foundation_year}</p>
+            </span>
           </div>
         </div>
         <div className="flex flex-col items-center">
