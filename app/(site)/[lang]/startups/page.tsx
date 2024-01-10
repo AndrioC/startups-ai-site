@@ -46,7 +46,7 @@ export default function StartupsPage() {
           </div>
           <Separator />
           {filteredData.length > 0 || isLoading ? (
-            <div className={`px-14 mt-5 ${isLoading ? "hidden" : ""}`}>
+            <div className={`mt-5 ${isLoading ? "hidden" : ""}`}>
               <p className="text-sm text-gray-500">
                 {foundText}{" "}
                 <span className="text-gray-800">
