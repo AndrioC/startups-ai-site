@@ -1,10 +1,29 @@
 import Image from "next/image";
 
-import brazilFlag from "@/assets/startups/brazil-flag.svg";
-import image01 from "@/assets/startups/image01.png";
-import sglImage from "@/assets/startups/sgl.svg";
+import { startupFlags, StartupProps } from "@/app/(site)/data";
+import sglFull from "@/assets/startups/sgl_full.svg";
+import sglJunior from "@/assets/startups/sgl_junior.svg";
+import sglMaster from "@/assets/startups/sgl_master.svg";
+import sglSenior from "@/assets/startups/sgl_senior.svg";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-export default function CardStartup() {
+export default function CardStartup({
+  startup_name,
+  logo,
+  foundation_year,
+  value_proposal,
+  sgl_label,
+  last_update,
+  vertical,
+  business_model,
+  country,
+  flag,
+}: StartupProps) {
   return (
     <div
       className="flex flex-col shadow-lg w-[390px] md:w-[450px] h-[200px] mb-10"
@@ -12,30 +31,81 @@ export default function CardStartup() {
     >
       <div className="flex justify-between p-5 items-center">
         <div className="flex flex-col">
-          <Image width={200} height={200} src={image01} alt="startup-image" />
+          <div className="w-[70px] h-[70px]">
+            <Image
+              className="flex-shrink-0 object-center"
+              width={70}
+              height={70}
+              src={logo}
+              alt="startup-image"
+              objectFit=""
+            />
+          </div>
           <div className="flex mt-5">
-            <span className="mr-5 font-semibold">123 Seguro</span>
-            <p className="text-gray-400">2019</p>
+            <span className="mr-5 font-semibold">{startup_name}</span>
+            <p className="text-gray-400">{foundation_year}</p>
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image width={60} height={60} src={sglImage} alt="sgl-image" />
+          <Image
+            width={60}
+            height={60}
+            src={sglLabelLogo(sgl_label as SglLabel)}
+            alt="sgl-image"
+          />
           <span className="text-xs text-gray-400 font-medium">
             Última atualização
           </span>
-          <p className="text-xs text-gray-400 font-medium">03/01/2024</p>
+          <p className="text-xs text-gray-400 font-medium">{last_update}</p>
         </div>
+      </div>
+      <div className="px-5">
+        <p className="font-normal text-sm text-gray-500">{value_proposal}</p>
       </div>
       <div
         id="footer"
-        className="flex items-center justify-between bg-gray-200 w-full p-2"
+        className="flex items-center justify-between bg-gray-200 w-full px-5"
         style={{ position: "absolute", bottom: "0" }}
       >
         <div>
-          <span>INSURANCE • B2B</span>
+          <span className="uppercase">
+            {vertical} • {business_model}
+          </span>
         </div>
-        <Image width={30} height={30} src={brazilFlag} alt="brazil-image" />
+
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <Image
+                width={25}
+                height={25}
+                src={startupFlags[flag]}
+                alt={country}
+              />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{country}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
     </div>
   );
 }
+
+type SglLabel = "junior" | "full" | "senior" | "master";
+
+type SglImages = {
+  [key in SglLabel]: string;
+};
+
+const sglLabelLogo = (sgl_label: SglLabel): string => {
+  const images: SglImages = {
+    junior: sglJunior,
+    full: sglFull,
+    senior: sglSenior,
+    master: sglMaster,
+  };
+
+  return images[sgl_label];
+};
