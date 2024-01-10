@@ -66,5 +66,19 @@
     "footer-support-fourth-text": "Política de Troca, Devolução e Reembolso para Produtos Digitais",
 
     "footer-social-title": "Redes Sociais"
+  },
+
+  "Startup": {
+    "header-filter-country": "País",
+    "header-filter-model-business": "Modelo de negócio",
+    "header-filter-model-sgl-badge": "Selo SGL",
+    "header-filter-clear": "Limpar filtros",
+
+    "search-found-text-first": "Foram encontradas",
+    "search-found-text-second": "com base nos filtros acima",
+
+    "startup-card-last-update-text": "Última atualização",
+
+    "startup-not-found-results-text": "Nenhuma startup encontrada"
   }
 }

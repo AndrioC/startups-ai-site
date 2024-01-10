@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { startupFlags, StartupProps } from "@/app/(site)/data";
 import sglFull from "@/assets/startups/sgl_full.svg";
@@ -17,13 +18,14 @@ export default function CardStartup({
   logo,
   foundation_year,
   value_proposal,
-  sgl_label,
+  sgl_badge,
   last_update,
   vertical,
   business_model,
   country,
   flag,
 }: StartupProps) {
+  const t = useTranslations("Startup");
   return (
     <div
       className="flex flex-col shadow-lg w-[390px] md:w-[450px] h-[200px] mb-10"
@@ -50,11 +52,11 @@ export default function CardStartup({
           <Image
             width={60}
             height={60}
-            src={sglLabelLogo(sgl_label as SglLabel)}
+            src={sglBadgeLogo(sgl_badge as SglBadge)}
             alt="sgl-image"
           />
           <span className="text-xs text-gray-400 font-medium">
-            Última atualização
+            {t("startup-card-last-update-text")}
           </span>
           <p className="text-xs text-gray-400 font-medium">{last_update}</p>
         </div>
@@ -93,13 +95,13 @@ export default function CardStartup({
   );
 }
 
-type SglLabel = "junior" | "full" | "senior" | "master";
+type SglBadge = "junior" | "full" | "senior" | "master";
 
 type SglImages = {
-  [key in SglLabel]: string;
+  [key in SglBadge]: string;
 };
 
-const sglLabelLogo = (sgl_label: SglLabel): string => {
+const sglBadgeLogo = (sgl_badge: SglBadge): string => {
   const images: SglImages = {
     junior: sglJunior,
     full: sglFull,
@@ -107,5 +109,5 @@ const sglLabelLogo = (sgl_label: SglLabel): string => {
     master: sglMaster,
   };
 
-  return images[sgl_label];
+  return images[sgl_badge];
 };

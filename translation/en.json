@@ -66,5 +66,19 @@
     "footer-support-fourth-text": "Exchange, Return, and Refund Policy for Digital Products",
 
     "footer-social-title": "Social Media"
+  },
+
+  "Startup": {
+    "header-filter-country": "Country",
+    "header-filter-model-business": "Model business",
+    "header-filter-model-sgl-badge": "SGL Badge",
+    "header-filter-clear": "Clean filters",
+
+    "search-found-text-first": "Were found",
+    "search-found-text-second": "based on the filters above",
+
+    "startup-card-last-update-text": "Last update",
+
+    "startup-not-found-results-text": "No startup found"
   }
 }

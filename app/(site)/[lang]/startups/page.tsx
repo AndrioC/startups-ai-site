@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { StartupProps, startupsList } from "@/app/(site)/data";
 import Container from "@/components/Site/Home/Container";
@@ -10,6 +11,7 @@ import NotFoundStartups from "@/components/Site/Startups/NotFoundStartups";
 import { Separator } from "@/components/ui/separator";
 
 export default function StartupsPage() {
+  const t = useTranslations("Startup");
   const [filteredData, setFilteredData] = useState(startupsList);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -31,9 +33,6 @@ export default function StartupsPage() {
     fetchData();
   }, []);
 
-  const foundText =
-    filteredData.length > 1 ? "Foram encontradas" : "Foi encontrada";
-  const startupText = filteredData.length > 1 ? "startups" : "startup";
   return (
     <main>
       <Container>
@@ -48,11 +47,11 @@ export default function StartupsPage() {
           {filteredData.length > 0 || isLoading ? (
             <div className={`mt-5 ${isLoading ? "hidden" : ""}`}>
               <p className="text-sm text-gray-500">
-                {foundText}{" "}
+                {t("search-found-text-first")}{" "}
                 <span className="text-gray-800">
-                  {filteredData.length} {startupText}
+                  {filteredData.length} startups
                 </span>{" "}
-                com base nos filtros acima.
+                {t("search-found-text-second")}.
               </p>
             </div>
           ) : (
@@ -73,7 +72,7 @@ export default function StartupsPage() {
                   logo={startup.logo}
                   foundation_year={startup.foundation_year}
                   value_proposal={startup.value_proposal}
-                  sgl_label={startup.sgl_label}
+                  sgl_badge={startup.sgl_badge}
                   last_update={startup.last_update}
                   vertical={startup.vertical}
                   business_model={startup.business_model}

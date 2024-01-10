@@ -4,7 +4,7 @@ export interface StartupProps {
   logo: string;
   foundation_year: number;
   value_proposal: string;
-  sgl_label: string;
+  sgl_badge: string;
   last_update: string;
   vertical: string;
   business_model: string;
@@ -22,7 +22,7 @@ export const startupsList: StartupProps[] = [
     startup_name: "Vaca Roxa",
     foundation_year: 2022,
     value_proposal: "",
-    sgl_label: "junior",
+    sgl_badge: "junior",
     last_update: "10/01/2024",
     vertical: "AgriTech",
     business_model: "B2B2C",
@@ -35,7 +35,7 @@ export const startupsList: StartupProps[] = [
     startup_name: "Grupo Gestão Saúde",
     foundation_year: 2023,
     value_proposal: "",
-    sgl_label: "junior",
+    sgl_badge: "junior",
     last_update: "10/01/2024",
     vertical: "SaaS",
     business_model: "B2B",
@@ -48,7 +48,7 @@ export const startupsList: StartupProps[] = [
     startup_name: "DS7 BANK",
     foundation_year: 2021,
     value_proposal: "",
-    sgl_label: "junior",
+    sgl_badge: "junior",
     last_update: "10/01/2024",
     vertical: "Fintech",
     business_model: "B2B2C",
@@ -61,7 +61,7 @@ export const startupsList: StartupProps[] = [
     startup_name: "mub",
     foundation_year: 2020,
     value_proposal: "",
-    sgl_label: "junior",
+    sgl_badge: "junior",
     last_update: "10/01/2024",
     vertical: "SaaS",
     business_model: "B2B",
@@ -74,7 +74,7 @@ export const startupsList: StartupProps[] = [
     startup_name: "Meister Safe System",
     foundation_year: 2020,
     value_proposal: "",
-    sgl_label: "junior",
+    sgl_badge: "junior",
     last_update: "10/01/2024",
     vertical: "Healthtech",
     business_model: "B2B e B2C",

@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useState } from "react";
 import _ from "lodash";
+import { useTranslations } from "next-intl";
 
 import { StartupProps } from "@/app/(site)/data";
 import { Button } from "@/components/ui/button";
@@ -21,10 +22,11 @@ export default function HeaderStartupsFilter({
   dataSource,
   setFilteredData,
 }: Props) {
+  const t = useTranslations("Startup");
   const [country, setCountry] = useState("");
   const [vertical, setVertical] = useState("");
   const [businessModel, setBusinessModel] = useState("");
-  const [sglLabel, setSglLabel] = useState("");
+  const [sglBadge, setSglBadge] = useState("");
 
   const options = setFilter(dataSource);
 
@@ -32,34 +34,34 @@ export default function HeaderStartupsFilter({
     setCountry("");
     setVertical("");
     setBusinessModel("");
-    setSglLabel("");
+    setSglBadge("");
     setFilteredData(dataSource);
   }, []);
 
   const handleFilterByCountry = useCallback(
     (country_value: string) => {
-      applyFilters(country_value, vertical, businessModel, sglLabel);
+      applyFilters(country_value, vertical, businessModel, sglBadge);
     },
-    [vertical, businessModel, sglLabel]
+    [vertical, businessModel, sglBadge]
   );
 
   const handleFilterByVertical = useCallback(
     (vertical_value: string) => {
-      applyFilters(country, vertical_value, businessModel, sglLabel);
+      applyFilters(country, vertical_value, businessModel, sglBadge);
     },
-    [country, businessModel, sglLabel]
+    [country, businessModel, sglBadge]
   );
 
   const handleFilterByBusinessModel = useCallback(
     (business_model_value: string) => {
-      applyFilters(country, vertical, business_model_value, sglLabel);
+      applyFilters(country, vertical, business_model_value, sglBadge);
     },
-    [country, vertical, sglLabel]
+    [country, vertical, sglBadge]
   );
 
   const handleFilterBySglLabel = useCallback(
-    (sgl_label_value: string) => {
-      applyFilters(country, vertical, businessModel, sgl_label_value);
+    (sgl_badge_value: string) => {
+      applyFilters(country, vertical, businessModel, sgl_badge_value);
     },
     [country, vertical, businessModel]
   );
@@ -68,7 +70,7 @@ export default function HeaderStartupsFilter({
     country_value: string,
     vertical_value: string,
     business_model_value: string,
-    sgl_label_value: string
+    sgl_badge_value: string
   ) => {
     let newFilteredData = [...dataSource];
 
@@ -90,9 +92,9 @@ export default function HeaderStartupsFilter({
       );
     }
 
-    if (sgl_label_value) {
+    if (sgl_badge_value) {
       newFilteredData = newFilteredData.filter(
-        (startup) => startup.sgl_label === sgl_label_value
+        (startup) => startup.sgl_badge === sgl_badge_value
       );
     }
     setFilteredData(newFilteredData);
@@ -109,7 +111,7 @@ export default function HeaderStartupsFilter({
           }}
         >
           <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="País" />
+            <SelectValue placeholder={t("header-filter-country")} />
           </SelectTrigger>
           <SelectContent>
             {options[0].map((option, index) => (
@@ -145,7 +147,7 @@ export default function HeaderStartupsFilter({
           }}
         >
           <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Modelo de negócio" />
+            <SelectValue placeholder={t("header-filter-model-business")} />
           </SelectTrigger>
           <SelectContent>
             {options[2].map((option, index) => (
@@ -156,14 +158,14 @@ export default function HeaderStartupsFilter({
           </SelectContent>
         </Select>
         <Select
-          value={sglLabel}
+          value={sglBadge}
           onValueChange={(value) => {
             handleFilterBySglLabel(value);
-            setSglLabel(value);
+            setSglBadge(value);
           }}
         >
           <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Selo SGL" />
+            <SelectValue placeholder={t("header-filter-model-sgl-badge")} />
           </SelectTrigger>
           <SelectContent>
             {options[3].map((option, index) => (
@@ -179,7 +181,7 @@ export default function HeaderStartupsFilter({
         onClick={handleClearFilters}
         className="self-end -mr-3 text-blue-600 font-normal uppercase"
       >
-        Limpar filtros
+        {t("header-filter-clear")}
       </Button>
     </div>
   );
@@ -239,21 +241,21 @@ function setFilter(dataSource: StartupProps[]) {
       label: value.business_model,
     }));
 
-  const uniqueSglLabel = _.uniqBy(dataSource, "sgl_label");
+  const uniqueSglLabel = _.uniqBy(dataSource, "sgl_badge");
 
   const sglLabelFilter = uniqueSglLabel
     .sort((a, b) => {
-      if (a.sgl_label < b.sgl_label) {
+      if (a.sgl_badge < b.sgl_badge) {
         return -1;
       }
-      if (a.sgl_label > b.sgl_label) {
+      if (a.sgl_badge > b.sgl_badge) {
         return 1;
       }
       return 0;
     })
     .map((value) => ({
-      value: value.sgl_label,
-      label: value.sgl_label.charAt(0).toUpperCase() + value.sgl_label.slice(1),
+      value: value.sgl_badge,
+      label: value.sgl_badge.charAt(0).toUpperCase() + value.sgl_badge.slice(1),
     }));
 
   return [countryFilter, verticalFilter, businessModelFilter, sglLabelFilter];
