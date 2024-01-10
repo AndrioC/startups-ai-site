@@ -76,7 +76,7 @@ export const startupsList: StartupProps[] = [
     value_proposal: "",
     sgl_badge: "junior",
     last_update: "10/01/2024",
-    vertical: "Healthtech",
+    vertical: "HealthTech",
     business_model: "B2B e B2C",
     country: "Brasil",
     logo: "/assets/startups/logos/05_meister_safe.jpg",
