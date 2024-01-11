@@ -930,7 +930,7 @@ export const expertsList: ExpertProps[] = [
     description_en: null,
     description_pt: null,
     languages_en: "pt - en",
-    languages_pt: "pt - en",
+    languages_pt: "pt - in",
     work_field_en:
       "Financing, Business Model, Investors, Operations, Strategic Vision",
     work_field_pt:
@@ -989,7 +989,7 @@ export const expertsList: ExpertProps[] = [
     description_pt:
       "Como consultora tenho experiência em estudos de mercado. Com startups tenho atuado desde 2020 como mentora e avaliadora de diversos programas de aceleração como Inovativa Brasil, Inovativa de Impacto, Startup Conecta, Ela Empodera, Nexus Hub, CPS Inova, entre outros. Também sou do Conselho Consultivo ds startup Polimex Bioplásticos desde 2021",
     languages_en: "pt - en",
-    languages_pt: "pt - sp",
+    languages_pt: "pt - in",
     work_field_en:
       "Public Funding, Business Model, Product, Marketing, B2B Sales",
     work_field_pt:
@@ -1009,7 +1009,7 @@ export const expertsList: ExpertProps[] = [
     description_pt:
       "Eu sou Rodrigo, sou Founder da STARTUPS GLOBAL LINK, sócio e Diretor Executivo de Tecnologia no grupo 2mi, Startup Manager no programa Internacional de Startups da IFIA, Advisor em duas Startups e Mentor Oficial do Inovativa Brasil. Fundei a TeamHub, e trago comigo a valiosa vivência desde a ideação até o exit. Fui CTO na SOLIDES, além de ter experiência em renomadas corporações como TOTVS e FCA.",
     languages_en: "pt - en",
-    languages_pt: "pt - sp",
+    languages_pt: "pt - in",
     work_field_en: "Investors, Business Model, Leadership, Pricing, Valuation",
     work_field_pt:
       "Investidores, Modelo de negócios, Liderança, Precificação, Valuation",
