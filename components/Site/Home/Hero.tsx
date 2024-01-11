@@ -53,7 +53,12 @@ export default function Hero() {
                   </span>
                 </li>
               </ul>
-              <Button variant="solid" color="blue" className="mt-10 w-40">
+              <Button
+                variant="solid"
+                color="blue"
+                className="mt-10 w-40"
+                href="#Subscription"
+              >
                 {t("hero-button-subscription")}
               </Button>
             </div>

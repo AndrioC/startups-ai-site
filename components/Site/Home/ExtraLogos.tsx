@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import logoAbipir from "@/assets/img/logos/abipir-logo.svg";
+import cogTech from "@/assets/img/logos/cogtech.svg";
 import logoConecta from "@/assets/img/logos/conecta-logo.svg";
 import logoFi from "@/assets/img/logos/fi-logo.svg";
 import logoIfia from "@/assets/img/logos/ifia-logo.svg";
@@ -25,6 +26,7 @@ export default function ExtraLogos() {
     { _id: 2009, title: "ParImpacto", logo: logoParImpacto },
     { _id: 2010, title: "Iguassu Valley", logo: logoIguassuValley },
     { _id: 2011, title: "Iguassu Angels", logo: logoIguassuAngels },
+    { _id: 2012, title: "CogTech", logo: cogTech },
   ];
 
   return (
