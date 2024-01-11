@@ -50,7 +50,7 @@ export const startupsList: StartupProps[] = [
     value_proposal: "",
     sgl_badge: "junior",
     last_update: "10/01/2024",
-    vertical: "Fintech",
+    vertical: "FinTech",
     business_model: "B2B2C",
     country: "Brasil",
     logo: "/assets/startups/logos/03_ds7_bank.png",
