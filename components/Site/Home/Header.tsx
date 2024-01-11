@@ -27,7 +27,6 @@ export default function Header() {
     { _id: 102, title: t("nav-title-plans"), href: "/plans" },
     { _id: 103, title: "Startups", href: "/startups" },
     { _id: 104, title: t("nav-title-experts"), href: "/experts" },
-    { _id: 105, title: "Workshops", href: "/workshops" },
   ];
   return (
     <header className={"w-full sticky z-50 bg-white"}>
@@ -44,7 +43,7 @@ export default function Header() {
           {/* Buttons */}
           <div className="flex items-center gap-6">
             <LanguageToggle />
-            <Button href="#" variant="outline" className="hidden lg:block">
+            {/* <Button href="#" variant="outline" className="hidden lg:block">
               Log In
             </Button>
             <Button
@@ -54,7 +53,7 @@ export default function Header() {
               className="hidden lg:block"
             >
               Sign Up
-            </Button>
+            </Button> */}
             {/* Mobile NavLinks */}
             <Popover className="lg:hidden">
               {({ open }) => (
@@ -101,14 +100,14 @@ export default function Header() {
                               </MobileNavLinks>
                             ))}
                           </div>
-                          <div className="mt-8 flex flex-col gap-4">
+                          {/* <div className="mt-8 flex flex-col gap-4">
                             <Button href="#" variant="outline">
                               Log In
                             </Button>
                             <Button href="#" variant="solid" color="blue">
                               Sign Up
                             </Button>
-                          </div>
+                          </div> */}
                         </Popover.Panel>
                       </>
                     )}

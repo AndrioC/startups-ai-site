@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 export default function Footer() {
   const t = useTranslations("Home");
   return (
-    <footer>
-      <div className="flex flex-col bottom-0 text-sm items-center justify-between text-center px-40 py-10 gap-10 lg:h-80 lg:flex-row lg:text-base lg:text-left lg:gap-36 bg-dark-blue">
+    <footer className="flex-shrink-0">
+      <div className="flex flex-col text-sm items-center justify-between text-center px-40 py-10 gap-10 lg:h-80 lg:flex-row lg:text-base lg:text-left lg:gap-36 bg-dark-blue">
         <div className="flex flex-col gap-3 h-full">
           <span className="font-medium" style={{ color: "#2594EA" }}>
             STARTUPS GLOBAL LINK
@@ -39,7 +39,22 @@ export default function Footer() {
           </span>
           <ul className="text-gray-300">
             <li className="mb-4 font-semibold">
-              <Link href="#">Linkedin</Link>
+              <a
+                href="https://www.linkedin.com/company/startups-global-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
+              </a>
+            </li>
+            <li className="mb-4 font-semibold">
+              <a
+                href="https://www.youtube.com/@StartupsGlobalLink/featured"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube
+              </a>
             </li>
           </ul>
         </div>

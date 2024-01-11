@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <Theme>
-            <main>
+            <main className="min-h-screen flex flex-col">
               <Header />
               {children}
               <Footer />
