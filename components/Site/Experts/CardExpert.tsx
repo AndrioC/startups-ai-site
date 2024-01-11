@@ -7,7 +7,7 @@ import { infoFlags } from "@/app/(site)/data";
 import userPlaceHolder from "@/assets/user-placeholder.jpeg";
 import { Button } from "@/components/ui/button";
 
-interface CardExpertProps {
+export interface CardExpertProps {
   name: string;
   last_name: string;
   linkedin: string;

@@ -84,6 +84,8 @@
   },
 
   "Expert": {
-    "no-description-card-text": "Sem descrição"
+    "no-description-card-text": "Sem descrição",
+
+    "expert-not-found-results-text": "Nenhum especialista encontrado"
   }
 }
