@@ -12,7 +12,24 @@ export interface StartupProps {
   flag: string;
 }
 
-type StartupFlags = {
+export interface ExpertProps {
+  id: number;
+  name: string;
+  last_name: string;
+  linkedin: string;
+  description_en: string | null;
+  description_pt: string | null;
+  languages_en: string;
+  languages_pt: string;
+  work_field_en: string;
+  work_field_pt: string;
+  country_en: string;
+  country_pt: string;
+  photo: string | null;
+  flag: string;
+}
+
+type InfoFlags = {
   [key: string]: string;
 };
 
@@ -838,9 +855,167 @@ export const startupsList: StartupProps[] = [
   },
 ];
 
-export const startupFlags: StartupFlags = {
-  brazil: "/assets/startups/flags/brazil.svg",
-  finland: "/assets/startups/flags/finland.svg",
-  india: "/assets/startups/flags/india.svg",
-  usa: "/assets/startups/flags/usa.svg",
+export const infoFlags: InfoFlags = {
+  brazil: "/assets/flags/brazil.svg",
+  colombia: "/assets/flags/colombia.svg",
+  finland: "/assets/flags/finland.svg",
+  india: "/assets/flags/india.svg",
+  usa: "/assets/flags/usa.svg",
 };
+
+export const expertsList: ExpertProps[] = [
+  {
+    id: 1,
+    name: "Yadira",
+    last_name: "Galeano",
+    linkedin: "https://www.linkedin.com/in/yadirdiazgaleano/",
+    description_en:
+      "I started my career as a business consultant, working on projects ranging from established companies to emerging ventures. Over the years, I have gained valuable skills in areas such as business strategy, financial analysis, process optimization, and team development. My passion for startups stems from the realization that they are true engines of innovation and disruption. The agility, creativity, and entrepreneurial mindset present in this environment have captivated me. Over time, I realized I wanted to direct my expertise to support visionary entrepreneurs in realizing their bold ideas.",
+    description_pt:
+      "Iniciei minha carreira como consultor de negócios, trabalhando em projetos que abrangem desde empresas estabelecidas até empreendimentos emergentes. Ao longo dos anos, adquiri habilidades valiosas em áreas como estratégia de negócios, análise financeira, otimização de processos e desenvolvimento de equipes. Minha paixão por startups surgiu da percepção de que são verdadeiros motores de inovação e disrupção. A agilidade, a criatividade e a mentalidade empreendedora presentes nesse ambiente me cativaram. Ao longo do tempo, percebi que queria direcionar minha expertise para apoiar empreendedores visionários na realização de suas ideias ousadas",
+    languages_en: "pt - es",
+    languages_pt: "pt - sp",
+    work_field_en:
+      "Partnerships, Internationalization, Leadership, Negotiation, Strategic Vision, Management",
+    work_field_pt:
+      "Parcerias, Internacionalização, Liderança, Negociação, Visão estratégica, Gestão",
+    country_en: "Colombia",
+    country_pt: "Colômbia",
+    photo: "/assets/experts/01_yadira_galeano.png",
+    flag: "colombia",
+  },
+  {
+    id: 2,
+    name: "Claudio",
+    last_name: "de Souza",
+    linkedin:
+      "https://www.linkedin.com/in/claudio-alexandre-de-souza-cas-48709125/",
+    description_en:
+      "I have been working as a consultant for over 10 years for companies in the tourism, hospitality, and other sectors, as can be seen on the Xenios Institute website (www.xenios.org.br). I have been involved in mentoring for over 10 years in projects such as hackathons, NASA Space App, and as an innovation advisor for the hotel management startup Macna Digital Hotels.",
+    description_pt:
+      "Atua com consultoria há mais de 10 anos para empresas de turismo, hotelaria e outras que podem ser observada no site do Instituto Xenios (www.xenios.org.br). Atuo há mais de 10 anos com mentorias em projetos como hackathons , NASA Space App e como conselheiro para Inovação da startup de administração hoteleira Macna Digital Hotels.",
+    languages_pt: "pt - es",
+    languages_en: "pt - sp",
+    work_field_pt: "Parcerias, Liderança, Operações",
+    work_field_en: "Partnerships, Leadership, Operations",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/02_claudio_alexandre_souza.jpeg",
+    flag: "brazil",
+  },
+  {
+    id: 3,
+    name: "Felipe",
+    last_name: "Seabra",
+    linkedin: "Www.linkedin.com/in/felipedemouraseabra",
+    description_en: "Internationalization and new business.",
+    description_pt: "Internacionalização e novos negocios.",
+    languages_en: "en - pt - sp",
+    languages_pt: "in - pt - es",
+    work_field_en:
+      "Purchasing, Partnerships, Internationalization, Government Relations, B2B Sales",
+    work_field_pt:
+      "Compras, Parcerias, Internacionalização, Governos, Vendas B2B",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/03_felipe_seabra.png",
+    flag: "brazil",
+  },
+  {
+    id: 4,
+    name: "Samuel",
+    last_name: "Magalhães",
+    linkedin:
+      "https://www.linkedin.com/in/samuel-magalh%C3%A3esc?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    description_en: null,
+    description_pt: null,
+    languages_en: "pt - en",
+    languages_pt: "pt - en",
+    work_field_en:
+      "Financing, Business Model, Investors, Operations, Strategic Vision",
+    work_field_pt:
+      "Financiamentos, Modelo de negócios, Investidores, Operações, Visão estratégica",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/04_samuel_magalhaes.jpg",
+    flag: "brazil",
+  },
+  {
+    id: 5,
+    name: "Eduardo",
+    last_name: "Balardim",
+    linkedin: "https://www.linkedin.com/in/eduardobalardim",
+    description_en:
+      "I have over 17 years of experience in the Retail and Service sectors. I am part of the Retail vertical at Anjos do Brasil, where I work as a mentor and also as an angel investor. I am also a mentor for Inovativa Brasil, which is the largest startup acceleration program in Latin America.",
+    description_pt:
+      "Tenho mais de 17 anos atuando nas áreas de Varejo e Serviço. Faço parte da vertical de Varejo da Anjos do Brasil, onde atuo com mentoria e também como investidor anjo. Também sou mentor do Inovativa Brasil, que é o maior programa de aceleração de startups da América Latina.",
+    languages_en: "en - pt - sp",
+    languages_pt: "in - pt - es",
+    work_field_en: "Business Model, Operations, Strategic Vision",
+    work_field_pt: "Modelo de negócios, Operações, Visão estratégica",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/05_eduardo_balardim.jpg",
+    flag: "brazil",
+  },
+  {
+    id: 6,
+    name: "Guilherme",
+    last_name: "Yata",
+    linkedin: "http://linkedin.com/in/guilhermeyata",
+    description_en:
+      "I have extensive experience in the retail, engineering, and international business sectors with almost 30 years in this field. I am a member of the administrative boards of some startups here in Brazil. Additionally, I am a managing partner at S3 projects, where we develop energy transition projects for companies.",
+    description_pt:
+      "Tenho muita experiência na área de varejo, engenharia e negócios internacionais com quase 30 anos nessa área. Faço parte do conselho administrativos de algumas startups aqui no Brasil. Além disso sou sócio-diretor da S3 projects onde desenvolvemos projetos transição energética para empresas.",
+    languages_en: "en - pt - sp",
+    languages_pt: "in - pt - es",
+    work_field_en:
+      "Purchasing, Business Model, Product, Operations, Strategic Vision",
+    work_field_pt:
+      "Compras, Modelo de negócios, Produto, Operações, Visão estratégica",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/06_guilherme_yata.jpeg",
+    flag: "brazil",
+  },
+  {
+    id: 7,
+    name: "Simone",
+    last_name: "Alves",
+    linkedin:
+      "https://www.linkedin.com/in/simonealvesrj?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    description_en:
+      "As a consultant, I have experience in market research. With startups, I have been active since 2020 as a mentor and evaluator for various acceleration programs such as Inovativa Brasil, Inovativa de Impacto, Startup Conecta, Ela Empodera, Nexus Hub, CPS Inova, among others. I am also part of the Advisory Board of the startup Polimex Bioplásticos since 2021.",
+    description_pt:
+      "Como consultora tenho experiência em estudos de mercado. Com startups tenho atuado desde 2020 como mentora e avaliadora de diversos programas de aceleração como Inovativa Brasil, Inovativa de Impacto, Startup Conecta, Ela Empodera, Nexus Hub, CPS Inova, entre outros. Também sou do Conselho Consultivo ds startup Polimex Bioplásticos desde 2021",
+    languages_en: "pt - en",
+    languages_pt: "pt - sp",
+    work_field_en:
+      "Public Funding, Business Model, Product, Marketing, B2B Sales",
+    work_field_pt:
+      "Financiamento público, Modelo de negócios, Produto, Marketing, Vendas B2B",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/07_simone_alves.jpg",
+    flag: "brazil",
+  },
+  {
+    id: 8,
+    name: "Rodrigo",
+    last_name: "Grossi",
+    linkedin: "https://www.linkedin.com/in/rodrigogrossi/",
+    description_en:
+      "I am Rodrigo, Founder of STARTUPS GLOBAL LINK, partner and Chief Technology Officer at 2mi Group, Startup Manager in the International Startup Program at IFIA, Advisor to two Startups, and Official Mentor of Inovativa Brasil. I founded TeamHub and bring valuable experience from ideation to exit. I was CTO at SOLIDES, and I also have experience in renowned corporations such as TOTVS and FCA.",
+    description_pt:
+      "Eu sou Rodrigo, sou Founder da STARTUPS GLOBAL LINK, sócio e Diretor Executivo de Tecnologia no grupo 2mi, Startup Manager no programa Internacional de Startups da IFIA, Advisor em duas Startups e Mentor Oficial do Inovativa Brasil. Fundei a TeamHub, e trago comigo a valiosa vivência desde a ideação até o exit. Fui CTO na SOLIDES, além de ter experiência em renomadas corporações como TOTVS e FCA.",
+    languages_en: "pt - en",
+    languages_pt: "pt - sp",
+    work_field_en: "Investors, Business Model, Leadership, Pricing, Valuation",
+    work_field_pt:
+      "Investidores, Modelo de negócios, Liderança, Precificação, Valuation",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/08_rodrigo_grossi.jpeg",
+    flag: "brazil",
+  },
+];

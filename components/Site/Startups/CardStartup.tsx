@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { startupFlags, StartupProps } from "@/app/(site)/data";
+import { infoFlags, StartupProps } from "@/app/(site)/data";
 import startupPlaceHolder from "@/assets/startup-placeholder.png";
 import sglFull from "@/assets/startups/sgl_full.svg";
 import sglJunior from "@/assets/startups/sgl_junior.svg";
@@ -41,7 +41,6 @@ export default function CardStartup({
               height={70}
               src={logo ?? startupPlaceHolder}
               alt="startup-image"
-              objectFit=""
             />
           </div>
           <div className="flex flex-col">
@@ -84,7 +83,7 @@ export default function CardStartup({
               <Image
                 width={25}
                 height={25}
-                src={startupFlags[flag]}
+                src={infoFlags[flag]}
                 alt={country}
               />
             </TooltipTrigger>

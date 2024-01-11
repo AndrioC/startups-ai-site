@@ -81,5 +81,9 @@
     "startup-card-last-update-text": "Last update",
 
     "startup-not-found-results-text": "No startup found"
+  },
+
+  "Expert": {
+    "no-description-card-text": "No description"
   }
 }
