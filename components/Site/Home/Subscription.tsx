@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import subsImage01 from "@/assets/img/subs-img01.svg";
 import subsImage02 from "@/assets/img/subs-img02.svg";
@@ -10,6 +10,19 @@ import Container from "./Container";
 
 export default function Subscription() {
   const t = useTranslations("Home");
+
+  const lang = useLocale();
+
+  const subscriptionLinkStartups =
+    lang === "en"
+      ? "https://forms.gle/a7FCyM9LcFrbbcB8A"
+      : "https://forms.gle/49ge9iz3UpMXf9zRA";
+
+  const subscriptionLinkExperts =
+    lang === "en"
+      ? "https://forms.gle/7gqsjrRdi8bHxr3Q8"
+      : "https://forms.gle/kzmmzc89t7A23And7";
+
   return (
     <section id="Subscription" className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container className="-mt-20">
@@ -43,7 +56,14 @@ export default function Subscription() {
                 alt="subs-image-02"
                 className="w-64 lg:w-72"
               />
-              <Button variant="solid" color="blue" className="mt-10">
+              <Button
+                variant="solid"
+                color="blue"
+                className="mt-10"
+                href={subscriptionLinkStartups}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t("subscription-startups-subscription-button")}
               </Button>
             </div>
@@ -54,7 +74,14 @@ export default function Subscription() {
                 alt="subs-image-03"
                 className="w-72 lg:w-72"
               />
-              <Button variant="solid" color="blue" className="mt-10">
+              <Button
+                variant="solid"
+                color="blue"
+                className="mt-10"
+                href={subscriptionLinkExperts}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t("subscription-experts-subscription-button")}
               </Button>
             </div>
