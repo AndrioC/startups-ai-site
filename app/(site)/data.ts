@@ -1018,4 +1018,44 @@ export const expertsList: ExpertProps[] = [
     photo: "/assets/experts/08_rodrigo_grossi.jpeg",
     flag: "brazil",
   },
+  {
+    id: 9,
+    name: "Marcos Tito",
+    last_name: "Marques",
+    linkedin: "https://www.linkedin.com/in/mrctito",
+    description_en:
+      "I am an Artificial Intelligence enthusiast with over 25 years of experience in the technology world, and my passion continues to grow. I am the kind of person who sees challenges as opportunities and learns by doing. My curiosity led me to develop an innovative AI product, and this self-instructive adventure has provided me with a wealth of practical knowledge in AI, as well as a profound understanding of its applications in the business world. Over the years, I have had the privilege of working with some of the largest software companies in the Brazilian and international markets, giving me a broad and diversified perspective of the industry. Leading multidisciplinary teams, including 100% remote teams, I have discovered the art of managing productivity and engagement from a distance. I firmly believe in the power of collaboration and communication to overcome obstacles and achieve ambitious goals. My experience spans various areas such as Education, Healthcare, Construction, HR, Hospitality, and more. I embrace both agile and traditional methodologies, and this flexibility allows me to adapt to different contexts and needs. In roles overseeing areas like Innovation, Support, Implementation, and Technology, I have developed a holistic vision that is crucial in software development.",
+    description_pt:
+      "Sou um entusiasta da Inteligência Artificial com mais de 25 anos de jornada no mundo da tecnologia, e minha paixão não para de crescer. Sou aquele tipo de pessoa que encara desafios como oportunidades e que aprende fazendo. Minha curiosidade me levou a desenvolver um produto de IA inovador, e essa aventura autoinstrutiva me trouxe um arsenal de conhecimentos práticos em IA, bem como uma compreensão profunda de suas aplicações no mundo dos negócios. Através dos anos, tive o privilégio de trabalhar com algumas das maiores empresas de software do mercado brasileiro e internacional, o que me proporcionou uma visão ampla e diversificada da indústria. Na liderança de equipes multidisciplinares, inclusive times 100% remotos, descobri a arte de gerenciar produtividade e engajamento à distância. Acredito firmemente no poder da colaboração e da comunicação para superar obstáculos e alcançar metas ambiciosas. Minha experiência se estende por áreas variadas como Educação, Saúde, Construção, RH, Hotelaria e muito mais. Sou adepto das metodologias ágeis e tradicionais, e essa flexibilidade me permite adaptar-me a diferentes contextos e necessidades. No comando de áreas como Inovação, Suporte, Implantação e Tecnologia, desenvolvi uma visão holística que é crucial no desenvolvimento de software.",
+    languages_en: "pt",
+    languages_pt: "pt",
+    work_field_en:
+      "Partnerships, Business Model, Product, Leadership, B2B Sales, Strategic Vision, Company Direction",
+    work_field_pt:
+      "Parcerias, Modelo de negócios, Produto, Liderança, Vendas B2B, Visão estratégica, Direcionamento da empresa",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/09_Marcos_Tito.jpeg",
+    flag: "brazil",
+  },
+  {
+    id: 10,
+    name: "Andre",
+    last_name: "Bretas",
+    linkedin: "https://www.linkedin.com/in/andrebretas",
+    description_en:
+      "I work as a partner in startups and have previously served as CTO and COO in others I've been involved with. Additionally, I have experience in large corporations.",
+    description_pt:
+      "Atuo como sócio em startups e já atuei com CTO e COO em outras que passei. Além disso já tive experiência em grandes corporações.",
+    languages_en: "pt - en",
+    languages_pt: "pt - in",
+    work_field_en:
+      "Business Model, Product, E-commerce, Leadership, Digital Marketing",
+    work_field_pt:
+      "Modelo de negócios, Produto, E-commerce, Liderança, Marketing digital",
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/10_andre_bretas.jpeg",
+    flag: "brazil",
+  },
 ];
