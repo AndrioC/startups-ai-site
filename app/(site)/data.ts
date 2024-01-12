@@ -1035,7 +1035,7 @@ export const expertsList: ExpertProps[] = [
       "Parcerias, Modelo de negócios, Produto, Liderança, Vendas B2B, Visão estratégica, Direcionamento da empresa",
     country_en: "Brazil",
     country_pt: "Brasil",
-    photo: "/assets/experts/09_Marcos_Tito.jpeg",
+    photo: "/assets/experts/09_marcos_tito.jpeg",
     flag: "brazil",
   },
   {
