@@ -26,5 +26,4 @@ function TextWithBullet({ title, text }: TermProps) {
     </div>
   );
 }
-
 export { Term, TextWithBullet };
