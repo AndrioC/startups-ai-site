@@ -893,7 +893,7 @@ export const expertsList: ExpertProps[] = [
     description_en:
       "I have been working as a consultant for over 10 years for companies in the tourism, hospitality, and other sectors, as can be seen on the Xenios Institute website (www.xenios.org.br). I have been involved in mentoring for over 10 years in projects such as hackathons, NASA Space App, and as an innovation advisor for the hotel management startup Macna Digital Hotels.",
     description_pt:
-      "Atua com consultoria há mais de 10 anos para empresas de turismo, hotelaria e outras que podem ser observada no site do Instituto Xenios (www.xenios.org.br). Atuo há mais de 10 anos com mentorias em projetos como hackathons , NASA Space App e como conselheiro para Inovação da startup de administração hoteleira Macna Digital Hotels.",
+      "Atua com consultoria há mais de 10 anos para empresas de turismo, hotelaria e outras que podem ser observada no site do Instituto Xenios (www.xenios.org.br). Atuo há mais de 10 anos com mentorias em projetos como hackathons, NASA Space App e como conselheiro para Inovação da startup de administração hoteleira Macna Digital Hotels.",
     languages_pt: "pt - es",
     languages_en: "pt - sp",
     work_field_pt: "Parcerias, Liderança, Operações",
