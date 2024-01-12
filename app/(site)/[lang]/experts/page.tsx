@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
 
 import { expertsList } from "@/app/(site)/data";
-import CardExpert from "@/components/Site/Experts/CardExpert";
-import Container from "@/components/Site/Home/Container";
+import CardExpert from "@/components/site/experts/card-expert";
+import Container from "@/components/site/home/container";
 
 export default function ExpertPage() {
   const lang = useLocale();

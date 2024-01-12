@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { StartupProps, startupsList } from "@/app/(site)/data";
-import Container from "@/components/Site/Home/Container";
-import CardStartup from "@/components/Site/Startups/CardStartup";
-import HeaderStartupsFilter from "@/components/Site/Startups/HeaderStartupsFilter";
-import NotFoundStartups from "@/components/Site/Startups/NotFoundStartups";
+import Container from "@/components/site/home/container";
+import CardStartup from "@/components/site/startups/card-startup";
+import HeaderStartupsFilter from "@/components/site/startups/header-startups-filter";
+import NotFoundStartups from "@/components/site/startups/not-found-startups";
 import { Separator } from "@/components/ui/separator";
 
 export default function StartupsPage() {

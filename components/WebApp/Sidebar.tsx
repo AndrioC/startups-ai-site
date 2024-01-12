@@ -11,7 +11,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import globalLinkOpenLogo from "@/assets/img/logos/global-link-logo.svg";
-import globalLinkCloseLogo from "@/assets/img/logos/global-link-logo-collapsed.svg";
 
 import SidebarMenu from "./SidebarMenu";
 
@@ -22,8 +21,6 @@ export default function SideBar({ children }: PropsWithChildren) {
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
-
-  const logo = isSidebarOpen ? globalLinkOpenLogo : globalLinkCloseLogo;
 
   return (
     <aside>

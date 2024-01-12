@@ -3,8 +3,8 @@ import { useTranslations } from "next-intl";
 
 import contactImage from "@/assets/img/contact-image.svg";
 
-import Button from "./Button";
-import Container from "./Container";
+import Button from "./button";
+import Container from "./container";
 
 export default function Contact() {
   const t = useTranslations("Home");

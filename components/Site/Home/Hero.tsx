@@ -3,9 +3,9 @@ import { useTranslations } from "next-intl";
 
 import heroBg from "@/assets/img/hero-bg.svg";
 
-import Button from "./Button";
-import CheckCircle from "./CheckCircle";
-import Container from "./Container";
+import Button from "./button";
+import CheckCircle from "./check-circle";
+import Container from "./container";
 
 export default function Hero() {
   const t = useTranslations("Home");

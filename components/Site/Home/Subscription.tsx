@@ -5,8 +5,8 @@ import subsImage01 from "@/assets/img/subs-img01.svg";
 import subsImage02 from "@/assets/img/subs-img02.svg";
 import subsImage03 from "@/assets/img/subs-img03.svg";
 
-import Button from "./Button";
-import Container from "./Container";
+import Button from "./button";
+import Container from "./container";
 
 export default function Subscription() {
   const t = useTranslations("Home");

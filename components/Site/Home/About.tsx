@@ -4,8 +4,8 @@ import abipirLogo from "@/assets/img/logos/abipir-logo-100.svg";
 import globalLinkLogo from "@/assets/img/logos/global-link-logo-100.svg";
 import ifiaLogo from "@/assets/img/logos/ifia-logo-100.svg";
 
-import AboutInfoCard from "./AboutInfoCard";
-import Container from "./Container";
+import AboutInfoCard from "./about-info-card";
+import Container from "./container";
 
 export default function About() {
   const t = useTranslations("Home");

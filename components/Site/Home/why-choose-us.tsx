@@ -5,8 +5,8 @@ import whyUsImage01 from "@/assets/img/whyus-image01.svg";
 import whyUsImage02 from "@/assets/img/whyus-image02.svg";
 import whyUsImage03 from "@/assets/img/whyus-image03.svg";
 
-import Container from "./Container";
-import WhyChooseUsList from "./WhyChooseUsList";
+import Container from "./container";
+import WhyChooseUsList from "./why-choose-us-list";
 
 export default function WhyChooseUs() {
   const t = useTranslations("Home");

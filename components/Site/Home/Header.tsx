@@ -9,10 +9,9 @@ import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/ui/language-toggler";
 import { Link } from "@/navigation";
 
-import Button from "./Button";
-import Container from "./Container";
-import Logo from "./Logo";
-import NavLinks from "./NavLinks";
+import Container from "./container";
+import Logo from "./logo";
+import NavLinks from "./nav-links";
 
 type MobileNavLinksProps = {
   children: ReactNode;

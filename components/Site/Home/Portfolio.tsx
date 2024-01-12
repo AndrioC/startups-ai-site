@@ -6,8 +6,8 @@ import portfImage02 from "@/assets/img/portf-img02.svg";
 import portfImage03 from "@/assets/img/portf-img03.svg";
 import portfImage04 from "@/assets/img/portf-img04.svg";
 
-import Container from "./Container";
-import ExtraLogos from "./ExtraLogos";
+import Container from "./container";
+import ExtraLogos from "./extra-logos";
 
 export default function Portfolio() {
   const t = useTranslations("Home");

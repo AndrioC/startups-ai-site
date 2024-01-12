@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Footer() {
   const t = useTranslations("Home");
+  const lang = useLocale();
   return (
     <footer className="flex-shrink-0">
       <div className="flex flex-col text-sm items-center justify-between text-center px-40 py-10 gap-10 lg:h-80 lg:flex-row lg:text-base lg:text-left lg:gap-36 bg-dark-blue">
@@ -20,16 +21,26 @@ export default function Footer() {
           </span>
           <ul className="flex flex-col text-gray-300">
             <li className="mb-4 font-semibold">
-              <Link href="#">{t("footer-support-first-text")}</Link>
+              <Link href={`/${lang}/terms/terms-and-conditions`}>
+                {t("footer-support-first-text")}
+              </Link>
             </li>
             <li className="mb-4 font-semibold">
-              <Link href="#">{t("footer-support-second-text")}</Link>
+              <Link href={`/${lang}/terms/privacy-policy`}>
+                {t("footer-support-second-text")}
+              </Link>
             </li>
             <li className="mb-4 font-semibold">
-              <Link href="#">{t("footer-support-third-text")}</Link>
+              <Link href={`/${lang}/terms/return-refund-policy`}>
+                {t("footer-support-third-text")}
+              </Link>
             </li>
             <li className="mb-4 font-semibold">
-              <Link href="#">{t("footer-support-fourth-text")}</Link>
+              <Link
+                href={`/${lang}/terms/delivery-policy-for-digital-products`}
+              >
+                {t("footer-support-fourth-text")}
+              </Link>
             </li>
           </ul>
         </div>

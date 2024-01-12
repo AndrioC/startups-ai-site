@@ -87,5 +87,108 @@
     "no-description-card-text": "Sem descrição",
 
     "expert-not-found-results-text": "Nenhum especialista encontrado"
+  },
+  "Support": {
+    "terms-and-conditions": {
+      "title": "Programa de aceleração da Startup Global Link",
+      "first-term-title": "Isenção de responsabilidade jurídica",
+      "first-term-text": "O Programa de aceleração global Startups Global Link é uma oportunidade única para startups de todo o mundo se conectarem com outras Startups, Investidores e clientes, colaborarem e terem sucesso juntas. Criamos conexões mundiais valiosas para Startups, permitindo-lhes melhorar suas taxas de sucesso e sobrevivência. Esta seção fornece informações gerais sobre os benefícios do programa de aceleração e como ele pode ajudar as startups a crescerem. No entanto, as informações aqui contidas não devem ser consideradas como aconselhamento jurídico e recomendamos que as startups procurem orientação jurídica se precisarem de ajuda para entender seus direitos e deveres.",
+      "second-term-title": "Termos e Condições - noções fundamentais",
+      "second-term-text": {
+        "first-paragraph": "Dito isso, Termos e Condições (“T&C”) são um conjunto de termos juridicamente vinculantes definidos por você, na qualidade de proprietário deste site. Os T&C estabelecem o marco jurídico que rege as atividades dos visitantes do site, ou seus clientes, durante a sua visita ou interação com este site. A intenção dos T&C é estabelecer a relação jurídica entre os visitantes do site e você, o proprietário do site.",
+
+        "second-paragraph": "OS T&C devem ser estabelecidos de acordo com as necessidades específicas e a natureza de cada site. Por exemplo, um site que oferece produtos a clientes envolvendo transações de comércio eletrônico precisa ter T&C que sejam diferentes dos T&C de um site que oferece somente informações (como um blog, uma página inicial de encaminhamento a outras e assim por diante).",
+
+        "third-paragraph": "T&C dão a você, como proprietário do site, a possibilidade de se proteger contra possíveis exposições jurídicas. Porém, isso pode diferir de jurisdição para jurisdição, então procure orientação jurídica local se pretender se proteger de exposição jurídica."
+      },
+      "third-term-title": "O que inclui o programa de aceleração",
+      "third-term-text": "O programa de aceleração pode incluir uma variedade de recursos e benefícios para ajudar as startups a crescerem e terem sucesso. Isso pode incluir mentoria de especialistas do setor, acesso a investidores e clientes em todo o mundo, suporte técnico e recursos financeiros. Cada programa de aceleração é único e pode oferecer recursos diferentes. Para saber mais sobre o que o programa de aceleração Startups Global Link oferece, visite a nossa página de recursos.",
+      "last-update": "Última atualização: 02 de Dezembro de 2023"
+    },
+    "privacy-policy": {
+      "title": "Política de Privacidade",
+      "first-term-title": "Isenção de Responsabilidade Jurídica",
+      "first-term-text": "A Startups Global Link valoriza a privacidade dos seus usuários e se compromete a proteger as informações pessoais coletadas. Esta página tem como objetivo informar sobre as práticas adotadas pela Startups Global Link em relação à privacidade dos seus usuários. No entanto, é importante destacar que esta página tem apenas caráter geral e não deve ser considerada como aconselhamento jurídico. Recomendamos que você consulte um advogado para obter orientações específicas sobre a criação de uma Política de Privacidade que atenda às necessidades da sua startup.",
+      "second-term-title": "Conceitos Fundamentais da Política de Privacidade",
+      "second-term-text": "Uma Política de Privacidade é uma declaração que informa aos usuários sobre como a Startups Global Link coleta, usa, armazena, compartilha e protege as informações pessoais dos seus usuários. Além disso, a Política de Privacidade esclarece o compromisso da Startups Global Link em proteger a privacidade dos seus usuários e os mecanismos utilizados para garantir a segurança das informações coletadas.",
+      "third-term-title": "O que deve estar incluído na Política de Privacidade?",
+      "third-term-text": "A Startups Global Link está comprometida em proteger a privacidade dos usuários, seguindo as disposições da Lei Geral de Proteção de Dados (LGPD) e demais regulamentações aplicáveis. Nossa Política de Privacidade abrange os aspectos essenciais relacionados à coleta, uso e proteção de informações pessoais.",
+      "fourth-term-bullets": {
+        "first-bullet-title": "1. Informações Coletadas:",
+        "first-bullet-text": "Detalhamos os tipos de informações que coletamos, incluindo dados pessoais e dados de navegação, visando proporcionar uma experiência personalizada e segura aos usuários.",
+        "second-bullet-title": "2. Processo de Coleta:",
+        "second-bullet-text": "Explicamos de maneira transparente como as informações são coletadas, seja por meio de formulários, cookies ou outras tecnologias, garantindo total ciência aos usuários sobre esse processo.",
+        "third-bullet-title": "3. Finalidade da Coleta:",
+        "third-bullet-text": "Esclarecemos os motivos da coleta de informações, garantindo que cada dado seja utilizado de forma legítima e em conformidade com os propósitos informados no momento da coleta.",
+        "fourth-bullet-title": "4. Uso, Compartilhamento e Armazenamento:",
+        "fourth-bullet-text": "Detalhamos como as informações são utilizadas internamente, as circunstâncias em que são compartilhadas (se houver) e os protocolos seguros adotados para armazenamento, tudo alinhado com os padrões de segurança da LGPD.",
+        "fifth-bullet-title": "5. Direitos dos Usuários:",
+        "fifth-bullet-text": "Destacamos os direitos dos usuários em relação às suas informações pessoais, incluindo o acesso, retificação, exclusão e portabilidade de dados, conforme previsto na LGPD.",
+        "sixth-bullet-title": "6. Informações de Menores:",
+        "sixth-bullet-text": "Abordamos nossa postura em relação à coleta de informações de menores, garantindo que as práticas estejam em conformidade com as exigências legais e éticas.",
+        "seventh-bullet-title": "7. Alterações na Política:",
+        "seventh-bullet-text": "Reservamo-nos o direito de atualizar esta política periodicamente para refletir alterações nas práticas de privacidade e cookies. Recomendamos que os usuários revejam regularmente a política para manterem-se informados.",
+        "eighth-bullet-title": "8. Contato:",
+        "eighth-bullet-text": "Para esclarecimentos adicionais ou exercício de direitos previstos na LGPD, os usuários podem entrar em contato conosco através dos meios disponibilizados em nossa página de contato."
+      },
+      "fith-term-text": "A Política de Privacidade e Cookies da Startups Global Link reflete nosso compromisso com a transparência e segurança na gestão de informações pessoais. Para obter informações mais detalhadas, consulte nossa Política de Privacidade completa.",
+      "last-update": "Última atualização: 02 de Dezembro de 2023"
+    },
+    "return-refund-policy": {
+      "title": "Política de Troca, Devolução e Reembolso para Produtos Digitais",
+      "first-term-title": "Isenção de Responsabilidade Jurídica",
+      "first-term-text": "As informações e esclarecimentos nesta página têm apenas caráter geral e não constituem orientação jurídica. Não se baseie neste artigo para orientação jurídica ou para recomendações sobre o que fazer. Recomendamos que você busque orientação jurídica se precisar de ajuda para entender e criar sua Política de Cookies. Na Startups Global Link, nós não nos responsabilizamos por quaisquer problemas legais decorrentes do uso das informações aqui contidas.",
+      "second-term-title": "Política de Entrega e Prazos para Produtos Digitais:",
+      "second-term-text": "Política de Troca, Devolução e Reembolso para Produtos Digitais - Startups Global Link",
+      "third-term-text": "A Startups Global Link está comprometida em proporcionar aos nossos clientes uma experiência positiva e satisfatória com nossos produtos digitais. Nossa Política de Troca, Devolução e Reembolso foi desenvolvida para garantir transparência e justiça nas situações em que seja necessário realizar essas operações.",
+      "fourth-term-bullets": {
+        "first-bullet-title": "1. Produtos Abrangidos:",
+        "first-bullet-text": "Esta política se aplica exclusivamente a produtos digitais oferecidos pela Startups Global Link, como acesso a plataformas online, cursos digitais, e-books, entre outros.",
+        "second-bullet-title": "2. Cancelamento e Devolução:",
+        "second-bullet-text": "Como nossos produtos são digitais e normalmente disponibilizados imediatamente após a confirmação do pagamento, não aceitamos cancelamentos ou devoluções após o início do acesso ao conteúdo. Antes de finalizar a compra, recomendamos que os clientes revisem cuidadosamente as informações do produto.",
+        "third-bullet-title": "3. Reembolso:",
+        "third-bullet-text": "A Startups Global Link oferece uma política de reembolso justo para situações excepcionais, como falhas técnicas persistentes que impeçam o uso adequado do produto ou se o produto não atender às expectativas declaradas. O pedido de reembolso deve ser feito no prazo de 7 dias a partir da data de compra.",
+        "fourth-bullet-title": "4. Processo de Reembolso:",
+        "fourth-bullet-text": "Para solicitar um reembolso, entre em contato com o nosso suporte ao cliente no formulário CONTATO do site. Certifique-se de fornecer informações detalhadas sobre o motivo da solicitação e qualquer evidência relevante, como capturas de tela. Analisaremos o caso e, se validado, processaremos o reembolso dentro de 30 dias úteis.",
+        "fifth-bullet-title": "5. Trocas:",
+        "fifth-bullet-text": "Não realizamos trocas de produtos digitais. Caso tenha alguma dificuldade com o acesso ou uso do produto, entre em contato com nossa equipe de suporte para que possamos ajudar a resolver a questão.",
+        "sixth-bullet-title": "6. Atualizações de Produto:",
+        "sixth-bullet-text": "Caso ocorram atualizações nos produtos digitais adquiridos, os clientes serão notificados e receberão instruções sobre como acessar as melhorias sem custo adicional.",
+        "seventh-bullet-title": "7. Suporte ao Cliente:",
+        "seventh-bullet-text": "Nossa equipe de suporte está disponível para auxiliar os clientes em qualquer dificuldade encontrada. Entre em contato conosco [inserir informações de contato] para obter assistência.",
+        "eighth-bullet-title": "8. Alterações na Política:",
+        "eighth-bullet-text": "Reservamo-nos o direito de fazer alterações nesta política para refletir melhorias nos processos ou atender a novas regulamentações. Recomendamos que os clientes revisem periodicamente nossa Política de Troca, Devolução e Reembolso para estar sempre informados."
+      },
+      "fith-term-text": "Agradecemos por escolher a Startups Global Link. Estamos dedicados a proporcionar uma experiência positiva, e nossa equipe está disponível para auxiliar em qualquer situação. Entre em contato conosco se precisar de assistência.",
+      "last-update": "Última atualização: 02 de Dezembro de 2023"
+    },
+
+    "delivery-for-digital-products-policy": {
+      "title": "Política de Entrega e Prazos para Produtos Digitais",
+      "first-term-title": "Isenção de Responsabilidade Jurídica",
+      "first-term-text": "As informações e esclarecimentos nesta página têm apenas caráter geral e não constituem orientação jurídica. Não se baseie neste artigo para orientação jurídica ou para recomendações sobre o que fazer. Recomendamos que você busque orientação jurídica se precisar de ajuda para entender e criar sua Política de Cookies. Na Startups Global Link, nós não nos responsabilizamos por quaisquer problemas legais decorrentes do uso das informações aqui contidas.",
+      "second-term-title": "Política de Entrega e Prazos para Produtos Digitais:",
+      "second-term-text": "Agradecemos por escolher a Startups Global Link como seu fornecedor de produtos digitais e para uso da nossa plataforma. Nossa Política de Entrega foi desenvolvida para fornecer a você uma compreensão clara dos procedimentos relacionados à entrega de produtos digitais e estabelecer expectativas transparentes.",
+      "third-term-bullets": {
+        "first-bullet-title": "1. Natureza dos Produtos:",
+        "first-bullet-text": "A Startups Global Link oferece produtos digitais, como arquivos, acesso a plataformas online ou conteúdo digital. Esses produtos são entregues eletronicamente, eliminando a necessidade de envio físico.",
+        "second-bullet-title": "2. Processo de Entrega:",
+        "second-bullet-text": "Após a confirmação do pagamento, você receberá instruções detalhadas sobre como acessar e baixar os produtos adquiridos. Para produtos que envolvem o acesso a uma plataforma, você receberá informações de login e orientações sobre como começar.",
+        "third-bullet-title": "3. Prazos Estimados:",
+        "third-bullet-text": "Os prazos de entrega para produtos digitais são imediatos ou conforme especificado na descrição do produto. Após a confirmação do pagamento, você terá acesso instantâneo aos produtos digitais ou receberá informações sobre como iniciar o uso da plataforma.",
+        "fourth-bullet-title": "4. Contingências Técnicas:",
+        "fourth-bullet-text": "Em raras circunstâncias, podem ocorrer problemas técnicos que afetem a entrega imediata. Se isso acontecer, nossa equipe entrará em contato prontamente para resolver o problema e garantir a entrega o mais rápido possível.",
+        "fifth-bullet-title": "5. Suporte ao Cliente:",
+        "fifth-bullet-text": "Nossa equipe de suporte está disponível para ajudar caso você encontre dificuldades na entrega ou precise de assistência para acessar os produtos adquiridos. Entre em contato conosco no formulário CONTATO e teremos prazer em auxiliá-lo.",
+        "sixth-bullet-title": "6. Reembolsos:",
+        "sixth-bullet-text": "Caso ocorra alguma dificuldade insuperável na entrega ou acesso ao produto, e nossa equipe não consiga resolver o problema, garantimos um processo de reembolso justo e eficiente. Consulte nossa política de reembolsos para obter mais informações.",
+        "seventh-bullet-title": "7. Atualizações de Produto:",
+        "seventh-bullet-text": "Para produtos digitais que recebem atualizações, os clientes serão notificados sobre as melhorias disponíveis, e instruções serão fornecidas para acessar as atualizações.",
+        "eighth-bullet-title": "8. Alterações na Política:",
+        "eighth-bullet-text": "Reservamo-nos o direito de fazer alterações nesta política para refletir melhorias nos processos ou atender a novas regulamentações. Recomendamos revisar periodicamente nossa Política de Entrega para estar sempre informado."
+      },
+      "fourth-term-text": "Agradecemos por escolher a Startups Global Link. Estamos comprometidos em oferecer uma experiência de entrega eficiente e satisfatória para nossos produtos digitais. Se precisar de mais informações ou assistência, entre em contato com nossa equipe de suporte.",
+      "last-update": "Última atualização: 02 de Dezembro de 2023"
+    }
   }
 }

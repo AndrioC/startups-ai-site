@@ -78,7 +78,7 @@
     "search-found-text-first": "Were found",
     "search-found-text-second": "based on the filters above",
 
-    "startup-card-last-update-text": "Last update",
+    "startup-card-last-update-text": "Last updated",
 
     "startup-not-found-results-text": "No startup found"
   },
@@ -87,5 +87,105 @@
     "no-description-card-text": "No description",
 
     "expert-not-found-results-text": "No expert found"
+  },
+  "Support": {
+    "terms-and-conditions": {
+      "title": "Global Link Startup Acceleration Program",
+      "first-term-title": "Legal Disclaimer",
+      "first-term-text": "The Global Link Startup Acceleration Program is a unique opportunity for startups from around the world to connect with other startups, investors, and clients, collaborate, and succeed together. We create valuable global connections for startups, enabling them to improve their success and survival rates. This section provides general information about the benefits of the acceleration program and how it can help startups grow. However, the information contained herein should not be considered legal advice, and we recommend that startups seek legal guidance if they need assistance in understanding their rights and duties.",
+      "second-term-title": "Terms and Conditions - Key Concepts",
+      "second-term-text": {
+        "first-paragraph": "That being said, Terms and Conditions (“T&C”) are a set of legally binding terms defined by you, as the owner of this website. The T&C establish the legal framework governing the activities of the website visitors, or your customers, during their visit or interaction with this site. The intention of the T&C is to establish the legal relationship between the website visitors and you, the site owner.",
+        "second-paragraph": "THE T&C should be established according to the specific needs and nature of each site. For example, a site offering products to customers involving e-commerce transactions needs to have T&C that are different from the T&C of a site providing only information (such as a blog, a landing page redirecting to others, and so forth).",
+        "third-paragraph": "T&C give you, as the website owner, the ability to protect yourself against potential legal exposures. However, this may differ from jurisdiction to jurisdiction, so seek local legal guidance if you intend to protect yourself from legal exposure."
+      },
+      "third-term-title": "What's Included in the Acceleration Program",
+      "third-term-text": "The acceleration program may include a variety of resources and benefits to help startups grow and succeed. This can include mentorship from industry experts, access to investors and clients worldwide, technical support, and financial resources. Each acceleration program is unique and may offer different resources. To learn more about what the Global Link Startup Acceleration Program offers, visit our resources page.",
+      "last-update": "Last updated: December 2, 2023"
+    },
+    "privacy-policy": {
+      "title": "Privacy Policy",
+      "first-term-title": "Legal Disclaimer",
+      "first-term-text": "Global Link Startups values the privacy of its users and is committed to protecting the collected personal information. This page aims to inform about the practices adopted by Global Link Startups regarding the privacy of its users. However, it is important to note that this page is for general information only and should not be considered legal advice. We recommend consulting a lawyer for specific guidance on creating a Privacy Policy that meets the needs of your startup.",
+      "second-term-title": "Fundamental Concepts of the Privacy Policy",
+      "second-term-text": "A Privacy Policy is a statement that informs users about how Global Link Startups collects, uses, stores, shares, and protects users' personal information. Additionally, the Privacy Policy clarifies Global Link Startups' commitment to protecting the privacy of its users and the mechanisms used to ensure the security of the collected information.",
+      "third-term-title": "What Should Be Included in the Privacy Policy?",
+      "third-term-text": "Global Link Startups is committed to protecting the privacy of users, following the provisions of the General Data Protection Law (LGPD) and other applicable regulations. Our Privacy Policy covers essential aspects related to the collection, use, and protection of personal information.",
+      "fourth-term-bullets": {
+        "first-bullet-title": "1. Information Collected:",
+        "first-bullet-text": "We detail the types of information we collect, including personal and browsing data, aiming to provide a personalized and secure experience for users.",
+        "second-bullet-title": "2. Collection Process:",
+        "second-bullet-text": "We transparently explain how information is collected, whether through forms, cookies, or other technologies, ensuring full awareness to users about this process.",
+        "third-bullet-title": "3. Purpose of Collection:",
+        "third-bullet-text": "We clarify the reasons for collecting information, ensuring that each piece of data is used legitimately and in accordance with the purposes informed at the time of collection.",
+        "fourth-bullet-title": "4. Use, Sharing, and Storage:",
+        "fourth-bullet-text": "We detail how information is used internally, the circumstances under which it is shared (if any), and the secure protocols adopted for storage, all aligned with LGPD security standards.",
+        "fifth-bullet-title": "5. User Rights:",
+        "fifth-bullet-text": "We highlight users' rights regarding their personal information, including access, rectification, deletion, and data portability, as provided by LGPD.",
+        "sixth-bullet-title": "6. Minors' Information:",
+        "sixth-bullet-text": "We address our stance on the collection of information from minors, ensuring that practices comply with legal and ethical requirements.",
+        "seventh-bullet-title": "7. Policy Changes:",
+        "seventh-bullet-text": "We reserve the right to update this policy periodically to reflect changes in privacy and cookie practices. We recommend that users regularly review the policy to stay informed.",
+        "eighth-bullet-title": "8. Contact:",
+        "eighth-bullet-text": "For additional clarification or to exercise rights provided by LGPD, users can contact us through the means provided on our contact page."
+      },
+      "fith-term-text": "The Global Link Startups Privacy and Cookies Policy reflects our commitment to transparency and security in managing personal information. For more detailed information, please refer to our complete Privacy Policy.",
+      "last-update": "Last updated: December 2, 2023"
+    },
+    "return-refund-policy": {
+      "title": "Exchange, Return, and Refund Policy for Digital Products",
+      "first-term-title": "Legal Disclaimer",
+      "first-term-text": "The information and clarifications on this page are for general purposes only and do not constitute legal guidance. Do not rely on this article for legal advice or recommendations on what to do. We recommend seeking legal advice if you need help understanding and creating your Cookie Policy. At Global Link Startups, we are not responsible for any legal issues arising from the use of the information contained herein.",
+      "second-term-title": "Delivery and Timelines Policy for Digital Products:",
+      "second-term-text": "Exchange, Return, and Refund Policy for Digital Products - Global Link Startups",
+      "third-term-text": "Global Link Startups is committed to providing our customers with a positive and satisfactory experience with our digital products. Our Exchange, Return, and Refund Policy have been developed to ensure transparency and fairness in situations where these operations are necessary.",
+      "fourth-term-bullets": {
+        "first-bullet-title": "1. Covered Products:",
+        "first-bullet-text": "This policy exclusively applies to digital products offered by Global Link Startups, such as access to online platforms, digital courses, e-books, among others.",
+        "second-bullet-title": "2. Cancellation and Return:",
+        "second-bullet-text": "As our products are digital and typically made available immediately after payment confirmation, we do not accept cancellations or returns after the start of content access. Before completing the purchase, we recommend customers carefully review product information.",
+        "third-bullet-title": "3. Refund:",
+        "third-bullet-text": "Global Link Startups offers a fair refund policy for exceptional situations, such as persistent technical failures preventing proper product usage or if the product does not meet stated expectations. Refund requests must be made within 7 days from the date of purchase.",
+        "fourth-bullet-title": "4. Refund Process:",
+        "fourth-bullet-text": "To request a refund, please contact our customer support through the website's CONTACT form. Ensure you provide detailed information about the reason for the request and any relevant evidence, such as screenshots. We will review the case and, if validated, process the refund within 30 business days.",
+        "fifth-bullet-title": "5. Exchanges:",
+        "fifth-bullet-text": "We do not perform exchanges for digital products. If you encounter any difficulties with product access or usage, please contact our support team so we can assist in resolving the issue.",
+        "sixth-bullet-title": "6. Product Updates:",
+        "sixth-bullet-text": "In the event of updates to purchased digital products, customers will be notified and provided instructions on accessing improvements at no additional cost.",
+        "seventh-bullet-title": "7. Customer Support:",
+        "seventh-bullet-text": "Our support team is available to assist customers with any difficulties encountered. Contact us [insert contact information] for assistance.",
+        "eighth-bullet-title": "8. Policy Changes:",
+        "eighth-bullet-text": "We reserve the right to make changes to this policy to reflect process improvements or comply with new regulations. We recommend customers periodically review our Exchange, Return, and Refund Policy to stay informed."
+      },
+      "fith-term-text": "Thank you for choosing Global Link Startups. We are dedicated to providing a positive experience, and our team is available to assist in any situation. Please contact us if you need assistance.",
+      "last-update": "Last updated: December 2, 2023"
+    },
+    "delivery-for-digital-products-policy": {
+      "title": "Delivery and Timelines Policy for Digital Products",
+      "first-term-title": "Legal Disclaimer",
+      "first-term-text": "The information and clarifications on this page are for general purposes only and do not constitute legal guidance. Do not rely on this article for legal advice or recommendations on what to do. We recommend seeking legal advice if you need help understanding and creating your Cookie Policy. At Global Link Startups, we are not responsible for any legal issues arising from the use of the information contained herein.",
+      "second-term-title": "Delivery and Timelines Policy for Digital Products:",
+      "second-term-text": "Thank you for choosing Global Link Startups as your provider of digital products and for using our platform. Our Delivery Policy has been developed to provide you with a clear understanding of procedures related to the delivery of digital products and to establish transparent expectations.",
+      "third-term-bullets": {
+        "first-bullet-title": "1. Nature of Products:",
+        "first-bullet-text": "Global Link Startups offers digital products, such as files, access to online platforms, or digital content. These products are delivered electronically, eliminating the need for physical shipment.",
+        "second-bullet-title": "2. Delivery Process:",
+        "second-bullet-text": "After payment confirmation, you will receive detailed instructions on how to access and download the purchased products. For products involving access to a platform, you will receive login information and guidance on getting started.",
+        "third-bullet-title": "3. Estimated Timelines:",
+        "third-bullet-text": "Delivery timelines for digital products are immediate or as specified in the product description. After payment confirmation, you will have instant access to digital products or receive information on how to start using the platform.",
+        "fourth-bullet-title": "4. Technical Contingencies:",
+        "fourth-bullet-text": "In rare circumstances, technical issues may occur that affect immediate delivery. If this happens, our team will promptly contact you to resolve the issue and ensure delivery as soon as possible.",
+        "fifth-bullet-title": "5. Customer Support:",
+        "fifth-bullet-text": "Our support team is available to assist if you encounter difficulties in delivery or need assistance accessing purchased products. Contact us through the CONTACT form, and we'll be happy to assist you.",
+        "sixth-bullet-title": "6. Refunds:",
+        "sixth-bullet-text": "If an insurmountable difficulty occurs in delivery or access to the product, and our team cannot resolve the issue, we guarantee a fair and efficient refund process. Refer to our refund policy for more information.",
+        "seventh-bullet-title": "7. Product Updates:",
+        "seventh-bullet-text": "For digital products receiving updates, customers will be notified about available improvements, and instructions will be provided to access the updates.",
+        "eighth-bullet-title": "8. Policy Changes:",
+        "eighth-bullet-text": "We reserve the right to make changes to this policy to reflect process improvements or comply with new regulations. We recommend periodically reviewing our Delivery Policy to stay informed."
+      },
+      "fourth-term-text": "Thank you for choosing Global Link Startups. We are committed to providing an efficient and satisfactory delivery experience for our digital products. If you need more information or assistance, please contact our support team.",
+      "last-update": "Last updated: December 2, 2023"
+    }
   }
 }
