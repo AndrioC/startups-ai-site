@@ -21,7 +21,7 @@ function TextWithBullet({ title, text }: TermProps) {
     <div className="flex flex-col mt-5 gap-3">
       <h3 className="text-sm">{title}</h3>
       <ul className="list-inside list-none">
-        <li className="text-sm leading-7">{text}</li>
+        <li className="text-xs lg:text-sm leading-7">{text}</li>
       </ul>
     </div>
   );
