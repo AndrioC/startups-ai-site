@@ -109,7 +109,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/06_vishv_foods.png",
     flag: "india",
   },
   {
@@ -122,7 +122,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/07_daksyam.png",
     flag: "india",
   },
   {
@@ -135,7 +135,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/08_agri.png",
     flag: "india",
   },
   {
@@ -148,7 +148,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/09_energysaver.png",
     flag: "india",
   },
   {
@@ -174,7 +174,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/11_curium.png",
     flag: "india",
   },
   {
@@ -213,7 +213,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/14_insignia.png",
     flag: "india",
   },
   {
@@ -226,7 +226,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/15_maathru.png",
     flag: "india",
   },
   {
@@ -239,7 +239,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/16_hetrogenous.png",
     flag: "india",
   },
   {
@@ -265,7 +265,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/18_inn-force.png",
     flag: "india",
   },
   {
@@ -278,7 +278,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/19_jalodbust.png",
     flag: "india",
   },
   {
@@ -317,7 +317,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/22_gto_pay.png",
     flag: "india",
   },
   {
@@ -343,7 +343,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/24_fabrik.png",
     flag: "india",
   },
   {
@@ -356,7 +356,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2G",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/25_clear_water.png",
     flag: "india",
   },
   {
@@ -395,7 +395,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/28_statvalu.png",
     flag: "india",
   },
   {
@@ -408,7 +408,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "-",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/29_healthsure.png",
     flag: "india",
   },
   {
@@ -447,7 +447,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/32_stocktick.png",
     flag: "india",
   },
   {
@@ -460,7 +460,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/33_offset_global.png",
     flag: "india",
   },
   {
@@ -473,7 +473,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/34_manentia.png",
     flag: "india",
   },
   {
@@ -512,7 +512,7 @@ export const startupsList: StartupProps[] = [
     vertical: "FinTech",
     business_model: "B2B2C",
     country: "India",
-    logo: "/assets/startups/logos/37_VITT.PNG",
+    logo: "/assets/startups/logos/37_vitt.png",
     flag: "india",
   },
   {
@@ -525,7 +525,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/38_pentavalent.png",
     flag: "india",
   },
   {
@@ -538,7 +538,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/39_gfresh.png",
     flag: "india",
   },
   {
@@ -551,7 +551,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/40_vector.png",
     flag: "india",
   },
   {
@@ -577,7 +577,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/42_veenero.png",
     flag: "india",
   },
   {
@@ -590,7 +590,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2G",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/43_aspalli.png",
     flag: "india",
   },
   {
@@ -603,7 +603,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/44_teakshed.png",
     flag: "india",
   },
   {
@@ -616,7 +616,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/45_swayam.png",
     flag: "india",
   },
   {
@@ -629,7 +629,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/46_canorx.png",
     flag: "india",
   },
   {
@@ -655,7 +655,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/48_proenx.png",
     flag: "india",
   },
   {
@@ -681,7 +681,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/50_austhraa.png",
     flag: "india",
   },
   {
@@ -694,7 +694,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/51_divine.png",
     flag: "india",
   },
   {
@@ -707,7 +707,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/52_dhanvantri.png",
     flag: "india",
   },
   {
@@ -720,7 +720,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/53_techxcl.png",
     flag: "india",
   },
   {
@@ -746,7 +746,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/55_azooka.png",
     flag: "india",
   },
   {
@@ -759,7 +759,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/56_dentifrice.png",
     flag: "india",
   },
   {
@@ -772,7 +772,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2G",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/57_hicet.png",
     flag: "india",
   },
   {
@@ -785,7 +785,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/58_saptkrishi.png",
     flag: "india",
   },
   {
@@ -798,7 +798,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/59_whrrl.png",
     flag: "india",
   },
   {
@@ -811,7 +811,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/60_organic_mile.png",
     flag: "india",
   },
   {
@@ -824,7 +824,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B",
     country: "USA",
-    logo: null,
+    logo: "/assets/startups/logos/61_xrathus.png",
     flag: "usa",
   },
   {
@@ -837,7 +837,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "B2B2C",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/62_neidhal.png",
     flag: "india",
   },
   {
@@ -850,7 +850,7 @@ export const startupsList: StartupProps[] = [
     vertical: "-",
     business_model: "-",
     country: "India",
-    logo: null,
+    logo: "/assets/startups/logos/63_uravu.png",
     flag: "india",
   },
 ];
