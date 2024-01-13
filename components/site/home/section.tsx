@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Section({ children }: React.PropsWithChildren) {
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
 
   const variants = {
