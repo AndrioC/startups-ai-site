@@ -2,10 +2,9 @@ import Image from "next/image";
 import { useLocale } from "next-intl";
 
 import { teamList } from "@/app/(site)/data";
-import aboutUsTopImage from "@/assets/img/about-us-top-image.svg";
+import aboutUsTopImage from "@/assets/img/about-top-image.svg";
 import TeamCard from "@/components/site/about/team-card";
-
-import Section from "../../../../components/site/home/section";
+import Section from "@/components/site/home/section";
 
 export default function PlansPage() {
   const lang = useLocale();
@@ -37,7 +36,7 @@ export default function PlansPage() {
             </p>
             <Image
               src={aboutUsTopImage}
-              alt="about-us-top-image"
+              alt="about-top-image"
               className="w-[230px] h-[230px] lg:w-[500px] lg:h-[500px]"
             />
           </div>

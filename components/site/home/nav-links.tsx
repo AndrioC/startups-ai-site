@@ -15,7 +15,7 @@ export default function NavLinks() {
     { _id: 102, title: t("nav-title-plans"), href: "/plans" },
     { _id: 103, title: "Startups", href: "/startups" },
     { _id: 104, title: t("nav-title-experts"), href: "/experts" },
-    { _id: 105, title: t("nav-title-about-us"), href: "/about-us" },
+    { _id: 105, title: t("nav-title-about"), href: "/about" },
   ];
   return (
     <>
