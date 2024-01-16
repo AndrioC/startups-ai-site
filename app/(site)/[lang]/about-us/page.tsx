@@ -120,7 +120,7 @@ export default function PlansPage() {
         <Section>
           <div className="flex flex-col items-center gap-10 mb-10 w-[400px] lg:w-full">
             <h1 className="text-4xl uppercase text-gray-700">Nosso time</h1>
-            <div className="container grid grid-cols-2 lg:grid-cols-3 lg:place-items-center lg:gap-y-8 gap-x-20 lg:gap-x-0">
+            <div className="container grid grid-cols-2 lg:grid-cols-3 lg:place-items-center lg:gap-y-8 gap-x-20 lg:gap-x-14">
               {data.map((value) => (
                 <TeamCard
                   key={value.id}
