@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="container grid sm:grid-cols-1 md:grid-cols-3 w-[500px] gap-y-3 place-items-center">
+      <div className="container grid sm:grid-cols-1 md:grid-cols-3 w-[300px] md:w-[500px] gap-y-3 place-items-center">
         <CountUpNumbers
           title={t("countup-startup-title")}
           img={startupImage}
