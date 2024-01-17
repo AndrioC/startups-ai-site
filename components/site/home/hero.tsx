@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 
 import heroBg from "@/assets/img/hero-bg.svg";
 
@@ -9,6 +10,8 @@ import Container from "./container";
 
 export default function Hero() {
   const t = useTranslations("Home");
+
+  const lang = useLocale();
   return (
     <section
       id="Hero"
@@ -41,14 +44,11 @@ export default function Hero() {
                   </span>
                 </li>
               </ul>
-              <Button
-                variant="solid"
-                color="blue"
-                className="mt-10 w-40"
-                href="#Subscription"
-              >
-                {t("hero-button-subscription")}
-              </Button>
+              <Link href={`${lang}/plans`}>
+                <Button variant="solid" color="blue" className="mt-10">
+                  {t("hero-button-subscription")}
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
