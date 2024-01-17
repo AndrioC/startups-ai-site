@@ -209,5 +209,37 @@
     "about-fourth-text-third-section": "We position ourselves in the market not as competitors to excellent acceleration programs like those offered by our institutional partners Hub Inovativa or Founders Institute but as a subsequent stage for graduated Startups.",
 
     "about-our-team-title": "Our Team"
+  },
+
+  "Plans": {
+    "plan-title": "Choose the best plan for you",
+    "plan-best-option-text": "Best option",
+    "plan-month-text": "monthly",
+    "plan-feature-title": "Includes",
+
+    "plan-startup-title": "Startup",
+
+    "plan-startup-price-free": "$ 0",
+    "plan-startup-price-premium": "$ 19",
+
+    "plan-startup-first-feature-free": "Display of the Startup's logo and description to Investors, Mentors, and Companies from over 80 countries worldwide.",
+
+    "plan-startup-first-feature-premium": "All benefits from the free plan",
+    "plan-startup-second-feature-premium": "Global prospecting, using Artificial Intelligence, in over 80 countries worldwide.",
+    "plan-startup-third-feature-premium": "IFIA Certificate",
+    "plan-startup-fourth-feature-premium": "Discounts on consultations, courses, and events",
+    "plan-startup-fifth-feature-premium": "Exclusive discounts offered by partner companies",
+
+    "plan-expert-title": "Expert",
+
+    "plan-expert-price-free": "$ 0",
+    "plan-expert-price-premium": "$ 19",
+
+    "plan-expert-first-feature-free": "Display of your expertise and photo on our website visible in our network across more than 80 countries worldwide.",
+
+    "plan-expert-first-feature-premium": "All benefits from the free plan",
+    "plan-expert-second-feature-premium": "Global prospecting, using Artificial Intelligence, in over 80 countries worldwide.",
+
+    "plan-purchase-button-text": "Purchase plan"
   }
 }

@@ -212,5 +212,39 @@
     "about-fourth-text-third-section": "Nos posicionamos no mercado não como um concorrente aos excelentes programas de aceleração como aqueles oferecidos pelos nossos parceiros institucionais Hub Inovativa ou Founders Institute, mas como uma etapa posterior a ser seguidas pelas Startups graduadas.",
 
     "about-our-team-title": "Nosso time"
+  },
+
+  "Plans": {
+    "plan-title": "Escolha o melhor plano para você",
+    "plan-best-option-text": "Melhor opção",
+    "plan-month-text": "mensal",
+    "plan-feature-title": "Inclui",
+
+    "plan-startup-title": "Startup",
+
+    "plan-startup-price-free": "R$ 0",
+    "plan-startup-price-premium": "R$ 99",
+    "plan-startup-price-month": "mensal",
+
+    "plan-startup-first-feature-free": "Exibição da logo e descrição da Startup para Investidores, Mentores e Empresas de mais de 80 países no mundo.",
+
+    "plan-startup-first-feature-premium": "Todos os benefícios do plano free",
+    "plan-startup-second-feature-premium": "Prospecção global, com uso de Inteligência Artificial, em mais de 80 países do mundo.",
+    "plan-startup-third-feature-premium": "Certificado IFIA",
+    "plan-startup-fourth-feature-premium": "Descontos nas consultorias, curso e eventos",
+    "plan-startup-fifth-feature-premium": "Descontos exclusivos oferecidos por empresas parceiras",
+
+    "plan-expert-title": "Especialista",
+
+    "plan-expert-price-free": "R$ 0",
+    "plan-expert-price-premium": "R$ 99",
+    "plan-expert-price-month": "mensal",
+
+    "plan-expert-first-feature-free": "Exibição de suas expertises e foto em nosso site que está visível em nossa rede em mais de 80 países no mundo.",
+
+    "plan-expert-first-feature-premium": "Todos os benefícios do plano free",
+    "plan-expert-second-feature-premium": "Prospecção global, com uso de Inteligência Artificial, em mais de 80 países do mundo.",
+
+    "plan-purchase-button-text": "Adquirir plano"
   }
 }
