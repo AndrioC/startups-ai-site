@@ -43,7 +43,7 @@ export default function CardExpert({
                 width={120}
                 height={120}
                 src={photo ?? userPlaceHolder}
-                alt="startup-image"
+                alt={`${name}-image`}
               />
             </div>
             <div className="flex mt-2">
