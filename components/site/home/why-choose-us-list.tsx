@@ -11,8 +11,8 @@ export default function WhyChooseUsList() {
   const t = useTranslations("Home");
   return (
     <div className="mt-8 lg:mt-10 flex flex-col items-center lg:items-start">
-      <ul className="md:flex md:flex-col lg:grid lg:grid-cols-2 lg:gap-20">
-        <li className="flex flex-col items-center justify-center mb-10 lg:flex-row lg:mb-0">
+      <ul className="md:flex md:flex-col lg:grid lg:grid-cols-2 lg:gap-20 ">
+        <li className="flex flex-col items-center mb-10 lg:flex-row lg:mb-0">
           <Image src={globalConnectionsIcon} alt="global-connections-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
@@ -23,7 +23,7 @@ export default function WhyChooseUsList() {
             </p>
           </div>
         </li>
-        <li className="flex flex-col items-center justify-center mb-10 lg:flex-row lg:mb-0">
+        <li className="flex flex-col items-center mb-10 lg:flex-row lg:mb-0">
           <Image src={colaborationIcon} alt="global-connections-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
@@ -34,7 +34,7 @@ export default function WhyChooseUsList() {
             </p>
           </div>
         </li>
-        <li className="flex flex-col items-center justify-center mb-10 lg:flex-row lg:mb-0">
+        <li className="flex flex-col items-center mb-10 lg:flex-row lg:mb-0">
           <Image src={globalInnovationIcon} alt="global-connections-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
@@ -45,7 +45,7 @@ export default function WhyChooseUsList() {
             </p>
           </div>
         </li>
-        <li className="flex flex-col items-center justify-center mb-10 lg:flex-row lg:mb-0">
+        <li className="flex flex-col items-center mb-10 lg:flex-row lg:mb-0 w-[350px]">
           <Image src={mentorshipIcon} alt="global-connections-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
@@ -56,7 +56,7 @@ export default function WhyChooseUsList() {
             </p>
           </div>
         </li>
-        <li className="flex flex-col items-center justify-center lg:flex-row lg:mb-0">
+        <li className="flex flex-col items-center lg:flex-row lg:mb-0">
           <Image src={winWinIcon} alt="global-connections-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">

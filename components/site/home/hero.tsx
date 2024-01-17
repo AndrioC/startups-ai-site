@@ -40,18 +40,6 @@ export default function Hero() {
                     {t("hero-second-li")}
                   </span>
                 </li>
-                <li className="flex items-center mt-2 md:mt-0">
-                  <CheckCircle />
-                  <span className="ml-3 text-base text-gray-500">
-                    {t("hero-third-li")}
-                  </span>
-                </li>
-                <li className="flex items-center mt-2 md:mt-0">
-                  <CheckCircle />
-                  <span className="ml-3 text-base text-gray-500">
-                    {t("hero-fourth-li")}
-                  </span>
-                </li>
               </ul>
               <Button
                 variant="solid"
