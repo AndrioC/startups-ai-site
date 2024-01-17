@@ -188,5 +188,26 @@
       "fourth-term-text": "Thank you for choosing Global Link Startups. We are committed to providing an efficient and satisfactory delivery experience for our digital products. If you need more information or assistance, please contact our support team.",
       "last-update": "Last updated: December 2, 2023"
     }
+  },
+
+  "About": {
+    "about-title": "About",
+    "about-sub-title": "Welcome to Startups Global Link: Business Platform for Startups with AI.",
+
+    "about-text-first-section": "We are a Brazilian Startup created by entrepreneurs with complementary skills, experiences, and knowledge, 100% centered on our clients and focused on fulfilling our purpose and delivering with quality, agility, transparency, and security.",
+
+    "about-title-first-section": "Our Mission",
+    "about-first-text-first-section": "Our purpose is to help Startups increase their survival and success rates by expanding their national and international networking, generating new valuable business and partnership opportunities, and increasing their profitability.",
+
+    "about-title-second-section": "How We Operate",
+    "about-first-text-second-section": "Our platform features advanced artificial intelligence resources that enable us to work with data intelligence. Through business matchmaking (synergistic business connections) facilitated by our exclusive and powerful software combined with international networking, we can offer various solutions to promote sustainable growth and scalability for your Startup.",
+
+    "about-title-third-section": "What sets us apart from the Startup Market Players",
+    "about-first-text-third-section": "It's not just cutting-edge artificial intelligence technology that sets us apart but primarily our international networking. We hold exclusive rights to the IFIA-ABIPIR International Acceleration and Connections Program, making us uniquely positioned to internationalize your business or connect your Startup with relevant Brazilian partners.",
+    "about-second-text-third-section": "IFIA (International Federation of Inventor's Association) is the world's largest institution located in Geneva, Switzerland, represented in over 70 countries (www.ifia.com).",
+    "about-third-text-third-section": "Another distinction is that we are the only Startup using our platform to run a continuous flow connection program for Startups, as opposed to the cycle format used in acceleration programs. In other words, we are tirelessly working to find the best solutions for your Startup to achieve its goals 24 hours a day, 7 days a week, and 365 days a year. We are not competitors to acceleration programs but a stage following them.",
+    "about-fourth-text-third-section": "We position ourselves in the market not as competitors to excellent acceleration programs like those offered by our institutional partners Hub Inovativa or Founders Institute but as a subsequent stage for graduated Startups.",
+
+    "about-our-team-title": "Our Team"
   }
 }

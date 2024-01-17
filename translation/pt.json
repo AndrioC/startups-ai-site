@@ -191,5 +191,26 @@
       "fourth-term-text": "Agradecemos por escolher a Startups Global Link. Estamos comprometidos em oferecer uma experiência de entrega eficiente e satisfatória para nossos produtos digitais. Se precisar de mais informações ou assistência, entre em contato com nossa equipe de suporte.",
       "last-update": "Última atualização: 02 de Dezembro de 2023"
     }
+  },
+
+  "About": {
+    "about-title": "Sobre",
+    "about-sub-title": "Bem vindo(a) à Startups Global Link: Plataforma de Negócios para Startups com IA.",
+
+    "about-text-first-section": "Somos uma Startup Brasileira criada por empreendedores com competências, experiências e conhecimentos complementares 100% centrados nos nossos clientes e focados em cumprir o nosso propósito e realizar entregas com qualidade, agilidade, transparência e segurança.",
+
+    "about-title-first-section": "Nossa Missão",
+    "about-first-text-first-section": "Nosso propósito é ajudar as Startups a aumentarem suas taxas de sobrevivência e sucesso ampliando sua networking nacional e internacional gerando novos negócios e parcerias de valor e aumentando a sua lucratividade.",
+
+    "about-title-second-section": "Como operacionalizamos",
+    "about-first-text-second-section": "A nossa plataforma conta com recursos avançados de inteligência artificial que permite que nós trabalhemos com a inteligência de dados e, por meio do business matchmaking (conexões sinérgicas de negócios) realizado pelo nosso exclusivo e poderoso Software associado à networking internacional, possamos oferecer à sua Startup diversas soluções para promover o crescimento sustentável e a escalabilidade.",
+
+    "about-title-third-section": "O que nos diferencia dos players do mercado de Startups",
+    "about-first-text-third-section": "Não se trata somente a tecnologia de ponta de inteligência artificial que nos diferencia mas principalmente a nossa networking internacional visto que somos a Startup a deter os direitos de exclusividade sobre o Programa de aceleração e conexões internacionais da IFIA-ABIPIR, fato que nos credencia como quem terá mais facilidade em internacionalizar o seu negócio ou conectar sua Startup com relevantes parceiros Brasileiros.",
+    "about-second-text-third-section": "A IFIA (International Federation of Inventor's Association) é a maior instituição do mundo localizada em Genebra na Suíça e encontra-se representada em mais de 70 países (www.ifia.com).",
+    "about-third-text-third-section": "Outra diferença diz respeito ao fato de sermos a única Startup a utilizar nossa plataforma para executar um programa de conexão para Startups em forma de fluxo contínuo e não no formato de ciclos como nos programas de aceleração, ou seja, estaremos trabalhando arduamente para buscar as melhores soluções para a sua Startup alcançar os objetivos 24 horas por dia, 7 dias por semana e 365 dias por ano. Não somos concorrentes dos programas de aceleração mas um estágio posterior a estes.",
+    "about-fourth-text-third-section": "Nos posicionamos no mercado não como um concorrente aos excelentes programas de aceleração como aqueles oferecidos pelos nossos parceiros institucionais Hub Inovativa ou Founders Institute, mas como uma etapa posterior a ser seguidas pelas Startups graduadas.",
+
+    "about-our-team-title": "Nosso time"
   }
 }

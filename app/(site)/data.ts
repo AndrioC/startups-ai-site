@@ -1099,7 +1099,7 @@ export const teamList: TeamProps[] = [
     name: "Maria Goreti",
     linkedin: "https://www.linkedin.com/in/maria-goreti-freitas-phd-68a27738/",
     position_pt: "Advisor de Relações Internacionais",
-    position_en: "Advisor de Relações Internacionais",
+    position_en: "International Relations Advisor",
     photo: "/assets/team/04_maria.jpeg",
   },
   {
@@ -1107,7 +1107,7 @@ export const teamList: TeamProps[] = [
     name: "Mário Alex",
     linkedin: "https://www.linkedin.com/in/marioalexsantos/",
     position_pt: "Advisor de Gestão de Projetos e Experiência do Cliente",
-    position_en: "Advisor de Gestão de Projetos e Experiência do Cliente",
+    position_en: "Project Management and Customer Experience Advisor",
     photo: "/assets/team/05_mario.jpeg",
   },
   {
@@ -1115,7 +1115,7 @@ export const teamList: TeamProps[] = [
     name: "Yadira Galeano",
     linkedin: "https://www.linkedin.com/in/yadirdiazgaleano/",
     position_pt: "Advisor de Gestão de Risco e Continuidade do Negócio",
-    position_en: "Advisor de Gestão de Risco e Continuidade do Negócio",
+    position_en: "Risk Management and Business Continuity Advisor",
     photo: "/assets/team/06_yadira.jpeg",
   },
   {
@@ -1123,7 +1123,7 @@ export const teamList: TeamProps[] = [
     name: "Marcos Tito",
     linkedin: "https://www.linkedin.com/in/mrctito/",
     position_pt: "Advisor de IA",
-    position_en: "Advisor de IA",
+    position_en: "AI Advisor",
     photo: "/assets/team/07_marcos.jpeg",
   },
   {
@@ -1131,7 +1131,7 @@ export const teamList: TeamProps[] = [
     name: "Danilo Melo",
     linkedin: "https://www.linkedin.com/in/danilo-melo-bb8586202/",
     position_pt: "Advisor de Estratégia",
-    position_en: "Advisor de Estratégia",
+    position_en: "Strategy Advisor",
     photo: "/assets/team/08_danilo.jpeg",
   },
   {
@@ -1139,7 +1139,7 @@ export const teamList: TeamProps[] = [
     name: "Marco de Biasi",
     linkedin: "https://www.linkedin.com/in/debiasimarco/",
     position_pt: "Advisor de Investimentos",
-    position_en: "Advisor de Investimentos",
+    position_en: "Investment Advisor",
     photo: "/assets/team/09_marco.jpeg",
   },
   {
