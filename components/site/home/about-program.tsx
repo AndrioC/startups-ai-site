@@ -59,7 +59,7 @@ export default function OurSolutions() {
             className="w-96 lg:w-auto"
           />
         </div>
-        <div className="flex items-center justify-center bg-green-300 gap-20">
+        <div className="flex items-center justify-center gap-20">
           <Link href="">
             <Button variant="solid" color="blue" className="mt-10">
               {t("subscription-startups-subscription-button")}
