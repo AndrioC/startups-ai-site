@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import portfImage01 from "@/assets/img/portf-img01.svg";
@@ -6,6 +7,7 @@ import portfImage02 from "@/assets/img/portf-img02.svg";
 import portfImage03 from "@/assets/img/portf-img03.svg";
 import portfImage04 from "@/assets/img/portf-img04.svg";
 
+import Button from "./button";
 import Container from "./container";
 import ExtraLogos from "./extra-logos";
 
@@ -56,6 +58,18 @@ export default function OurSolutions() {
             alt="port-image-04"
             className="w-96 lg:w-auto"
           />
+        </div>
+        <div className="flex items-center justify-center bg-green-300 gap-20">
+          <Link href="">
+            <Button variant="solid" color="blue" className="mt-10">
+              {t("subscription-startups-subscription-button")}
+            </Button>
+          </Link>
+          <Link href="">
+            <Button variant="solid" color="blue" className="mt-10">
+              {t("subscription-experts-subscription-button")}
+            </Button>
+          </Link>
         </div>
       </Container>
       <ExtraLogos />
