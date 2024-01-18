@@ -63,6 +63,9 @@
     "contact-us-message-placeholder": "Mensagem",
     "contact-us-button-text": "Enviar Mensagem",
 
+    "contact-email-sending-text": "Enviando..",
+    "contact-email-sent-message": "E-mail enviado com sucesso!",
+
     "footer-support-title": "Suporte",
     "footer-support-first-text": "Termos e Condições",
     "footer-support-second-text": "Política de Privacidade",

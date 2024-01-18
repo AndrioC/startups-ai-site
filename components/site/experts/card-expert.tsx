@@ -90,9 +90,9 @@ export default function CardExpert({
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-10">
+      {/* <div className="flex justify-center mt-10">
         <Button variant="blue">{t("expert-learn-more")}</Button>
-      </div>
+      </div> */}
     </div>
   );
 }

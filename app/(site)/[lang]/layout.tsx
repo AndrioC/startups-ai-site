@@ -6,6 +6,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 
 import Footer from "@/components/site/home/footer";
 import Header from "@/components/site/home/header";
+import { Toaster } from "@/components/ui/sonner";
 
 import "@radix-ui/themes/styles.css";
 import "@/app/globals.css";
@@ -44,6 +45,7 @@ export default function RootLayout({
               {children}
               <Footer />
             </main>
+            <Toaster position="bottom-center" />
           </Theme>
         </NextIntlClientProvider>
       </body>
