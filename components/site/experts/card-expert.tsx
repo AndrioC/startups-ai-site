@@ -33,7 +33,7 @@ export default function CardExpert({
   const t = useTranslations("Expert");
 
   return (
-    <div className="border-4 border-gray-200 p-4 w-[400px] rounded-[100px] h-[520px] flex flex-col justify-center">
+    <div className="border-4 border-gray-200 p-4 w-[400px] rounded-[100px] lg:h-[550px] flex flex-col justify-center">
       <div className="flex items-center gap-3 h-[190px]">
         <div className="flex flex-col w-[200px]">
           <div className="flex flex-col w-[120px] items-center text-center">
@@ -80,13 +80,13 @@ export default function CardExpert({
           {description ?? t("no-description-card-text")}
         </p>
       </div>
-      <div className="grid md:grid-cols-2 grid-cols-2 gap-0.5 mt-3 h-[150px]">
+      <div className="grid md:grid-cols-2 grid-cols-2 gap-0.5 mt-3 h-[150px] w-full ml-3">
         {work_field.slice(0, 6).map((value) => (
           <div
             key={value}
-            className="flex items-center justify-center border-2 border-gray-400 rounded-full p-2 w-[150px] h-[40px] text-xs text-gray-500 text-center"
+            className="flex items-center justify-center border-2 border-gray-400 rounded-full p-2 w-[150px] h-[40px] text-gray-500 text-center"
           >
-            <span className="py-2">{value}</span>
+            <span className="py-2 text-xs lg:text-xs">{value}</span>
           </div>
         ))}
       </div>
