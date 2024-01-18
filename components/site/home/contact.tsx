@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { FaSpinner } from "react-icons/fa";
-import { FcOk } from "react-icons/fc";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
