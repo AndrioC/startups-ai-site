@@ -30,22 +30,14 @@ export default function ExtraLogos() {
   ];
 
   return (
-    <div className="bg-blue-100">
+    <div className="flex items-center justify-center mt-10">
       <ul
         role="list"
-        className="mt-8 flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8"
+        className="container grid sm:grid-cols-1 md:grid-cols-3 gap-y-3 place-items-center"
       >
         {logos.map(({ title, logo }) => (
-          <li
-            key={title}
-            className="w-24 sm:w-32 md:w-30 lg:w-30 mx-auto mb-4 md:mb-6 lg:mb-8"
-          >
-            <Image
-              src={logo}
-              alt={title}
-              className="h-24 sm:h-32 md:h-40 lg:h-44"
-              unoptimized
-            />
+          <li key={title} className="w-32 lg:w-44 mx-auto mb-4 md:mb-6 lg:mb-8">
+            <Image src={logo} alt={title} width={250} height={250} />
           </li>
         ))}
       </ul>

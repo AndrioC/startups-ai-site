@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
 
-import abipirLogo from "@/assets/img/logos/abipir-logo-100.svg";
-import globalLinkLogo from "@/assets/img/logos/global-link-logo-100.svg";
-import ifiaLogo from "@/assets/img/logos/ifia-logo-100.svg";
+import abipirLogo from "@/assets/img/logos/abipir-logo.svg";
+import globalLinkLogo from "@/assets/img/logos/global-link-logo.svg";
+import ifiaLogo from "@/assets/img/logos/ifia-logo.svg";
 
 import AboutInfoCard from "./about-info-card";
 import Container from "./container";
