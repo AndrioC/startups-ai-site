@@ -65,6 +65,7 @@
 
     "contact-email-sending-text": "Sending..",
     "contact-email-sent-message": "E-mail sent successfully!",
+    "contact-email-error-message": "Error sending email, please try again later.",
 
     "footer-support-title": "Support",
     "footer-support-first-text": "Terms and Conditions",
