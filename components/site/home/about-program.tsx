@@ -14,7 +14,7 @@ import ExtraLogos from "./extra-logos";
 export default function OurSolutions() {
   const t = useTranslations("Home");
   return (
-    <section id="OUR-SOLUTIONS" className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <section id="OUR-SOLUTIONS" className="py-20 sm:py-32 lg:pb-5 xl:pb-5">
       <Container className="-mt-20">
         <div className="w-full flex flex-col items-center">
           <h2
@@ -72,7 +72,6 @@ export default function OurSolutions() {
           </Link>
         </div>
       </Container>
-      <ExtraLogos />
     </section>
   );
 }

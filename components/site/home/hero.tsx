@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="Hero"
-      className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36"
+      className="overflow-hidden py-20 sm:py-32 lg:pb-24 xl:pb-24"
     >
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20 ">

@@ -24,7 +24,7 @@ export default function WhyChooseUsList() {
           </div>
         </li>
         <li className="flex flex-col items-center mb-10 lg:flex-row lg:mb-0">
-          <Image src={colaborationIcon} alt="global-connections-icon" />
+          <Image src={colaborationIcon} alt="colaboration-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
               {t("why-choose-us-second-title")}
@@ -35,7 +35,7 @@ export default function WhyChooseUsList() {
           </div>
         </li>
         <li className="flex flex-col items-center mb-10 lg:flex-row lg:mb-0">
-          <Image src={globalInnovationIcon} alt="global-connections-icon" />
+          <Image src={globalInnovationIcon} alt="inovation-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
               {t("why-choose-us-third-title")}
@@ -46,7 +46,7 @@ export default function WhyChooseUsList() {
           </div>
         </li>
         <li className="flex flex-col items-center mb-10 lg:flex-row lg:mb-0 w-[350px]">
-          <Image src={mentorshipIcon} alt="global-connections-icon" />
+          <Image src={mentorshipIcon} alt="mentorship-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
               {t("why-choose-us-fourth-title")}
@@ -57,7 +57,7 @@ export default function WhyChooseUsList() {
           </div>
         </li>
         <li className="flex flex-col items-center lg:flex-row lg:mb-0">
-          <Image src={winWinIcon} alt="global-connections-icon" />
+          <Image src={winWinIcon} alt="win-win-icon" />
           <div className="flex flex-col items-center px-10 lg:items-start lg:ml-3 lg:px-0">
             <span className="text-base text-gray-500 font-semibold">
               {t("why-choose-us-fifth-title")}

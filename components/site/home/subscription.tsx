@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
-import subsImage01 from "@/assets/img/subs-img01.svg";
 import subsImage02 from "@/assets/img/subs-img02.svg";
 import subsImage03 from "@/assets/img/subs-img03.svg";
 
@@ -15,7 +14,7 @@ export default function Subscription() {
   const lang = useLocale();
 
   return (
-    <section id="Subscription" className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <section id="Subscription" className="py-20 sm:py-32 lg:pb-5 xl:pb-5">
       <Container className="-mt-20">
         <div className="w-full flex flex-col items-center">
           <h2
@@ -24,22 +23,8 @@ export default function Subscription() {
           >
             {t("subscription-title")}
           </h2>
-          {/* <div className="flex flex-col items-center">
-            <p className="mt-6 w-96 md:w-3/6 text-lg md:text-2xl lg:text-2xl text-gray-500 gap-7 font-light">
-              {t("subscription-first-text")}
-            </p>
-            <p className="mt-6 w-96 md:w-3/6 text-lg md:text-2xl lg:text-2xl text-gray-500 gap-7 font-light">
-              {t("subscription-second-text")}
-            </p>
-          </div> */}
         </div>
         <div className="flex flex-col items-center justify-center mt-10 gap-10">
-          {/* <Image
-            src={subsImage01}
-            alt="subs-image-01"
-            className="w-64 lg:w-96"
-          /> */}
-
           <div className="flex flex-col justify-center items-center gap-10 lg:flex-row">
             <div className="flex flex-col justify-center items-center">
               <Image
