@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import { Button } from "@/components/ui/button";
+
 interface PricingCardProps {
   plan_name: string;
   premium: boolean;
@@ -21,7 +23,7 @@ export default function PricingCard({
   const t = useTranslations("Plans");
   return (
     <div
-      className={`h-[580px] lg:h-[700px] w-[250px] ${premium ? "dark" : ""}`}
+      className={`h-[630px] lg:h-[760px] w-[250px] ${premium ? "dark" : ""}`}
     >
       <div className="relative flex flex-col h-full p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow shadow-slate-950/5">
         {premium && (
@@ -43,7 +45,7 @@ export default function PricingCard({
               premium ? 50 : 200
             } border-solid my-2`}
           ></div>
-          <div className="flex flex-col h-[270px] lg:h-[390px]">
+          <div className="flex flex-col h-[270px] lg:h-[400px]">
             <div className="flex flex-col items-center">
               <div className="inline-flex items-baseline mb-2">
                 <span className="text-slate-900 dark:text-slate-200 font-bold text-lg lg:text-4xl">
@@ -73,6 +75,11 @@ export default function PricingCard({
                 );
               })}
             </ul>
+          </div>
+          <div className="flex items-center justify-center mt-2">
+            <Button variant="link" className="text-xs lg:text-sm">
+              {t("plan-learn-more-text")}
+            </Button>
           </div>
           <a
             className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 mt-10 text-xs lg:text-sm"
