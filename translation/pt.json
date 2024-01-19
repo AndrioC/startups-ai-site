@@ -256,6 +256,55 @@
 
     "plan-learn-more-text": "Saiba mais",
 
-    "plan-purchase-button-text": "Adquirir plano"
+    "plan-purchase-button-text": "Adquirir plano",
+
+    "plan-learn-more-startups-title": "VEJA COMO É O PROGRAMA PARA SUA STARTUP",
+    "plan-learn-more-startups-first-text": "O objetivo do Programa é ajudar sua Startup a sobreviver mais tempo, criando oportunidades para ela se conectar com pessoas e empresas que podem ajudá-la a crescer e escalar seus negócios.",
+
+    "plan-learn-more-startups-first-section-title": "CONHEÇA O PLANO FREE",
+    "plan-learn-more-startups-first-section-first-text": "Neste plano, sua Startup terá os seguintes benefícios:",
+    "plan-learn-more-startups-first-section-first-text-bullet": "Exibição da logo e descrição da sua Startup para Investidores, Mentores e Empresas de mais de 80 países no mundo.",
+
+    "plan-learn-more-startups-second-section-title": "ASSINE O PLANO PREMIUM",
+    "plan-learn-more-startups-second-section-first-text": "O Plano Premium aumenta as chances de negócios, bem como acesso à toda a rede, pois, sua Startup passa a ser alvo de prospecção de negócios realizada pelo Global Innovation Scouting System com nossa ferramenta de Inteligência Artificial.",
+    "plan-learn-more-startups-second-section-second-text": "Neste plano, sua Startup terá os seguintes benefícios:",
+
+    "plan-learn-more-startups-second-section-bullets": {
+      "first-bullet": "Todos os benefícios do plano free",
+      "second-bullet": {
+        "text": "Prospecção global, com uso de Inteligência Artificial, em mais de 80 países no mundo de:",
+        "first-sub-bullet": "Investidores",
+        "second-sub-bullet": "Mentores e consultores",
+        "third-sub-bullet": "Outras Startups (parceria)",
+        "fourth-sub-bullet": "Potenciais clientes da Startup (públicos ou privados)",
+        "fifth-sub-bullet": "Empresas praticantes do Open Innovation"
+      },
+      "third-bullet": "Certificado IFIA (Federação Internacional de Inventores e Associados)",
+      "fourth-bullet": "Descontos nas consultorias, curso e eventos",
+      "fifth-bullet": "Descontos exclusivos oferecidos por empresas parceiras"
+    },
+
+    "plan-startups-subscription-free-plan-text": "Inscreva-se no plano free",
+    "plan-startups-subscription-premium-plan-text": "Assinar o plano premium",
+
+    "plan-learn-more-experts-title": "SEJA UM ESPECIALISTA DE NEGÓCIOS DE STARTUPS",
+    "plan-learn-more-experts-first-text": "O objetivo do nosso Programa é ajudar as Startups a sobreviverem mais tempo, criando oportunidades para ela se conectar com pessoas e empresas que podem ajudá-las a crescerem e escalarem seus negócios.",
+    "plan-learn-more-experts-second-text": "E você pode ser o Especialista de Negócios de Startups que elas precisam.",
+
+    "plan-learn-more-experts-first-section-title": "CONHEÇA O PLANO FREE",
+    "plan-learn-more-experts-first-section-first-text": "Neste plano, você terá os seguintes benefícios:",
+    "plan-learn-more-experts-first-section-first-text-bullet": "Exibição de suas expertises e foto em nosso site que está visível em nossa rede em mais de 80 países no mundo.",
+
+    "plan-learn-more-experts-second-section-title": "ASSINE O PLANO PREMIUM",
+    "plan-learn-more-experts-second-section-first-text": "O Plano Premium aumenta as chances de negócios, bem como acesso à toda a rede, pois, você passa a ser alvo de prospecção de negócios realizada pelo Global Innovation Scouting System com nossa ferramenta de Inteligência Artificial.",
+    "plan-learn-more-experts-second-section-second-text": "Neste plano, você terá os seguintes benefícios:",
+
+    "plan-learn-more-experts-second-section-first-bullet": "Todos os benefícios do plano free",
+    "plan-learn-more-experts-second-section-second-bullet": "Certificado Internacional de Especialista de Negócio em Startups, credeciado pela IFIA.",
+    "plan-learn-more-experts-second-section-third-bullet": "Prospecção global, com uso de Inteligência Artificial, em mais de 80 países no mundo",
+    "plan-learn-more-experts-second-section-fourth-bullet": "Você poderá ser conectado com Startups, Empresas e Governos para prestar seus serviços de consultorias ou mentorias, conforme a demanada.",
+
+    "plan-experts-subscription-free-plan-text": "Inscreva-se no plano free",
+    "plan-experts-subscription-premium-plan-text": "Assinar o plano premium"
   }
 }

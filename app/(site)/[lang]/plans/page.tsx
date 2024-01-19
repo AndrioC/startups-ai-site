@@ -28,6 +28,10 @@ export default function PlansPage() {
       ? "https://buy.stripe.com/5kA7undE86ID3JefZ1"
       : "https://buy.stripe.com/fZebKD57C6IDcfKbIK?locale=pt";
 
+  const linkLearnMoreStartups = "plans/learn-more/startups";
+
+  const linkLearnMoreExperts = "plans/learn-more/experts";
+
   return (
     <main>
       <div className="flex flex-col items-center mt-10">
@@ -41,6 +45,7 @@ export default function PlansPage() {
             price={t("plan-startup-price-free")}
             img={startupImage}
             link={freePlanStartupsLink}
+            learn_more_link={linkLearnMoreStartups}
             features={[t("plan-startup-first-feature-free")]}
           />
           <PricingCard
@@ -49,6 +54,7 @@ export default function PlansPage() {
             price={t("plan-startup-price-premium")}
             img={startupImage}
             link={premiumPlanStartupsLink}
+            learn_more_link={linkLearnMoreStartups}
             features={[
               t("plan-startup-first-feature-premium"),
               t("plan-startup-second-feature-premium"),
@@ -63,6 +69,7 @@ export default function PlansPage() {
             price={t("plan-expert-price-free")}
             img={expertImage}
             link={freePlanExpertsLink}
+            learn_more_link={linkLearnMoreExperts}
             features={[t("plan-expert-first-feature-free")]}
           />
           <PricingCard
@@ -71,6 +78,7 @@ export default function PlansPage() {
             price={t("plan-expert-price-premium")}
             img={expertImage}
             link={premiumPlanExpertsLink}
+            learn_more_link={linkLearnMoreExperts}
             features={[
               t("plan-expert-first-feature-premium"),
               t("plan-expert-second-feature-premium"),

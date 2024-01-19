@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,8 @@ interface PricingCardProps {
   plan_name: string;
   premium: boolean;
   price: string;
-  img?: string;
+  img: string;
+  learn_more_link: string;
   link: string;
   features: string[];
 }
@@ -17,10 +19,12 @@ export default function PricingCard({
   premium,
   price,
   img,
+  learn_more_link,
   link,
   features,
 }: PricingCardProps) {
   const t = useTranslations("Plans");
+
   return (
     <div
       className={`h-[630px] lg:h-[760px] w-[250px] ${premium ? "dark" : ""}`}
@@ -77,9 +81,11 @@ export default function PricingCard({
             </ul>
           </div>
           <div className="flex items-center justify-center mt-2">
-            <Button variant="link" className="text-xs lg:text-sm">
-              {t("plan-learn-more-text")}
-            </Button>
+            <Link href={learn_more_link}>
+              <Button variant="link" className="text-xs lg:text-sm">
+                {t("plan-learn-more-text")}
+              </Button>
+            </Link>
           </div>
           <a
             className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 mt-10 text-xs lg:text-sm"

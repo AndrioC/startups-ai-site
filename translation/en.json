@@ -251,6 +251,55 @@
 
     "plan-learn-more-text": "Learn more",
 
-    "plan-purchase-button-text": "Purchase plan"
+    "plan-purchase-button-text": "Purchase plan",
+
+    "plan-learn-more-startups-title": "SEE HOW THE PROGRAM WORKS FOR YOUR STARTUP",
+    "plan-learn-more-startups-first-text": "The goal of the Program is to help your startup survive longer, creating opportunities for it to connect with people and companies that can help it grow and scale its business.",
+
+    "plan-learn-more-startups-first-section-title": "DISCOVER THE FREE PLAN",
+    "plan-learn-more-startups-first-section-first-text": "In this plan, your startup will have the following benefits:",
+    "plan-learn-more-startups-first-section-first-text-bullet": "Display of your startup's logo and description to investors, mentors, and companies from over 80 countries worldwide.",
+
+    "plan-learn-more-startups-second-section-title": "SUBSCRIBE TO THE PREMIUM PLAN",
+    "plan-learn-more-startups-second-section-first-text": "The Premium Plan increases business opportunities and provides access to the entire network, as your startup becomes a target for business prospecting conducted by the Global Innovation Scouting System with our Artificial Intelligence tool.",
+    "plan-learn-more-startups-second-section-second-text": "In this plan, your startup will have the following benefits:",
+
+    "plan-learn-more-startups-second-section-bullets": {
+      "first-bullet": "All the benefits of the free plan",
+      "second-bullet": {
+        "text": "Global prospecting, using Artificial Intelligence, in over 80 countries worldwide for:",
+        "first-sub-bullet": "Investors",
+        "second-sub-bullet": "Mentors and consultants",
+        "third-sub-bullet": "Other startups (partnership)",
+        "fourth-sub-bullet": "Potential clients of the startup (public or private)",
+        "fifth-sub-bullet": "Companies practicing Open Innovation"
+      },
+      "third-bullet": "IFIA Certificate (International Federation of Inventors and Associates)",
+      "fourth-bullet": "Discounts on consultations, courses, and events",
+      "fifth-bullet": "Exclusive discounts offered by partner companies"
+    },
+
+    "plan-startups-subscription-free-plan-text": "Subscribe to the free plan",
+    "plan-startups-subscription-premium-plan-text": "Subscribe to the premium plan",
+
+    "plan-learn-more-experts-title": "BECOME A STARTUP BUSINESS EXPERT",
+    "plan-learn-more-experts-first-text": "The goal of our Program is to help startups survive longer, creating opportunities for them to connect with people and companies that can help them grow and scale their businesses.",
+    "plan-learn-more-experts-second-text": "And you can be the Startup Business Expert they need.",
+
+    "plan-learn-more-experts-first-section-title": "DISCOVER THE FREE PLAN",
+    "plan-learn-more-experts-first-section-first-text": "In this plan, you will have the following benefits:",
+    "plan-learn-more-experts-first-section-first-text-bullet": "Display of your expertise and photo on our website, visible in our network in over 80 countries worldwide.",
+
+    "plan-learn-more-experts-second-section-title": "SUBSCRIBE TO THE PREMIUM PLAN",
+    "plan-learn-more-experts-second-section-first-text": "The Premium Plan increases business opportunities and provides access to the entire network, as you become a target for business prospecting conducted by the Global Innovation Scouting System with our Artificial Intelligence tool.",
+    "plan-learn-more-experts-second-section-second-text": "In this plan, you will have the following benefits:",
+
+    "plan-learn-more-experts-second-section-first-bullet": "All the benefits of the free plan",
+    "plan-learn-more-experts-second-section-second-bullet": "International Certification as a Startup Business Expert, accredited by IFIA.",
+    "plan-learn-more-experts-second-section-third-bullet": "Global prospecting, using Artificial Intelligence, in over 80 countries worldwide",
+    "plan-learn-more-experts-second-section-fourth-bullet": "You may be connected with startups, companies, and governments to provide your consultancy or mentoring services, as needed.",
+
+    "plan-experts-subscription-free-plan-text": "Subscribe to the free plan",
+    "plan-experts-subscription-premium-plan-text": "Subscribe to the premium plan"
   }
 }
