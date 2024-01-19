@@ -13,7 +13,6 @@ import logoInovativa from "@/assets/img/logos/inovativa-logo.svg";
 import logoMaxi from "@/assets/img/logos/maxi-logo.svg";
 import newEnglandInventsLogo from "@/assets/img/logos/new-england-invents-logo.png";
 import logoParImpacto from "@/assets/img/logos/parimpacto-logo.svg";
-import logoXrathus from "@/assets/img/logos/xrathus-logo.svg";
 
 export default function ExtraLogos() {
   const logos = [
@@ -50,43 +49,37 @@ export default function ExtraLogos() {
     },
     {
       _id: 2007,
-      title: "Xrathus",
-      logo: logoXrathus,
-      url: "https://xrathus.com/",
-    },
-    {
-      _id: 2008,
       title: "Inovativa",
       logo: logoInovativa,
       url: "https://www.inovativa.online/",
     },
-    { _id: 2009, title: "Fi", logo: logoFi, url: "https://fi.co/" },
+    { _id: 2008, title: "Fi", logo: logoFi, url: "https://fi.co/" },
     {
-      _id: 2010,
+      _id: 2009,
       title: "ParImpacto",
       logo: logoParImpacto,
       url: "https://www.parimpacto.com/",
     },
     {
-      _id: 2011,
+      _id: 2010,
       title: "Iguassu Valley",
       logo: logoIguassuValley,
       url: "https://www.iguassuvalley.com.br/",
     },
     {
-      _id: 2012,
+      _id: 2011,
       title: "Iguassu Angels",
       logo: logoIguassuAngels,
       url: "https://www.iguassuangels.com.br/",
     },
     {
-      _id: 2013,
+      _id: 2012,
       title: "CogTech",
       logo: cogTech,
       url: "https://cogtech.com.br/",
     },
     {
-      _id: 2014,
+      _id: 2013,
       title: "NewEnglandInvents",
       logo: newEnglandInventsLogo,
       url: "https://neinvents.org/",
