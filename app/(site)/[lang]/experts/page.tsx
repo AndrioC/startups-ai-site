@@ -49,7 +49,7 @@ export default function ExpertPage() {
   return (
     <main>
       <div className="flex flex-col items-center justify-center mt-10 mb-10">
-        <div className="flex flex-col lg:flex-row lg:w-[800px] items-center">
+        <div className="flex flex-col lg:flex-row items-center">
           <Link href="plans/learn-more/experts">
             <Button variant="link" className="text-blue-500">
               {t("expert-header-learn-more-text")}

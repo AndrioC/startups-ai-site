@@ -75,7 +75,7 @@ export default function HeaderExpertsFilter({
   };
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 place-items-center">
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10 place-items-center w-[700px]">
       <Select
         value={language}
         onValueChange={(value) => {
