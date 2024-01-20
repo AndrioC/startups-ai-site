@@ -144,5 +144,15 @@ function setFilter(dataSource: HeaderExpertsFiltersProps[]) {
     label: value,
   }));
 
+  languagesFilter.sort(sortByLabel);
+  workFieldsFilter.sort(sortByLabel);
+
   return [languagesFilter, workFieldsFilter];
 }
+type FilterItem = {
+  value: string;
+  label: string;
+};
+
+const sortByLabel = (a: FilterItem, b: FilterItem): number =>
+  a.label.localeCompare(b.label);
