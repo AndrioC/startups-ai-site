@@ -1,4 +1,5 @@
 import { Theme } from "@radix-ui/themes";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -43,6 +44,7 @@ export default function RootLayout({
             <main className="min-h-screen flex flex-col">
               <Header />
               {children}
+              <SpeedInsights />
               <Footer />
             </main>
             <Toaster position="bottom-center" />

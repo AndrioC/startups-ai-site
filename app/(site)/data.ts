@@ -1348,8 +1348,8 @@ export const expertsList: ExpertProps[] = [
   },
   {
     id: 20,
-    name: "Marcelo Vivacqua",
-    last_name: "",
+    name: "Marcelo",
+    last_name: "Vivacqua",
     linkedin: "https://www.linkedin.com/in/marcelo-vivacqua-phd-b92b7620/",
     description_en:
       "I work as a business consultant for micro and small businesses for over 10 years as the CEO of my consulting company Conecta International Business Consultancy and as a mentor for programs such as Inovativa Brasil, Inovativa de Impacto, Sinergia Amazônia, and Founders Institute.",
@@ -1380,8 +1380,8 @@ export const expertsList: ExpertProps[] = [
   },
   {
     id: 21,
-    name: "Mário Alex da Silva Santos",
-    last_name: "",
+    name: "Mário Alex",
+    last_name: "Santos",
     linkedin: "https://www.linkedin.com/in/marioalexsantos/",
     description_en:
       "More than 24 years of experience in the IT market, working in major software companies such as TOTVS, Softplan, and Betha Sistemas.",
@@ -1400,8 +1400,8 @@ export const expertsList: ExpertProps[] = [
   },
   {
     id: 22,
-    name: "Leandro Figueiredo",
-    last_name: "",
+    name: "Leandro",
+    last_name: "Figueiredo",
     linkedin: "https://www.linkedin.com/in/lefigueiredo/",
     description_en:
       "Associate Professor at Fundação Dom Cabral. Postdoctoral degree in Economic Development and Strategy.",
@@ -1429,6 +1429,64 @@ export const expertsList: ExpertProps[] = [
     country_pt: "Brasil",
     photo: "/assets/experts/22_leandro_figueiredo.png",
     flag: "brazil",
+  },
+  {
+    id: 23,
+    name: "Dr.",
+    last_name: "Viggardan",
+    linkedin: "",
+    description_en:
+      "Mentor to 22 firm. Have my own start up India recognised company.",
+    description_pt:
+      "Mentor de 22 empresas. Tenho minha própria startup, reconhecida na Índia.",
+    languages_en: "en",
+    languages_pt: "in",
+    languages_en_array: ["English"],
+    languages_pt_array: ["Inglês"],
+    work_field_en: ["Purchasing (Suppliers)"],
+    work_field_pt: ["Compras (Fornecedores)"],
+    country_en: "India",
+    country_pt: "Índia",
+    photo: "/assets/experts/23_viggardan.jpg",
+    flag: "india",
+  },
+  {
+    id: 24,
+    name: "Boddupally",
+    last_name: "Suhas",
+    linkedin: "",
+    description_en: "No description",
+    description_pt: "Sem descrição",
+    languages_en: "en",
+    languages_pt: "in",
+    languages_en_array: ["English"],
+    languages_pt_array: ["Inglês"],
+    work_field_en: ["Marketing"],
+    work_field_pt: ["Marketing"],
+    country_en: "India",
+    country_pt: "Índia",
+    photo: "/assets/experts/24_boddupally.jpg",
+    flag: "india",
+  },
+  {
+    id: 25,
+    name: "Prudhvi",
+    last_name: "Pakalapati",
+    linkedin: "",
+    description_en:
+      "My role involves offering practical guidance in key areas like strategic planning, financial management, understanding market dynamics, and enhancing operational efficiency. I focus on helping you navigate the challenges of running a business, from managing funds and legalities to scaling up and networking. The goal is to partner with you, providing insights and advice tailored to your unique journey, ensuring your business thrives in a competitive environment.",
+    description_pt:
+      "Minha função envolve oferecer orientação prática em áreas-chave como planejamento estratégico, gestão financeira, compreensão da dinâmica de mercado e aprimoramento da eficiência operacional. Concentro-me em ajudar você a enfrentar os desafios de administrar um negócio, desde gerenciar fundos e questões legais até expandir e construir redes de contatos. O objetivo é ser seu parceiro, fornecendo insights e conselhos personalizados para a sua jornada única, garantindo que seu negócio prospere em um ambiente competitivo.",
+    languages_en: "en",
+    languages_pt: "in",
+    languages_en_array: ["English"],
+    languages_pt_array: ["Inglês"],
+    work_field_en: ["Product development"],
+    work_field_pt: ["Desenvolvimento de produtos"],
+    country_en: "India",
+    country_pt: "Índia",
+    photo: "/assets/experts/25_prudhvi.png",
+    flag: "india",
   },
 ];
 
