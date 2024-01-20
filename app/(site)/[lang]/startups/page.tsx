@@ -86,7 +86,6 @@ export default function StartupsPage() {
                   logo={startup.logo}
                   foundation_year={startup.foundation_year}
                   value_proposal={startup.value_proposal}
-                  sgl_badge={startup.sgl_badge}
                   last_update={startup.last_update}
                   vertical={startup.vertical}
                   business_model={startup.business_model}
