@@ -96,6 +96,15 @@
   "Expert": {
     "expert-header-learn-more-text": "Saiba mais sobre o nosso probrama para Especialistas",
     "expert-header-subscription-button-text": "Fazer meu cadastro",
+
+    "header-filter-language": "Idioma",
+    "header-filter-work-field": "Área de atuação",
+    "header-filter-clear": "Limpar filtros",
+
+    "search-found-text-first": "Foram encontrados",
+    "search-found-experts-text": "especialistas",
+    "search-found-text-second": "com base nos filtros acima",
+
     "no-description-card-text": "Sem descrição",
     "expert-learn-more": "Saiba mais",
 

@@ -98,6 +98,15 @@
   "Expert": {
     "expert-header-learn-more-text": "Learn more about our program for Experts",
     "expert-header-subscription-button-text": "Register my profile",
+
+    "header-filter-language": "Language",
+    "header-filter-work-field": "Work Field",
+    "header-filter-clear": "Clean filters",
+
+    "search-found-text-first": "Were found",
+    "search-found-experts-text": "experts",
+    "search-found-text-second": "based on the filters above",
+
     "no-description-card-text": "No description",
     "expert-learn-more": "Learn more",
 

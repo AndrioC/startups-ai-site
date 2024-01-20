@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { infoFlags } from "@/app/(site)/data";
 import userPlaceHolder from "@/assets/user-placeholder.jpeg";
 
+
 export interface CardExpertProps {
   name: string;
   last_name: string;
