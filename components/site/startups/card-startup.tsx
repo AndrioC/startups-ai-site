@@ -3,10 +3,6 @@ import { useTranslations } from "next-intl";
 
 import { infoFlags, StartupProps } from "@/app/(site)/data";
 import startupPlaceHolder from "@/assets/startup-placeholder.png";
-import sglFull from "@/assets/startups/sgl_full.svg";
-import sglJunior from "@/assets/startups/sgl_junior.svg";
-import sglMaster from "@/assets/startups/sgl_master.svg";
-import sglSenior from "@/assets/startups/sgl_senior.svg";
 import {
   Tooltip,
   TooltipContent,
@@ -19,7 +15,6 @@ export default function CardStartup({
   logo,
   foundation_year,
   value_proposal,
-  sgl_badge,
   last_update,
   vertical,
   business_model,
@@ -34,29 +29,22 @@ export default function CardStartup({
     >
       <div className="flex justify-between p-5 items-center">
         <div className="flex flex-col">
-          <div className="w-[70px] h-[70px] overflow-hidden">
-            <Image
-              className="flex-shrink-0 object-center"
-              width={70}
-              height={70}
-              src={logo ?? startupPlaceHolder}
-              alt="startup-image"
-            />
-          </div>
           <div className="flex flex-col">
-            <span className="mr-5 text-xs font-semibold w-[250px]">
+            <span className="mr-5 text-sm font-semibold w-[250px]">
               {startup_name}
               <p className="text-gray-400">{foundation_year}</p>
             </span>
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image
-            width={60}
-            height={60}
-            src={sglBadgeLogo(sgl_badge as SglBadge)}
-            alt="sgl-image"
-          />
+          <div className="w-[70px] h-[70px] overflow-hidden">
+            <Image
+              width={70}
+              height={70}
+              src={logo ?? startupPlaceHolder}
+              alt="startup-image"
+            />
+          </div>
           <span className="text-xs text-gray-400 font-medium">
             {t("startup-card-last-update-text")}
           </span>
@@ -96,20 +84,3 @@ export default function CardStartup({
     </div>
   );
 }
-
-type SglBadge = "junior" | "full" | "senior" | "master";
-
-type SglImages = {
-  [key in SglBadge]: string;
-};
-
-const sglBadgeLogo = (sgl_badge: SglBadge): string => {
-  const images: SglImages = {
-    junior: sglJunior,
-    full: sglFull,
-    senior: sglSenior,
-    master: sglMaster,
-  };
-
-  return images[sgl_badge];
-};
