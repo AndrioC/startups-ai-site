@@ -79,7 +79,7 @@
   },
 
   "Startup": {
-    "startup-header-learn-more-text": "Saiba mais sobre o nosso probrama para sua Startup",
+    "startup-header-learn-more-text": "Saiba mais sobre o nosso programa para sua Startup",
     "startup-header-subscription-button-text": "Inscrever minha Startup",
 
     "header-filter-country": "País",
@@ -94,6 +94,8 @@
   },
 
   "Expert": {
+    "expert-header-learn-more-text": "Saiba mais sobre o nosso probrama para Especialistas",
+    "expert-header-subscription-button-text": "Fazer meu cadastro",
     "no-description-card-text": "Sem descrição",
     "expert-learn-more": "Saiba mais",
 

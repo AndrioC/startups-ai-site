@@ -1,13 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLocale } from "next-intl";
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 
 import { expertsList } from "@/app/(site)/data";
 import CardExpert from "@/components/site/experts/card-expert";
 import Container from "@/components/site/home/container";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 export default function ExpertPage() {
+  const t = useTranslations("Expert");
   const lang = useLocale();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,6 +39,19 @@ export default function ExpertPage() {
   return (
     <main>
       <Container>
+        <div className="flex flex-col lg:flex-row items-center justify-center mt-10 mb-10">
+          <Link href="plans/learn-more/experts">
+            <Button variant="link" className="text-blue-500">
+              {t("expert-header-learn-more-text")}
+            </Button>
+          </Link>
+          <Link href="plans">
+            <Button variant="blue" className="lg:ml-5 w-[200px]">
+              {t("expert-header-subscription-button-text")}
+            </Button>
+          </Link>
+        </div>
+        <Separator />
         {isLoading ? (
           <div className="flex justify-center items-center mt-10 mb-10">
             <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
