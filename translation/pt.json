@@ -79,6 +79,9 @@
   },
 
   "Startup": {
+    "startup-header-learn-more-text": "Saiba mais sobre o nosso probrama para sua Startup",
+    "startup-header-subscription-button-text": "Inscrever minha Startup",
+
     "header-filter-country": "País",
     "header-filter-model-business": "Modelo de negócio",
     "header-filter-model-sgl-badge": "Selo SGL",
@@ -87,9 +90,7 @@
     "search-found-text-first": "Foram encontradas",
     "search-found-text-second": "com base nos filtros acima",
 
-    "startup-card-last-update-text": "Última atualização",
-
-    "startup-not-found-results-text": "Nenhuma startup encontrada"
+    "startup-card-last-update-text": "Última atualização"
   },
 
   "Expert": {

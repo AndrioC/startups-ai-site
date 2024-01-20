@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { StartupProps, startupsList } from "@/app/(site)/data";
@@ -8,6 +9,7 @@ import Container from "@/components/site/home/container";
 import CardStartup from "@/components/site/startups/card-startup";
 import HeaderStartupsFilter from "@/components/site/startups/header-startups-filter";
 import NotFoundStartups from "@/components/site/startups/not-found-startups";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 export default function StartupsPage() {
@@ -37,7 +39,19 @@ export default function StartupsPage() {
     <main>
       <Container>
         <div className="flex flex-col">
-          <div className="flex justify-center mt-10 mb-10">
+          <div className="flex flex-col items-center justify-center mt-10 mb-10">
+            <div className="flex flex-col lg:flex-row lg:w-[800px] items-center">
+              <Link href="plans/learn-more/startups">
+                <Button variant="link" className="text-blue-500">
+                  {t("startup-header-learn-more-text")}
+                </Button>
+              </Link>
+              <Link href="plans">
+                <Button variant="blue" className="lg:ml-5 w-[200px]">
+                  {t("startup-header-subscription-button-text")}
+                </Button>
+              </Link>
+            </div>
             <HeaderStartupsFilter
               dataSource={startupsList}
               setFilteredData={handleFilterChange}

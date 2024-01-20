@@ -79,6 +79,9 @@
   },
 
   "Startup": {
+    "startup-header-learn-more-text": "Learn more about our program for your Startup",
+    "startup-header-subscription-button-text": "Subscribe my Startup",
+
     "header-filter-country": "Country",
     "header-filter-model-business": "Model business",
     "header-filter-model-sgl-badge": "SGL Badge",
