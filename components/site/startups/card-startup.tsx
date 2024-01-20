@@ -24,7 +24,7 @@ export default function CardStartup({
   const t = useTranslations("Startup");
   return (
     <div
-      className="flex flex-col shadow-lg w-[390px] md:w-[450px] h-[200px] mb-10"
+      className="flex flex-col shadow-lg w-[370px] md:w-[450px] h-[200px] mb-10"
       style={{ position: "relative" }}
     >
       <div className="flex justify-between p-5 items-center">
@@ -45,7 +45,7 @@ export default function CardStartup({
               alt="startup-image"
             />
           </div>
-          <span className="text-xs text-gray-400 font-medium">
+          <span className="text-xs text-gray-400 font-medium text-center">
             {t("startup-card-last-update-text")}
           </span>
           <p className="text-xs text-gray-400 font-medium">{last_update}</p>

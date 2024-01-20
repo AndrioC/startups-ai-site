@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { infoFlags } from "@/app/(site)/data";
 import userPlaceHolder from "@/assets/user-placeholder.jpeg";
 
-
 export interface CardExpertProps {
   name: string;
   last_name: string;
@@ -33,7 +32,7 @@ export default function CardExpert({
   const t = useTranslations("Expert");
 
   return (
-    <div className="border-4 border-gray-200 p-4 w-[400px] rounded-[100px] lg:h-[550px] flex flex-col justify-center">
+    <div className="border-4 border-gray-200 p-4 w-[370px] rounded-[100px] lg:h-[550px] flex flex-col justify-center">
       <div className="flex items-center gap-3 h-[190px]">
         <div className="flex flex-col w-[200px]">
           <div className="flex flex-col w-[120px] items-center text-center">
@@ -84,15 +83,12 @@ export default function CardExpert({
         {work_field.slice(0, 6).map((value) => (
           <div
             key={value}
-            className="flex items-center justify-center border-2 border-gray-400 rounded-full p-2 w-[150px] h-[40px] text-gray-500 text-center"
+            className="flex items-center justify-center border-2 border-gray-400 rounded-full p-2 w-[130px] lg:w-[150px] h-[40px] text-gray-500 text-center"
           >
             <span className="py-2 text-xs lg:text-xs">{value}</span>
           </div>
         ))}
       </div>
-      {/* <div className="flex justify-center mt-10">
-        <Button variant="blue">{t("expert-learn-more")}</Button>
-      </div> */}
     </div>
   );
 }
