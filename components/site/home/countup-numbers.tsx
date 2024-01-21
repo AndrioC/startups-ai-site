@@ -16,8 +16,14 @@ export default function CountUpNumbers({
 }: CountUpNumbersProps) {
   return (
     <div className="flex flex-col items-center justify-between border-4 border-gray-100 w-36 h-40">
-      <div className="w-[90px] h-[90px] flex items-center justify-center">
-        <Image src={img!} width={60} height={60} alt={`${title} - title`} />
+      <div className="flex items-center justify-center mt-3 h-[90px]">
+        <Image
+          src={img!}
+          width={60}
+          height={60}
+          alt={`${title} - title`}
+          style={{ width: "75px", height: "75px" }}
+        />
       </div>
       <CountUp
         end={value!}

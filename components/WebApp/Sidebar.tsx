@@ -33,7 +33,11 @@ export default function SideBar({ children }: PropsWithChildren) {
           <div className="flex flex-col items-center space-y-4">
             <Link href="/">
               <div className="text-white p-3 mt-4 rounded-lg inline-block">
-                <Image src={globalLinkOpenLogo} alt="sidebar-menu-logo" />
+                <Image
+                  src={globalLinkOpenLogo}
+                  alt="sidebar-menu-logo"
+                  priority
+                />
               </div>
             </Link>
             <span className="border-b-[1px] border-gray-200 w-full p-2"></span>

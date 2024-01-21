@@ -39,7 +39,13 @@ export default function PricingCard({
         )}
         <div className="mb-5">
           <div className="relative flex flex-col items-center  h-[165px] mb-5">
-            <Image src={img!} alt="plan-image" width={120} height={120} />
+            <Image
+              src={img!}
+              alt="plan-image"
+              width={60}
+              height={60}
+              style={{ width: "130px", height: "130px" }}
+            />
             <div className="absolute bottom-0 text-slate-900 dark:text-slate-200 font-semibold mb-1 uppercase mt-3">
               {plan_name}
             </div>

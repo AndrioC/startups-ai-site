@@ -18,7 +18,13 @@ export default function Logo({ className, ...props }: ContainerProps) {
         )}
         {...props}
       >
-        <Image src={LogoImage} alt="global-link-logo" width={186} height={58} />
+        <Image
+          src={LogoImage}
+          alt="global-link-logo"
+          width={186}
+          height={58}
+          priority
+        />
       </h2>
     </Link>
   );
