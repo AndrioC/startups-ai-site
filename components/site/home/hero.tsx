@@ -59,7 +59,6 @@ export default function Hero() {
                 priority
                 width={600}
                 height={400}
-                loading="lazy"
               />
             </div>
           </div>
