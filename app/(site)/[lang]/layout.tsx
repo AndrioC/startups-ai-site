@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
+import GoogleAnalytics from "@/components/site/google-analytics";
 import Footer from "@/components/site/home/footer";
 import Header from "@/components/site/home/header";
 import { Toaster } from "@/components/ui/sonner";
@@ -50,6 +51,9 @@ export default function RootLayout({
             <Toaster position="bottom-center" />
           </Theme>
         </NextIntlClientProvider>
+        {process.env.GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.GOOGLE_ANALYTICS} />
+        ) : null}
       </body>
     </html>
   );
