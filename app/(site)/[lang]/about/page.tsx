@@ -33,6 +33,7 @@ export default function PlansPage() {
             <Image
               src={aboutUsTopImage}
               alt="about-top-image"
+              priority
               className="w-[230px] h-[230px] lg:w-[500px] lg:h-[500px]"
             />
           </div>
