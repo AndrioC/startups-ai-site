@@ -54,7 +54,13 @@ export default function CardExpert({
         </div>
         <div className="flex flex-col h-[90px] gap-3">
           <div className="flex items-center gap-2">
-            <Image width={25} height={25} src={infoFlags[flag]} alt={country} />
+            <Image
+              width={25}
+              height={25}
+              src={infoFlags[flag]}
+              alt={country}
+              style={{ width: "25px", height: "25px" }}
+            />
             <p>{country}</p>
           </div>
           <div className="flex items-center">
