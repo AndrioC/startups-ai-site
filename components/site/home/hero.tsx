@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
-import heroBg from "@/assets/img/hero-bg.svg";
-import heroBgMobile from "@/assets/img/hero-bg-mobile.svg";
+import heroBg from "@/assets/img/hero-bg-min.svg";
+import heroBgMobile from "@/assets/img/hero-bg-mobile-min.svg";
 
 import Button from "./button";
 import CheckCircle from "./check-circle";
@@ -68,7 +68,7 @@ export default function Hero() {
                 priority
                 width={253}
                 height={181}
-                className="sm:block"
+                className="sm:block lg:hidden"
               />
             </div>
           </div>
