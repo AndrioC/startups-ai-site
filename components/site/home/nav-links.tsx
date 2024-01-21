@@ -12,8 +12,6 @@ export default function NavLinks() {
   const getPathName = (): string => {
     const path = usePathname().split("/");
 
-    console.log(path);
-
     if (path.length === 3) {
       return "/" + path[2];
     }
