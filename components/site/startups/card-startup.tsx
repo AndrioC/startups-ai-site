@@ -37,7 +37,7 @@ export default function CardStartup({
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <div className="overflow-hidden">
+          <div className="w-[70px] h-[70px] overflow-hidden">
             <Image
               width={70}
               height={70}
