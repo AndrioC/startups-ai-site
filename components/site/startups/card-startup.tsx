@@ -37,11 +37,12 @@ export default function CardStartup({
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <div className="w-[70px] h-[70px] overflow-hidden">
+          <div className="overflow-hidden">
             <Image
               width={70}
               height={70}
               src={logo ?? startupPlaceHolder}
+              style={{ width: "auto", height: "auto" }}
               alt="startup-image"
             />
           </div>
@@ -72,6 +73,7 @@ export default function CardStartup({
                 width={25}
                 height={25}
                 src={infoFlags[flag]}
+                style={{ width: "25px", height: "25px" }}
                 alt={country}
               />
             </TooltipTrigger>
