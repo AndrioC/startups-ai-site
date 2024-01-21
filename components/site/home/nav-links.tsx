@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/navigation";
@@ -8,7 +9,20 @@ import { Link } from "@/navigation";
 export default function NavLinks() {
   const t = useTranslations("Home");
 
+  const getPathName = (): string => {
+    const path = usePathname().split("/");
+
+    console.log(path);
+
+    if (path.length === 3) {
+      return "/" + path[2];
+    }
+
+    return "/";
+  };
+
   const [hoverIndex, setHoverIndex] = useState(0);
+  const pathname = getPathName();
 
   const navData = [
     { _id: 101, title: "Home", href: "/" },
@@ -23,7 +37,9 @@ export default function NavLinks() {
         <Link
           key={_id}
           href={href}
-          className="relative -mx-3 -my-2 px-3 rounded-lg py-2 text-base text-gray-700 transition-colors"
+          className={`relative -mx-3 -my-2 px-3 rounded-lg py-2 text-base ${
+            pathname === href ? "bg-gray-100" : "text-gray-700"
+          } transition-colors`}
           onMouseEnter={() => setHoverIndex(_id)}
           onMouseLeave={() => setHoverIndex(0)}
         >

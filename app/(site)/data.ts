@@ -825,7 +825,7 @@ export const startupsList: StartupProps[] = [
     flag: "brazil",
   },
   {
-    id: 65,
+    id: 66,
     startup_name: "SagaPro Edtech Ltda",
     foundation_year: 2021,
     value_proposal: "",
