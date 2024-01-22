@@ -1500,6 +1500,26 @@ export const expertsList: ExpertProps[] = [
     photo: "/assets/experts/25_prudhvi.png",
     flag: "india",
   },
+  {
+    id: 26,
+    name: "Eduardo Cesar",
+    last_name: "Dechechi",
+    linkedin: "https://www.linkedin.com/in/dechechi/",
+    description_en:
+      "UniHub Coordinator (Innovation and Entrepreneurship Hub of Unioeste in Foz do Iguaçu).",
+    description_pt:
+      "Coordenador de UniHub (Hub de inovação e empreendedorismo da Unioeste em Foz do Iguaçu).",
+    languages_en: "pt - en",
+    languages_pt: "pt - in",
+    languages_en_array: ["Portuguese", "English"],
+    languages_pt_array: ["Português", "Inglês"],
+    work_field_en: ["Governmental Relationship", "Strategic Vision"],
+    work_field_pt: ["Relacionamento Governamental", "Visão estratégica"],
+    country_en: "Brazil",
+    country_pt: "Brasil",
+    photo: "/assets/experts/26_eduardo_dechechi.png",
+    flag: "brazil",
+  },
 ];
 
 export const teamList: TeamProps[] = [
