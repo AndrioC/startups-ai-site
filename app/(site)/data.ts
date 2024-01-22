@@ -836,6 +836,18 @@ export const startupsList: StartupProps[] = [
     logo: "/assets/startups/logos/66_sagapro.png",
     flag: "brazil",
   },
+  {
+    id: 67,
+    startup_name: "Meu Cuidador - Marketplace de Soluções em Saúde",
+    foundation_year: 2020,
+    value_proposal: "",
+    last_update: "21/01/2024",
+    vertical: "HealthTech",
+    business_model: "B2B2C",
+    country: "Brasil",
+    logo: "/assets/startups/logos/67_meu_cuidador.jpeg",
+    flag: "brazil",
+  },
 ];
 
 export const infoFlags: InfoFlags = {
