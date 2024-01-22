@@ -60,7 +60,7 @@ export default function Footer() {
             </li>
             <li className="mb-4 font-semibold">
               <a
-                href="https://www.youtube.com/@StartupsGlobalLink/featured"
+                href="https://www.youtube.com/@StartupsGlobalLink-fy2te"
                 target="_blank"
                 rel="noreferrer"
               >
