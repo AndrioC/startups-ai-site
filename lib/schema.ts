@@ -10,3 +10,11 @@ export const FormDataSchema = z.object({
   state: z.string().min(1, "State is required"),
   zip: z.string().min(1, "Zip is required"),
 });
+
+export const DataAbourStartupsSchema = z.object({
+  startupName: z.string().min(1, "Startup name is required"),
+});
+
+export const DataMaturationLevelDeepTechSchema = z.object({
+  patentsQuantity: z.number().optional(),
+});
