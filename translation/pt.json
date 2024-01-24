@@ -69,6 +69,9 @@
     "contact-email-sent-message": "E-mail enviado com sucesso!",
     "contact-email-error-message": "Error ao enviar e-mail, tente novamente mais tarde.",
 
+    "footer-address": "Rua Teodoro Sampaio, 744, Conjunto 108, Bairro Pinheiros, São Paulo - SP, Brasil",
+    "footer-zip-code": "CEP: 05.406-000",
+
     "footer-support-title": "Suporte",
     "footer-support-first-text": "Termos e Condições",
     "footer-support-second-text": "Política de Privacidade",

@@ -14,6 +14,10 @@ export default function Footer() {
           <p className="text-sm text-gray-300">
             &copy; {new Date().getFullYear()} - Startups Global Link
           </p>
+          <p className="text-sm text-gray-300 w-[320px]">
+            {t("footer-address")}
+          </p>
+          <p className="text-sm text-gray-300">{t("footer-zip-code")}</p>
         </div>
         <div className="flex flex-col gap-3 h-full">
           <span className="font-medium text-purple-500">
