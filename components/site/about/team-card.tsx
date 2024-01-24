@@ -15,7 +15,7 @@ export default function TeamCard({
   photo,
 }: TeamCardProps) {
   return (
-    <div className="flex items-center space-x-2 lg:space-x-4 w-[170px] lg:w-[300px] h-[150px] lg:h-[90px]">
+    <div className="flex items-center space-x-2 lg:space-x-4 w-[145px] lg:w-[300px] h-[150px] lg:h-[90px]">
       <div className="relative">
         <Image
           src={photo}
