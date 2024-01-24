@@ -18,9 +18,7 @@ export default function Footer() {
             {t("footer-address")}
           </p>
           <p className="text-sm text-gray-300">{t("footer-zip-code")}</p>
-          <p className="text-sm text-gray-300">
-            startups-globallink@gmail.com.
-          </p>
+          <p className="text-sm text-gray-300">startups-globallink@gmail.com</p>
         </div>
         <div className="flex flex-col gap-3 h-full">
           <span className="font-medium text-purple-500">
