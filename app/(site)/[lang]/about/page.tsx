@@ -82,11 +82,11 @@ export default function PlansPage() {
           </div>
         </div>
         <Section>
-          <div className="flex flex-col items-center gap-10 mb-10 w-[350px] lg:w-full bg-red-200">
+          <div className="flex flex-col items-center gap-10 mb-10 w-[350px] lg:w-full">
             <h1 className="text-4xl uppercase text-gray-700">
               {t("about-our-team-title")}
             </h1>
-            <div className="container grid grid-cols-2 lg:grid-cols-3 lg:place-items-center lg:gap-y-8 gap-x-20 lg:gap-x-14 bg-green-400">
+            <div className="container grid grid-cols-2 lg:grid-cols-3 lg:place-items-center lg:gap-y-8 gap-x-20 lg:gap-x-14">
               {data.map((value) => (
                 <TeamCard
                   key={value.id}
