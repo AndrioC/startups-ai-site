@@ -12,31 +12,14 @@ export default function HeaderSteps() {
   }
 
   return (
-    <div className="flex items-center justify-center w-[720px] h-[70px]">
+    <div className="flex items-center justify-center w-[350px] lg:w-[720px] h-[70px] bg-gray-100">
       {steps.map((_label, index) => (
         <div
           key={index + 1}
-          style={{
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-            backgroundColor:
-              index + 1 < step
-                ? "#4890d7"
-                : index + 1 === step
-                  ? "#0a61a0"
-                  : "white",
-            color:
-              index + 1 < step
-                ? "white"
-                : index + 1 === step
-                  ? "white"
-                  : "black",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "0 5px",
-          }}
+          className={`w-7 h-7 lg:w-10 text-sm lg:text-base lg:h-10 rounded-full flex items-center justify-center mx-2 
+          ${index + 1 < step ? "bg-blue-400 text-white" : ""} 
+          ${index + 1 === step ? "bg-blue-900 text-white" : ""}
+          ${index + 1 > step ? "bg-white text-black" : ""}`}
         >
           {index + 1}
         </div>

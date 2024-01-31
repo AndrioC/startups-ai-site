@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 
 import { serviceProductsList } from "@/app/(site)/data";
+import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataServiceProductSchema } from "@/lib/schema";
 
@@ -57,10 +58,10 @@ export default function DataServiceProduct() {
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
-      <h1 className="text-xl font-semibold uppercase">
+      <h1 className="text-sm lg:text-xl font-semibold uppercase">
         {t("startup-form-data-service-product.title")}
       </h1>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label
           htmlFor="startupProductService"
           className="flex items-center mt-5"
@@ -157,15 +158,16 @@ export default function DataServiceProduct() {
         )}
       </div>
       <div className="flex justify-between">
-        <button
-          className="h-11 px-6 bg-black text-white rounded-md"
+        <Button
+          variant="blue"
           onClick={handleSubmit(onHandleBack)}
+          className="px-6 text-white rounded-md"
         >
           {t("startup-form-previous-button")}
-        </button>
-        <button className="h-11 px-6 bg-black text-white rounded-md">
+        </Button>
+        <Button variant="blue" className="px-6 text-white rounded-md">
           {t("startup-form-next-button")}
-        </button>
+        </Button>
       </div>
     </form>
   );

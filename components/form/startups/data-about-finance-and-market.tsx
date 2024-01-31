@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { z } from "zod";
 
+import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataAboutFinanceAndMarket } from "@/lib/schema";
 
@@ -35,10 +36,10 @@ export default function DataAboutFinanceAndMarketPage() {
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
-      <h1 className="text-xl font-semibold uppercase">
+      <h1 className="text-sm lg:text-xl font-semibold uppercase">
         {t("startup-form-data-about-finance-and-market.title")}
       </h1>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="customersQuantity" className="flex items-center mt-5">
           <span>
             {t("startup-form-data-about-finance-and-market.question-42")}
@@ -193,15 +194,16 @@ export default function DataAboutFinanceAndMarketPage() {
         )}
       </div>
       <div className="flex justify-between">
-        <button
-          className="h-11 px-6 bg-black text-white rounded-md"
+        <Button
+          variant="blue"
           onClick={handleSubmit(onHandleBack)}
+          className="px-6 text-white rounded-md"
         >
           {t("startup-form-previous-button")}
-        </button>
-        <button className="h-11 px-6 bg-black text-white rounded-md">
+        </Button>
+        <Button variant="blue" className="px-6 text-white rounded-md">
           {t("startup-form-finish-button")}
-        </button>
+        </Button>
       </div>
     </form>
   );

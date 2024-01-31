@@ -12,6 +12,7 @@ import {
   startupChallengesList,
   verticalTypes,
 } from "@/app/(site)/data";
+import { Button } from "@/components/ui/button";
 import { DatePicker } from "@/components/ui/date-picker";
 import { useFormState } from "@/contexts/FormContext";
 import { DataAboutStartupsSchema } from "@/lib/schema";
@@ -127,10 +128,10 @@ export default function DataAboutStartupsForm() {
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
-      <h1 className="text-xl font-semibold uppercase">
+      <h1 className="text-sm lg:text-xl font-semibold uppercase">
         {t("startup-form-data-about-startups.title")}
       </h1>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="startupName" className="flex items-center">
           <span>{t("startup-form-data-about-startups.question-01")}</span>
           <span className="text-red-500 ml-1">*</span>
@@ -138,7 +139,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="startupName"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("startupName")}
         />
         {errors.startupName?.message && (
@@ -195,7 +196,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="subscriptionNumber"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("subscriptionNumber")}
         />
         {errors.subscriptionNumber?.message && (
@@ -210,7 +211,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="referenceLink"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("referenceLink")}
         />
         {errors.referenceLink?.message && (
@@ -244,7 +245,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="stateAndCity"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("stateAndCity")}
         />
         {errors.stateAndCity?.message && (
@@ -259,7 +260,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="mainResponsibleName"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("mainResponsibleName")}
         />
         {errors.mainResponsibleName?.message && (
@@ -277,7 +278,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="mainResponsibleLinkedin"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("mainResponsibleLinkedin")}
         />
         {errors.mainResponsibleLinkedin?.message && (
@@ -292,7 +293,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="contactNumber"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("contactNumber")}
         />
         {errors.contactNumber?.message && (
@@ -310,7 +311,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="mainResponsibleEmail"
           type="text"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("mainResponsibleEmail")}
         />
         {errors.mainResponsibleEmail?.message && (
@@ -325,7 +326,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="partnersQuantity"
           type="number"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("partnersQuantity")}
         />
         {errors.partnersQuantity?.message && (
@@ -386,7 +387,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="employeesQuantity"
           type="number"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("employeesQuantity")}
         />
         {errors.employeesQuantity?.message && (
@@ -404,7 +405,7 @@ export default function DataAboutStartupsForm() {
         <input
           id="fullTimeEmployeesQuantity"
           type="number"
-          className="h-11 px-4 border rounded-md"
+          className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("fullTimeEmployeesQuantity")}
         />
         {errors.fullTimeEmployeesQuantity?.message && (
@@ -584,15 +585,16 @@ export default function DataAboutStartupsForm() {
         )}
       </div>
       <div className="flex justify-between sticky">
-        <button
-          className="h-11 px-6 bg-black text-white rounded-md"
+        <Button
+          variant="blue"
           onClick={handleSubmit(onHandleBack)}
+          className="px-6 text-white rounded-md"
         >
           {t("startup-form-previous-button")}
-        </button>
-        <button className="h-11 px-6 bg-black text-white rounded-md">
-          {t("startup-form-finish-button")}
-        </button>
+        </Button>
+        <Button variant="blue" className="px-6 text-white rounded-md">
+          {t("startup-form-next-button")}
+        </Button>
       </div>
     </form>
   );

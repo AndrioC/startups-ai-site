@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 
 import { trlList } from "@/app/(site)/data";
+import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataMaturationLevelDeepTechSchema } from "@/lib/schema";
 
@@ -52,25 +53,25 @@ export default function DataMaturationLevelDeepTech() {
   }
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
-      <h1 className="text-xl font-semibold uppercase">
+      <h1 className="text-sm lg:text-xl font-semibold uppercase">
         {t("startup-form-data-maturation-level-deep-tech.title")}
       </h1>
-      <p className="text-gray-500 font-light text-sm">
+      <p className="text-gray-500 font-light text-xs lg:text-sm">
         {t(
           "startup-form-data-maturation-level-deep-tech.explain-text.first-part"
         )}
       </p>
-      <p className="text-gray-500 font-light text-sm">
+      <p className="text-gray-500 font-light text-xs lg:text-sm">
         {t(
           "startup-form-data-maturation-level-deep-tech.explain-text.second-part"
         )}
       </p>
-      <p className="text-gray-500 font-light text-sm">
+      <p className="text-gray-500 font-light text-xs lg:text-sm">
         {t(
           "startup-form-data-maturation-level-deep-tech.explain-text.third-part"
         )}
       </p>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="maturityLevel" className="flex items-center">
           <span>
             {t("startup-form-data-maturation-level-deep-tech.question-25")}
@@ -119,15 +120,16 @@ export default function DataMaturationLevelDeepTech() {
         />
       </div>
       <div className="flex justify-between">
-        <button
-          className="h-11 px-6 bg-black text-white rounded-md"
+        <Button
+          variant="blue"
           onClick={handleSubmit(onHandleBack)}
+          className="px-6 text-white rounded-md"
         >
           {t("startup-form-previous-button")}
-        </button>
-        <button className="h-11 px-6 bg-black text-white rounded-md">
+        </Button>
+        <Button variant="blue" className="px-6 text-white rounded-md">
           {t("startup-form-next-button")}
-        </button>
+        </Button>
       </div>
     </form>
   );
