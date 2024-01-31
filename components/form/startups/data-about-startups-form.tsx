@@ -583,7 +583,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between sticky">
         <button
           className="h-11 px-6 bg-black text-white rounded-md"
           onClick={handleSubmit(onHandleBack)}
@@ -591,7 +591,7 @@ export default function DataAboutStartupsForm() {
           {t("startup-form-previous-button")}
         </button>
         <button className="h-11 px-6 bg-black text-white rounded-md">
-          {t("startup-form-next-button")}
+          {t("startup-form-finish-button")}
         </button>
       </div>
     </form>

@@ -24,7 +24,6 @@ export default function DataAboutFinanceAndMarketPage() {
   });
 
   function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
-    console.log(data);
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     handleNext();
   }

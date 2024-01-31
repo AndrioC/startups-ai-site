@@ -12,7 +12,7 @@ export default function HeaderSteps() {
   }
 
   return (
-    <div className="flex items-center justify-center w-[720px] bg-gray-100 h-[100px]">
+    <div className="flex items-center justify-center w-[720px] h-[70px]">
       {steps.map((_label, index) => (
         <div
           key={index + 1}

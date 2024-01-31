@@ -42,7 +42,6 @@ export default function DataMaturationLevelDeepTech() {
   });
 
   function onHandleFormSubmit(data: Inputs) {
-    console.log(data);
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     handleNext();
   }
