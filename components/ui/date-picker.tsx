@@ -16,12 +16,12 @@ import { cn } from "@/lib/utils";
 
 interface DatePickerProps {
   onChange: (date: Date | null) => void;
-  value: Date | null;
+  value: Date | null | undefined;
 }
 
 // DatePicker component
 export function DatePicker({ onChange, value }: DatePickerProps) {
-  const [date, setDate] = React.useState<Date | null>(value);
+  const [date, setDate] = React.useState<Date | null | undefined>(value);
 
   const lang = useLocale();
 
