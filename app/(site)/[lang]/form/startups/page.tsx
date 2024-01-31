@@ -1,34 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { motion } from "framer-motion";
-import { z } from "zod";
-
-import DataAboutStartupsForm from "@/components/form/startups/data-about-startups-form";
 import FormStep from "@/components/form/startups/form-step";
+import HeaderSteps from "@/components/form/startups/header-steps";
 import { FormProvider } from "@/contexts/FormContext";
-import { FormDataSchema } from "@/lib/schema";
 
-type Inputs = z.infer<typeof FormDataSchema>;
-
-const steps = [
-  {
-    id: "Step 1",
-    name: "Personal Information",
-    fields: ["firstName", "lastName", "email"],
-  },
-  {
-    id: "Step 2",
-    name: "Address",
-    fields: ["country", "state", "city", "street", "zip"],
-  },
-  { id: "Step 3", name: "Complete" },
-];
 export default function FormStartusPage() {
-  const [step, setStep] = useState(1);
-
   return (
     // <section className="flex flex-col justify-between p-24">
     //   {/* steps */}
@@ -273,13 +249,15 @@ export default function FormStartusPage() {
     //     </div>
     //   </div>
     // </section>
-    <div className="flex justify-center items-center min-h-screen p-6 bg-gray-100">
-      <div className="max-w-2xl w-full border p-6 rounded-md bg-white">
-        <h1 className="text-xl font-semibold text-center">Sign Up Form</h1>
-        <FormProvider>
-          <FormStep />
-        </FormProvider>
+    <FormProvider>
+      <div className="flex flex-col items-center mt-5 mb-5">
+        <HeaderSteps />
+        <div className="flex justify-center items-center min-h-screen p-6 bg-gray-100 w-[720px]">
+          <div className="max-w-2xl w-full border p-6 rounded-md bg-white">
+            <FormStep />
+          </div>
+        </div>
       </div>
-    </div>
+    </FormProvider>
   );
 }
