@@ -39,6 +39,54 @@ export interface TeamProps {
   photo: string;
 }
 
+export interface VerticalTypes {
+  id: number;
+  value: string;
+  label_en: string;
+  label_pt: string;
+}
+
+export interface CountriesList {
+  id: number;
+  value: string;
+  label_en: string;
+  label_pt: string;
+}
+
+export interface BusinessModel {
+  id: number;
+  value: string;
+  label: string;
+}
+
+export interface OperationalStage {
+  id: number;
+  value: string;
+  label_en: string;
+  label_pt: string;
+}
+
+export interface ChallengesList {
+  id: number;
+  value: string;
+  label_en: string;
+  label_pt: string;
+}
+
+export interface TRLList {
+  id: number;
+  value: string;
+  label_en: string;
+  label_pt: string;
+}
+
+export interface ServiceProductsStartup {
+  id: number;
+  value: string;
+  label_en: string;
+  label_pt: string;
+}
+
 type InfoFlags = {
   [key: string]: string;
 };
@@ -1602,5 +1650,1319 @@ export const teamList: TeamProps[] = [
     position_pt: "Head SGL India",
     position_en: "Head SGL India",
     photo: "/assets/team/10_anand.jpeg",
+  },
+];
+
+export const verticalTypes: VerticalTypes[] = [
+  {
+    id: 1,
+    value: "adtech",
+    label_pt: "AdTech - Tecnologia de Publicidade",
+    label_en: "AdTech - Advertising Technology",
+  },
+  {
+    id: 2,
+    value: "agritech",
+    label_pt: "AgriTech - Tecnologia Agrícola",
+    label_en: "AgriTech - Agricultural Technology",
+  },
+  {
+    id: 3,
+    value: "agtech",
+    label_pt: "AgTech - Tecnologia Agrícola",
+    label_en: "AgTech - Agricultural Technology",
+  },
+  {
+    id: 4,
+    value: "arvr",
+    label_pt: "AR/VR - Realidade Aumentada/Realidade Virtual",
+    label_en: "AR/VR - Augmented Reality/Virtual Reality",
+  },
+  {
+    id: 5,
+    value: "beautytech",
+    label_pt: "BeautyTech - Tecnologia de Beleza",
+    label_en: "BeautyTech - Beauty Technology",
+  },
+  {
+    id: 6,
+    value: "bigdata",
+    label_pt: "Big Data - Grandes Dados e Análise de Dados",
+    label_en: "Big Data - Big Data and Data Analysis",
+  },
+  {
+    id: 7,
+    value: "biotech",
+    label_pt: "BioTech - Tecnologia de Biologia",
+    label_en: "BioTech - Biotechnology",
+  },
+  {
+    id: 8,
+    value: "blockchain",
+    label_pt: "Blockchain - Tecnologia de Blockchain",
+    label_en: "Blockchain - Blockchain Technology",
+  },
+  {
+    id: 9,
+    value: "cleanenergy",
+    label_pt: "Clean Energy - Energia Limpa",
+    label_en: "Clean Energy - Clean Energy",
+  },
+  {
+    id: 10,
+    value: "cleantech",
+    label_pt: "Cleantech - Tecnologia Limpa (sustentabilidade ambiental)",
+    label_en: "Cleantech - Clean Technology (environmental sustainability)",
+  },
+  {
+    id: 11,
+    value: "cybersecurity",
+    label_pt: "Cybersecurity - Segurança Cibernética",
+    label_en: "Cybersecurity - Cybersecurity",
+  },
+  {
+    id: 12,
+    value: "datasecurity",
+    label_pt: "Data Security - Segurança de Dados",
+    label_en: "Data Security - Data Security",
+  },
+  {
+    id: 13,
+    value: "drones",
+    label_pt: "Drones - Veículos Aéreos Não Tripulados",
+    label_en: "Drones - Unmanned Aerial Vehicles",
+  },
+  {
+    id: 14,
+    value: "ecommerce",
+    label_pt: "E-commerce - Comércio Eletrônico",
+    label_en: "E-commerce - Electronic Commerce",
+  },
+  {
+    id: 15,
+    value: "ehealth",
+    label_pt: "E-health - Tecnologia de Saúde Eletrônica",
+    label_en: "E-health - Electronic Health Technology",
+  },
+  {
+    id: 16,
+    value: "editech",
+    label_pt: "EdiTech - Tecnologia de Edição e Publicação",
+    label_en: "EdiTech - Editing and Publishing Technology",
+  },
+  {
+    id: 17,
+    value: "edtech",
+    label_pt: "EdTech - Tecnologia Educacional",
+    label_en: "EdTech - Educational Technology",
+  },
+  {
+    id: 18,
+    value: "educationenvironmental",
+    label_pt: "Educação Ambiental - Educação sobre Meio Ambiente",
+    label_en: "Environmental Education - Environmental Education",
+  },
+  {
+    id: 19,
+    value: "energytech",
+    label_pt: "EnergyTech - Tecnologia Energética",
+    label_en: "EnergyTech - Energy Technology",
+  },
+  {
+    id: 20,
+    value: "fashiontech",
+    label_pt: "FashionTech - Tecnologia de Moda",
+    label_en: "FashionTech - Fashion Technology",
+  },
+  {
+    id: 21,
+    value: "fintech",
+    label_pt: "Fintech - Tecnologia Financeira",
+    label_en: "Fintech - Financial Technology",
+  },
+  {
+    id: 22,
+    value: "fitnesstech",
+    label_pt: "FitnessTech - Tecnologia de Fitness",
+    label_en: "FitnessTech - Fitness Technology",
+  },
+  {
+    id: 23,
+    value: "fooddelivery",
+    label_pt: "Food Delivery - Entrega de Alimentos",
+    label_en: "Food Delivery - Food Delivery",
+  },
+  {
+    id: 24,
+    value: "foodtech",
+    label_pt: "Foodtech - Tecnologia Alimentar",
+    label_en: "Foodtech - Food Technology",
+  },
+  {
+    id: 25,
+    value: "govtech",
+    label_pt: "GovTech - Tecnologia Governamental",
+    label_en: "GovTech - Government Technology",
+  },
+  {
+    id: 26,
+    value: "greentech",
+    label_pt: "GreenTech - Tecnologia Sustentável",
+    label_en: "GreenTech - Sustainable Technology",
+  },
+  {
+    id: 27,
+    value: "healthtech",
+    label_pt: "Healthtech - Tecnologia de Saúde",
+    label_en: "Healthtech - Health Technology",
+  },
+  {
+    id: 28,
+    value: "homeautomation",
+    label_pt: "Home Automation - Automação Residencial",
+    label_en: "Home Automation - Home Automation",
+  },
+  {
+    id: 29,
+    value: "hrtech",
+    label_pt: "HRtech - Tecnologia de Recursos Humanos",
+    label_en: "HRtech - Human Resources Technology",
+  },
+  {
+    id: 30,
+    value: "insurtech",
+    label_pt: "Insurtech - Tecnologia de Seguros",
+    label_en: "Insurtech - Insurance Technology",
+  },
+  {
+    id: 31,
+    value: "iot",
+    label_pt: "IoT - Internet das Coisas",
+    label_en: "IoT - Internet of Things",
+  },
+  {
+    id: 32,
+    value: "legaltech",
+    label_pt: "Legaltech - Tecnologia Jurídica",
+    label_en: "Legaltech - Legal Technology",
+  },
+  {
+    id: 33,
+    value: "marech",
+    label_pt: "Marech - Tecnologia de Marketing",
+    label_en: "Marech - Marketing Technology",
+  },
+  {
+    id: 34,
+    value: "medtech",
+    label_pt: "Medtech - Tecnologia Médica",
+    label_en: "Medtech - Medical Technology",
+  },
+  {
+    id: 35,
+    value: "mobileapp",
+    label_pt: "Mobile App - Aplicativos Móveis",
+    label_en: "Mobile App - Mobile Applications",
+  },
+  {
+    id: 36,
+    value: "mobilitytech",
+    label_pt: "MobilityTech - Tecnologia de Mobilidade",
+    label_en: "MobilityTech - Mobility Technology",
+  },
+  {
+    id: 37,
+    value: "musctech",
+    label_pt: "MusicTech - Tecnologia Musical",
+    label_en: "MusicTech - Music Technology",
+  },
+  {
+    id: 38,
+    value: "proptech",
+    label_pt: "Proptech - Tecnologia Imobiliária",
+    label_en: "Proptech - Real Estate Technology",
+  },
+  {
+    id: 39,
+    value: "retailtech",
+    label_pt: "RetailTech - Tecnologia de Varejo",
+    label_en: "RetailTech - Retail Technology",
+  },
+  {
+    id: 40,
+    value: "robotech",
+    label_pt: "RoboTech - Tecnologia de Robótica",
+    label_en: "RoboTech - Robotic Technology",
+  },
+  {
+    id: 41,
+    value: "saas",
+    label_pt: "SaaS - Software como Serviço",
+    label_en: "SaaS - Software as a Service",
+  },
+  {
+    id: 42,
+    value: "smartcitytech",
+    label_pt: "Smart City Tech - Tecnologia para Cidades Inteligentes",
+    label_en: "Smart City Tech - Technology for Smart Cities",
+  },
+  {
+    id: 43,
+    value: "socialmedia",
+    label_pt: "Social Media - Mídias Sociais",
+    label_en: "Social Media - Social Media",
+  },
+  {
+    id: 44,
+    value: "spaceexploration",
+    label_pt: "Space Exploration - Exploração Espacial",
+    label_en: "Space Exploration - Space Exploration",
+  },
+  {
+    id: 45,
+    value: "spacetech",
+    label_pt: "SpaceTech - Tecnologia Espacial",
+    label_en: "SpaceTech - Space Technology",
+  },
+  {
+    id: 46,
+    value: "sportstech",
+    label_pt: "SportsTech - Tecnologia Esportiva",
+    label_en: "SportsTech - Sports Technology",
+  },
+  {
+    id: 47,
+    value: "sustainability",
+    label_pt: "Sustentabilidade - Startups focadas em práticas sustentáveis",
+    label_en: "Sustainability - Startups focused on sustainable practices",
+  },
+  {
+    id: 48,
+    value: "traveltech",
+    label_pt: "Traveltech - Tecnologia de Viagem",
+    label_en: "Traveltech - Travel Technology",
+  },
+];
+
+export const countriesList: CountriesList[] = [
+  {
+    id: 1,
+    value: "afghanistan",
+    label_en: "Afghanistan",
+    label_pt: "Afeganistão",
+  },
+  {
+    id: 2,
+    value: "aland_islands",
+    label_en: "Aland Islands",
+    label_pt: "Ilhas Aland",
+  },
+  { id: 3, value: "albania", label_en: "Albania", label_pt: "Albânia" },
+  { id: 4, value: "algeria", label_en: "Algeria", label_pt: "Argélia" },
+  {
+    id: 5,
+    value: "american_samoa",
+    label_en: "American Samoa",
+    label_pt: "Samoa Americana",
+  },
+  { id: 6, value: "andorra", label_en: "Andorra", label_pt: "Andorra" },
+  { id: 7, value: "angola", label_en: "Angola", label_pt: "Angola" },
+  { id: 8, value: "anguilla", label_en: "Anguilla", label_pt: "Anguila" },
+  { id: 9, value: "antarctica", label_en: "Antarctica", label_pt: "Antártida" },
+  {
+    id: 10,
+    value: "antigua_and_barbuda",
+    label_en: "Antigua and Barbuda",
+    label_pt: "Antígua e Barbuda",
+  },
+  { id: 11, value: "argentina", label_en: "Argentina", label_pt: "Argentina" },
+  { id: 12, value: "armenia", label_en: "Armenia", label_pt: "Armênia" },
+  { id: 13, value: "aruba", label_en: "Aruba", label_pt: "Aruba" },
+  { id: 14, value: "australia", label_en: "Australia", label_pt: "Austrália" },
+  { id: 15, value: "austria", label_en: "Austria", label_pt: "Áustria" },
+  {
+    id: 16,
+    value: "azerbaijan",
+    label_en: "Azerbaijan",
+    label_pt: "Azerbaijão",
+  },
+  { id: 17, value: "bahamas", label_en: "Bahamas", label_pt: "Bahamas" },
+  { id: 18, value: "bahrain", label_en: "Bahrain", label_pt: "Bahrein" },
+  {
+    id: 19,
+    value: "bangladesh",
+    label_en: "Bangladesh",
+    label_pt: "Bangladesh",
+  },
+  { id: 20, value: "barbados", label_en: "Barbados", label_pt: "Barbados" },
+  { id: 21, value: "belarus", label_en: "Belarus", label_pt: "Bielorrússia" },
+  { id: 22, value: "belgium", label_en: "Belgium", label_pt: "Bélgica" },
+  { id: 23, value: "belize", label_en: "Belize", label_pt: "Belize" },
+  { id: 24, value: "benin", label_en: "Benin", label_pt: "Benin" },
+  { id: 25, value: "bermuda", label_en: "Bermuda", label_pt: "Bermudas" },
+  { id: 26, value: "bhutan", label_en: "Bhutan", label_pt: "Butão" },
+  { id: 27, value: "bolivia", label_en: "Bolivia", label_pt: "Bolívia" },
+  {
+    id: 28,
+    value: "bosnia_and_herzegovina",
+    label_en: "Bosnia and Herzegovina",
+    label_pt: "Bósnia e Herzegovina",
+  },
+  { id: 29, value: "botswana", label_en: "Botswana", label_pt: "Botsuana" },
+  {
+    id: 30,
+    value: "bouvet_island",
+    label_en: "Bouvet Island",
+    label_pt: "Ilha Bouvet",
+  },
+  { id: 31, value: "brazil", label_en: "Brazil", label_pt: "Brasil" },
+  {
+    id: 32,
+    value: "british_indian_ocean_territory",
+    label_en: "British Indian Ocean Territory",
+    label_pt: "Território Britânico do Oceano Índico",
+  },
+  {
+    id: 33,
+    value: "brunei_darussalam",
+    label_en: "Brunei Darussalam",
+    label_pt: "Brunei",
+  },
+  { id: 34, value: "bulgaria", label_en: "Bulgaria", label_pt: "Bulgária" },
+  {
+    id: 35,
+    value: "burkina_faso",
+    label_en: "Burkina Faso",
+    label_pt: "Burkina Faso",
+  },
+  { id: 36, value: "burundi", label_en: "Burundi", label_pt: "Burundi" },
+  { id: 37, value: "cambodia", label_en: "Cambodia", label_pt: "Camboja" },
+  { id: 38, value: "cameroon", label_en: "Cameroon", label_pt: "Camarões" },
+  { id: 39, value: "canada", label_en: "Canada", label_pt: "Canadá" },
+  {
+    id: 40,
+    value: "cape_verde",
+    label_en: "Cape Verde",
+    label_pt: "Cabo Verde",
+  },
+  {
+    id: 41,
+    value: "cayman_islands",
+    label_en: "Cayman Islands",
+    label_pt: "Ilhas Cayman",
+  },
+  {
+    id: 42,
+    value: "central_african_republic",
+    label_en: "Central African Republic",
+    label_pt: "República Centro-Africana",
+  },
+  { id: 43, value: "chad", label_en: "Chad", label_pt: "Chade" },
+  { id: 44, value: "chile", label_en: "Chile", label_pt: "Chile" },
+  { id: 45, value: "china", label_en: "China", label_pt: "China" },
+  {
+    id: 46,
+    value: "christmas_island",
+    label_en: "Christmas Island",
+    label_pt: "Ilha Christmas",
+  },
+  {
+    id: 47,
+    value: "cocos_keeling_islands",
+    label_en: "Cocos (Keeling) Islands",
+    label_pt: "Ilhas Cocos (Keeling)",
+  },
+  { id: 48, value: "colombia", label_en: "Colombia", label_pt: "Colômbia" },
+  { id: 49, value: "comoros", label_en: "Comoros", label_pt: "Comores" },
+  { id: 50, value: "congo", label_en: "Congo", label_pt: "Congo" },
+  {
+    id: 51,
+    value: "democratic_republic_of_the_congo",
+    label_en: "Democratic Republic of the Congo",
+    label_pt: "República Democrática do Congo",
+  },
+  {
+    id: 52,
+    value: "cook_islands",
+    label_en: "Cook Islands",
+    label_pt: "Ilhas Cook",
+  },
+  {
+    id: 53,
+    value: "costa_rica",
+    label_en: "Costa Rica",
+    label_pt: "Costa Rica",
+  },
+  {
+    id: 54,
+    value: "cote_divoire",
+    label_en: "Cote D'Ivoire",
+    label_pt: "Costa do Marfim",
+  },
+  { id: 55, value: "croatia", label_en: "Croatia", label_pt: "Croácia" },
+  { id: 56, value: "cuba", label_en: "Cuba", label_pt: "Cuba" },
+  { id: 57, value: "cyprus", label_en: "Cyprus", label_pt: "Chipre" },
+  {
+    id: 58,
+    value: "czech_republic",
+    label_en: "Czech Republic",
+    label_pt: "República Tcheca",
+  },
+  { id: 59, value: "denmark", label_en: "Denmark", label_pt: "Dinamarca" },
+  { id: 60, value: "djibouti", label_en: "Djibouti", label_pt: "Djibuti" },
+  { id: 61, value: "dominica", label_en: "Dominica", label_pt: "Dominica" },
+  {
+    id: 62,
+    value: "dominican_republic",
+    label_en: "Dominican Republic",
+    label_pt: "República Dominicana",
+  },
+  { id: 63, value: "ecuador", label_en: "Ecuador", label_pt: "Equador" },
+  { id: 64, value: "egypt", label_en: "Egypt", label_pt: "Egito" },
+  {
+    id: 65,
+    value: "el_salvador",
+    label_en: "El Salvador",
+    label_pt: "El Salvador",
+  },
+  {
+    id: 66,
+    value: "equatorial_guinea",
+    label_en: "Equatorial Guinea",
+    label_pt: "Guiné Equatorial",
+  },
+  { id: 67, value: "eritrea", label_en: "Eritrea", label_pt: "Eritreia" },
+  { id: 68, value: "estonia", label_en: "Estonia", label_pt: "Estônia" },
+  { id: 69, value: "ethiopia", label_en: "Ethiopia", label_pt: "Etiópia" },
+  {
+    id: 70,
+    value: "falkland_islands_malvinas",
+    label_en: "Falkland Islands (Malvinas)",
+    label_pt: "Ilhas Falkland (Malvinas)",
+  },
+  {
+    id: 71,
+    value: "faroe_islands",
+    label_en: "Faroe Islands",
+    label_pt: "Ilhas Faroé",
+  },
+  { id: 72, value: "fiji", label_en: "Fiji", label_pt: "Fiji" },
+  { id: 73, value: "finland", label_en: "Finland", label_pt: "Finlândia" },
+  { id: 74, value: "france", label_en: "France", label_pt: "França" },
+  {
+    id: 75,
+    value: "french_guiana",
+    label_en: "French Guiana",
+    label_pt: "Guiana Francesa",
+  },
+  {
+    id: 76,
+    value: "french_polynesia",
+    label_en: "French Polynesia",
+    label_pt: "Polinésia Francesa",
+  },
+  {
+    id: 77,
+    value: "french_southern_territories",
+    label_en: "French Southern Territories",
+    label_pt: "Territórios Franceses do Sul",
+  },
+  { id: 78, value: "gabon", label_en: "Gabon", label_pt: "Gabão" },
+  { id: 79, value: "gambia", label_en: "Gambia", label_pt: "Gâmbia" },
+  { id: 80, value: "georgia", label_en: "Georgia", label_pt: "Geórgia" },
+  { id: 81, value: "germany", label_en: "Germany", label_pt: "Alemanha" },
+  { id: 82, value: "ghana", label_en: "Ghana", label_pt: "Gana" },
+  { id: 83, value: "gibraltar", label_en: "Gibraltar", label_pt: "Gibraltar" },
+  { id: 84, value: "greece", label_en: "Greece", label_pt: "Grécia" },
+  {
+    id: 85,
+    value: "greenland",
+    label_en: "Greenland",
+    label_pt: "Groenlândia",
+  },
+  { id: 86, value: "grenada", label_en: "Grenada", label_pt: "Granada" },
+  {
+    id: 87,
+    value: "guadeloupe",
+    label_en: "Guadeloupe",
+    label_pt: "Guadalupe",
+  },
+  { id: 88, value: "guam", label_en: "Guam", label_pt: "Guam" },
+  { id: 89, value: "guatemala", label_en: "Guatemala", label_pt: "Guatemala" },
+  { id: 90, value: "guernsey", label_en: "Guernsey", label_pt: "Guernsey" },
+  { id: 91, value: "guinea", label_en: "Guinea", label_pt: "Guiné" },
+  {
+    id: 92,
+    value: "guinea_bissau",
+    label_en: "Guinea-Bissau",
+    label_pt: "Guiné-Bissau",
+  },
+  { id: 93, value: "guyana", label_en: "Guyana", label_pt: "Guiana" },
+  { id: 94, value: "haiti", label_en: "Haiti", label_pt: "Haiti" },
+  {
+    id: 95,
+    value: "heard_island_and_mcdonald_islands",
+    label_en: "Heard Island and Mcdonald Islands",
+    label_pt: "Ilha Heard e Ilhas McDonald",
+  },
+  {
+    id: 96,
+    value: "holy_see_vatican_city_state",
+    label_en: "Holy See (Vatican City State)",
+    label_pt: "Santa Sé (Estado da Cidade do Vaticano)",
+  },
+  { id: 97, value: "honduras", label_en: "Honduras", label_pt: "Honduras" },
+  { id: 98, value: "hong_kong", label_en: "Hong Kong", label_pt: "Hong Kong" },
+  { id: 99, value: "hungary", label_en: "Hungary", label_pt: "Hungria" },
+  { id: 100, value: "iceland", label_en: "Iceland", label_pt: "Islândia" },
+  { id: 101, value: "india", label_en: "India", label_pt: "Índia" },
+  { id: 102, value: "indonesia", label_en: "Indonesia", label_pt: "Indonésia" },
+  { id: 103, value: "iran", label_en: "Iran", label_pt: "Irã" },
+  { id: 104, value: "iraq", label_en: "Iraq", label_pt: "Iraque" },
+  { id: 105, value: "ireland", label_en: "Ireland", label_pt: "Irlanda" },
+  {
+    id: 106,
+    value: "isle_of_man",
+    label_en: "Isle of Man",
+    label_pt: "Ilha de Man",
+  },
+  { id: 107, value: "israel", label_en: "Israel", label_pt: "Israel" },
+  { id: 108, value: "italy", label_en: "Italy", label_pt: "Itália" },
+  { id: 109, value: "jamaica", label_en: "Jamaica", label_pt: "Jamaica" },
+  { id: 110, value: "japan", label_en: "Japan", label_pt: "Japão" },
+  { id: 111, value: "jersey", label_en: "Jersey", label_pt: "Jersey" },
+  { id: 112, value: "jordan", label_en: "Jordan", label_pt: "Jordânia" },
+  {
+    id: 113,
+    value: "kazakhstan",
+    label_en: "Kazakhstan",
+    label_pt: "Cazaquistão",
+  },
+  { id: 114, value: "kenya", label_en: "Kenya", label_pt: "Quênia" },
+  { id: 115, value: "kiribati", label_en: "Kiribati", label_pt: "Kiribati" },
+  {
+    id: 116,
+    value: "north_korea",
+    label_en: "North Korea",
+    label_pt: "Coreia do Norte",
+  },
+  {
+    id: 117,
+    value: "south_korea",
+    label_en: "South Korea",
+    label_pt: "Coreia do Sul",
+  },
+  { id: 118, value: "kuwait", label_en: "Kuwait", label_pt: "Kuwait" },
+  {
+    id: 119,
+    value: "kyrgyzstan",
+    label_en: "Kyrgyzstan",
+    label_pt: "Quirguistão",
+  },
+  { id: 120, value: "laos", label_en: "Laos", label_pt: "Laos" },
+  { id: 121, value: "latvia", label_en: "Latvia", label_pt: "Letônia" },
+  { id: 122, value: "lebanon", label_en: "Lebanon", label_pt: "Líbano" },
+  { id: 123, value: "lesotho", label_en: "Lesotho", label_pt: "Lesoto" },
+  { id: 124, value: "liberia", label_en: "Liberia", label_pt: "Libéria" },
+  {
+    id: 125,
+    value: "libyan_arab_jamahiriya",
+    label_en: "Libyan Arab Jamahiriya",
+    label_pt: "Líbia",
+  },
+  {
+    id: 126,
+    value: "liechtenstein",
+    label_en: "Liechtenstein",
+    label_pt: "Liechtenstein",
+  },
+  { id: 127, value: "lithuania", label_en: "Lithuania", label_pt: "Lituânia" },
+  {
+    id: 128,
+    value: "luxembourg",
+    label_en: "Luxembourg",
+    label_pt: "Luxemburgo",
+  },
+  { id: 129, value: "macao", label_en: "Macao", label_pt: "Macau" },
+  { id: 130, value: "macedonia", label_en: "Macedonia", label_pt: "Macedônia" },
+  {
+    id: 131,
+    value: "madagascar",
+    label_en: "Madagascar",
+    label_pt: "Madagáscar",
+  },
+  { id: 132, value: "malawi", label_en: "Malawi", label_pt: "Malawi" },
+  { id: 133, value: "malaysia", label_en: "Malaysia", label_pt: "Malásia" },
+  { id: 134, value: "maldives", label_en: "Maldives", label_pt: "Maldivas" },
+  { id: 135, value: "mali", label_en: "Mali", label_pt: "Mali" },
+  { id: 136, value: "malta", label_en: "Malta", label_pt: "Malta" },
+  {
+    id: 137,
+    value: "marshall_islands",
+    label_en: "Marshall Islands",
+    label_pt: "Ilhas Marshall",
+  },
+  {
+    id: 138,
+    value: "martinique",
+    label_en: "Martinique",
+    label_pt: "Martinica",
+  },
+  {
+    id: 139,
+    value: "mauritania",
+    label_en: "Mauritania",
+    label_pt: "Mauritânia",
+  },
+  { id: 140, value: "mauritius", label_en: "Mauritius", label_pt: "Maurícia" },
+  { id: 141, value: "mayotte", label_en: "Mayotte", label_pt: "Mayotte" },
+  { id: 142, value: "mexico", label_en: "Mexico", label_pt: "México" },
+  {
+    id: 143,
+    value: "micronesia",
+    label_en: "Micronesia",
+    label_pt: "Micronésia",
+  },
+  { id: 144, value: "moldova", label_en: "Moldova", label_pt: "Moldávia" },
+  { id: 145, value: "monaco", label_en: "Monaco", label_pt: "Mônaco" },
+  { id: 146, value: "mongolia", label_en: "Mongolia", label_pt: "Mongólia" },
+  {
+    id: 147,
+    value: "montserrat",
+    label_en: "Montserrat",
+    label_pt: "Montserrat",
+  },
+  { id: 148, value: "morocco", label_en: "Morocco", label_pt: "Marrocos" },
+  {
+    id: 149,
+    value: "mozambique",
+    label_en: "Mozambique",
+    label_pt: "Moçambique",
+  },
+  { id: 150, value: "myanmar", label_en: "Myanmar", label_pt: "Mianmar" },
+  { id: 151, value: "namibia", label_en: "Namibia", label_pt: "Namíbia" },
+  { id: 152, value: "nauru", label_en: "Nauru", label_pt: "Nauru" },
+  { id: 153, value: "nepal", label_en: "Nepal", label_pt: "Nepal" },
+  {
+    id: 154,
+    value: "netherlands",
+    label_en: "Netherlands",
+    label_pt: "Países Baixos",
+  },
+  {
+    id: 155,
+    value: "netherlands_antilles",
+    label_en: "Netherlands Antilles",
+    label_pt: "Antilhas Neerlandesas",
+  },
+  {
+    id: 156,
+    value: "new_caledonia",
+    label_en: "New Caledonia",
+    label_pt: "Nova Caledônia",
+  },
+  {
+    id: 157,
+    value: "new_zealand",
+    label_en: "New Zealand",
+    label_pt: "Nova Zelândia",
+  },
+  { id: 158, value: "nicaragua", label_en: "Nicaragua", label_pt: "Nicarágua" },
+  { id: 159, value: "niger", label_en: "Niger", label_pt: "Níger" },
+  { id: 160, value: "nigeria", label_en: "Nigeria", label_pt: "Nigéria" },
+  { id: 161, value: "niue", label_en: "Niue", label_pt: "Niue" },
+  {
+    id: 162,
+    value: "norfolk_island",
+    label_en: "Norfolk Island",
+    label_pt: "Ilha Norfolk",
+  },
+  {
+    id: 163,
+    value: "northern_mariana_islands",
+    label_en: "Northern Mariana Islands",
+    label_pt: "Ilhas Marianas do Norte",
+  },
+  { id: 164, value: "norway", label_en: "Norway", label_pt: "Noruega" },
+  { id: 165, value: "oman", label_en: "Oman", label_pt: "Omã" },
+  { id: 166, value: "pakistan", label_en: "Pakistan", label_pt: "Paquistão" },
+  { id: 167, value: "palau", label_en: "Palau", label_pt: "Palau" },
+  {
+    id: 168,
+    value: "palestinian",
+    label_en: "Palestinian",
+    label_pt: "Palestina",
+  },
+  { id: 169, value: "panama", label_en: "Panama", label_pt: "Panamá" },
+  {
+    id: 170,
+    value: "papua_new_guinea",
+    label_en: "Papua New Guinea",
+    label_pt: "Papua Nova Guiné",
+  },
+  { id: 171, value: "paraguay", label_en: "Paraguay", label_pt: "Paraguai" },
+  { id: 172, value: "peru", label_en: "Peru", label_pt: "Peru" },
+  {
+    id: 173,
+    value: "philippines",
+    label_en: "Philippines",
+    label_pt: "Filipinas",
+  },
+  { id: 174, value: "pitcairn", label_en: "Pitcairn", label_pt: "Pitcairn" },
+  { id: 175, value: "poland", label_en: "Poland", label_pt: "Polônia" },
+  { id: 176, value: "portugal", label_en: "Portugal", label_pt: "Portugal" },
+  {
+    id: 177,
+    value: "puerto_rico",
+    label_en: "Puerto Rico",
+    label_pt: "Porto Rico",
+  },
+  { id: 178, value: "qatar", label_en: "Qatar", label_pt: "Catar" },
+  { id: 179, value: "reunion", label_en: "Reunion", label_pt: "Reunião" },
+  { id: 180, value: "romania", label_en: "Romania", label_pt: "Romênia" },
+  {
+    id: 181,
+    value: "russian_federation",
+    label_en: "Russian Federation",
+    label_pt: "Federação Russa",
+  },
+  { id: 182, value: "rwanda", label_en: "RWANDA", label_pt: "Ruanda" },
+  {
+    id: 183,
+    value: "saint_helena",
+    label_en: "Saint Helena",
+    label_pt: "Santa Helena",
+  },
+  {
+    id: 184,
+    value: "saint_kitts_and_nevis",
+    label_en: "Saint Kitts and Nevis",
+    label_pt: "Saint Kitts e Nevis",
+  },
+  {
+    id: 185,
+    value: "saint_lucia",
+    label_en: "Saint Lucia",
+    label_pt: "Santa Lúcia",
+  },
+  {
+    id: 186,
+    value: "saint_pierre_and_miquelon",
+    label_en: "Saint Pierre and Miquelon",
+    label_pt: "Saint Pierre e Miquelon",
+  },
+  {
+    id: 187,
+    value: "saint_vincent_and_the_grenadines",
+    label_en: "Saint Vincent and the Grenadines",
+    label_pt: "São Vicente e Granadinas",
+  },
+  { id: 188, value: "samoa", label_en: "Samoa", label_pt: "Samoa" },
+  {
+    id: 189,
+    value: "san_marino",
+    label_en: "San Marino",
+    label_pt: "San Marino",
+  },
+  {
+    id: 190,
+    value: "sao_tome_and_principe",
+    label_en: "Sao Tome and Principe",
+    label_pt: "São Tomé e Príncipe",
+  },
+  {
+    id: 191,
+    value: "saudi_arabia",
+    label_en: "Saudi Arabia",
+    label_pt: "Arábia Saudita",
+  },
+  { id: 192, value: "senegal", label_en: "Senegal", label_pt: "Senegal" },
+  {
+    id: 193,
+    value: "serbia_and_montenegro",
+    label_en: "Serbia and Montenegro",
+    label_pt: "Sérvia e Montenegro",
+  },
+  {
+    id: 194,
+    value: "seychelles",
+    label_en: "Seychelles",
+    label_pt: "Seicheles",
+  },
+  {
+    id: 195,
+    value: "sierra_leone",
+    label_en: "Sierra Leone",
+    label_pt: "Serra Leoa",
+  },
+  { id: 196, value: "singapore", label_en: "Singapore", label_pt: "Singapura" },
+  { id: 197, value: "slovakia", label_en: "Slovakia", label_pt: "Eslováquia" },
+  { id: 198, value: "slovenia", label_en: "Slovenia", label_pt: "Eslovênia" },
+  {
+    id: 199,
+    value: "solomon_islands",
+    label_en: "Solomon Islands",
+    label_pt: "Ilhas Salomão",
+  },
+  { id: 200, value: "somalia", label_en: "Somalia", label_pt: "Somália" },
+  {
+    id: 201,
+    value: "south_africa",
+    label_en: "South Africa",
+    label_pt: "África do Sul",
+  },
+  {
+    id: 202,
+    value: "south_georgia_and_the_south_sandwich_islands",
+    label_en: "South Georgia and the South Sandwich Islands",
+    label_pt: "Geórgia do Sul e Ilhas Sandwich do Sul",
+  },
+  { id: 203, value: "spain", label_en: "Spain", label_pt: "Espanha" },
+  { id: 204, value: "sri_lanka", label_en: "Sri Lanka", label_pt: "Sri Lanka" },
+  { id: 205, value: "sudan", label_en: "Sudan", label_pt: "Sudão" },
+  { id: 206, value: "suriname", label_en: "Suriname", label_pt: "Suriname" },
+  {
+    id: 207,
+    value: "svalbard_and_jan_mayen",
+    label_en: "Svalbard and Jan Mayen",
+    label_pt: "Svalbard e Jan Mayen",
+  },
+  {
+    id: 208,
+    value: "swaziland",
+    label_en: "Swaziland",
+    label_pt: "Suazilândia",
+  },
+  { id: 209, value: "sweden", label_en: "Sweden", label_pt: "Suécia" },
+  { id: 210, value: "switzerland", label_en: "Switzerland", label_pt: "Suíça" },
+  {
+    id: 211,
+    value: "syrian_arab_republic",
+    label_en: "Syrian Arab Republic",
+    label_pt: "República Árabe Síria",
+  },
+  { id: 212, value: "taiwan", label_en: "Taiwan", label_pt: "Taiwan" },
+  {
+    id: 213,
+    value: "tajikistan",
+    label_en: "Tajikistan",
+    label_pt: "Tajiquistão",
+  },
+  { id: 214, value: "tanzania", label_en: "Tanzania", label_pt: "Tanzânia" },
+  { id: 215, value: "thailand", label_en: "Thailand", label_pt: "Tailândia" },
+  {
+    id: 216,
+    value: "timor-leste",
+    label_en: "Timor-Leste",
+    label_pt: "Timor-Leste",
+  },
+  { id: 217, value: "togo", label_en: "Togo", label_pt: "Togo" },
+  { id: 218, value: "tokelau", label_en: "Tokelau", label_pt: "Tokelau" },
+  { id: 219, value: "tonga", label_en: "Tonga", label_pt: "Tonga" },
+  {
+    id: 220,
+    value: "trinidad_and_tobago",
+    label_en: "Trinidad and Tobago",
+    label_pt: "Trindade e Tobago",
+  },
+  { id: 221, value: "tunisia", label_en: "Tunisia", label_pt: "Tunísia" },
+  { id: 222, value: "turkey", label_en: "Turkey", label_pt: "Turquia" },
+  {
+    id: 223,
+    value: "turkmenistan",
+    label_en: "Turkmenistan",
+    label_pt: "Turcomenistão",
+  },
+  {
+    id: 224,
+    value: "turks_and_caicos_islands",
+    label_en: "Turks and Caicos Islands",
+    label_pt: "Ilhas Turks e Caicos",
+  },
+  { id: 225, value: "tuvalu", label_en: "Tuvalu", label_pt: "Tuvalu" },
+  { id: 226, value: "uganda", label_en: "Uganda", label_pt: "Uganda" },
+  { id: 227, value: "ukraine", label_en: "Ukraine", label_pt: "Ucrânia" },
+  {
+    id: 228,
+    value: "united_arab_emirates",
+    label_en: "United Arab Emirates",
+    label_pt: "Emirados Árabes Unidos",
+  },
+  {
+    id: 229,
+    value: "united_kingdom",
+    label_en: "United Kingdom",
+    label_pt: "Reino Unido",
+  },
+  {
+    id: 230,
+    value: "united_states",
+    label_en: "United States",
+    label_pt: "Estados Unidos",
+  },
+  {
+    id: 231,
+    value: "united_states_minor_outlying_islands",
+    label_en: "United States Minor Outlying Islands",
+    label_pt: "Ilhas Menores Distantes dos Estados Unidos",
+  },
+  { id: 232, value: "uruguay", label_en: "Uruguay", label_pt: "Uruguai" },
+  {
+    id: 233,
+    value: "uzbekistan",
+    label_en: "Uzbekistan",
+    label_pt: "Uzbequistão",
+  },
+  { id: 234, value: "vanuatu", label_en: "Vanuatu", label_pt: "Vanuatu" },
+  { id: 235, value: "venezuela", label_en: "Venezuela", label_pt: "Venezuela" },
+  { id: 236, value: "viet_nam", label_en: "Viet Nam", label_pt: "Vietnã" },
+  {
+    id: 237,
+    value: "virgin_islands_british",
+    label_en: "Virgin Islands, British",
+    label_pt: "Ilhas Virgens Britânicas",
+  },
+  {
+    id: 238,
+    value: "virgin_islands_us",
+    label_en: "Virgin Islands, U.S.",
+    label_pt: "Ilhas Virgens Americanas",
+  },
+  {
+    id: 239,
+    value: "wallis_and_futuna",
+    label_en: "Wallis and Futuna",
+    label_pt: "Wallis e Futuna",
+  },
+  {
+    id: 240,
+    value: "western_sahara",
+    label_en: "Western Sahara",
+    label_pt: "Saara Ocidental",
+  },
+  { id: 241, value: "yemen", label_en: "Yemen", label_pt: "Iémen" },
+  { id: 242, value: "zambia", label_en: "Zambia", label_pt: "Zâmbia" },
+  { id: 243, value: "zimbabwe", label_en: "Zimbabwe", label_pt: "Zimbábue" },
+];
+
+export const businessModelList: BusinessModel[] = [
+  {
+    id: 1,
+    value: "b2b",
+    label: "B2B",
+  },
+  {
+    id: 2,
+    value: "b2c",
+    label: "B2C",
+  },
+  {
+    id: 3,
+    value: "b2e",
+    label: "B2E",
+  },
+  {
+    id: 4,
+    value: "b2g",
+    label: "B2G",
+  },
+  {
+    id: 5,
+    value: "b2b2c",
+    label: "B2B2C",
+  },
+  {
+    id: 6,
+    value: "b2i",
+    label: "B2I",
+  },
+];
+
+export const operationalStageList: OperationalStage[] = [
+  {
+    id: 1,
+    value: "ideation",
+    label_en:
+      "Ideation (initial phase where the business idea is developed and validated)",
+    label_pt:
+      "Ideação (fase inicial, em que a ideia de negócio é desenvolvida e validada)",
+  },
+
+  {
+    id: 2,
+    value: "validation",
+    label_en:
+      "Validation (phase where the product or service is tested in the market to verify its viability)",
+    label_pt:
+      "Validação (fase em que o produto ou serviço é testado no mercado para verificar se é viável)",
+  },
+  {
+    id: 3,
+    value: "operation",
+    label_en:
+      "Operation (phase where the startup is in operation and begins to generate revenue)",
+    label_pt:
+      "Operação (fase em que a startup está em funcionamento e começa a gerar receita)",
+  },
+  {
+    id: 4,
+    value: "traction",
+    label_en:
+      "Traction (phase where the startup starts to grow rapidly and attract investors)",
+    label_pt:
+      "Tração (fase em que a startup começa a crescer rapidamente e atrair investidores)",
+  },
+  {
+    id: 5,
+    value: "scale",
+    label_en:
+      "Scale (phase where the startup expands its business to new markets and becomes a mature company)",
+    label_pt:
+      "Escala (fase em que a startup expande seus negócios para novos mercados e se torna uma empresa madura)",
+  },
+];
+
+export const startupChallengesList: ChallengesList[] = [
+  {
+    id: 1,
+    value: "definition_and_validation",
+    label_en: "Definition and validation of the business model",
+    label_pt: "Definição e validação do modelo de negócios",
+  },
+  {
+    id: 2,
+    value: "financial_modeling",
+    label_en: "Financial modeling",
+    label_pt: "Modelagem financeira",
+  },
+  {
+    id: 3,
+    value: "company_valuation",
+    label_en: "Company valuation",
+    label_pt: "Valuation da empresa",
+  },
+  {
+    id: 4,
+    value: "pricing",
+    label_en: "Pricing",
+    label_pt: "Precificação",
+  },
+  {
+    id: 5,
+    value: "marketing",
+    label_en: "Marketing",
+    label_pt: "Marketing",
+  },
+  {
+    id: 6,
+    value: "digital_marketing",
+    label_en: "Digital marketing",
+    label_pt: "Marketing digital",
+  },
+  {
+    id: 7,
+    value: "b2b_sales",
+    label_en: "B2B Sales",
+    label_pt: "Vendas B2B",
+  },
+  {
+    id: 8,
+    value: "b2c_sales",
+    label_en: "B2C Sales",
+    label_pt: "Vendas B2C",
+  },
+  {
+    id: 9,
+    value: "b2g_sales",
+    label_en: "B2G Sales",
+    label_pt: "Vendas B2G",
+  },
+  {
+    id: 10,
+    value: "ecommerce",
+    label_en: "E-commerce",
+    label_pt: "E-commerce",
+  },
+  {
+    id: 11,
+    value: "operations",
+    label_en: "Operations",
+    label_pt: "Operações",
+  },
+  {
+    id: 12,
+    value: "product_development",
+    label_en: "Product development",
+    label_pt: "Desenvolvimento de produto",
+  },
+  {
+    id: 13,
+    value: "purchasing",
+    label_en: "Purchasing",
+    label_pt: "Compras",
+  },
+  {
+    id: 14,
+    value: "strategic_vision",
+    label_en: "Strategic vision and company direction",
+    label_pt: "Visão estratégica e direcionamento da empresa",
+  },
+  {
+    id: 15,
+    value: "building_relationships",
+    label_en:
+      "Building a network of relationships (partnerships, suppliers...)",
+    label_pt:
+      "Construção de rede de relacionamento (parcerias, fornecedores...)",
+  },
+  {
+    id: 16,
+    value: "access_public_financing",
+    label_en: "Access to public financing",
+    label_pt: "Acesso a financiamento público",
+  },
+  {
+    id: 17,
+    value: "access_private_financing",
+    label_en: "Access to private financing",
+    label_pt: "Acesso a financiamento privado",
+  },
+  {
+    id: 18,
+    value: "access_to_investors",
+    label_en: "Access to investors",
+    label_pt: "Acesso a investidores",
+  },
+  {
+    id: 19,
+    value: "negotiation_with_investors",
+    label_en: "Negotiation with investors",
+    label_pt: "Negociação com investidores",
+  },
+  {
+    id: 20,
+    value: "team_leadership",
+    label_en: "Team leadership",
+    label_pt: "Liderança de equipes",
+  },
+  {
+    id: 21,
+    value: "intellectual_property",
+    label_en: "Intellectual property",
+    label_pt: "Propriedade intelectual",
+  },
+  {
+    id: 22,
+    value: "legal",
+    label_en: "Legal",
+    label_pt: "Jurídico",
+  },
+  {
+    id: 23,
+    value: "internationalization",
+    label_en: "Internationalization",
+    label_pt: "Internacionalização",
+  },
+];
+
+export const trlList: TRLList[] = [
+  {
+    id: 1,
+    value: "trl_1",
+    label_en:
+      "TRL 1 - Initial Concept: At this stage, the technology is in the conceptual stage, with basic research, theoretical studies, and initial ideas",
+    label_pt:
+      "TRL 1 - Conceito Inicial: Nesta fase, a tecnologia está em estágio conceitual, com pesquisa de base, estudos teóricos e ideias iniciais",
+  },
+  {
+    id: 2,
+    value: "trl_2",
+    label_en:
+      "TRL 2 - Conceptual Discovery: The technology is evaluated for its feasibility, and initial concepts are tested in a controlled environment",
+    label_pt:
+      "TRL 2 - Descoberta Conceitual: A tecnologia é avaliada quanto à sua viabilidade, e conceitos iniciais são testados em ambiente controlado",
+  },
+  {
+    id: 3,
+    value: "trl_3",
+    label_en:
+      "TRL 3 - Proof of Concept: Concepts are demonstrated in a laboratory environment, proving that the idea can work in practice",
+    label_pt:
+      "TRL 3 - Prova de Conceito: Os conceitos são demonstrados em ambiente de laboratório, provando que a ideia pode funcionar na prática",
+  },
+  {
+    id: 4,
+    value: "trl_4",
+    label_en:
+      "TRL 4 - Laboratory Prototype: The technology is developed to the point where a functional prototype is created and tested in a laboratory environment",
+    label_pt:
+      "TRL 4 - Protótipo em Ambiente de Laboratório: A tecnologia é desenvolvida até o ponto em que um protótipo funcional é criado e testado em ambiente de laboratório",
+  },
+  {
+    id: 5,
+    value: "trl_5",
+    label_en:
+      "TRL 5 - Simulated Environment Prototype: The prototype is tested in a simulated environment, closer to real operating conditions",
+    label_pt:
+      "TRL 5 - Protótipo em Ambiente Simulado: O protótipo é testado em um ambiente simulado, mais próximo das condições reais de operação",
+  },
+  {
+    id: 6,
+    value: "trl_6",
+    label_en:
+      "TRL 6 - Real Environment Prototype: The prototype is tested in a real environment and representative operational conditions",
+    label_pt:
+      "TRL 6 - Protótipo em Ambiente Real: O protótipo é testado em ambiente real e condições operacionais representativas",
+  },
+  {
+    id: 7,
+    value: "trl_7",
+    label_en:
+      "TRL 7 - Operational Environment Demonstration: The technology is demonstrated in an operational environment, validating its operation in real situations",
+    label_pt:
+      "TRL 7 - Demonstração em Ambiente Operacional: A tecnologia é demonstrada em ambiente operacional, validando seu funcionamento em situações reais",
+  },
+  {
+    id: 8,
+    value: "trl_8",
+    label_en:
+      "TRL 8 - Pre-Commercial System: The technology is refined to meet commercial requirements and is ready for market launch",
+    label_pt:
+      "TRL 8 - Sistema Pré-Comercial: A tecnologia é refinada para atender a requisitos comerciais e está pronta para lançamento no mercado",
+  },
+  {
+    id: 9,
+    value: "trl_9",
+    label_en:
+      "TRL 9 - Operational System: The technology is in real use, proven, and widely adopted in the market",
+    label_pt:
+      "TRL 9 - Sistema em Operação: A tecnologia está em uso real, comprovada e amplamente adotada no mercado",
+  },
+];
+
+export const serviceProductsList: ServiceProductsStartup[] = [
+  {
+    id: 1,
+    value: "physical_product",
+    label_en: "Physical product",
+    label_pt: "Produto físico",
+  },
+  {
+    id: 2,
+    value: "digital_product",
+    label_en: "Digital product",
+    label_pt: "Produto digital",
+  },
+  {
+    id: 3,
+    value: "in_person_service",
+    label_en: "In-person service",
+    label_pt: "Serviço presencial",
+  },
+  {
+    id: 4,
+    value: "digital_service",
+    label_en: "Digital service",
+    label_pt: "Serviço digital",
   },
 ];
