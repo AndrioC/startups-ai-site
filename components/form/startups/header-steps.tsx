@@ -5,7 +5,15 @@ import { useFormState } from "@/contexts/FormContext";
 export default function HeaderSteps() {
   const { step } = useFormState();
 
-  const steps = ["Step 1", "Step 2", "Step 4", "Step 5", "Step 6", "Step 7"];
+  const steps = [
+    "Step 1",
+    "Step 2",
+    "Step 3",
+    "Step 4",
+    "Step 5",
+    "Step 6",
+    "Step 7",
+  ];
 
   if (step === 0) {
     return null;

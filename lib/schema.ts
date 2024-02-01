@@ -91,6 +91,24 @@ export const DataAboutFinanceAndMarket = (t: (arg: string) => string) =>
     howMuchEquityWasDistributed: z.coerce.string().optional(),
   });
 
+export const DataSignUpSchema = (t: (arg: string) => string) =>
+  z
+    .object({
+      fullNameSignUp: z.string().min(1, t("startup-form-required-field")),
+      emailSignUp: z
+        .string()
+        .min(1, t("startup-form-required-field"))
+        .email(t("startup-form-required-field")),
+      passwordSignUp: z.string().min(6, t("startup-form-password-field")),
+      confirmPasswordSignUp: z
+        .string()
+        .min(6, { message: "Password must be at least 6 characters" }),
+    })
+    .refine((data) => data.passwordSignUp === data.confirmPasswordSignUp, {
+      path: ["confirmPasswordSignUp"],
+      message: "Passwords does not match",
+    });
+
 //   import { z } from "zod";
 
 // export const FormDataSchema = z.object({

@@ -1,13 +1,13 @@
+import DataAboutFinanceAndMarketPage from "@/components/form/startups/data-about-finance-and-market";
+import DataAboutGovernancePage from "@/components/form/startups/data-about-governance";
+import DataAboutStartupsForm from "@/components/form/startups/data-about-startups-form";
+import DataAboutTeam from "@/components/form/startups/data-about-team";
+import DataFinal from "@/components/form/startups/data-final";
+import DataMaturationLevelDeepTechForm from "@/components/form/startups/data-maturation-level-deep-tech";
+import DataServiceProduct from "@/components/form/startups/data-service-product";
+import DataSignUpUser from "@/components/form/startups/data-sign-up-user";
+import FormAboutTheProgram from "@/components/form/startups/form-about-the-program";
 import { useFormState } from "@/contexts/FormContext";
-
-import DataAboutFinanceAndMarketPage from "./data-about-finance-and-market";
-import DataAboutGovernancePage from "./data-about-governance";
-import DataAboutStartupsForm from "./data-about-startups-form";
-import DataAboutTeam from "./data-about-team";
-import DataFinal from "./data-final";
-import DataMaturationLevelDeepTechForm from "./data-maturation-level-deep-tech";
-import DataServiceProduct from "./data-service-product";
-import FormAboutTheProgram from "./form-about-the-program";
 
 export default function FormStep() {
   const { step } = useFormState();
@@ -16,18 +16,20 @@ export default function FormStep() {
     case 0:
       return <FormAboutTheProgram />;
     case 1:
-      return <DataAboutStartupsForm />;
+      return <DataSignUpUser />;
     case 2:
-      return <DataMaturationLevelDeepTechForm />;
+      return <DataAboutStartupsForm />;
     case 3:
-      return <DataServiceProduct />;
+      return <DataMaturationLevelDeepTechForm />;
     case 4:
-      return <DataAboutTeam />;
+      return <DataServiceProduct />;
     case 5:
-      return <DataAboutGovernancePage />;
+      return <DataAboutTeam />;
     case 6:
-      return <DataAboutFinanceAndMarketPage />;
+      return <DataAboutGovernancePage />;
     case 7:
+      return <DataAboutFinanceAndMarketPage />;
+    case 8:
       return <DataFinal />;
     default:
       return null;

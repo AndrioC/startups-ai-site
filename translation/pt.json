@@ -351,6 +351,14 @@
       "text-19": "Saiba mais sobre o Programa visitando nossa página: https://www.ifia.com/startups-department/",
       "text-20": "Obrigado antecipadamente pelo interesse em fazer parte do maior ecossistema de startups do mundo!"
     },
+    "startup-form-sign-up": {
+      "title": "Cadastro de usuário",
+      "name-field": "Nome completo",
+      "email-field": "Email",
+      "password-field": "Senha",
+      "confirm-password-field": "Confirmar senha"
+    },
+    "startup-form-password-field": "Senha deve ter no mínimo 6 caracteres",
     "startup-form-required-field": "Este campo é obrigatório!",
     "startup-form-email-field": "E-mail não é válido!",
     "startup-form-challenges-field": "Selecione pelo menos um campo",

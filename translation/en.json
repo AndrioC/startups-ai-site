@@ -347,6 +347,15 @@
       "text-19": "Learn more about the Program by visiting our page: https://www.ifia.com/startups-department/",
       "text-20": "Thank you in advance for your interest in being part of the world's largest startup ecosystem!"
     },
+
+    "startup-form-sign-up": {
+      "title": "Sign Up",
+      "name-field": "Full Name",
+      "email-field": "Email",
+      "password-field": "Password",
+      "confirm-password-field": "Confirm password"
+    },
+    "startup-form-password-field": "Password must have at least 6 characters",
     "startup-form-required-field": "This field is required!",
     "startup-form-email-field": "Invalid email address!",
     "startup-form-challenges-field": "Select at least one option",

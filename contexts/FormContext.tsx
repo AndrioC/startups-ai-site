@@ -49,6 +49,10 @@ interface FormData {
   alreadyRaisedInvestment: string;
   amountRaised: string;
   howMuchEquityWasDistributed: string;
+  fullNameSignUp: string;
+  emailSignUp: string;
+  passwordSignUp: string;
+  confirmPasswordSignUp: string;
 }
 interface FormContext {
   handleNext: () => void;
@@ -107,6 +111,10 @@ const initialFormData: FormData = {
   alreadyRaisedInvestment: "",
   amountRaised: "",
   howMuchEquityWasDistributed: "",
+  fullNameSignUp: "",
+  emailSignUp: "",
+  passwordSignUp: "",
+  confirmPasswordSignUp: "",
 };
 
 const FormContext = createContext<FormContext>({
