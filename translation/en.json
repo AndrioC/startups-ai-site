@@ -113,7 +113,9 @@
     "no-description-card-text": "No description",
     "expert-learn-more": "Learn more",
 
-    "expert-not-found-results-text": "No expert found"
+    "expert-not-found-results-text": "No expert found",
+
+    "expert-acess-ebook-button": "Access E-book"
   },
   "Support": {
     "terms-and-conditions": {

@@ -87,6 +87,16 @@ export interface ServiceProductsStartup {
   label_pt: string;
 }
 
+export interface ExpertsEbook {
+  id: number;
+  title_en: string;
+  title_pt: string;
+  link_en: string;
+  link_pt: string;
+  img_en: string;
+  img_pt: string;
+}
+
 type InfoFlags = {
   [key: string]: string;
 };
@@ -2964,5 +2974,19 @@ export const serviceProductsList: ServiceProductsStartup[] = [
     value: "digital_service",
     label_en: "Digital service",
     label_pt: "Serviço digital",
+  },
+];
+
+export const expertsEbook: ExpertsEbook[] = [
+  {
+    id: 1,
+    title_en: "Expert Guide",
+    title_pt: "Guia do Especialista",
+    link_en:
+      "https://drive.google.com/file/d/1oYKb-yEHQi5Zfit4T4cxNK9IiQJcMBdG/view?usp=sharing",
+    link_pt:
+      "https://drive.google.com/file/d/1BaocxLBhMYcrsikL0dOn0PxzRT9p2r3V/view?usp=sharing",
+    img_en: "/assets/ebooks/01_ebook_experts_en.png",
+    img_pt: "/assets/ebooks/01_ebook_experts_pt.png",
   },
 ];
