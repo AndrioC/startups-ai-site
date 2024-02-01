@@ -67,7 +67,7 @@
 
     "contact-email-sending-text": "Enviando..",
     "contact-email-sent-message": "E-mail enviado com sucesso!",
-    "contact-email-error-message": "Error ao enviar e-mail, tente novamente mais tarde.",
+    "contact-email-error-message": "Erro ao enviar e-mail, tente novamente mais tarde.",
 
     "footer-address": "Rua Teodoro Sampaio, 744, Conjunto 108, Bairro Pinheiros, São Paulo - SP, Brasil",
     "footer-zip-code": "CEP: 05.406-000",
@@ -97,7 +97,7 @@
   },
 
   "Expert": {
-    "expert-header-learn-more-text": "Saiba mais sobre o nosso probrama para Especialistas",
+    "expert-header-learn-more-text": "Saiba mais sobre o nosso programa para Especialistas",
     "expert-header-subscription-button-text": "Fazer meu cadastro",
 
     "header-filter-language": "Idioma",
