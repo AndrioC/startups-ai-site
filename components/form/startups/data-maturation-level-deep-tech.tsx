@@ -17,7 +17,7 @@ export default function DataMaturationLevelDeepTech() {
   const t = useTranslations("Form");
   const lang = useLocale();
 
-  const { register, handleSubmit } = useForm<Inputs>({
+  const { register, handleSubmit, watch } = useForm<Inputs>({
     defaultValues: formData,
     resolver: zodResolver(DataMaturationLevelDeepTechSchema),
   });
@@ -47,8 +47,9 @@ export default function DataMaturationLevelDeepTech() {
     handleNext();
   }
 
-  function onHandleBack(data: Inputs) {
-    setFormData((prevFormData) => ({ ...prevFormData, ...data }));
+  function onHandleBack() {
+    const currentFormData = watch();
+    setFormData((prevFormData) => ({ ...prevFormData, ...currentFormData }));
     handleBack();
   }
   return (

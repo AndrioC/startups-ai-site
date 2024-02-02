@@ -26,6 +26,7 @@ export default function DataSignUpUser() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<z.infer<typeof formSchema>>({
     defaultValues: formData,
@@ -37,8 +38,9 @@ export default function DataSignUpUser() {
     handleNext();
   }
 
-  function onHandleBack(data: z.infer<typeof formSchema>) {
-    setFormData((prevFormData) => ({ ...prevFormData, ...data }));
+  function onHandleBack() {
+    const currentFormData = watch();
+    setFormData((prevFormData) => ({ ...prevFormData, ...currentFormData }));
     handleBack();
   }
 
@@ -177,7 +179,7 @@ export default function DataSignUpUser() {
       <div className="flex justify-between">
         <Button
           variant="blue"
-          onClick={handleSubmit(onHandleBack)}
+          onClick={() => onHandleBack()}
           className="px-6 text-white rounded-md"
         >
           {t("startup-form-previous-button")}

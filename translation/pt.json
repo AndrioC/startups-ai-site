@@ -358,7 +358,8 @@
       "name-field": "Nome completo",
       "email-field": "Email",
       "password-field": "Senha",
-      "confirm-password-field": "Confirmar senha"
+      "confirm-password-field": "Confirmar senha",
+      "password-does-not-match": "Senhas não coincidem"
     },
     "startup-form-password-field": "Senha deve ter no mínimo 6 caracteres",
     "startup-form-required-field": "Este campo é obrigatório!",

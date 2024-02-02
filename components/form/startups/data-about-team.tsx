@@ -17,6 +17,7 @@ export default function DataAboutTeamPage() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<z.infer<typeof formSchema>>({
     defaultValues: formData,
@@ -28,8 +29,9 @@ export default function DataAboutTeamPage() {
     handleNext();
   }
 
-  function onHandleBack(data: z.infer<typeof formSchema>) {
-    setFormData((prevFormData) => ({ ...prevFormData, ...data }));
+  function onHandleBack() {
+    const currentFormData = watch();
+    setFormData((prevFormData) => ({ ...prevFormData, ...currentFormData }));
     handleBack();
   }
 

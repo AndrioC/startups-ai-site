@@ -355,7 +355,8 @@
       "name-field": "Full Name",
       "email-field": "Email",
       "password-field": "Password",
-      "confirm-password-field": "Confirm password"
+      "confirm-password-field": "Confirm password",
+      "password-does-not-match": "Passwords does not match"
     },
     "startup-form-password-field": "Password must have at least 6 characters",
     "startup-form-required-field": "This field is required!",

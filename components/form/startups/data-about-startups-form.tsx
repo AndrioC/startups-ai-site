@@ -27,6 +27,7 @@ export default function DataAboutStartupsForm() {
   const {
     register,
     handleSubmit,
+    watch,
     control,
     formState: { errors },
   } = useForm<z.infer<typeof formSchema>>({
@@ -121,8 +122,9 @@ export default function DataAboutStartupsForm() {
     handleNext();
   }
 
-  function onHandleBack(data: z.infer<typeof formSchema>) {
-    setFormData((prevFormData) => ({ ...prevFormData, ...data }));
+  function onHandleBack() {
+    const currentFormData = watch();
+    setFormData((prevFormData) => ({ ...prevFormData, ...currentFormData }));
     handleBack();
   }
 
