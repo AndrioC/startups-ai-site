@@ -198,7 +198,7 @@ export default function DataAboutFinanceAndMarketPage() {
       <div className="flex justify-between">
         <Button
           variant="blue"
-          onClick={handleSubmit(onHandleBack)}
+          onClick={onHandleBack}
           className="px-6 text-white rounded-md"
         >
           {t("startup-form-previous-button")}

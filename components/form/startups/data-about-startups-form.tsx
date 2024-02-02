@@ -589,7 +589,7 @@ export default function DataAboutStartupsForm() {
       <div className="flex justify-between sticky">
         <Button
           variant="blue"
-          onClick={handleSubmit(onHandleBack)}
+          onClick={onHandleBack}
           className="px-6 text-white rounded-md"
         >
           {t("startup-form-previous-button")}
