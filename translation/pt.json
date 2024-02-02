@@ -370,6 +370,7 @@
     "startup-form-question-no-text": "Não",
     "startup-form-question-maybe-text": "Talvez",
     "startup-form-question-partially-text": "Parcialmente",
+    "startup-select-file-text": "Selecionar arquivo",
     "startup-form-data-about-startups": {
       "title": "Dados gerais sobre a startup",
       "question-01": "1. Qual o nome da Startup?",
@@ -396,7 +397,7 @@
       "question-19": "19. Quais são os desafios que a sua Startup possui neste momento?",
       "question-20": "20. Sua Startup é uma DeepTech?",
       "question-20-text": "De modo geral, startups Deep Tech nascem de descobertas de pesquisa científica das universidades nas áreas de matemática, física, medicina, medicina veterinária, engenharia entre outras áreas. Possuem em seu time fundador mestres, doutores, pós-doutores e possuem tempo de maturação mais longo, incluindo muitas vezes etapas regulatórias para lançamento de produtos no mercado.",
-      "question-21": "21. Carregue o pitchdeck de sua Startup aqui (formado .pdf)",
+      "question-21": "21. Carregue o pitchdeck de sua Startup aqui (formato .pdf)",
       "question-22": "22. Carregue a logomarca de sua Startup aqui (de preferência no formato .svg)",
       "question-23": "23. Faça uma breve descrição de sua Startup",
       "question-24": "24. Descreva sua Proposta de Valor em 70 caracteres"

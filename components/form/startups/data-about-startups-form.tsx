@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
@@ -19,6 +20,11 @@ import { DataAboutStartupsSchema } from "@/lib/schema";
 
 export default function DataAboutStartupsForm() {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
+  const [pitchDeckFile, setPitchDeckFile] = useState<string | undefined>(
+    undefined
+  );
+  const [logoFile, setLogoFile] = useState<string | undefined>(undefined);
+
   const t = useTranslations("Form");
   const lang = useLocale();
 
@@ -118,6 +124,7 @@ export default function DataAboutStartupsForm() {
     });
 
   function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
+    console.log("DATA: ", data);
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     handleNext();
   }
@@ -513,17 +520,28 @@ export default function DataAboutStartupsForm() {
           name="loadPitchDeck"
           control={control}
           render={({ field: { ref, name, onBlur, onChange } }) => (
-            <div>
+            <div className="flex items-center space-x-2">
+              <label
+                htmlFor={name}
+                className="bg-blue-500 px-4 py-2 text-white rounded-md cursor-pointer"
+              >
+                {t("startup-select-file-text")}
+              </label>
               <input
                 type="file"
                 ref={ref}
                 name={name}
+                id={name}
                 onBlur={onBlur}
                 accept=".pdf"
+                style={{ display: "none" }}
                 onChange={(e) => {
-                  onChange(e.target.files?.[0]);
+                  const selectedFile = e.target.files?.[0];
+                  setPitchDeckFile(selectedFile?.name || undefined);
+                  onChange(selectedFile);
                 }}
               />
+              {pitchDeckFile && <span>{pitchDeckFile}</span>}
             </div>
           )}
         />
@@ -540,16 +558,29 @@ export default function DataAboutStartupsForm() {
           name="loadLogo"
           control={control}
           render={({ field: { ref, name, onBlur, onChange } }) => (
-            <input
-              type="file"
-              ref={ref}
-              name={name}
-              onBlur={onBlur}
-              accept=".png, .jpeg, .jpg, .svg"
-              onChange={(e) => {
-                onChange(e.target.files?.[0]);
-              }}
-            />
+            <div className="flex items-center space-x-2">
+              <label
+                htmlFor={name}
+                className="bg-blue-500 px-4 py-2 text-white rounded-md cursor-pointer"
+              >
+                {t("startup-select-file-text")}
+              </label>
+              <input
+                type="file"
+                ref={ref}
+                name={name}
+                id={name}
+                onBlur={onBlur}
+                accept=".png, .jpeg, .jpg, .svg"
+                style={{ display: "none" }}
+                onChange={(e) => {
+                  const selectedFile = e.target.files?.[0];
+                  setLogoFile(selectedFile?.name || undefined);
+                  onChange(selectedFile);
+                }}
+              />
+              {logoFile && <span>{logoFile}</span>}
+            </div>
           )}
         />
         {errors.loadLogo?.message && (

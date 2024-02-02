@@ -367,6 +367,7 @@
     "startup-form-question-no-text": "No",
     "startup-form-question-maybe-text": "Maybe",
     "startup-form-question-partially-text": "Partially",
+    "startup-select-file-text": "Select file",
     "startup-form-data-about-startups": {
       "title": "General information about the startup",
       "question-01": "1. What is the name of the Startup?",
