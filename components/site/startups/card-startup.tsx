@@ -36,7 +36,7 @@ export default function CardStartup({
   const t = useTranslations("Startup");
   return (
     <div
-      className="flex flex-col shadow-lg w-[370px] md:w-[450px] h-[200px] mb-10"
+      className="flex flex-col shadow-lg w-[370px] md:w-[450px] h-[215px] lg:h-[200px] mb-10"
       style={{ position: "relative" }}
     >
       <div className="flex justify-between p-5 py-1 items-center">
@@ -69,7 +69,7 @@ export default function CardStartup({
       </div>
       <div
         id="footer"
-        className="flex items-center justify-between bg-gray-200 w-full px-5"
+        className="flex items-center justify-between bg-gray-200 w-full px-5 mt-10"
         style={{ position: "absolute", bottom: "0" }}
       >
         <div>
