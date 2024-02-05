@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { StartupProps, startupsList } from "@/app/(site)/data";
 import Container from "@/components/site/home/container";
@@ -14,6 +14,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function StartupsPage() {
   const t = useTranslations("Startup");
+  const lang = useLocale();
   const [filteredData, setFilteredData] = useState(startupsList);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,8 +28,15 @@ export default function StartupsPage() {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
+      const newData = startupsList.filter((value) => [
+        {
+          ...value,
+          value_proposal:
+            lang === "en" ? value.value_proposal_en : value.value_proposal_pt,
+        },
+      ]);
       await new Promise((resolve) => setTimeout(resolve, 500));
-      setFilteredData(startupsList);
+      setFilteredData(newData);
       setIsLoading(false);
     };
 
@@ -85,7 +93,11 @@ export default function StartupsPage() {
                   startup_name={startup.startup_name}
                   logo={startup.logo}
                   foundation_year={startup.foundation_year}
-                  value_proposal={startup.value_proposal}
+                  value_proposal={
+                    lang === "en"
+                      ? startup.value_proposal_en
+                      : startup.value_proposal_pt
+                  }
                   last_update={startup.last_update}
                   vertical={startup.vertical}
                   business_model={startup.business_model}

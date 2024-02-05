@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { infoFlags, StartupProps } from "@/app/(site)/data";
+import { infoFlags } from "@/app/(site)/data";
 import startupPlaceHolder from "@/assets/startup-placeholder.png";
 import {
   Tooltip,
@@ -9,6 +9,18 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+
+interface CardStartupProps {
+  startup_name: string;
+  logo: string | null;
+  foundation_year: number | null;
+  value_proposal: string;
+  last_update: string;
+  vertical: string;
+  business_model: string;
+  country: string;
+  flag: string;
+}
 
 export default function CardStartup({
   startup_name,
@@ -20,14 +32,14 @@ export default function CardStartup({
   business_model,
   country,
   flag,
-}: StartupProps) {
+}: CardStartupProps) {
   const t = useTranslations("Startup");
   return (
     <div
       className="flex flex-col shadow-lg w-[370px] md:w-[450px] h-[200px] mb-10"
       style={{ position: "relative" }}
     >
-      <div className="flex justify-between p-5 items-center">
+      <div className="flex justify-between p-5 py-1 items-center">
         <div className="flex flex-col">
           <div className="flex flex-col">
             <span className="mr-5 text-sm font-semibold w-[250px]">
@@ -53,7 +65,7 @@ export default function CardStartup({
         </div>
       </div>
       <div className="px-5">
-        <p className="font-normal text-sm text-gray-500">{value_proposal}</p>
+        <p className="font-normal text-xs text-gray-500">{value_proposal}</p>
       </div>
       <div
         id="footer"
