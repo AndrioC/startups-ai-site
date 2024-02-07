@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import logoAbipir from "@/assets/img/logos/abipir-logo.svg";
+import logoAws from "@/assets/img/logos/aws-logo.png";
 import cogTech from "@/assets/img/logos/cogtech.svg";
 import logoConecta from "@/assets/img/logos/conecta-logo.svg";
 import logoFi from "@/assets/img/logos/fi-logo.svg";
@@ -83,6 +84,12 @@ export default function ExtraLogos() {
       title: "NewEnglandInvents",
       logo: newEnglandInventsLogo,
       url: "https://neinvents.org/",
+    },
+    {
+      _id: 2014,
+      title: "AWS",
+      logo: logoAws,
+      url: "https://aws.amazon.com/",
     },
   ];
 
