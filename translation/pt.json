@@ -386,21 +386,23 @@
       "question-09": "9. LinkedIn do responsável pela Startup no programa",
       "question-10": "10. Número de telefone/contato (WhatsApp) com código do país",
       "question-11": "11. E-mail do responsável da Startup no programa",
-      "question-12": "12. Quantos sócios fazem parte da Startup?",
-      "question-13": "13. Relacione o nome, o cargo e LinkedIn de cada um dos sócios",
-      "question-13-text": "Ex: Rodrigo Grossi / CEO / https://www.linkedin.com/in/rodrigogrossi/",
-      "question-14": "14. Pelo menos um dos sócios possui dedicação exclusiva para a Startup?",
-      "question-15": "15. Quantos funcionários trabalham na Startup?",
-      "question-16": "16. Quantas pessoas da equipe estão 100% envolvidas na Startup?",
-      "question-17": "17. Qual o modelo de negócio da sua Startup?",
-      "question-18": "18. Qual o estágio operacional da Startup?",
-      "question-19": "19. Quais são os desafios que a sua Startup possui neste momento?",
-      "question-20": "20. Sua Startup é uma DeepTech?",
-      "question-20-text": "De modo geral, startups Deep Tech nascem de descobertas de pesquisa científica das universidades nas áreas de matemática, física, medicina, medicina veterinária, engenharia entre outras áreas. Possuem em seu time fundador mestres, doutores, pós-doutores e possuem tempo de maturação mais longo, incluindo muitas vezes etapas regulatórias para lançamento de produtos no mercado.",
-      "question-21": "21. Carregue o pitchdeck de sua Startup aqui (formato .pdf)",
-      "question-22": "22. Carregue a logomarca de sua Startup aqui (de preferência no formato .svg)",
-      "question-23": "23. Faça uma breve descrição de sua Startup",
-      "question-24": "24. Descreva sua Proposta de Valor em 70 caracteres"
+      "question-12": "12. Qual o objetivo da sua startup no programa??",
+      "question-13": "13. Fazer conexões apenas no país de origem da minha startup?",
+      "question-14": "14. Quantos sócios fazem parte da Startup?",
+      "question-15": "15. Relacione o nome, o cargo e LinkedIn de cada um dos sócios",
+      "question-15-text": "Ex: Rodrigo Grossi / CEO / https://www.linkedin.com/in/rodrigogrossi/",
+      "question-16": "16. Pelo menos um dos sócios possui dedicação exclusiva para a Startup?",
+      "question-17": "17. Quantos funcionários trabalham na Startup?",
+      "question-18": "18. Quantas pessoas da equipe estão 100% envolvidas na Startup?",
+      "question-19": "19. Qual o modelo de negócio da sua Startup?",
+      "question-20": "20. Qual o estágio operacional da Startup?",
+      "question-21": "21. Quais são os desafios que a sua Startup possui neste momento?",
+      "question-22": "22. Sua Startup é uma DeepTech?",
+      "question-22-text": "De modo geral, startups Deep Tech nascem de descobertas de pesquisa científica das universidades nas áreas de matemática, física, medicina, medicina veterinária, engenharia entre outras áreas. Possuem em seu time fundador mestres, doutores, pós-doutores e possuem tempo de maturação mais longo, incluindo muitas vezes etapas regulatórias para lançamento de produtos no mercado.",
+      "question-23": "23. Carregue o pitchdeck de sua Startup aqui (formato .pdf)",
+      "question-24": "24. Carregue a logomarca de sua Startup aqui (de preferência no formato .svg)",
+      "question-25": "25. Faça uma breve descrição de sua Startup",
+      "question-26": "26. Descreva sua Proposta de Valor em 70 caracteres"
     },
     "startup-form-data-maturation-level-deep-tech": {
       "title": "Estágio de maturação tecnológica de sua startup deeptech",
@@ -409,48 +411,48 @@
         "second-part": "A escala TRL (Technology Readiness Level) é um sistema numérico utilizado para avaliar o estágio de maturidade tecnológica de uma inovação ou tecnologia. Essa escala fornece uma medida objetiva do progresso de uma tecnologia desde a pesquisa inicial até sua prontidão para a implementação e uso no mundo real. A escala TRL é frequentemente usada por agências governamentais, instituições de pesquisa e empresas para acompanhar e comunicar o desenvolvimento tecnológico.",
         "third-part": "A escala TRL varia de 1 a 9, e cada nível representa um estágio específico no processo de desenvolvimento tecnológico."
       },
-      "question-25": "25. Selecione o melhor nível de maturidade tecnológica que sua Startup se encontra",
-      "question-26": "26. Sua Startup possui alguma patente pendente ou já concedida?",
-      "question-27": "27. Caso a resposta acima foi 'Sim', relacione abaixo as patentes com o Título e o código de cada patente"
+      "question-27": "27. Selecione o melhor nível de maturidade tecnológica que sua Startup se encontra",
+      "question-28": "28. Sua Startup possui alguma patente pendente ou já concedida?",
+      "question-29": "29. Caso a resposta acima foi 'Sim', relacione abaixo as patentes com o Título e o código de cada patente"
     },
     "startup-form-data-service-product": {
       "title": "Produto(s)/serviço(s) da startup",
-      "question-28": "28. Escolha a opção que melhor descreve o que é comercializado na sua Startup",
-      "question-29": "29. Descreva abaixo cada problema e a respectiva solução que sua Startup se propõem a solucionar.",
-      "question-30": "30. Quem são seus concorrentes? Liste-os abaixo",
-      "question-31": "31. Qual é o diferencial competitivo da sua Startup frente aos seus concorrentes?",
-      "question-32": "32. Quantos Objetivos do Desenvolvimento Sustentável - ODS da ONU sua Startup atende?"
+      "question-30": "30. Escolha a opção que melhor descreve o que é comercializado na sua Startup",
+      "question-31": "31. Descreva abaixo cada problema e a respectiva solução que sua Startup se propõem a solucionar.",
+      "question-32": "32. Quem são seus concorrentes? Liste-os abaixo",
+      "question-33": "33. Qual é o diferencial competitivo da sua Startup frente aos seus concorrentes?",
+      "question-34": "34. Quantos Objetivos do Desenvolvimento Sustentável - ODS da ONU sua Startup atende?"
     },
     "startup-form-data-about-team": {
       "title": "Sobre a equipe",
-      "question-33": "33. Um ou mais sócios já empreenderam ou empreendem em outro negócio ?",
-      "question-34": "34. A formação e a área de atuação dos sócios são complementares? Ex. Um sócio de tecnologia e outro sócio da área de gestão",
-      "question-35": "35. Um ou mais sócios dedicam 100% do seu tempo à Startup",
-      "question-36": "36. Um ou mais sócios tem experiência comprovada na área de atuação da Startup"
+      "question-35": "35. Um ou mais sócios já empreenderam ou empreendem em outro negócio ?",
+      "question-36": "36. A formação e a área de atuação dos sócios são complementares? Ex. Um sócio de tecnologia e outro sócio da área de gestão",
+      "question-37": "37. Um ou mais sócios dedicam 100% do seu tempo à Startup",
+      "question-38": "38. Um ou mais sócios tem experiência comprovada na área de atuação da Startup"
     },
     "startup-form-data-governance": {
       "title": "Governança",
       "explain-text-first-part": "Governança corporativa é o sistema pelo qual as empresas e demais organizações são dirigidas, monitoradas e incentivadas, envolvendo os relacionamentos entre sócios, conselho de administração, diretoria, órgãos de fiscalização e controle e demais partes interessadas.",
       "explain-text-second-part": "As boas práticas de governança corporativa convertem princípios básicos em recomendações objetivas, alinhando interesses com a finalidade de preservar e otimizar o valor econômico de longo prazo da organização, facilitando seu acesso a recursos e contribuindo para a qualidade da gestão da organização, sua longevidade e o bem comum.",
-      "question-37": "37. A empresa está oficialmente registrada em seu país com um contrato social?",
-      "question-38": "38. Existe um Acordo de Sócios assinados pelos sócios?",
-      "question-38-text-first-part": "O Acordo de Sócios representa um instrumento jurídico formalizado entre os sócios de uma empresa, com a finalidade de regular as interações entre as partes, além de instituir diretrizes e responsabilidades específicas para a administração da entidade.",
-      "question-38-text-second-part": "Este documento é uma extensão do Contrato Social da empresa, que, por sua vez, estabelece os parâmetros fundamentais para a constituição da empresa e delineia as normativas gerais para seu funcionamento.",
-      "question-38-text-third-part": "O Acordo de Sócios assume um papel fundamental para as empresas que buscam assegurar a concordância entre os sócios e a eficaz administração do empreendimento.",
-      "question-39": "39. A Startup possui uma assessoria jurídica?",
-      "question-40": "40. A Startup possui uma assessoria contábil?",
-      "question-41": "41. Todas as relações com Clientes, Fornecedores, Parceiros e Funcionários estão devidamente registrados em contrato?"
+      "question-39": "39. A empresa está oficialmente registrada em seu país com um contrato social?",
+      "question-40": "40. Existe um Acordo de Sócios assinados pelos sócios?",
+      "question-40-text-first-part": "O Acordo de Sócios representa um instrumento jurídico formalizado entre os sócios de uma empresa, com a finalidade de regular as interações entre as partes, além de instituir diretrizes e responsabilidades específicas para a administração da entidade.",
+      "question-40-text-second-part": "Este documento é uma extensão do Contrato Social da empresa, que, por sua vez, estabelece os parâmetros fundamentais para a constituição da empresa e delineia as normativas gerais para seu funcionamento.",
+      "question-40-text-third-part": "O Acordo de Sócios assume um papel fundamental para as empresas que buscam assegurar a concordância entre os sócios e a eficaz administração do empreendimento.",
+      "question-41": "41. A Startup possui uma assessoria jurídica?",
+      "question-42": "42. A Startup possui uma assessoria contábil?",
+      "question-43": "43. Todas as relações com Clientes, Fornecedores, Parceiros e Funcionários estão devidamente registrados em contrato?"
     },
     "startup-form-data-about-finance-and-market": {
       "question-american-dollar-text": "Converta o valor em dólar americano",
       "title": "Sobre os dados financeiros e mercado",
-      "question-42": "42. Quantos clientes possui a Startup?",
-      "question-43": "43. Qual foi o faturamento do último mês?",
-      "question-44": "44. Qual foi o faturamento dos últimos 6 meses?",
-      "question-45": "45. Qual foi o faturamento dos últimos 12 meses?",
-      "question-46": "46. A Startup já captou investimento?",
-      "question-47": "47. Caso a resposta anterior seja 'Sim', informe o valor total captado de Investimentos:",
-      "question-48": "48. Quanto de equity foi distribuído para os investidores?"
+      "question-44": "44. Quantos clientes possui a Startup?",
+      "question-45": "45. Qual foi o faturamento do último mês?",
+      "question-46": "46. Qual foi o faturamento dos últimos 6 meses?",
+      "question-47": "47. Qual foi o faturamento dos últimos 12 meses?",
+      "question-48": "48. A Startup já captou investimento?",
+      "question-49": "49. Caso a resposta anterior seja 'Sim', informe o valor total captado de Investimentos:",
+      "question-50": "50. Quanto de equity foi distribuído para os investidores?"
     }
   }
 }

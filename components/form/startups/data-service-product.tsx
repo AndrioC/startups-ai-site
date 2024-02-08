@@ -68,7 +68,7 @@ export default function DataServiceProduct() {
           htmlFor="startupProductService"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-service-product.question-28")}</span>
+          <span>{t("startup-form-data-service-product.question-30")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         {sortedServiceProduct.map((option) => (
@@ -93,7 +93,7 @@ export default function DataServiceProduct() {
         <label htmlFor="problemThatIsSolved" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-service-product.question-29")}</span>
+              <span>{t("startup-form-data-service-product.question-31")}</span>
               <span className="text-red-500 ml-1">*</span>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function DataServiceProduct() {
           </p>
         )}
         <label htmlFor="competitors" className="flex items-center mt-5">
-          <span>{t("startup-form-data-service-product.question-30")}</span>
+          <span>{t("startup-form-data-service-product.question-32")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea
@@ -129,7 +129,7 @@ export default function DataServiceProduct() {
           htmlFor="competitiveDifferentiator"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-service-product.question-31")}</span>
+          <span>{t("startup-form-data-service-product.question-33")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea
@@ -144,7 +144,7 @@ export default function DataServiceProduct() {
           </p>
         )}
         <label htmlFor="quantityOdsGoals" className="flex items-center mt-5">
-          <span>{t("startup-form-data-service-product.question-32")}</span>
+          <span>{t("startup-form-data-service-product.question-34")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input

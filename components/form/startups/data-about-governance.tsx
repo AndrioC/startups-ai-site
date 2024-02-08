@@ -52,7 +52,7 @@ export default function DataAboutGovernancePage() {
           htmlFor="isStartupOfficiallyRegistered"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-37")}</span>
+          <span>{t("startup-form-data-governance.question-39")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -73,18 +73,18 @@ export default function DataAboutGovernancePage() {
           htmlFor="isTherePartnersAgreementSigned"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-38")}</span>
+          <span>{t("startup-form-data-governance.question-40")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <div className="flex flex-col gap-5 mb-3">
           <p className="text-gray-500 font-light text-sm">
-            {t("startup-form-data-governance.question-38-text-first-part")}
+            {t("startup-form-data-governance.question-40-text-first-part")}
           </p>
           <p className="text-gray-500 font-light text-sm">
-            {t("startup-form-data-governance.question-38-text-second-part")}
+            {t("startup-form-data-governance.question-40-text-second-part")}
           </p>
           <p className="text-gray-500 font-light text-sm">
-            {t("startup-form-data-governance.question-38-text-third-part")}
+            {t("startup-form-data-governance.question-40-text-third-part")}
           </p>
         </div>
         <select
@@ -103,7 +103,7 @@ export default function DataAboutGovernancePage() {
           </p>
         )}
         <label htmlFor="haveLegalAdvice" className="flex items-center mt-5">
-          <span>{t("startup-form-data-governance.question-39")}</span>
+          <span>{t("startup-form-data-governance.question-41")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -124,7 +124,7 @@ export default function DataAboutGovernancePage() {
           htmlFor="haveAccountingConsultancy"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-40")}</span>
+          <span>{t("startup-form-data-governance.question-42")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -145,7 +145,7 @@ export default function DataAboutGovernancePage() {
           htmlFor="relationshipsRegisteredInContract"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-41")}</span>
+          <span>{t("startup-form-data-governance.question-43")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select

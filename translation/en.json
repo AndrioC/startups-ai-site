@@ -383,21 +383,23 @@
       "question-09": "9. LinkedIn of the person responsible for the Startup in the program",
       "question-10": "10. Phone/contact number (WhatsApp) with country code",
       "question-11": "11. Email of the person responsible for the Startup in the program",
-      "question-12": "12. How many partners are part of the Startup?",
-      "question-13": "13. List the name, position, and LinkedIn of each of the partners",
-      "question-13-text": "Example: Rodrigo Grossi / CEO / https://www.linkedin.com/in/rodrigogrossi/",
-      "question-14": "14. Does at least one of the partners dedicate themselves exclusively to the Startup?",
-      "question-15": "15. How many employees work in the Startup?",
-      "question-16": "16. How many team members are 100% involved in the Startup?",
-      "question-17": "17. What is the business model of your Startup?",
-      "question-18": "18. What is the operational stage of the Startup?",
-      "question-19": "19. What are the challenges that your Startup faces at the moment?",
-      "question-20": "20. Is your Startup a DeepTech?",
-      "question-20-text": "In general, Deep Tech startups emerge from scientific research discoveries at universities in areas such as mathematics, physics, medicine, veterinary medicine, engineering, among other fields. They have founders with master's, doctoral, post-doctoral degrees and have a longer maturation time, often including regulatory stages for product launch in the market.",
-      "question-21": "21. Upload your Startup's pitch deck here (.pdf format)",
-      "question-22": "22. Upload your Startup's logo here (preferably in .svg format)",
-      "question-23": "23. Provide a brief description of your Startup",
-      "question-24": "24. Describe your Value Proposition in 70 characters"
+      "question-12": "12. What is the goal of your startup in the program?",
+      "question-13": "13. Make connections only in the home country of my startup?",
+      "question-14": "14. How many partners are part of the Startup?",
+      "question-15": "15. List the name, position, and LinkedIn of each of the partners",
+      "question-15-text": "Example: Rodrigo Grossi / CEO / https://www.linkedin.com/in/rodrigogrossi/",
+      "question-16": "16. Does at least one of the partners dedicate themselves exclusively to the Startup?",
+      "question-17": "17. How many employees work in the Startup?",
+      "question-18": "18. How many team members are 100% involved in the Startup?",
+      "question-19": "19. What is the business model of your Startup?",
+      "question-20": "20. What is the operational stage of the Startup?",
+      "question-21": "21. What are the challenges that your Startup faces at the moment?",
+      "question-22": "22. Is your Startup a DeepTech?",
+      "question-22-text": "In general, Deep Tech startups emerge from scientific research discoveries at universities in areas such as mathematics, physics, medicine, veterinary medicine, engineering, among other fields. They have founders with master's, doctoral, post-doctoral degrees and have a longer maturation time, often including regulatory stages for product launch in the market.",
+      "question-23": "23. Upload your Startup's pitch deck here (.pdf format)",
+      "question-24": "24. Upload your Startup's logo here (preferably in .svg format)",
+      "question-25": "25. Provide a brief description of your Startup",
+      "question-26": "26. Describe your Value Proposition in 70 characters"
     },
     "startup-form-data-maturation-level-deep-tech": {
       "title": "Technological Maturity Stage of Your Deeptech Startup",
@@ -406,48 +408,48 @@
         "second-part": "The Technology Readiness Level (TRL) scale is a numerical system used to assess the technological maturity stage of an innovation or technology. This scale provides an objective measure of a technology's progress from initial research to its readiness for real-world implementation and use. The TRL scale is commonly used by government agencies, research institutions, and companies to track and communicate technological development.",
         "third-part": "The TRL scale ranges from 1 to 9, with each level representing a specific stage in the technological development process."
       },
-      "question-25": "25. Select the best technological maturity level your startup is currently at",
-      "question-26": "26. Does your startup have any pending or granted patents?",
-      "question-27": "27. If the answer above was 'Yes,' list below the patents with their Title and code for each patent"
+      "question-27": "27. Select the best technological maturity level your startup is currently at",
+      "question-28": "28. Does your startup have any pending or granted patents?",
+      "question-29": "29. If the answer above was 'Yes,' list below the patents with their Title and code for each patent"
     },
     "startup-form-data-service-product": {
       "title": "Startup's Product(s)/Service(s)",
-      "question-28": "28. Choose the option that best describes what your startup sells",
-      "question-29": "29. Describe below each problem and the respective solution that your startup aims to address.",
-      "question-30": "30. Who are your competitors? List them below",
-      "question-31": "31. What is the competitive advantage of your startup compared to its competitors?",
-      "question-32": "32. How many United Nations Sustainable Development Goals (SDGs) does your startup address?"
+      "question-30": "30. Choose the option that best describes what your startup sells",
+      "question-31": "31. Describe below each problem and the respective solution that your startup aims to address.",
+      "question-32": "32. Who are your competitors? List them below",
+      "question-33": "33. What is the competitive advantage of your startup compared to its competitors?",
+      "question-34": "34. How many United Nations Sustainable Development Goals (SDGs) does your startup address?"
     },
     "startup-form-data-about-team": {
       "title": "About the Team",
-      "question-33": "33. Have one or more founders already started or currently run another business?",
-      "question-34": "34. Are the education and field of expertise of the founders complementary? E.g., One founder in technology and another in management.",
-      "question-35": "35. Do one or more founders dedicate 100% of their time to the startup?",
-      "question-36": "36. Do one or more founders have proven experience in the startup's field of operation?"
+      "question-35": "35. Have one or more founders already started or currently run another business?",
+      "question-36": "36. Are the education and field of expertise of the founders complementary? E.g., One founder in technology and another in management.",
+      "question-37": "37. Do one or more founders dedicate 100% of their time to the startup?",
+      "question-38": "38. Do one or more founders have proven experience in the startup's field of operation?"
     },
     "startup-form-data-governance": {
       "title": "Governance",
       "explain-text-first-part": "Corporate governance is the system through which companies and other organizations are directed, monitored, and incentivized, involving relationships between partners, the board of directors, management, oversight and control bodies, and other stakeholders.",
       "explain-text-second-part": "Good corporate governance practices translate basic principles into objective recommendations, aligning interests with the purpose of preserving and optimizing the organization's long-term economic value, facilitating its access to resources, and contributing to the quality of the organization's management, longevity, and the common good.",
-      "question-37": "37. Is the company officially registered in your country with articles of incorporation?",
-      "question-38": "38. Is there a Shareholders' Agreement signed by the partners?",
-      "question-38-text-first-part": "The Shareholders' Agreement is a legal instrument formalized among a company's partners to regulate interactions between the parties and establish specific guidelines and responsibilities for the entity's administration.",
-      "question-38-text-second-part": "This document is an extension of the company's Articles of Incorporation, which, in turn, establishes the fundamental parameters for the company's formation and outlines general regulations for its operation.",
-      "question-38-text-third-part": "The Shareholders' Agreement plays a fundamental role for companies seeking to ensure agreement among partners and the effective administration of the enterprise.",
-      "question-39": "39. Does the startup have legal advice?",
-      "question-40": "40. Does the startup have accounting advice?",
-      "question-41": "41. Are all relationships with clients, suppliers, partners, and employees properly documented in contracts?"
+      "question-39": "39. Is the company officially registered in your country with articles of incorporation?",
+      "question-40": "40. Is there a Shareholders' Agreement signed by the partners?",
+      "question-40-text-first-part": "The Shareholders' Agreement is a legal instrument formalized among a company's partners to regulate interactions between the parties and establish specific guidelines and responsibilities for the entity's administration.",
+      "question-40-text-second-part": "This document is an extension of the company's Articles of Incorporation, which, in turn, establishes the fundamental parameters for the company's formation and outlines general regulations for its operation.",
+      "question-40-text-third-part": "The Shareholders' Agreement plays a fundamental role for companies seeking to ensure agreement among partners and the effective administration of the enterprise.",
+      "question-41": "41. Does the startup have legal advice?",
+      "question-42": "42. Does the startup have accounting advice?",
+      "question-43": "43. Are all relationships with clients, suppliers, partners, and employees properly documented in contracts?"
     },
     "startup-form-data-about-finance-and-market": {
       "question-american-dollar-text": "Convert the value to US dollars",
       "title": "About Financial and Market Data",
-      "question-42": "42. How many customers does the startup have?",
-      "question-43": "43. What was the revenue for the last month?",
-      "question-44": "44. What was the revenue for the last 6 months?",
-      "question-45": "45. What was the revenue for the last 12 months?",
-      "question-46": "46. Has the startup raised any investment?",
-      "question-47": "47. If the previous answer is 'Yes,' please provide the total amount raised from Investments:",
-      "question-48": "48. How much equity was distributed to investors?"
+      "question-44": "44. How many customers does the startup have?",
+      "question-45": "45. What was the revenue for the last month?",
+      "question-46": "46. What was the revenue for the last 6 months?",
+      "question-47": "47. What was the revenue for the last 12 months?",
+      "question-48": "48. Has the startup raised any investment?",
+      "question-49": "49. If the previous answer is 'Yes,' please provide the total amount raised from Investments:",
+      "question-50": "50. How much equity was distributed to investors?"
     }
   }
 }

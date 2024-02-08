@@ -49,6 +49,12 @@ export const DataAboutStartupsSchema = (t: (arg: string) => string) =>
       .string()
       .min(1, t("startup-form-required-field"))
       .email(t("startup-form-email-field")),
+    startupObjectives: z.array(z.string()).refine((data) => data.length > 0, {
+      message: t("startup-form-challenges-field"),
+    }),
+    connectionsOnlyOnStartupCountryOrigin: z
+      .string()
+      .min(1, t("startup-form-required-field")),
     partnersQuantity: z.coerce
       .number()
       .min(1, t("startup-form-required-field")),

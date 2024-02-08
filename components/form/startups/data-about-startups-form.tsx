@@ -11,6 +11,7 @@ import {
   countriesList,
   operationalStageList,
   startupChallengesList,
+  startupObjectivesList,
   verticalTypes,
 } from "@/app/(site)/data";
 import { Button } from "@/components/ui/button";
@@ -57,6 +58,11 @@ export default function DataAboutStartupsForm() {
   }));
 
   const startupsChallengesData = startupChallengesList.map((value) => ({
+    ...value,
+    label: lang === "en" ? value.label_en : value.label_pt,
+  }));
+
+  const startupsObjectives = startupObjectivesList.map((value) => ({
     ...value,
     label: lang === "en" ? value.label_en : value.label_pt,
   }));
@@ -123,8 +129,22 @@ export default function DataAboutStartupsForm() {
       return 0;
     });
 
+  const sortedStartupsObjectives = startupsObjectives.slice().sort((a, b) => {
+    const labelA = a.label.toUpperCase();
+    const labelB = b.label.toUpperCase();
+
+    if (labelA < labelB) {
+      return -1;
+    }
+
+    if (labelA > labelB) {
+      return 1;
+    }
+
+    return 0;
+  });
+
   function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
-    console.log("DATA: ", data);
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     handleNext();
   }
@@ -328,8 +348,52 @@ export default function DataAboutStartupsForm() {
             {errors.mainResponsibleEmail.message}
           </p>
         )}
-        <label htmlFor="partnersQuantity" className="flex items-center mt-5">
+        <label htmlFor="startupObjectives" className="flex items-center mt-5">
           <span>{t("startup-form-data-about-startups.question-12")}</span>
+          <span className="text-red-500 ml-1">*</span>
+        </label>
+        {sortedStartupsObjectives.map((option) => (
+          <div key={option.id} className="flex items-center">
+            <input
+              type="checkbox"
+              id={`option-${option.id}`}
+              value={option.value}
+              className="w-[15px] h-[15px]"
+              {...register("startupObjectives")}
+            />
+            <label htmlFor={`option-${option.id}`} className="ml-2">
+              {option.label}
+            </label>
+          </div>
+        ))}
+        {errors.startupObjectives?.message && (
+          <p className="mt-2 text-sm text-red-400">
+            {errors.startupObjectives.message}
+          </p>
+        )}
+        <label
+          htmlFor="connectionsOnlyOnStartupCountryOrigin"
+          className="flex items-center mt-5"
+        >
+          <span>{t("startup-form-data-about-startups.question-13")}</span>
+          <span className="text-red-500 ml-1">*</span>
+        </label>
+        <select
+          id="connectionsOnlyOnStartupCountryOrigin"
+          {...register("connectionsOnlyOnStartupCountryOrigin")}
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+        >
+          <option value="">{t("startup-form-question-select-text")}</option>
+          <option value="yes">{t("startup-form-question-yes-text")}</option>
+          <option value="no">{t("startup-form-question-no-text")}</option>
+        </select>
+        {errors.connectionsOnlyOnStartupCountryOrigin?.message && (
+          <p className="mt-2 text-sm text-red-400">
+            {errors.connectionsOnlyOnStartupCountryOrigin.message}
+          </p>
+        )}
+        <label htmlFor="partnersQuantity" className="flex items-center mt-5">
+          <span>{t("startup-form-data-about-startups.question-14")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -349,11 +413,11 @@ export default function DataAboutStartupsForm() {
         >
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-about-startups.question-13")}</span>
+              <span>{t("startup-form-data-about-startups.question-15")}</span>
               <span className="text-red-500 ml-1">*</span>
             </div>
             <p className="text-xs">
-              {t("startup-form-data-about-startups.question-13-text")}
+              {t("startup-form-data-about-startups.question-15-text")}
             </p>
           </div>
         </label>
@@ -372,7 +436,7 @@ export default function DataAboutStartupsForm() {
           htmlFor="exclusiveDedicationPartner"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-startups.question-14")}</span>
+          <span>{t("startup-form-data-about-startups.question-16")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -390,7 +454,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
         <label htmlFor="employeesQuantity" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-15")}</span>
+          <span>{t("startup-form-data-about-startups.question-17")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -408,7 +472,7 @@ export default function DataAboutStartupsForm() {
           htmlFor="fullTimeEmployeesQuantity"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-startups.question-16")}</span>
+          <span>{t("startup-form-data-about-startups.question-18")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -423,7 +487,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
         <label htmlFor="businessModel" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-17")}</span>
+          <span>{t("startup-form-data-about-startups.question-19")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -444,7 +508,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
         <label htmlFor="operationalStage" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-18")}</span>
+          <span>{t("startup-form-data-about-startups.question-20")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -465,7 +529,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
         <label htmlFor="startupChallenges" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-19")}</span>
+          <span>{t("startup-form-data-about-startups.question-21")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         {sortedStartupsChallenges.map((option) => (
@@ -490,11 +554,11 @@ export default function DataAboutStartupsForm() {
         <label htmlFor="isDeepTech" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-about-startups.question-20")}</span>
+              <span>{t("startup-form-data-about-startups.question-22")}</span>
               <span className="text-red-500 ml-1">*</span>
             </div>
             <p className="text-xs mt-1">
-              {t("startup-form-data-about-startups.question-20-text")}
+              {t("startup-form-data-about-startups.question-22-text")}
             </p>
           </div>
         </label>
@@ -513,7 +577,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
         <label htmlFor="loadPitchDeck" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-21")}</span>
+          <span>{t("startup-form-data-about-startups.question-23")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <Controller
@@ -551,7 +615,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
         <label htmlFor="loadLogo" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-22")}</span>
+          <span>{t("startup-form-data-about-startups.question-24")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <Controller
@@ -587,7 +651,7 @@ export default function DataAboutStartupsForm() {
           <p className="mt-2 text-sm text-red-400">{errors.loadLogo.message}</p>
         )}
         <label htmlFor="shortDescription" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-23")}</span>
+          <span>{t("startup-form-data-about-startups.question-25")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea
@@ -602,7 +666,7 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
         <label htmlFor="valueProposal" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-24")}</span>
+          <span>{t("startup-form-data-about-startups.question-26")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea

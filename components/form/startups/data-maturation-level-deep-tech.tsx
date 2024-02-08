@@ -75,7 +75,7 @@ export default function DataMaturationLevelDeepTech() {
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="maturityLevel" className="flex items-center">
           <span>
-            {t("startup-form-data-maturation-level-deep-tech.question-25")}
+            {t("startup-form-data-maturation-level-deep-tech.question-27")}
           </span>
         </label>
         <select
@@ -92,7 +92,7 @@ export default function DataMaturationLevelDeepTech() {
         </select>
         <label htmlFor="hasPatent" className="flex items-center mt-5">
           <span>
-            {t("startup-form-data-maturation-level-deep-tech.question-26")}
+            {t("startup-form-data-maturation-level-deep-tech.question-28")}
           </span>
         </label>
         <select
@@ -108,7 +108,7 @@ export default function DataMaturationLevelDeepTech() {
           <div className="flex flex-col">
             <div>
               <span>
-                {t("startup-form-data-maturation-level-deep-tech.question-27")}
+                {t("startup-form-data-maturation-level-deep-tech.question-29")}
               </span>
             </div>
           </div>

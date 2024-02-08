@@ -88,6 +88,13 @@ export interface ServiceProductsStartup {
   label_pt: string;
 }
 
+export interface StartupObjectives {
+  id: number;
+  value: string;
+  label_en: string;
+  label_pt: string;
+}
+
 export interface ExpertsEbook {
   id: number;
   title_en: string;
@@ -3126,6 +3133,39 @@ export const serviceProductsList: ServiceProductsStartup[] = [
     value: "digital_service",
     label_en: "Digital service",
     label_pt: "Serviço digital",
+  },
+];
+
+export const startupObjectivesList: StartupObjectives[] = [
+  {
+    id: 1,
+    value: "investors_connection",
+    label_en: "Connection with investors",
+    label_pt: "Conexão com investidores",
+  },
+  {
+    id: 2,
+    value: "experts_connection",
+    label_en: "Connection with experts",
+    label_pt: "Conexão com especialistas",
+  },
+  {
+    id: 3,
+    value: "partners_connection",
+    label_en: "Connection with partners (other startups)",
+    label_pt: "Conexão com parceiros (outras startups)",
+  },
+  {
+    id: 4,
+    value: "innovation_programs_connection",
+    label_en: "Connection with open innovation programs",
+    label_pt: "Conexão com programas de inovação aberta",
+  },
+  {
+    id: 5,
+    value: "potential_clients_connection",
+    label_en: "Connection with potential clients (private and public)",
+    label_pt: "Conexão com potenciais clientes (privados e públicos)",
   },
 ];
 

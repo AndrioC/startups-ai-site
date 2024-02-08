@@ -45,7 +45,7 @@ export default function DataAboutTeamPage() {
           htmlFor="partnersHaveAlreadyBeenInOtherBusiness"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-33")}</span>
+          <span>{t("startup-form-data-about-team.question-35")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -66,7 +66,7 @@ export default function DataAboutTeamPage() {
           htmlFor="parnertsHaveComplementaryAreaOfActivity"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-34")}</span>
+          <span>{t("startup-form-data-about-team.question-36")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -90,7 +90,7 @@ export default function DataAboutTeamPage() {
           htmlFor="oneOrMoreDedicationPartner"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-35")}</span>
+          <span>{t("startup-form-data-about-team.question-37")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -111,7 +111,7 @@ export default function DataAboutTeamPage() {
           htmlFor="oneOrMorePartnersHasProvenExperience"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-36")}</span>
+          <span>{t("startup-form-data-about-team.question-38")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select

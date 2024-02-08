@@ -44,7 +44,7 @@ export default function DataAboutFinanceAndMarketPage() {
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="customersQuantity" className="flex items-center mt-5">
           <span>
-            {t("startup-form-data-about-finance-and-market.question-42")}
+            {t("startup-form-data-about-finance-and-market.question-44")}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
@@ -61,7 +61,7 @@ export default function DataAboutFinanceAndMarketPage() {
         )}
         <label htmlFor="lastRevenue" className="flex items-center mt-5">
           <span>
-            {t("startup-form-data-about-finance-and-market.question-43")}
+            {t("startup-form-data-about-finance-and-market.question-45")}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
@@ -86,7 +86,7 @@ export default function DataAboutFinanceAndMarketPage() {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-44")}
+            {t("startup-form-data-about-finance-and-market.question-46")}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
@@ -111,7 +111,7 @@ export default function DataAboutFinanceAndMarketPage() {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-45")}
+            {t("startup-form-data-about-finance-and-market.question-47")}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
@@ -136,7 +136,7 @@ export default function DataAboutFinanceAndMarketPage() {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-46")}
+            {t("startup-form-data-about-finance-and-market.question-48")}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
@@ -156,7 +156,7 @@ export default function DataAboutFinanceAndMarketPage() {
         )}
         <label htmlFor="amountRaised" className="flex items-center mt-5">
           <span>
-            {t("startup-form-data-about-finance-and-market.question-47")}
+            {t("startup-form-data-about-finance-and-market.question-49")}
           </span>
         </label>
         <p className="text-gray-500 font-light text-sm">
@@ -180,7 +180,7 @@ export default function DataAboutFinanceAndMarketPage() {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-48")}
+            {t("startup-form-data-about-finance-and-market.question-50")}
           </span>
         </label>
         <input
