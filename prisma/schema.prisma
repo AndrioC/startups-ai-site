@@ -32,6 +32,7 @@ model vertical {
 
 model business_model {
   id       Int        @id @default(autoincrement())
+  code     String
   name     String
   startups startups[]
 }
@@ -45,10 +46,11 @@ model operational_stage {
 }
 
 model challenges {
-  id      Int    @id @default(autoincrement())
-  code    String
-  name_en String
-  name_pt String
+  id                 Int                  @id @default(autoincrement())
+  code               String
+  name_en            String
+  name_pt            String
+  startup_challenges startup_challenges[]
 }
 
 model maturity_level {
@@ -60,10 +62,11 @@ model maturity_level {
 }
 
 model service_products {
-  id      Int    @id @default(autoincrement())
-  code    String
-  name_en String
-  name_pt String
+  id                       Int                        @id @default(autoincrement())
+  code                     String
+  name_en                  String
+  name_pt                  String
+  startup_service_products startup_service_products[]
 }
 
 model country {
@@ -75,10 +78,11 @@ model country {
 }
 
 model objectives {
-  id      Int    @id @default(autoincrement())
-  code    String
-  name_en String
-  name_pt String
+  id                 Int                  @id @default(autoincrement())
+  code               String
+  name_en            String
+  name_pt            String
+  startup_objectives startup_objectives[]
 }
 
 model startups {
@@ -145,12 +149,15 @@ model startups {
   user                                         user[]
 
   //relacionamentos
-  organizations   organizations?     @relation(fields: [organization_id], references: [id])
-  vertical        vertical?          @relation(fields: [vertical_id], references: [id])
-  country         country?           @relation(fields: [country_id], references: [id])
-  business_model  business_model?    @relation(fields: [business_model_id], references: [id])
-  operation_stage operational_stage? @relation(fields: [operation_stage_id], references: [id])
-  maturity_level  maturity_level?    @relation(fields: [maturity_level_id], references: [id])
+  organizations            organizations?             @relation(fields: [organization_id], references: [id])
+  vertical                 vertical?                  @relation(fields: [vertical_id], references: [id])
+  country                  country?                   @relation(fields: [country_id], references: [id])
+  business_model           business_model?            @relation(fields: [business_model_id], references: [id])
+  operation_stage          operational_stage?         @relation(fields: [operation_stage_id], references: [id])
+  maturity_level           maturity_level?            @relation(fields: [maturity_level_id], references: [id])
+  startup_challenges       startup_challenges[]
+  startup_service_products startup_service_products[]
+  startup_objectives       startup_objectives[]
 }
 
 model user {
@@ -167,4 +174,37 @@ model user {
   //relacionamentos
   organizations organizations? @relation(fields: [organization_id], references: [id])
   startups      startups?      @relation(fields: [startup_id], references: [id])
+}
+
+model startup_challenges {
+  id           Int @id @default(autoincrement())
+  startup_id   Int
+  challenge_id Int
+
+  startup   startups   @relation(fields: [startup_id], references: [id])
+  challenge challenges @relation(fields: [challenge_id], references: [id])
+
+  @@unique([startup_id, challenge_id])
+}
+
+model startup_service_products {
+  id                  Int @id @default(autoincrement())
+  startup_id          Int
+  service_products_id Int
+
+  startup          startups         @relation(fields: [startup_id], references: [id])
+  service_products service_products @relation(fields: [service_products_id], references: [id])
+
+  @@unique([startup_id, service_products_id])
+}
+
+model startup_objectives {
+  id           Int @id @default(autoincrement())
+  startup_id   Int
+  objective_id Int
+
+  startup    startups   @relation(fields: [startup_id], references: [id])
+  objectives objectives @relation(fields: [objective_id], references: [id])
+
+  @@unique([startup_id, objective_id])
 }
