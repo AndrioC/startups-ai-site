@@ -12,6 +12,8 @@ interface FormData {
   mainResponsibleLinkedin: string;
   contactNumber: string;
   mainResponsibleEmail: string;
+  startupObjectives: string[];
+  connectionsOnlyOnStartupCountryOrigin: string;
   partnersQuantity: number;
   partnersPositionRelation: string;
   exclusiveDedicationPartner: string;
@@ -74,6 +76,8 @@ const initialFormData: FormData = {
   mainResponsibleLinkedin: "",
   contactNumber: "",
   mainResponsibleEmail: "",
+  startupObjectives: [],
+  connectionsOnlyOnStartupCountryOrigin: "",
   partnersQuantity: 0,
   partnersPositionRelation: "",
   exclusiveDedicationPartner: "",
