@@ -1,0 +1,168 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model organizations {
+  id             Int        @id @default(autoincrement())
+  name           String
+  slug           String     @default("")
+  payment_needed Boolean    @default(false)
+  logo_img       String?
+  created_at     DateTime   @default(now())
+  updated_at     DateTime   @default(now())
+  user           user[]
+  startups       startups[]
+}
+
+model vertical {
+  id       Int        @id @default(autoincrement())
+  name     String
+  startups startups[]
+}
+
+model business_model {
+  id       Int        @id @default(autoincrement())
+  name     String
+  startups startups[]
+}
+
+model operational_stage {
+  id       Int        @id @default(autoincrement())
+  code     String
+  name_en  String
+  name_pt  String
+  startups startups[]
+}
+
+model challenges {
+  id      Int    @id @default(autoincrement())
+  code    String
+  name_en String
+  name_pt String
+}
+
+model maturity_level {
+  id       Int        @id @default(autoincrement())
+  code     String
+  name_en  String
+  name_pt  String
+  startups startups[]
+}
+
+model service_products {
+  id      Int    @id @default(autoincrement())
+  code    String
+  name_en String
+  name_pt String
+}
+
+model country {
+  id       Int        @id @default(autoincrement())
+  code     String
+  name_en  String
+  name_pt  String
+  startups startups[]
+}
+
+model objectives {
+  id      Int    @id @default(autoincrement())
+  code    String
+  name_en String
+  name_pt String
+}
+
+model startups {
+  id                                           Int       @id @default(autoincrement())
+  organization_id                              Int
+  name                                         String
+  vertical_id                                  Int
+  foundation_date                              DateTime
+  subscription_number                          String
+  reference_link                               String
+  country_id                                   Int
+  state_city                                   String
+  main_responsible_name                        String
+  main_responsible_linkedin                    String
+  contact_number                               String
+  main_responsible_email                       String
+  connections_only_on_origin_country           String
+  partners_quantity                            Int
+  partners_position_relation                   String
+  exclusive_dedication_partner                 String
+  employees_quantity                           Int
+  fulltime_employees_quantity                  Int
+  business_model_id                            Int
+  operation_stage_id                           Int
+  is_deep_tech                                 String
+  pitch_deck                                   String
+  logo_img                                     String
+  short_description_en                         String
+  short_description_pt                         String
+  value_proposal_en                            String
+  value_proposal_pt                            String
+  maturity_level_id                            Int?
+  has_patent                                   String?
+  patent_and_code                              String?
+  problem_that_is_solved_en                    String
+  problem_that_is_solved_pt                    String
+  competitors                                  String
+  competitive_differentiator_en                String
+  competitive_differentiator_pt                String
+  quantity_ods_goals                           Int
+  partners_have_already_been_in_other_business String
+  partners_have_complementary_area_of_activity String
+  one_or_more_dedication_partner               String
+  one_or_more_partners_has_proven_experience   String
+  is_startup_officially_registered             String
+  is_there_partners_agreement_signed           String
+  have_legal_advice                            String
+  have_accounting_advice                       String
+  relationships_registered_in_contract         String
+  customers_quantity                           Int
+  last_revenue                                 Float
+  last_six_months_revenue                      Float
+  last_twelve_months_revenue                   Float
+  already_raised_investment                    String
+  amount_raised                                Float?
+  how_much_equity_was_distributed              String?
+  plan                                         String    @default("free")
+  is_deleted                                   Boolean   @default(false)
+  is_blocked                                   Boolean   @default(false)
+  created_at                                   DateTime  @default(now())
+  updated_at                                   DateTime  @default(now())
+  deleted_at                                   DateTime?
+  deleted_by                                   Int?
+  user                                         user[]
+
+  //relacionamentos
+  organizations   organizations?     @relation(fields: [organization_id], references: [id])
+  vertical        vertical?          @relation(fields: [vertical_id], references: [id])
+  country         country?           @relation(fields: [country_id], references: [id])
+  business_model  business_model?    @relation(fields: [business_model_id], references: [id])
+  operation_stage operational_stage? @relation(fields: [operation_stage_id], references: [id])
+  maturity_level  maturity_level?    @relation(fields: [maturity_level_id], references: [id])
+}
+
+model user {
+  id              Int      @id @default(autoincrement())
+  organization_id Int
+  startup_id      Int
+  name            String
+  email           String
+  hashed_password String
+  is_blocked      Boolean  @default(false)
+  created_at      DateTime @default(now())
+  updated_at      DateTime @default(now())
+
+  //relacionamentos
+  organizations organizations? @relation(fields: [organization_id], references: [id])
+  startups      startups?      @relation(fields: [startup_id], references: [id])
+}
