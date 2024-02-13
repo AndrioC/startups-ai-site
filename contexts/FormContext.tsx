@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-interface FormData {
+export interface FormData {
   startupName: string;
   vertical: string;
   foundationDate: Date;
@@ -49,7 +49,7 @@ interface FormData {
   lastSixMonthsRevenue: number;
   lastTwelveMonthsRevenue: number;
   alreadyRaisedInvestment: string;
-  amountRaised: string;
+  amountRaised: number;
   howMuchEquityWasDistributed: string;
   fullNameSignUp: string;
   emailSignUp: string;
@@ -113,7 +113,7 @@ const initialFormData: FormData = {
   lastSixMonthsRevenue: 0,
   lastTwelveMonthsRevenue: 0,
   alreadyRaisedInvestment: "",
-  amountRaised: "",
+  amountRaised: 0,
   howMuchEquityWasDistributed: "",
   fullNameSignUp: "",
   emailSignUp: "",

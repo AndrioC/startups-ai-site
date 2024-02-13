@@ -5,12 +5,22 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 
-import { serviceProductsList } from "@/app/(site)/data";
+import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
 import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataServiceProductSchema } from "@/lib/schema";
 
-export default function DataServiceProduct() {
+interface ValueProps {
+  id: number;
+  label: string;
+}
+
+interface Props {
+  is_review?: boolean;
+  data: SelectDataProps;
+}
+
+export default function DataServiceProduct({ is_review = false, data }: Props) {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
   const t = useTranslations("Form");
   const lang = useLocale();
@@ -27,10 +37,12 @@ export default function DataServiceProduct() {
     resolver: zodResolver(formSchema),
   });
 
-  const serviceProductData = serviceProductsList.map((value) => ({
-    ...value,
-    label: lang === "en" ? value.label_en : value.label_pt,
-  }));
+  const serviceProductData: ValueProps[] = data.service_products.map(
+    (value) => ({
+      ...value,
+      label: lang === "en" ? value.name_en : value.name_pt,
+    })
+  );
 
   const sortedServiceProduct = serviceProductData.slice().sort((a, b) => {
     const labelA = a.label.toUpperCase();
@@ -71,12 +83,12 @@ export default function DataServiceProduct() {
           <span>{t("startup-form-data-service-product.question-30")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
-        {sortedServiceProduct.map((option) => (
+        {sortedServiceProduct.map((option: any) => (
           <div key={option.id} className="flex items-center">
             <input
               type="checkbox"
               id={`option-${option.id}`}
-              value={option.value}
+              value={option.id}
               className="w-[15px] h-[15px]"
               {...register("startupProductService")}
             />
@@ -159,18 +171,20 @@ export default function DataServiceProduct() {
           </p>
         )}
       </div>
-      <div className="flex justify-between">
-        <Button
-          variant="blue"
-          onClick={onHandleBack}
-          className="px-6 text-white rounded-md"
-        >
-          {t("startup-form-previous-button")}
-        </Button>
-        <Button variant="blue" className="px-6 text-white rounded-md">
-          {t("startup-form-next-button")}
-        </Button>
-      </div>
+      {!is_review && (
+        <div className="flex justify-between">
+          <Button
+            variant="blue"
+            onClick={onHandleBack}
+            className="px-6 text-white rounded-md"
+          >
+            {t("startup-form-previous-button")}
+          </Button>
+          <Button variant="blue" className="px-6 text-white rounded-md">
+            {t("startup-form-next-button")}
+          </Button>
+        </div>
+      )}
     </form>
   );
 }

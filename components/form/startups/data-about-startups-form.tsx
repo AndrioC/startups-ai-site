@@ -6,20 +6,25 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 
-import {
-  businessModelList,
-  countriesList,
-  operationalStageList,
-  startupChallengesList,
-  startupObjectivesList,
-  verticalTypes,
-} from "@/app/(site)/data";
+import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
 import { Button } from "@/components/ui/button";
 import { DatePicker } from "@/components/ui/date-picker";
 import { useFormState } from "@/contexts/FormContext";
 import { DataAboutStartupsSchema } from "@/lib/schema";
 
-export default function DataAboutStartupsForm() {
+interface ValueProps {
+  id: number;
+  label: string;
+}
+
+interface Props {
+  is_review?: boolean;
+  data: SelectDataProps;
+}
+export default function DataAboutStartupsForm({
+  is_review = false,
+  data,
+}: Props) {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
   const [pitchDeckFile, setPitchDeckFile] = useState<string | undefined>(
     undefined
@@ -42,32 +47,34 @@ export default function DataAboutStartupsForm() {
     resolver: zodResolver(formSchema),
   });
 
-  const verticalData = verticalTypes.map((value) => ({
+  const verticalData: ValueProps[] = data.vertical.map((value) => ({
     ...value,
-    label: lang === "en" ? value.label_en : value.label_pt,
+    label: lang === "en" ? value.name_en : value.name_pt,
   }));
 
-  const countriesData = countriesList.map((value) => ({
+  const countriesData: ValueProps[] = data.country.map((value: any) => ({
     ...value,
-    label: lang === "en" ? value.label_en : value.label_pt,
+    label: lang === "en" ? value.name_en : value.name_pt,
   }));
 
-  const operationalStageData = operationalStageList.map((value) => ({
+  const operationalStageData: ValueProps[] = data.operational_stage.map(
+    (value) => ({
+      ...value,
+      label: lang === "en" ? value.name_en : value.name_pt,
+    })
+  );
+
+  const startupsChallengesData: ValueProps[] = data.challenges.map((value) => ({
     ...value,
-    label: lang === "en" ? value.label_en : value.label_pt,
+    label: lang === "en" ? value.name_en : value.name_pt,
   }));
 
-  const startupsChallengesData = startupChallengesList.map((value) => ({
+  const startupsObjectivesData: ValueProps[] = data.objectives.map((value) => ({
     ...value,
-    label: lang === "en" ? value.label_en : value.label_pt,
+    label: lang === "en" ? value.name_en : value.name_pt,
   }));
 
-  const startupsObjectives = startupObjectivesList.map((value) => ({
-    ...value,
-    label: lang === "en" ? value.label_en : value.label_pt,
-  }));
-
-  const sortedCountriesData = countriesData.slice().sort((a, b) => {
+  const sortedVerticalData = verticalData?.slice().sort((a, b) => {
     const labelA = a.label.toUpperCase();
     const labelB = b.label.toUpperCase();
 
@@ -82,7 +89,7 @@ export default function DataAboutStartupsForm() {
     return 0;
   });
 
-  const sortedBusinessModel = businessModelList.slice().sort((a, b) => {
+  const sortedCountriesData = countriesData?.slice().sort((a, b) => {
     const labelA = a.label.toUpperCase();
     const labelB = b.label.toUpperCase();
 
@@ -97,7 +104,22 @@ export default function DataAboutStartupsForm() {
     return 0;
   });
 
-  const sortedOperationalStage = operationalStageData.slice().sort((a, b) => {
+  const sortedBusinessModel = data.business_model.slice().sort((a, b) => {
+    const labelA = a.name.toUpperCase();
+    const labelB = b.name.toUpperCase();
+
+    if (labelA < labelB) {
+      return -1;
+    }
+
+    if (labelA > labelB) {
+      return 1;
+    }
+
+    return 0;
+  });
+
+  const sortedOperationalStage = operationalStageData?.slice().sort((a, b) => {
     const labelA = a.label.toUpperCase();
     const labelB = b.label.toUpperCase();
 
@@ -113,7 +135,7 @@ export default function DataAboutStartupsForm() {
   });
 
   const sortedStartupsChallenges = startupsChallengesData
-    .slice()
+    ?.slice()
     .sort((a, b) => {
       const labelA = a.label.toUpperCase();
       const labelB = b.label.toUpperCase();
@@ -129,20 +151,22 @@ export default function DataAboutStartupsForm() {
       return 0;
     });
 
-  const sortedStartupsObjectives = startupsObjectives.slice().sort((a, b) => {
-    const labelA = a.label.toUpperCase();
-    const labelB = b.label.toUpperCase();
+  const sortedStartupsObjectives = startupsObjectivesData
+    ?.slice()
+    .sort((a: any, b: any) => {
+      const labelA = a.label.toUpperCase();
+      const labelB = b.label.toUpperCase();
 
-    if (labelA < labelB) {
-      return -1;
-    }
+      if (labelA < labelB) {
+        return -1;
+      }
 
-    if (labelA > labelB) {
-      return 1;
-    }
+      if (labelA > labelB) {
+        return 1;
+      }
 
-    return 0;
-  });
+      return 0;
+    });
 
   function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
@@ -186,8 +210,8 @@ export default function DataAboutStartupsForm() {
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
-          {verticalData.map((option) => (
-            <option key={option.id} value={option.value}>
+          {sortedVerticalData.map((option: any) => (
+            <option key={option.id} value={String(option.id)}>
               {option.label}
             </option>
           ))}
@@ -258,8 +282,8 @@ export default function DataAboutStartupsForm() {
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
-          {sortedCountriesData.map((option) => (
-            <option key={option.id} value={option.value}>
+          {sortedCountriesData.map((option: any) => (
+            <option key={option.id} value={option.id}>
               {option.label}
             </option>
           ))}
@@ -352,12 +376,12 @@ export default function DataAboutStartupsForm() {
           <span>{t("startup-form-data-about-startups.question-12")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
-        {sortedStartupsObjectives.map((option) => (
+        {sortedStartupsObjectives.map((option: any) => (
           <div key={option.id} className="flex items-center">
             <input
               type="checkbox"
               id={`option-${option.id}`}
-              value={option.value}
+              value={Number(option.id)}
               className="w-[15px] h-[15px]"
               {...register("startupObjectives")}
             />
@@ -497,8 +521,8 @@ export default function DataAboutStartupsForm() {
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           {sortedBusinessModel.map((option) => (
-            <option key={option.id} value={option.value}>
-              {option.label}
+            <option key={option.id} value={Number(option.id)}>
+              {option.name}
             </option>
           ))}
         </select>
@@ -517,8 +541,8 @@ export default function DataAboutStartupsForm() {
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
-          {sortedOperationalStage.map((option) => (
-            <option key={option.id} value={option.value}>
+          {sortedOperationalStage.map((option: any) => (
+            <option key={option.id} value={Number(option.id)}>
               {option.label}
             </option>
           ))}
@@ -532,12 +556,12 @@ export default function DataAboutStartupsForm() {
           <span>{t("startup-form-data-about-startups.question-21")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
-        {sortedStartupsChallenges.map((option) => (
+        {sortedStartupsChallenges.map((option: any) => (
           <div key={option.id} className="flex items-center">
             <input
               type="checkbox"
               id={`option-${option.id}`}
-              value={option.value}
+              value={Number(option.id)}
               className="w-[15px] h-[15px]"
               {...register("startupChallenges")}
             />
@@ -681,18 +705,20 @@ export default function DataAboutStartupsForm() {
           </p>
         )}
       </div>
-      <div className="flex justify-between sticky">
-        <Button
-          variant="blue"
-          onClick={onHandleBack}
-          className="px-6 text-white rounded-md"
-        >
-          {t("startup-form-previous-button")}
-        </Button>
-        <Button variant="blue" className="px-6 text-white rounded-md">
-          {t("startup-form-next-button")}
-        </Button>
-      </div>
+      {!is_review && (
+        <div className="flex justify-between sticky">
+          <Button
+            variant="blue"
+            onClick={onHandleBack}
+            className="px-6 text-white rounded-md"
+          >
+            {t("startup-form-previous-button")}
+          </Button>
+          <Button variant="blue" className="px-6 text-white rounded-md">
+            {t("startup-form-next-button")}
+          </Button>
+        </div>
+      )}
     </form>
   );
 }

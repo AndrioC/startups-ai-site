@@ -9,7 +9,11 @@ import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataAboutFinanceAndMarket } from "@/lib/schema";
 
-export default function DataAboutFinanceAndMarketPage() {
+interface Props {
+  is_review?: boolean;
+}
+
+export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
   const t = useTranslations("Form");
 
@@ -25,7 +29,7 @@ export default function DataAboutFinanceAndMarketPage() {
     resolver: zodResolver(formSchema),
   });
 
-  function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
+  async function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     handleNext();
   }
@@ -50,7 +54,7 @@ export default function DataAboutFinanceAndMarketPage() {
         </label>
         <input
           id="customersQuantity"
-          type="text"
+          type="number"
           className="h-11 px-4 border rounded-md"
           {...register("customersQuantity")}
         />
@@ -72,7 +76,7 @@ export default function DataAboutFinanceAndMarketPage() {
         </p>
         <input
           id="lastRevenue"
-          type="text"
+          type="number"
           className="h-11 px-4 border rounded-md"
           {...register("lastRevenue")}
         />
@@ -97,7 +101,7 @@ export default function DataAboutFinanceAndMarketPage() {
         </p>
         <input
           id="lastSixMonthsRevenue"
-          type="text"
+          type="number"
           className="h-11 px-4 border rounded-md"
           {...register("lastSixMonthsRevenue")}
         />
@@ -122,7 +126,7 @@ export default function DataAboutFinanceAndMarketPage() {
         </p>
         <input
           id="lastTwelveMonthsRevenue"
-          type="text"
+          type="number"
           className="h-11 px-4 border rounded-md"
           {...register("lastTwelveMonthsRevenue")}
         />
@@ -166,7 +170,7 @@ export default function DataAboutFinanceAndMarketPage() {
         </p>
         <input
           id="amountRaised"
-          type="text"
+          type="number"
           className="h-11 px-4 border rounded-md"
           {...register("amountRaised")}
         />
@@ -195,18 +199,20 @@ export default function DataAboutFinanceAndMarketPage() {
           </p>
         )}
       </div>
-      <div className="flex justify-between">
-        <Button
-          variant="blue"
-          onClick={onHandleBack}
-          className="px-6 text-white rounded-md"
-        >
-          {t("startup-form-previous-button")}
-        </Button>
-        <Button variant="blue" className="px-6 text-white rounded-md">
-          {t("startup-form-finish-button")}
-        </Button>
-      </div>
+      {!is_review && (
+        <div className="flex justify-between">
+          <Button
+            variant="blue"
+            onClick={onHandleBack}
+            className="px-6 text-white rounded-md"
+          >
+            {t("startup-form-previous-button")}
+          </Button>
+          <Button variant="blue" className="px-6 text-white rounded-md">
+            {t("startup-form-next-button")}
+          </Button>
+        </div>
+      )}
     </form>
   );
 }

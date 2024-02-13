@@ -9,7 +9,11 @@ import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataAboutGovernance } from "@/lib/schema";
 
-export default function DataAboutGovernancePage() {
+interface Props {
+  is_review?: boolean;
+}
+
+export default function DataAboutGovernancePage({ is_review }: Props) {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
   const t = useTranslations("Form");
 
@@ -163,18 +167,20 @@ export default function DataAboutGovernancePage() {
           </p>
         )}
       </div>
-      <div className="flex justify-between">
-        <Button
-          variant="blue"
-          onClick={onHandleBack}
-          className="px-6 text-white rounded-md"
-        >
-          {t("startup-form-previous-button")}
-        </Button>
-        <Button variant="blue" className="px-6 text-white rounded-md">
-          {t("startup-form-next-button")}
-        </Button>
-      </div>
+      {!is_review && (
+        <div className="flex justify-between">
+          <Button
+            variant="blue"
+            onClick={onHandleBack}
+            className="px-6 text-white rounded-md"
+          >
+            {t("startup-form-previous-button")}
+          </Button>
+          <Button variant="blue" className="px-6 text-white rounded-md">
+            {t("startup-form-next-button")}
+          </Button>
+        </div>
+      )}
     </form>
   );
 }

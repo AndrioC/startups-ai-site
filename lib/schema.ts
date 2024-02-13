@@ -18,64 +18,36 @@ export const DataSignUpSchema = (t: (arg: string) => string) =>
       message: t("startup-form-sign-up.password-does-not-match"),
     });
 
-export const FormDataSchema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  email: z.string().min(1, "Email is required").email("Invalid email address"),
-  country: z.string().min(1, "Country is required"),
-  street: z.string().min(1, "Street is required"),
-  city: z.string().min(1, "City is required"),
-  state: z.string().min(1, "State is required"),
-  zip: z.string().min(1, "Zip is required"),
-});
-
 export const DataAboutStartupsSchema = (t: (arg: string) => string) =>
   z.object({
-    startupName: z.string().min(1, t("startup-form-required-field")),
-    vertical: z.string().min(1, t("startup-form-required-field")),
+    startupName: z.string(),
+    vertical: z.string(),
     foundationDate: z.date({
       required_error: t("startup-form-required-field"),
     }),
-    subscriptionNumber: z.string().min(3, t("startup-form-required-field")),
-    referenceLink: z.string().min(5, t("startup-form-required-field")),
-    country: z.string().min(1, t("startup-form-required-field")),
-    stateAndCity: z.string().min(3, t("startup-form-required-field")),
-    mainResponsibleName: z.string().min(3, t("startup-form-required-field")),
-    mainResponsibleLinkedin: z
-      .string()
-      .min(10, t("startup-form-required-field")),
-    contactNumber: z.string().min(5, t("startup-form-required-field")),
-    mainResponsibleEmail: z
-      .string()
-      .min(1, t("startup-form-required-field"))
-      .email(t("startup-form-email-field")),
+    subscriptionNumber: z.string(),
+    referenceLink: z.string(),
+    country: z.string(),
+    stateAndCity: z.string(),
+    mainResponsibleName: z.string(),
+    mainResponsibleLinkedin: z.string(),
+    contactNumber: z.string(),
+    mainResponsibleEmail: z.string(),
     startupObjectives: z.array(z.string()).refine((data) => data.length > 0, {
       message: t("startup-form-challenges-field"),
     }),
-    connectionsOnlyOnStartupCountryOrigin: z
-      .string()
-      .min(1, t("startup-form-required-field")),
-    partnersQuantity: z.coerce
-      .number()
-      .min(1, t("startup-form-required-field")),
-    partnersPositionRelation: z
-      .string()
-      .min(3, t("startup-form-required-field")),
-    exclusiveDedicationPartner: z
-      .string()
-      .min(1, t("startup-form-required-field")),
-    employeesQuantity: z.coerce
-      .number()
-      .min(1, t("startup-form-required-field")),
-    fullTimeEmployeesQuantity: z.coerce
-      .number()
-      .min(1, t("startup-form-required-field")),
-    businessModel: z.string().min(3, t("startup-form-required-field")),
-    operationalStage: z.string().min(3, t("startup-form-required-field")),
+    connectionsOnlyOnStartupCountryOrigin: z.string(),
+    partnersQuantity: z.coerce.number(),
+    partnersPositionRelation: z.string(),
+    exclusiveDedicationPartner: z.string(),
+    employeesQuantity: z.coerce.number(),
+    fullTimeEmployeesQuantity: z.coerce.number(),
+    businessModel: z.string(),
+    operationalStage: z.string(),
     startupChallenges: z.array(z.string()).refine((data) => data.length > 0, {
       message: t("startup-form-challenges-field"),
     }),
-    isDeepTech: z.string().min(3, t("startup-form-required-field")),
+    isDeepTech: z.string(),
     loadPitchDeck: z
       .custom<File | undefined>((v) => v instanceof File || v === undefined, {
         message: t("startup-form-required-field"),
@@ -90,9 +62,74 @@ export const DataAboutStartupsSchema = (t: (arg: string) => string) =>
       .refine((v) => v !== undefined && v.name !== "" && v.size > 0, {
         message: t("startup-form-required-field"),
       }),
-    shortDescription: z.string().min(10, t("startup-form-required-field")),
-    valueProposal: z.string().min(10, t("startup-form-required-field")),
+    shortDescription: z.string(),
+    valueProposal: z.string(),
   });
+
+// export const DataAboutStartupsSchema = (t: (arg: string) => string) =>
+// z.object({
+//   startupName: z.string().min(1, t("startup-form-required-field")),
+//   vertical: z.string().min(1, t("startup-form-required-field")),
+//   foundationDate: z.date({
+//     required_error: t("startup-form-required-field"),
+//   }),
+//   subscriptionNumber: z.string().min(3, t("startup-form-required-field")),
+//   referenceLink: z.string().min(5, t("startup-form-required-field")),
+//   country: z.string().min(1, t("startup-form-required-field")),
+//   stateAndCity: z.string().min(3, t("startup-form-required-field")),
+//   mainResponsibleName: z.string().min(3, t("startup-form-required-field")),
+//   mainResponsibleLinkedin: z
+//     .string()
+//     .min(10, t("startup-form-required-field")),
+//   contactNumber: z.string().min(5, t("startup-form-required-field")),
+//   mainResponsibleEmail: z
+//     .string()
+//     .min(1, t("startup-form-required-field"))
+//     .email(t("startup-form-email-field")),
+//   startupObjectives: z.array(z.string()).refine((data) => data.length > 0, {
+//     message: t("startup-form-challenges-field"),
+//   }),
+//   connectionsOnlyOnStartupCountryOrigin: z
+//     .string()
+//     .min(1, t("startup-form-required-field")),
+//   partnersQuantity: z.coerce
+//     .number()
+//     .min(1, t("startup-form-required-field")),
+//   partnersPositionRelation: z
+//     .string()
+//     .min(3, t("startup-form-required-field")),
+//   exclusiveDedicationPartner: z
+//     .string()
+//     .min(1, t("startup-form-required-field")),
+//   employeesQuantity: z.coerce
+//     .number()
+//     .min(1, t("startup-form-required-field")),
+//   fullTimeEmployeesQuantity: z.coerce
+//     .number()
+//     .min(1, t("startup-form-required-field")),
+//   businessModel: z.string().min(1, t("startup-form-required-field")),
+//   operationalStage: z.string().min(1, t("startup-form-required-field")),
+//   startupChallenges: z.array(z.string()).refine((data) => data.length > 0, {
+//     message: t("startup-form-challenges-field"),
+//   }),
+//   isDeepTech: z.string().min(3, t("startup-form-required-field")),
+//   loadPitchDeck: z
+//     .custom<File | undefined>((v) => v instanceof File || v === undefined, {
+//       message: t("startup-form-required-field"),
+//     })
+//     .refine((v) => v !== undefined && v.name !== "" && v.size > 0, {
+//       message: t("startup-form-required-field"),
+//     }),
+//   loadLogo: z
+//     .custom<File | undefined>((v) => v instanceof File || v === undefined, {
+//       message: t("startup-form-required-field"),
+//     })
+//     .refine((v) => v !== undefined && v.name !== "" && v.size > 0, {
+//       message: t("startup-form-required-field"),
+//     }),
+//   shortDescription: z.string().min(10, t("startup-form-required-field")),
+//   valueProposal: z.string().min(10, t("startup-form-required-field")),
+// });
 
 //Todos já são opcionais
 export const DataMaturationLevelDeepTechSchema = z.object({
@@ -167,6 +204,6 @@ export const DataAboutFinanceAndMarket = (t: (arg: string) => string) =>
       .string()
       .min(1, t("startup-form-required-field")),
     //os dois abaixo são opcionais
-    amountRaised: z.coerce.string().optional(),
+    amountRaised: z.coerce.number().optional(),
     howMuchEquityWasDistributed: z.coerce.string().optional(),
   });

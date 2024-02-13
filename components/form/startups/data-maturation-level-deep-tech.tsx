@@ -5,14 +5,27 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 
-import { trlList } from "@/app/(site)/data";
+import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
 import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataMaturationLevelDeepTechSchema } from "@/lib/schema";
 
 type Inputs = z.infer<typeof DataMaturationLevelDeepTechSchema>;
 
-export default function DataMaturationLevelDeepTech() {
+interface ValueProps {
+  id: number;
+  label: string;
+}
+
+interface Props {
+  is_review?: boolean;
+  data: SelectDataProps;
+}
+
+export default function DataMaturationLevelDeepTech({
+  is_review = false,
+  data,
+}: Props) {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
   const t = useTranslations("Form");
   const lang = useLocale();
@@ -22,9 +35,9 @@ export default function DataMaturationLevelDeepTech() {
     resolver: zodResolver(DataMaturationLevelDeepTechSchema),
   });
 
-  const trlData = trlList.map((value) => ({
+  const trlData: ValueProps[] = data.maturity_level.map((value) => ({
     ...value,
-    label: lang === "en" ? value.label_en : value.label_pt,
+    label: lang === "en" ? value.name_en : value.name_pt,
   }));
 
   const sortedTrlData = trlData.slice().sort((a, b) => {
@@ -43,6 +56,7 @@ export default function DataMaturationLevelDeepTech() {
   });
 
   function onHandleFormSubmit(data: Inputs) {
+    console.log(data);
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
     handleNext();
   }
@@ -84,8 +98,8 @@ export default function DataMaturationLevelDeepTech() {
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
-          {sortedTrlData.map((option) => (
-            <option key={option.id} value={option.value}>
+          {sortedTrlData.map((option: any) => (
+            <option key={option.id} value={option.id}>
               {option.label}
             </option>
           ))}
@@ -120,18 +134,20 @@ export default function DataMaturationLevelDeepTech() {
           {...register("patentAndCode")}
         />
       </div>
-      <div className="flex justify-between">
-        <Button
-          variant="blue"
-          onClick={onHandleBack}
-          className="px-6 text-white rounded-md"
-        >
-          {t("startup-form-previous-button")}
-        </Button>
-        <Button variant="blue" className="px-6 text-white rounded-md">
-          {t("startup-form-next-button")}
-        </Button>
-      </div>
+      {!is_review && (
+        <div className="flex justify-between">
+          <Button
+            variant="blue"
+            onClick={onHandleBack}
+            className="px-6 text-white rounded-md"
+          >
+            {t("startup-form-previous-button")}
+          </Button>
+          <Button variant="blue" className="px-6 text-white rounded-md">
+            {t("startup-form-next-button")}
+          </Button>
+        </div>
+      )}
     </form>
   );
 }
