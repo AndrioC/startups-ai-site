@@ -3,6 +3,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
+import { toast } from "sonner";
 
 import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
 import { Button } from "@/components/ui/button";
@@ -22,7 +23,7 @@ interface Props {
 
 export default function DataReview({ data }: Props) {
   const t = useTranslations("Form");
-  const { handleBack, formData } = useFormState();
+  const { handleNext, handleBack, formData } = useFormState();
   const [isSubmiting, setIsSubmiting] = useState(false);
 
   const lang = useLocale();
@@ -41,13 +42,20 @@ export default function DataReview({ data }: Props) {
     sendFormData.append("data", JSON.stringify(formData));
     try {
       setIsSubmiting(true);
-      await axios.post("/api/startups-form", sendFormData, {
+      const response = await axios.post("/api/startups-form", sendFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
+
+      if (response.status === 201) {
+        handleNext();
+        setIsSubmiting(false);
+        return;
+      }
     } catch (error) {
       console.log(error);
+      toast(t("error-when-finished-form"));
     }
     setIsSubmiting(false);
   }

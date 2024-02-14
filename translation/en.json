@@ -329,7 +329,8 @@
     "finished-form-congrats-text": "Congratulations!",
     "finished-form-text-first-part": "Thank you for submitting your startup application!",
     "finished-form-text-second-part": "We appreciate your interest in joining our platform. Rest assured that we will carefully review your submission. We'll be in touch shortly to discuss further steps, including access to our platform. If you have any urgent inquiries, feel free to reach out to us.",
-    "finished-form-text-third-part": " Looking forward to potentially working together!",
+    "finished-form-text-third-part": "Looking forward to potentially working together!",
+    "error-when-finished-form": "An error occurred while submitting the form. Please try again later.",
     "startup-form-presentation": {
       "title": "About the Program",
       "text-01": "Hello dear entrepreneur, welcome to the IFIA Startups Department!",
