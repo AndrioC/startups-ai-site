@@ -179,6 +179,38 @@ export default function DataAboutStartupsForm({
     handleBack();
   }
 
+  // const handleCheckboxStartupObjectivesChange = (
+  //   e: React.ChangeEvent<HTMLInputElement>
+  // ) => {
+  //   const { checked, value } = e.target;
+  //   const newStartupObjectives = [...formData.startupObjectives];
+  //   if (checked) {
+  //     newStartupObjectives.push(value);
+  //   } else {
+  //     const index = newStartupObjectives.indexOf(value);
+  //     if (index !== -1) {
+  //       newStartupObjectives.splice(index, 1);
+  //     }
+  //   }
+  //   updateFormData({ startupObjectives: newStartupObjectives });
+  // };
+
+  // const handleCheckboxStartupChallengesChange = (
+  //   e: React.ChangeEvent<HTMLInputElement>
+  // ) => {
+  //   const { checked, value } = e.target;
+  //   const newStartupChallenges = [...formData.startupChallenges];
+  //   if (checked) {
+  //     newStartupChallenges.push(value);
+  //   } else {
+  //     const index = newStartupChallenges.indexOf(value);
+  //     if (index !== -1) {
+  //       newStartupChallenges.splice(index, 1);
+  //     }
+  //   }
+  //   updateFormData({ startupChallenges: newStartupChallenges });
+  // };
+
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
@@ -194,6 +226,7 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("startupName")}
+          //onChange={(e) => updateFormData({ startupName: e.target.value })}
         />
         {errors.startupName?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -207,6 +240,7 @@ export default function DataAboutStartupsForm({
         <select
           id="vertical"
           {...register("vertical")}
+          //onChange={(e) => updateFormData({ vertical: e.target.value })}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
@@ -227,7 +261,13 @@ export default function DataAboutStartupsForm({
           control={control}
           name="foundationDate"
           render={({ field }) => (
-            <DatePicker onChange={field.onChange} value={field.value} />
+            <DatePicker
+              onChange={(newValue: Date | undefined) => {
+                field.onChange(newValue);
+                //updateFormData({ foundationDate: newValue });
+              }}
+              value={field.value}
+            />
           )}
         />
         {errors.foundationDate?.message && (
@@ -251,6 +291,9 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("subscriptionNumber")}
+          // onChange={(e) =>
+          //   updateFormData({ subscriptionNumber: e.target.value })
+          // }
         />
         {errors.subscriptionNumber?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -266,6 +309,7 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("referenceLink")}
+          //onChange={(e) => updateFormData({ referenceLink: e.target.value })}
         />
         {errors.referenceLink?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -279,6 +323,7 @@ export default function DataAboutStartupsForm({
         <select
           id="country"
           {...register("country")}
+          //onChange={(e) => updateFormData({ country: e.target.value })}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
@@ -300,6 +345,7 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("stateAndCity")}
+          //onChange={(e) => updateFormData({ stateAndCity: e.target.value })}
         />
         {errors.stateAndCity?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -315,6 +361,9 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("mainResponsibleName")}
+          // onChange={(e) =>
+          //   updateFormData({ mainResponsibleName: e.target.value })
+          // }
         />
         {errors.mainResponsibleName?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -333,6 +382,9 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("mainResponsibleLinkedin")}
+          // onChange={(e) =>
+          //   updateFormData({ mainResponsibleLinkedin: e.target.value })
+          // }
         />
         {errors.mainResponsibleLinkedin?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -348,6 +400,7 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("contactNumber")}
+          //onChange={(e) => updateFormData({ contactNumber: e.target.value })}
         />
         {errors.contactNumber?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -366,6 +419,9 @@ export default function DataAboutStartupsForm({
           type="text"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("mainResponsibleEmail")}
+          // onChange={(e) =>
+          //   updateFormData({ mainResponsibleEmail: e.target.value })
+          // }
         />
         {errors.mainResponsibleEmail?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -384,6 +440,7 @@ export default function DataAboutStartupsForm({
               value={Number(option.id)}
               className="w-[15px] h-[15px]"
               {...register("startupObjectives")}
+              //onChange={handleCheckboxStartupObjectivesChange}
             />
             <label htmlFor={`option-${option.id}`} className="ml-2">
               {option.label}
@@ -405,6 +462,11 @@ export default function DataAboutStartupsForm({
         <select
           id="connectionsOnlyOnStartupCountryOrigin"
           {...register("connectionsOnlyOnStartupCountryOrigin")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     connectionsOnlyOnStartupCountryOrigin: e.target.value,
+          //   })
+          // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
@@ -425,6 +487,11 @@ export default function DataAboutStartupsForm({
           type="number"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("partnersQuantity")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     partnersQuantity: Number(e.target.value),
+          //   })
+          // }
         />
         {errors.partnersQuantity?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -450,6 +517,11 @@ export default function DataAboutStartupsForm({
           rows={4}
           className="px-4 border rounded-md resize-none h-[120px]"
           {...register("partnersPositionRelation")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     partnersPositionRelation: e.target.value,
+          //   })
+          // }
         />
         {errors.partnersPositionRelation?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -466,6 +538,11 @@ export default function DataAboutStartupsForm({
         <select
           id="exclusiveDedicationPartner"
           {...register("exclusiveDedicationPartner")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     exclusiveDedicationPartner: e.target.value,
+          //   })
+          // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
@@ -486,6 +563,11 @@ export default function DataAboutStartupsForm({
           type="number"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("employeesQuantity")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     employeesQuantity: Number(e.target.value),
+          //   })
+          // }
         />
         {errors.employeesQuantity?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -504,6 +586,11 @@ export default function DataAboutStartupsForm({
           type="number"
           className="h-8 lg:h-11 px-4 border rounded-md"
           {...register("fullTimeEmployeesQuantity")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     fullTimeEmployeesQuantity: Number(e.target.value),
+          //   })
+          // }
         />
         {errors.fullTimeEmployeesQuantity?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -517,6 +604,11 @@ export default function DataAboutStartupsForm({
         <select
           id="businessModel"
           {...register("businessModel")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     businessModel: e.target.value,
+          //   })
+          // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
@@ -538,6 +630,11 @@ export default function DataAboutStartupsForm({
         <select
           id="operationalStage"
           {...register("operationalStage")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     operationalStage: e.target.value,
+          //   })
+          // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
@@ -564,6 +661,7 @@ export default function DataAboutStartupsForm({
               value={Number(option.id)}
               className="w-[15px] h-[15px]"
               {...register("startupChallenges")}
+              //onChange={handleCheckboxStartupChallengesChange}
             />
             <label htmlFor={`option-${option.id}`} className="ml-2">
               {option.label}
@@ -589,6 +687,11 @@ export default function DataAboutStartupsForm({
         <select
           id="isDeepTech"
           {...register("isDeepTech")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     isDeepTech: e.target.value,
+          //   })
+          // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
@@ -627,6 +730,7 @@ export default function DataAboutStartupsForm({
                   const selectedFile = e.target.files?.[0];
                   setPitchDeckFile(selectedFile?.name || undefined);
                   onChange(selectedFile);
+                  //updateFormData({ loadPitchDeck: selectedFile });
                 }}
               />
               {pitchDeckFile && <span>{pitchDeckFile}</span>}
@@ -665,6 +769,7 @@ export default function DataAboutStartupsForm({
                   const selectedFile = e.target.files?.[0];
                   setLogoFile(selectedFile?.name || undefined);
                   onChange(selectedFile);
+                  //updateFormData({ loadLogo: selectedFile });
                 }}
               />
               {logoFile && <span>{logoFile}</span>}
@@ -683,6 +788,11 @@ export default function DataAboutStartupsForm({
           rows={4}
           className="px-4 border rounded-md resize-none h-[120px]"
           {...register("shortDescription")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     shortDescription: e.target.value,
+          //   })
+          // }
         />
         {errors.shortDescription?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -698,6 +808,11 @@ export default function DataAboutStartupsForm({
           rows={4}
           className="px-4 border rounded-md resize-none h-[120px]"
           {...register("valueProposal")}
+          // onChange={(e) =>
+          //   updateFormData({
+          //     valueProposal: e.target.value,
+          //   })
+          // }
         />
         {errors.valueProposal?.message && (
           <p className="mt-2 text-sm text-red-400">

@@ -15,7 +15,7 @@ export default function HeaderSteps() {
     "Step 7",
   ];
 
-  if (step === 0) {
+  if (step === 0 || step === 8) {
     return null;
   }
 

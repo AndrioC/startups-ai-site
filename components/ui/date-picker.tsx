@@ -15,13 +15,13 @@ import {
 import { cn } from "@/lib/utils";
 
 interface DatePickerProps {
-  onChange: (date: Date | null) => void;
-  value: Date | null | undefined;
+  onChange: (date: Date | undefined) => void;
+  value: Date | undefined;
 }
 
 // DatePicker component
 export function DatePicker({ onChange, value }: DatePickerProps) {
-  const [date, setDate] = React.useState<Date | null | undefined>(value);
+  const [date, setDate] = React.useState<Date | undefined>(value);
 
   const lang = useLocale();
 
@@ -47,7 +47,7 @@ export function DatePicker({ onChange, value }: DatePickerProps) {
         <Calendar
           mode="single"
           selected={date || undefined}
-          onSelect={(newDate: Date | null | undefined) => {
+          onSelect={(newDate: Date | undefined) => {
             if (newDate !== undefined) {
               newDate?.setHours(0, 0, 0, 0);
               setDate(newDate);

@@ -59,10 +59,11 @@ export interface FormData {
 interface FormContext {
   handleNext: () => void;
   handleBack: () => void;
+  //handleStepChange: (step: number) => void;
   step: number;
   formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
-  updateFormData: (data: Partial<FormData>) => void;
+  //updateFormData: (data: Partial<FormData>) => void;
 }
 
 export const initialFormData: FormData = {
@@ -125,10 +126,11 @@ export const initialFormData: FormData = {
 const FormContext = createContext<FormContext>({
   handleBack: () => {},
   handleNext: () => {},
+  //handleStepChange: () => {},
   step: 0,
   formData: initialFormData,
   setFormData: () => {},
-  updateFormData: () => {},
+  //updateFormData: () => {},
 });
 
 interface Props {
@@ -147,12 +149,16 @@ export function FormProvider({ children }: Props) {
     setStep((prevStep) => prevStep - 1);
   }
 
-  function updateFormData(data: Partial<FormData>) {
-    setFormData((prevData) => ({
-      ...prevData,
-      ...data,
-    }));
-  }
+  // function handleStepChange(step: number) {
+  //   setStep(step);
+  // }
+
+  // function updateFormData(data: Partial<FormData>) {
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     ...data,
+  //   }));
+  // }
 
   return (
     <FormContext.Provider
@@ -162,7 +168,6 @@ export function FormProvider({ children }: Props) {
         step,
         formData,
         setFormData,
-        updateFormData,
       }}
     >
       {children}

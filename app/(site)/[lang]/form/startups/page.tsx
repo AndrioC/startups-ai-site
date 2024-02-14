@@ -15,7 +15,6 @@ import axios from "axios";
 
 import FormStep from "@/components/form/startups/form-step";
 import HeaderSteps from "@/components/form/startups/header-steps";
-import { Skeleton } from "@/components/ui/skeleton";
 import { FormProvider } from "@/contexts/FormContext";
 
 export interface SelectDataProps {
@@ -34,8 +33,8 @@ export default function FormStartusPage() {
 
   if (isLoading)
     return (
-      <div className="flex items-center justify-center mt-36 mb-36">
-        <Skeleton className="h-[250px] w-[250px] rounded-xl" />
+      <div className="flex justify-center items-center mt-10 mb-10">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
       </div>
     );
   return (

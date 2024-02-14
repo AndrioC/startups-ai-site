@@ -55,7 +55,6 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
         return;
       }
     } catch (error) {
-      console.log(error);
       toast(t("error-when-finished-form"));
     }
     setIsSubmiting(false);
@@ -241,7 +240,7 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
             disabled={isSubmiting}
             className="px-6 text-white rounded-md"
           >
-            {t("startup-form-next-button")}
+            {t("startup-form-finish-button")}
           </Button>
         </div>
       )}
