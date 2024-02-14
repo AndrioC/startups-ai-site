@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { z } from "zod";
 
+import { checkEmailExists } from "@/actions/check-email-exists";
+import { FormError } from "@/components/form/form-error";
 import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
 import { DataSignUpSchema } from "@/lib/schema";
@@ -17,6 +19,8 @@ interface Props {
 
 export default function DataSignUpUser({ is_review = false }: Props) {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
+  const [isPending, startTransition] = useTransition();
+  const [error, setError] = useState<string | undefined>("");
   const [iconPassword, setIconPassword] = useState(<EyeOffIcon />);
   const [iconConfirmPassword, setIconConfirmPassword] = useState(
     <EyeOffIcon />
@@ -38,8 +42,20 @@ export default function DataSignUpUser({ is_review = false }: Props) {
   });
 
   function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
+    setError("");
     setFormData((prevFormData) => ({ ...prevFormData, ...data }));
-    handleNext();
+    startTransition(() => {
+      checkEmailExists(data.emailSignUp, t("startup-form-email-already-exists"))
+        .then((values) => {
+          if (!values.error) {
+            handleNext();
+          }
+          setError(values.error);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
   }
 
   function onHandleBack() {
@@ -180,6 +196,7 @@ export default function DataSignUpUser({ is_review = false }: Props) {
           </p>
         )}
       </div>
+      <FormError message={error} />
       {!is_review && (
         <div className="flex justify-between">
           <Button
@@ -189,7 +206,11 @@ export default function DataSignUpUser({ is_review = false }: Props) {
           >
             {t("startup-form-previous-button")}
           </Button>
-          <Button variant="blue" className="px-6 text-white rounded-md">
+          <Button
+            disabled={isPending}
+            variant="blue"
+            className="px-6 text-white rounded-md"
+          >
             {t("startup-form-next-button")}
           </Button>
         </div>
