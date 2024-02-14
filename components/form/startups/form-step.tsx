@@ -36,9 +36,9 @@ export default function FormStep({ data }: Props) {
       return <DataAboutGovernancePage />;
     case 7:
       return <DataAboutFinanceAndMarketPage />;
+    // case 8:
+    //   return <DataReview data={data} />;
     case 8:
-      return <DataReview data={data} />;
-    case 9:
       return <FinishedForm />;
     default:
       return null;

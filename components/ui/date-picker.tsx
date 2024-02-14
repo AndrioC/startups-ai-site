@@ -49,6 +49,7 @@ export function DatePicker({ onChange, value }: DatePickerProps) {
           selected={date || undefined}
           onSelect={(newDate: Date | null | undefined) => {
             if (newDate !== undefined) {
+              newDate?.setHours(0, 0, 0, 0);
               setDate(newDate);
               onChange(newDate);
             }

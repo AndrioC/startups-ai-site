@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -28,6 +29,10 @@ export default function DataReview({ data }: Props) {
 
   const lang = useLocale();
 
+  const {
+    formState: { errors },
+  } = useForm();
+
   const message = lang === "en" ? "Review and Submit" : "Revisar e enviar";
 
   function onHandleBack() {
@@ -48,9 +53,9 @@ export default function DataReview({ data }: Props) {
         },
       });
 
-      if (response.status === 201) {
-        handleNext();
+      if (response.data.status === 201) {
         setIsSubmiting(false);
+        //handleNext();
         return;
       }
     } catch (error) {

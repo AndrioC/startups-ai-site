@@ -62,9 +62,10 @@ interface FormContext {
   step: number;
   formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+  updateFormData: (data: Partial<FormData>) => void;
 }
 
-const initialFormData: FormData = {
+export const initialFormData: FormData = {
   startupName: "",
   vertical: "",
   foundationDate: new Date(),
@@ -127,6 +128,7 @@ const FormContext = createContext<FormContext>({
   step: 0,
   formData: initialFormData,
   setFormData: () => {},
+  updateFormData: () => {},
 });
 
 interface Props {
@@ -145,9 +147,23 @@ export function FormProvider({ children }: Props) {
     setStep((prevStep) => prevStep - 1);
   }
 
+  function updateFormData(data: Partial<FormData>) {
+    setFormData((prevData) => ({
+      ...prevData,
+      ...data,
+    }));
+  }
+
   return (
     <FormContext.Provider
-      value={{ handleBack, handleNext, step, formData, setFormData }}
+      value={{
+        handleBack,
+        handleNext,
+        step,
+        formData,
+        setFormData,
+        updateFormData,
+      }}
     >
       {children}
     </FormContext.Provider>

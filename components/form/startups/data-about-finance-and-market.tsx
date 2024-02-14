@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 import { useTranslations } from "next-intl";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -15,6 +18,7 @@ interface Props {
 
 export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
   const { handleNext, handleBack, setFormData, formData } = useFormState();
+  const [isSubmiting, setIsSubmiting] = useState(false);
   const t = useTranslations("Form");
 
   const formSchema = DataAboutFinanceAndMarket(t);
@@ -29,9 +33,32 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     resolver: zodResolver(formSchema),
   });
 
-  async function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
-    setFormData((prevFormData) => ({ ...prevFormData, ...data }));
-    handleNext();
+  async function onHandleFormSubmit() {
+    const currentFormData = watch();
+    setFormData((prevFormData) => ({ ...prevFormData, ...currentFormData }));
+    const sendFormData = new FormData();
+
+    sendFormData.append("file-logo", formData.loadLogo!);
+    sendFormData.append("file-pitch", formData.loadPitchDeck!);
+    sendFormData.append("data", JSON.stringify(formData));
+    try {
+      setIsSubmiting(true);
+      const response = await axios.post("/api/startups-form", sendFormData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      if (response.data.status === 201) {
+        setIsSubmiting(false);
+        handleNext();
+        return;
+      }
+    } catch (error) {
+      console.log(error);
+      toast(t("error-when-finished-form"));
+    }
+    setIsSubmiting(false);
   }
 
   function onHandleBack() {
@@ -204,11 +231,16 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
           <Button
             variant="blue"
             onClick={onHandleBack}
+            disabled={isSubmiting}
             className="px-6 text-white rounded-md"
           >
             {t("startup-form-previous-button")}
           </Button>
-          <Button variant="blue" className="px-6 text-white rounded-md">
+          <Button
+            variant="blue"
+            disabled={isSubmiting}
+            className="px-6 text-white rounded-md"
+          >
             {t("startup-form-next-button")}
           </Button>
         </div>

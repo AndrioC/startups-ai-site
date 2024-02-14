@@ -18,7 +18,8 @@ interface Props {
 }
 
 export default function DataSignUpUser({ is_review = false }: Props) {
-  const { handleNext, handleBack, setFormData, formData } = useFormState();
+  const { handleNext, handleBack, setFormData, formData, updateFormData } =
+    useFormState();
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | undefined>("");
   const [iconPassword, setIconPassword] = useState(<EyeOffIcon />);
@@ -100,6 +101,7 @@ export default function DataSignUpUser({ is_review = false }: Props) {
           type="text"
           className="h-11 px-4 border rounded-md"
           {...register("fullNameSignUp")}
+          onChange={(e) => updateFormData({ fullNameSignUp: e.target.value })}
         />
         {errors.fullNameSignUp?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -120,6 +122,7 @@ export default function DataSignUpUser({ is_review = false }: Props) {
           type="email"
           className="h-11 px-4 border rounded-md"
           {...register("emailSignUp")}
+          onChange={(e) => updateFormData({ emailSignUp: e.target.value })}
         />
         {errors.emailSignUp?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -140,6 +143,7 @@ export default function DataSignUpUser({ is_review = false }: Props) {
             type={showPassword ? "text" : "password"}
             className="h-11 px-4 border rounded-md w-full"
             {...register("passwordSignUp")}
+            onChange={(e) => updateFormData({ passwordSignUp: e.target.value })}
           />
           <button
             type="button"
@@ -176,6 +180,9 @@ export default function DataSignUpUser({ is_review = false }: Props) {
             type={showConfirmPassword ? "text" : "password"}
             className="h-11 px-4 border rounded-md w-full"
             {...register("confirmPasswordSignUp")}
+            onChange={(e) =>
+              updateFormData({ confirmPasswordSignUp: e.target.value })
+            }
           />
           <button
             type="button"

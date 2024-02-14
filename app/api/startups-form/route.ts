@@ -58,8 +58,8 @@ export async function POST(request: NextRequest) {
       partners_quantity: data.partnersQuantity,
       partners_position_relation: data.partnersPositionRelation,
       exclusive_dedication_partner: data.exclusiveDedicationPartner,
-      employees_quantity: data.employeesQuantity,
-      fulltime_employees_quantity: data.fullTimeEmployeesQuantity,
+      employees_quantity: Number(data.employeesQuantity),
+      fulltime_employees_quantity: Number(data.fullTimeEmployeesQuantity),
       business_model_id: Number(data.businessModel),
       operation_stage_id: Number(data.operationalStage),
       is_deep_tech: data.isDeepTech,
@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
       competitors: data.competitors,
       competitive_differentiator_en: data.competitiveDifferentiator,
       competitive_differentiator_pt: data.competitiveDifferentiator,
-      quantity_ods_goals: data.quantityOdsGoals,
+      quantity_ods_goals: Number(data.quantityOdsGoals),
       partners_have_already_been_in_other_business:
         data.partnersHaveAlreadyBeenInOtherBusiness,
       partners_have_complementary_area_of_activity:
@@ -91,12 +91,12 @@ export async function POST(request: NextRequest) {
       have_accounting_advice: data.haveAccountingConsultancy,
       relationships_registered_in_contract:
         data.relationshipsRegisteredInContract,
-      customers_quantity: data.customersQuantity,
-      last_revenue: data.lastRevenue,
-      last_six_months_revenue: data.lastSixMonthsRevenue,
-      last_twelve_months_revenue: data.lastTwelveMonthsRevenue,
+      customers_quantity: Number(data.customersQuantity),
+      last_revenue: Number(data.lastRevenue),
+      last_six_months_revenue: Number(data.lastSixMonthsRevenue),
+      last_twelve_months_revenue: Number(data.lastTwelveMonthsRevenue),
       already_raised_investment: data.alreadyRaisedInvestment,
-      amount_raised: data.amountRaised,
+      amount_raised: Number(data.amountRaised),
       how_much_equity_was_distributed: data.subscriptionNumber,
     },
   });

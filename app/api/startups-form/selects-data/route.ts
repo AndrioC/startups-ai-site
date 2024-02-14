@@ -10,7 +10,7 @@ export async function GET() {
   const business_model = await prisma.business_model.findMany();
   const operational_stage = await prisma.operational_stage.findMany();
   const service_products = await prisma.service_products.findMany();
-  const vertical = await prisma.service_products.findMany();
+  const vertical = await prisma.vertical.findMany();
 
   const data = {
     challenges,
