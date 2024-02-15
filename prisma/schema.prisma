@@ -20,6 +20,7 @@ model organizations {
   updated_at     DateTime   @default(now())
   user           user[]
   startups       startups[]
+  ebooks         ebooks[]
 }
 
 model vertical {
@@ -209,4 +210,25 @@ model startup_objectives {
   objectives objectives @relation(fields: [objective_id], references: [id])
 
   @@unique([startup_id, objective_id])
+}
+
+enum EbookType {
+  STARTUP
+  EXPERT
+}
+
+model ebooks {
+  id              Int       @id @default(autoincrement())
+  organization_id Int
+  type            EbookType
+  title_en        String
+  title_pt        String
+  img_en          String
+  img_pt          String
+  link_en         String
+  link_pt         String
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @default(now())
+
+  organizations organizations? @relation(fields: [organization_id], references: [id])
 }

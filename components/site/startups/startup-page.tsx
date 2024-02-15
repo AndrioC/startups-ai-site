@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { StartupSummary } from "@/app/api/startups/route";
 import Container from "@/components/site/home/container";
@@ -12,17 +12,28 @@ import NotFoundStartups from "@/components/site/startups/not-found-startups";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
+import { expertsEbook } from "../../../app/(site)/data";
+import EbookView, { EbooksExpertProps } from "../experts/ebook-view";
+
 interface Props {
   data: StartupSummary[];
 }
 
 export default function StartuPageComponent({ data }: Props) {
   const t = useTranslations("Startup");
+  const lang = useLocale();
   const [filteredData, setFilteredData] = useState(data);
 
   const handleFilterChange = (filteredData: StartupSummary[]) => {
     setFilteredData(filteredData);
   };
+
+  const dataEbooks: EbooksExpertProps[] = expertsEbook.map((value) => ({
+    ...value,
+    title: lang === "en" ? value.title_en : value.title_pt,
+    link: lang === "en" ? value.link_en : value.link_pt,
+    img: lang === "en" ? value.img_en : value.img_pt,
+  }));
 
   console.log(data);
 
@@ -63,21 +74,35 @@ export default function StartuPageComponent({ data }: Props) {
             <NotFoundStartups />
           </div>
         )}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 place-items-center">
-          {filteredData.map((startup: StartupSummary) => (
-            <CardStartup
-              key={startup.id}
-              startup_name={startup.name}
-              logo={startup.logo_img_url}
-              foundation_year={startup.foundation_year}
-              value_proposal={startup.value_proposal}
-              last_update={startup.last_update}
-              vertical={returnVertical(startup.vertical)}
-              business_model={startup.business_model}
-              country={startup.country}
-              flag={startup.flag}
-            />
-          ))}
+        <div className="flex justify-between mb-10 flex-col lg:flex-row items-center lg:items-start">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10 place-items-center">
+            {filteredData.map((startup: StartupSummary) => (
+              <CardStartup
+                key={startup.id}
+                startup_name={startup.name}
+                logo={startup.logo_img_url}
+                foundation_year={startup.foundation_year}
+                value_proposal={startup.value_proposal}
+                last_update={startup.last_update}
+                vertical={returnVertical(startup.vertical)}
+                business_model={startup.business_model}
+                country={startup.country}
+                flag={startup.flag}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col ml-5 lg:ml-36 relative mt-8">
+            <div className="sticky top-0 hidden lg:block">
+              {dataEbooks.map((value) => (
+                <EbookView
+                  key={value.id}
+                  title={value.title}
+                  link={value.link}
+                  img={value.img}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </Container>
