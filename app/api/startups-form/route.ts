@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
         short_description_pt: data.shortDescription,
         value_proposal_en: data.valueProposal,
         value_proposal_pt: data.valueProposal,
-        maturity_level_id: Number(data.maturityLevel),
+        maturity_level_id: Number(data.maturityLevel) || null,
         has_patent: data.hasPatent,
         patent_and_code: data.patentAndCode,
         problem_that_is_solved_en: data.problemThatIsSolved,

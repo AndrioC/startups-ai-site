@@ -64,7 +64,7 @@ export const DataAboutStartupsSchema = (t: (arg: string) => string) =>
     startupChallenges: z.array(z.string()).refine((data) => data.length > 0, {
       message: t("startup-form-challenges-field"),
     }),
-    isDeepTech: z.string().min(3, t("startup-form-required-field")),
+    isDeepTech: z.string().min(1, t("startup-form-required-field")),
     loadPitchDeck: z
       .custom<File | undefined>((v) => v instanceof File || v === undefined, {
         message: t("startup-form-required-field"),
@@ -98,7 +98,7 @@ export const DataServiceProductSchema = (t: (arg: string) => string) =>
         message: t("startup-form-challenges-field"),
       }),
     problemThatIsSolved: z.string().min(1, t("startup-form-required-field")),
-    competitors: z.string().min(3, t("startup-form-required-field")),
+    competitors: z.string().min(1, t("startup-form-required-field")),
     competitiveDifferentiator: z
       .string()
       .min(5, t("startup-form-required-field")),
