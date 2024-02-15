@@ -125,7 +125,7 @@ export default function ExpertPage() {
             </div>
           </div>
           <div className="w-[100%] lg:w-[80%]">
-            <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 mt-10 place-items-center mb-10">
+            <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-10 place-items-center mb-10">
               {filteredData.map((value) => (
                 <CardExpert
                   key={value.id}
