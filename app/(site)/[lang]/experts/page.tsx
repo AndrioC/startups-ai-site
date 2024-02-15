@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useLocale } from "next-intl";
 
-import { ExpertsEbooksProps } from "@/app/api/ebooks-experts/route";
+import { ExpertsEbooksProps } from "@/app/api/ebooks/experts/route";
 import ExpertPageComponent from "@/components/site/experts/expert-page";
 
 export default function ExpertPage() {
@@ -31,7 +31,7 @@ const useEbooksExperts = (lang: string) =>
   useQuery<ExpertsEbooksProps[]>({
     queryKey: ["ebooks-experts-data", lang],
     queryFn: () =>
-      axios.get(`/api/ebooks-experts?lang=${lang}`).then((res) => {
+      axios.get(`/api/ebooks/experts?lang=${lang}`).then((res) => {
         return res.data;
       }),
   });

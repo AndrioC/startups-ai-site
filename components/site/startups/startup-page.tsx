@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
+import { StartupsEbooksProps } from "@/app/api/ebooks/startups/route";
 import { StartupSummary } from "@/app/api/startups/route";
+import EbookView from "@/components/site/experts/ebook-view";
 import Container from "@/components/site/home/container";
 import CardStartup from "@/components/site/startups/card-startup";
 import HeaderStartupsFilter from "@/components/site/startups/header-startups-filter";
@@ -12,30 +14,21 @@ import NotFoundStartups from "@/components/site/startups/not-found-startups";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { expertsEbook } from "../../../app/(site)/data";
-import EbookView, { EbooksExpertProps } from "../experts/ebook-view";
-
 interface Props {
   data: StartupSummary[];
+  ebooksStartupsData: StartupsEbooksProps[];
 }
 
-export default function StartuPageComponent({ data }: Props) {
+export default function StartuPageComponent({
+  data,
+  ebooksStartupsData,
+}: Props) {
   const t = useTranslations("Startup");
-  const lang = useLocale();
   const [filteredData, setFilteredData] = useState(data);
 
   const handleFilterChange = (filteredData: StartupSummary[]) => {
     setFilteredData(filteredData);
   };
-
-  const dataEbooks: EbooksExpertProps[] = expertsEbook.map((value) => ({
-    ...value,
-    title: lang === "en" ? value.title_en : value.title_pt,
-    link: lang === "en" ? value.link_en : value.link_pt,
-    img: lang === "en" ? value.img_en : value.img_pt,
-  }));
-
-  console.log(data);
 
   return (
     <Container>
@@ -93,7 +86,7 @@ export default function StartuPageComponent({ data }: Props) {
           </div>
           <div className="flex flex-col ml-5 lg:ml-36 relative mt-8">
             <div className="sticky top-0 hidden lg:block">
-              {dataEbooks.map((value) => (
+              {ebooksStartupsData.map((value) => (
                 <EbookView
                   key={value.id}
                   title={value.title}

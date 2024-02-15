@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
 import { ExpertProps, expertsList } from "@/app/(site)/data";
-import { ExpertsEbooksProps } from "@/app/api/ebooks-experts/route";
+import { ExpertsEbooksProps } from "@/app/api/ebooks/experts/route";
 import CardExpert from "@/components/site/experts/card-expert";
 import EbookView from "@/components/site/experts/ebook-view";
 import HeaderExpertsFilter, {
