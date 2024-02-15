@@ -55,7 +55,7 @@ const useSelectData = () =>
   useQuery<SelectDataProps>({
     queryKey: ["select-data"],
     queryFn: () =>
-      axios.get("/api/startups-form/selects-data").then((res) => {
+      axios.get("/api/selects-data").then((res) => {
         return res.data;
       }),
   });
