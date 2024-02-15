@@ -63,6 +63,10 @@ interface FormContext {
   step: number;
   formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+  pitchDeckFile: string | undefined;
+  setPitchDeckFile: React.Dispatch<React.SetStateAction<string | undefined>>;
+  logoFile: string | undefined;
+  setLogoFile: React.Dispatch<React.SetStateAction<string | undefined>>;
   //updateFormData: (data: Partial<FormData>) => void;
 }
 
@@ -130,6 +134,10 @@ const FormContext = createContext<FormContext>({
   step: 0,
   formData: initialFormData,
   setFormData: () => {},
+  pitchDeckFile: "",
+  setPitchDeckFile: () => {},
+  logoFile: "",
+  setLogoFile: () => {},
   //updateFormData: () => {},
 });
 
@@ -139,6 +147,8 @@ interface Props {
 
 export function FormProvider({ children }: Props) {
   const [step, setStep] = useState(0);
+  const [pitchDeckFile, setPitchDeckFile] = useState<string | undefined>("");
+  const [logoFile, setLogoFile] = useState<string | undefined>("");
   const [formData, setFormData] = useState<FormData>(initialFormData);
 
   function handleNext() {
@@ -168,6 +178,10 @@ export function FormProvider({ children }: Props) {
         step,
         formData,
         setFormData,
+        pitchDeckFile,
+        setPitchDeckFile,
+        logoFile,
+        setLogoFile,
       }}
     >
       {children}

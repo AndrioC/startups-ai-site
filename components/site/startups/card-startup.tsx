@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { infoFlags } from "@/app/(site)/data";
 import startupPlaceHolder from "@/assets/startup-placeholder.png";
 import {
   Tooltip,
@@ -13,10 +12,10 @@ import {
 interface CardStartupProps {
   startup_name: string;
   logo: string | null;
-  foundation_year: number | null;
+  foundation_year: string;
   value_proposal: string;
   last_update: string;
-  vertical: string;
+  vertical: string | null;
   business_model: string;
   country: string;
   flag: string;
@@ -84,7 +83,7 @@ export default function CardStartup({
               <Image
                 width={25}
                 height={25}
-                src={infoFlags[flag]}
+                src={flag}
                 style={{ width: "25px", height: "25px" }}
                 alt={country}
               />

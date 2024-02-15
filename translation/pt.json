@@ -93,7 +93,9 @@
     "search-found-text-first": "Foram encontradas",
     "search-found-text-second": "com base nos filtros acima",
 
-    "startup-card-last-update-text": "Última atualização"
+    "startup-card-last-update-text": "Última atualização",
+
+    "startup-not-found-results-text": "Nenhuma startup encontrada"
   },
 
   "Expert": {

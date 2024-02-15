@@ -62,7 +62,7 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
         <select
           id="isStartupOfficiallyRegistered"
           {...register("isStartupOfficiallyRegistered")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -94,7 +94,7 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
         <select
           id="isTherePartnersAgreementSigned"
           {...register("isTherePartnersAgreementSigned")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -113,7 +113,7 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
         <select
           id="haveLegalAdvice"
           {...register("haveLegalAdvice")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -134,7 +134,7 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
         <select
           id="haveAccountingConsultancy"
           {...register("haveAccountingConsultancy")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -155,7 +155,7 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
         <select
           id="relationshipsRegisteredInContract"
           {...register("relationshipsRegisteredInContract")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>

@@ -89,54 +89,54 @@ model startups {
   id                                           Int       @id @default(autoincrement())
   organization_id                              Int
   name                                         String
-  vertical_id                                  Int
-  foundation_date                              DateTime
-  subscription_number                          String
-  reference_link                               String
+  vertical_id                                  Int?
+  foundation_date                              DateTime?
+  subscription_number                          String?
+  reference_link                               String?
   country_id                                   Int
-  state_city                                   String
-  main_responsible_name                        String
-  main_responsible_linkedin                    String
-  contact_number                               String
-  main_responsible_email                       String
-  connections_only_on_origin_country           String
-  partners_quantity                            Int
-  partners_position_relation                   String
-  exclusive_dedication_partner                 String
-  employees_quantity                           Int
-  fulltime_employees_quantity                  Int
-  business_model_id                            Int
-  operation_stage_id                           Int
-  is_deep_tech                                 String
-  pitch_deck                                   String
+  state_city                                   String?
+  main_responsible_name                        String?
+  main_responsible_linkedin                    String?
+  contact_number                               String?
+  main_responsible_email                       String?
+  connections_only_on_origin_country           String?
+  partners_quantity                            Int?
+  partners_position_relation                   String?
+  exclusive_dedication_partner                 String?
+  employees_quantity                           Int?
+  fulltime_employees_quantity                  Int?
+  business_model_id                            Int?
+  operation_stage_id                           Int?
+  is_deep_tech                                 String?
+  pitch_deck                                   String?
   logo_img                                     String
-  short_description_en                         String
-  short_description_pt                         String
-  value_proposal_en                            String
-  value_proposal_pt                            String
+  short_description_en                         String?
+  short_description_pt                         String?
+  value_proposal_en                            String?
+  value_proposal_pt                            String?
   maturity_level_id                            Int?
   has_patent                                   String?
   patent_and_code                              String?
-  problem_that_is_solved_en                    String
-  problem_that_is_solved_pt                    String
-  competitors                                  String
-  competitive_differentiator_en                String
-  competitive_differentiator_pt                String
-  quantity_ods_goals                           Int
-  partners_have_already_been_in_other_business String
-  partners_have_complementary_area_of_activity String
-  one_or_more_dedication_partner               String
-  one_or_more_partners_has_proven_experience   String
-  is_startup_officially_registered             String
-  is_there_partners_agreement_signed           String
-  have_legal_advice                            String
-  have_accounting_advice                       String
-  relationships_registered_in_contract         String
-  customers_quantity                           Int
-  last_revenue                                 Float
-  last_six_months_revenue                      Float
-  last_twelve_months_revenue                   Float
-  already_raised_investment                    String
+  problem_that_is_solved_en                    String?
+  problem_that_is_solved_pt                    String?
+  competitors                                  String?
+  competitive_differentiator_en                String?
+  competitive_differentiator_pt                String?
+  quantity_ods_goals                           Int?
+  partners_have_already_been_in_other_business String?
+  partners_have_complementary_area_of_activity String?
+  one_or_more_dedication_partner               String?
+  one_or_more_partners_has_proven_experience   String?
+  is_startup_officially_registered             String?
+  is_there_partners_agreement_signed           String?
+  have_legal_advice                            String?
+  have_accounting_advice                       String?
+  relationships_registered_in_contract         String?
+  customers_quantity                           Int?
+  last_revenue                                 Float?
+  last_six_months_revenue                      Float?
+  last_twelve_months_revenue                   Float?
+  already_raised_investment                    String?
   amount_raised                                Float?
   how_much_equity_was_distributed              String?
   plan                                         String    @default("free")

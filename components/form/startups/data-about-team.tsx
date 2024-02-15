@@ -55,7 +55,7 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
         <select
           id="partnersHaveAlreadyBeenInOtherBusiness"
           {...register("partnersHaveAlreadyBeenInOtherBusiness")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -76,7 +76,7 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
         <select
           id="parnertsHaveComplementaryAreaOfActivity"
           {...register("parnertsHaveComplementaryAreaOfActivity")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -100,7 +100,7 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
         <select
           id="oneOrMoreDedicationPartner"
           {...register("oneOrMoreDedicationPartner")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -121,7 +121,7 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
         <select
           id="oneOrMorePartnersHasProvenExperience"
           {...register("oneOrMorePartnersHasProvenExperience")}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>

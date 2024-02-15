@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import _ from "lodash";
 import { useTranslations } from "next-intl";
 
-import { StartupProps } from "@/app/(site)/data";
+import { StartupSummary } from "@/app/api/startups/route";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -14,8 +14,8 @@ import {
 } from "@/components/ui/select";
 
 interface Props {
-  dataSource: StartupProps[];
-  setFilteredData(data: StartupProps[]): void;
+  dataSource: StartupSummary[];
+  setFilteredData(data: StartupSummary[]): void;
 }
 
 export default function HeaderStartupsFilter({
@@ -78,7 +78,7 @@ export default function HeaderStartupsFilter({
 
     if (business_model_value) {
       newFilteredData = newFilteredData.filter(
-        (startup) => startup.business_model === business_model_value
+        (startup) => startup?.business_model === business_model_value
       );
     }
 
@@ -154,7 +154,7 @@ export default function HeaderStartupsFilter({
   );
 }
 
-function setFilter(dataSource: StartupProps[]) {
+function setFilter(dataSource: StartupSummary[]) {
   const dataFilter = [...dataSource];
 
   const uniqueCountry = _.uniqBy(dataSource, "country");
@@ -181,7 +181,7 @@ function setFilter(dataSource: StartupProps[]) {
       if (a.vertical < b.vertical) {
         return -1;
       }
-      if (a.vertical > b.vertical) {
+      if (a.vertical! > b.vertical!) {
         return 1;
       }
       return 0;

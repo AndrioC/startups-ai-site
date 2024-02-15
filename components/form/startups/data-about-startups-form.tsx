@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
@@ -25,11 +24,16 @@ export default function DataAboutStartupsForm({
   is_review = false,
   data,
 }: Props) {
-  const { handleNext, handleBack, setFormData, formData } = useFormState();
-  const [pitchDeckFile, setPitchDeckFile] = useState<string | undefined>(
-    undefined
-  );
-  const [logoFile, setLogoFile] = useState<string | undefined>(undefined);
+  const {
+    handleNext,
+    handleBack,
+    setFormData,
+    formData,
+    pitchDeckFile,
+    setPitchDeckFile,
+    logoFile,
+    setLogoFile,
+  } = useFormState();
 
   const t = useTranslations("Form");
   const lang = useLocale();
@@ -241,7 +245,7 @@ export default function DataAboutStartupsForm({
           id="vertical"
           {...register("vertical")}
           //onChange={(e) => updateFormData({ vertical: e.target.value })}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           {sortedVerticalData.map((option: any) => (
@@ -324,7 +328,7 @@ export default function DataAboutStartupsForm({
           id="country"
           {...register("country")}
           //onChange={(e) => updateFormData({ country: e.target.value })}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           {sortedCountriesData.map((option: any) => (
@@ -467,7 +471,7 @@ export default function DataAboutStartupsForm({
           //     connectionsOnlyOnStartupCountryOrigin: e.target.value,
           //   })
           // }
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -543,7 +547,7 @@ export default function DataAboutStartupsForm({
           //     exclusiveDedicationPartner: e.target.value,
           //   })
           // }
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
@@ -609,7 +613,7 @@ export default function DataAboutStartupsForm({
           //     businessModel: e.target.value,
           //   })
           // }
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           {sortedBusinessModel.map((option) => (
@@ -635,7 +639,7 @@ export default function DataAboutStartupsForm({
           //     operationalStage: e.target.value,
           //   })
           // }
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           {sortedOperationalStage.map((option: any) => (
@@ -692,7 +696,7 @@ export default function DataAboutStartupsForm({
           //     isDeepTech: e.target.value,
           //   })
           // }
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
           <option value="">{t("startup-form-question-select-text")}</option>
           <option value="yes">{t("startup-form-question-yes-text")}</option>
