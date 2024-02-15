@@ -39,7 +39,7 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     const sendFormData = new FormData();
     sendFormData.append("file-logo", formData.loadLogo!);
     sendFormData.append("file-pitch", formData.loadPitchDeck!);
-    sendFormData.append("data", JSON.stringify(formData));
+    sendFormData.append("data", JSON.stringify(currentFormData));
     try {
       setIsSubmiting(true);
       const response = await axios.post("/api/startups-form", sendFormData, {
