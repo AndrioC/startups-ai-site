@@ -14,12 +14,6 @@ import Section from "@/components/site/home/section";
 import Subscription from "@/components/site/home/subscription";
 import WhyChooseUs from "@/components/site/home/why-choose-us";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 export default function Home() {
   const infoFlagsLength = Object.entries(infoFlags).length;
   const t = useTranslations("Home");
