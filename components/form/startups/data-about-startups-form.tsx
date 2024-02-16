@@ -708,8 +708,13 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="loadPitchDeck" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-23")}</span>
-          <span className="text-red-500 ml-1">*</span>
+          <div className="flex flex-col">
+            <div>
+              <span>{t("startup-form-data-about-startups.question-23")}</span>
+              <span className="text-red-500 ml-1">*</span>
+            </div>
+            <p className="text-xs mt-1">{t("error-when-file-is-too-large")}</p>
+          </div>
         </label>
         <Controller
           name="loadPitchDeck"
@@ -747,8 +752,13 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="loadLogo" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-24")}</span>
-          <span className="text-red-500 ml-1">*</span>
+          <div className="flex flex-col">
+            <div>
+              <span>{t("startup-form-data-about-startups.question-24")}</span>
+              <span className="text-red-500 ml-1">*</span>
+            </div>
+            <p className="text-xs mt-1">{t("error-when-image-is-too-large")}</p>
+          </div>
         </label>
         <Controller
           name="loadLogo"

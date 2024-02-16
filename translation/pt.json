@@ -338,6 +338,8 @@
     "finished-form-text-second-part": "Agradecemos o seu interesse em se juntar à nossa plataforma. Fique tranquilo que revisaremos cuidadosamente a sua submissão. Em breve entraremos em contato para discutir os próximos passos, incluindo o acesso à nossa plataforma. Se você tiver alguma dúvida urgente, sinta-se à vontade para nos contatar.",
     "finished-form-text-third-part": "Estamos ansiosos para potencialmente trabalharmos juntos!",
     "error-when-finished-form": "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.",
+    "error-when-file-is-too-large": "Tamanho máximo de arquivo é de 4Mb",
+    "error-when-image-is-too-large": "Tamanho máximo de arquivo é de 2Mb",
     "startup-form-presentation": {
       "title": "Sobre o programa",
       "text-01": "Olá caro empreendedor, bem-vindo ao Departamento de Startups da IFIA!",

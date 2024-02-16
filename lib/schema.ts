@@ -1,5 +1,6 @@
 import { z } from "zod";
-
+const MAX_FILE_SIZE = 4 * 1024 * 1024;
+const MAX_IMAGE_FILE = 2 * 1024 * 1024;
 export const DataSignUpSchema = (t: (arg: string) => string) =>
   z
     .object({
@@ -71,14 +72,26 @@ export const DataAboutStartupsSchema = (t: (arg: string) => string) =>
       })
       .refine((v) => v !== undefined && v.name !== "" && v.size > 0, {
         message: t("startup-form-required-field"),
-      }),
+      })
+      .refine((file) => {
+        if (file) {
+          return file.size <= MAX_FILE_SIZE;
+        }
+        return true;
+      }, t("error-when-file-is-too-large")),
     loadLogo: z
       .custom<File | undefined>((v) => v instanceof File || v === undefined, {
         message: t("startup-form-required-field"),
       })
       .refine((v) => v !== undefined && v.name !== "" && v.size > 0, {
         message: t("startup-form-required-field"),
-      }),
+      })
+      .refine((file) => {
+        if (file) {
+          return file.size <= MAX_IMAGE_FILE;
+        }
+        return true;
+      }, t("error-when-image-is-too-large")),
     shortDescription: z.string().min(10, t("startup-form-required-field")),
     valueProposal: z.string().min(10, t("startup-form-required-field")),
   });
