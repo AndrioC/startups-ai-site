@@ -183,9 +183,3 @@ async function uploadFileToS3(
 
   return newFileName;
 }
-
-export const config = {
-  api: {
-    responseLimit: false,
-  },
-};
