@@ -5,6 +5,14 @@ import { NextRequest, NextResponse } from "next/server";
 import { FormData } from "@/contexts/FormContext";
 import prisma from "@/prisma/client";
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: "50mb",
+    },
+  },
+};
+
 const s3Client = new S3Client({
   region: process.env.S3_REGION as string,
   credentials: {
