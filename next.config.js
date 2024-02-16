@@ -11,7 +11,7 @@ module.exports = withNextIntl({
   },
   experimental: {
     serverActions: {
-      bodySizeLimit: false,
+      bodySizeLimit: "50mb",
     },
   },
 });
