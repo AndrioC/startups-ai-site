@@ -135,14 +135,14 @@ export async function POST(request: NextRequest) {
     const bufferLogoImage = Buffer.from(await fileLogo.arrayBuffer());
     const logoImageFileName = await uploadFileToS3(
       bufferLogoImage,
-      fileLogo.name,
+      data.startupName + "_logo_img",
       STARTUPS_LOGO_BUCKET
     );
 
     const bufferPitchDeck = Buffer.from(await filePitch.arrayBuffer());
     const pitchDeckFileName = await uploadFileToS3(
       bufferPitchDeck,
-      filePitch.name,
+      data.startupName + "_pitch_deck",
       STARTUPS_PITCH_BUCKET
     );
 
@@ -169,7 +169,7 @@ async function uploadFileToS3(
   bucket_name: string
 ): Promise<string> {
   const fileBuffer = file;
-  const newFileName = `${Date.now()}-${fileName}`;
+  const newFileName = `${Date.now()}-${createSlug(fileName)}`;
 
   const params = {
     Bucket: bucket_name,
@@ -182,4 +182,15 @@ async function uploadFileToS3(
   await s3Client.send(command);
 
   return newFileName;
+}
+
+function createSlug(name: string): string {
+  const slug = name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_");
+
+  return slug;
 }
