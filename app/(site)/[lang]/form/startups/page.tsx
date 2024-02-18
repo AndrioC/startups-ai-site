@@ -58,4 +58,5 @@ const useSelectData = () =>
       axios.get("/api/selects-data").then((res) => {
         return res.data;
       }),
+    staleTime: 5 * 60 * 1000,
   });
