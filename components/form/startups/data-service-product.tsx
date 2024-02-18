@@ -105,12 +105,15 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
           <div key={option.id} className="flex items-center">
             <input
               type="checkbox"
-              id={`option-${option.id}`}
+              id={`service-product-option-${option.id}`}
               value={option.id}
               className="w-[15px] h-[15px]"
               {...register("startupProductService")}
             />
-            <label htmlFor={`option-${option.id}`} className="ml-2">
+            <label
+              htmlFor={`service-product-option-${option.id}`}
+              className="ml-2"
+            >
               {option.label}
             </label>
           </div>

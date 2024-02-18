@@ -468,13 +468,16 @@ export default function DataAboutStartupsForm({
           <div key={option.id} className="flex items-center">
             <input
               type="checkbox"
-              id={`option-${option.id}`}
+              id={`startup-objectives-option-${option.id}`}
               value={Number(option.id)}
               className="w-[15px] h-[15px]"
               {...register("startupObjectives")}
               //onChange={handleCheckboxStartupObjectivesChange}
             />
-            <label htmlFor={`option-${option.id}`} className="ml-2">
+            <label
+              htmlFor={`startup-objectives-option-${option.id}`}
+              className="ml-2"
+            >
               {option.label}
             </label>
           </div>
@@ -691,13 +694,16 @@ export default function DataAboutStartupsForm({
           <div key={option.id} className="flex items-center">
             <input
               type="checkbox"
-              id={`option-${option.id}`}
+              id={`startup-challenge-option-${option.id}`}
               value={Number(option.id)}
               className="w-[15px] h-[15px]"
               {...register("startupChallenges")}
               //onChange={handleCheckboxStartupChallengesChange}
             />
-            <label htmlFor={`option-${option.id}`} className="ml-2">
+            <label
+              htmlFor={`startup-challenge-option-${option.id}`}
+              className="ml-2"
+            >
               {option.label}
             </label>
           </div>
