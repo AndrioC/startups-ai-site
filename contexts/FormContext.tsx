@@ -17,7 +17,7 @@ export interface FormData {
   partnersQuantity: number;
   partnersPositionRelation: string;
   exclusiveDedicationPartner: string;
-  employeesQuantity: number;
+  employeesQuantity: string;
   fullTimeEmployeesQuantity: number;
   businessModel: string;
   operationalStage: string;
@@ -34,7 +34,7 @@ export interface FormData {
   problemThatIsSolved: string;
   competitors: string;
   competitiveDifferentiator: string;
-  quantityOdsGoals: number;
+  quantityOdsGoals: string;
   partnersHaveAlreadyBeenInOtherBusiness: string;
   parnertsHaveComplementaryAreaOfActivity: string;
   oneOrMoreDedicationPartner: string;
@@ -44,7 +44,7 @@ export interface FormData {
   haveLegalAdvice: string;
   haveAccountingConsultancy: string;
   relationshipsRegisteredInContract: string;
-  customersQuantity: number;
+  customersQuantity: string;
   lastRevenue: string;
   lastSixMonthsRevenue: string;
   lastTwelveMonthsRevenue: string;
@@ -87,7 +87,7 @@ export const initialFormData: FormData = {
   partnersQuantity: 0,
   partnersPositionRelation: "",
   exclusiveDedicationPartner: "",
-  employeesQuantity: 0,
+  employeesQuantity: "",
   fullTimeEmployeesQuantity: 0,
   businessModel: "",
   operationalStage: "",
@@ -104,7 +104,7 @@ export const initialFormData: FormData = {
   problemThatIsSolved: "",
   competitors: "",
   competitiveDifferentiator: "",
-  quantityOdsGoals: 0,
+  quantityOdsGoals: "",
   partnersHaveAlreadyBeenInOtherBusiness: "",
   parnertsHaveComplementaryAreaOfActivity: "",
   oneOrMoreDedicationPartner: "",
@@ -114,7 +114,7 @@ export const initialFormData: FormData = {
   haveLegalAdvice: "",
   haveAccountingConsultancy: "",
   relationshipsRegisteredInContract: "",
-  customersQuantity: 0,
+  customersQuantity: "",
   lastRevenue: "",
   lastSixMonthsRevenue: "",
   lastTwelveMonthsRevenue: "",

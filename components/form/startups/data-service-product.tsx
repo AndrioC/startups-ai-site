@@ -70,6 +70,24 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
     handleBack();
   }
 
+  const sdgoals = [
+    {
+      id: 1,
+      value: "none",
+      label: t("startup-form-sgd-option-one"),
+    },
+    {
+      id: 2,
+      value: "1 or more",
+      label: t("startup-form-sgd-option-two"),
+    },
+    {
+      id: 3,
+      value: "i don't know",
+      label: t("startup-form-sgd-option-three"),
+    },
+  ];
+
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
@@ -159,12 +177,19 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
           <span>{t("startup-form-data-service-product.question-34")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
-        <input
-          id="quantityOdsGoals"
-          type="number"
-          className="h-11 px-4 border rounded-md"
-          {...register("quantityOdsGoals")}
-        />
+        {sdgoals.map((item) => (
+          <div key={item.id}>
+            <input
+              type="radio"
+              id={item.value}
+              value={item.value}
+              {...register("quantityOdsGoals")}
+            />
+            <label htmlFor={item.value} className="ml-2">
+              {item.label}
+            </label>
+          </div>
+        ))}
         {errors.quantityOdsGoals?.message && (
           <p className="mt-2 text-sm text-red-400">
             {errors.quantityOdsGoals.message}

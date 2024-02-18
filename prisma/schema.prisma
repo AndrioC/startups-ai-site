@@ -104,7 +104,7 @@ model startups {
   partners_quantity                            Int?
   partners_position_relation                   String?
   exclusive_dedication_partner                 String?
-  employees_quantity                           Int?
+  employees_quantity                           String?
   fulltime_employees_quantity                  Int?
   business_model_id                            Int?
   operation_stage_id                           Int?
@@ -123,7 +123,7 @@ model startups {
   competitors                                  String?
   competitive_differentiator_en                String?
   competitive_differentiator_pt                String?
-  quantity_ods_goals                           Int?
+  quantity_ods_goals                           String?
   partners_have_already_been_in_other_business String?
   partners_have_complementary_area_of_activity String?
   one_or_more_dedication_partner               String?
@@ -133,7 +133,7 @@ model startups {
   have_legal_advice                            String?
   have_accounting_advice                       String?
   relationships_registered_in_contract         String?
-  customers_quantity                           Int?
+  customers_quantity                           String?
   last_revenue                                 String?
   last_six_months_revenue                      String?
   last_twelve_months_revenue                   String?

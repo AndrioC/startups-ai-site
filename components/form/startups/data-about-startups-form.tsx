@@ -183,6 +183,34 @@ export default function DataAboutStartupsForm({
     handleBack();
   }
 
+  const employeesQuantityData = [
+    {
+      id: 1,
+      value: "1 - 5",
+      label: `1 ${t("startup-form-employees-quantity-text-option")} 5`,
+    },
+    {
+      id: 2,
+      value: "6 - 10",
+      label: `6 ${t("startup-form-employees-quantity-text-option")} 10`,
+    },
+    {
+      id: 3,
+      value: "11 - 30",
+      label: `11 ${t("startup-form-employees-quantity-text-option")} 30`,
+    },
+    {
+      id: 4,
+      value: "31 - 50",
+      label: `31 ${t("startup-form-employees-quantity-text-option")} 50`,
+    },
+    {
+      id: 5,
+      value: "more than 50",
+      label: `${t("startup-form-employees-more-than-option")} 50`,
+    },
+  ];
+
   // const handleCheckboxStartupObjectivesChange = (
   //   e: React.ChangeEvent<HTMLInputElement>
   // ) => {
@@ -562,17 +590,19 @@ export default function DataAboutStartupsForm({
           <span>{t("startup-form-data-about-startups.question-17")}</span>
           <span className="text-red-500 ml-1">*</span>
         </label>
-        <input
-          id="employeesQuantity"
-          type="number"
-          className="h-8 lg:h-11 px-4 border rounded-md"
-          {...register("employeesQuantity")}
-          // onChange={(e) =>
-          //   updateFormData({
-          //     employeesQuantity: Number(e.target.value),
-          //   })
-          // }
-        />
+        {employeesQuantityData.map((item) => (
+          <div key={item.id}>
+            <input
+              type="radio"
+              id={item.value}
+              value={item.value}
+              {...register("employeesQuantity")}
+            />
+            <label htmlFor={item.value} className="ml-2">
+              {item.label}
+            </label>
+          </div>
+        ))}
         {errors.employeesQuantity?.message && (
           <p className="mt-2 text-sm text-red-400">
             {errors.employeesQuantity.message}

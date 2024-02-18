@@ -54,9 +54,7 @@ export const DataAboutStartupsSchema = (t: (arg: string) => string) =>
     exclusiveDedicationPartner: z
       .string()
       .min(1, t("startup-form-required-field")),
-    employeesQuantity: z.coerce
-      .number()
-      .min(1, t("startup-form-required-field")),
+    employeesQuantity: z.string().min(1, t("startup-form-required-field")),
     fullTimeEmployeesQuantity: z.coerce
       .number()
       .min(1, t("startup-form-required-field")),
@@ -115,9 +113,7 @@ export const DataServiceProductSchema = (t: (arg: string) => string) =>
     competitiveDifferentiator: z
       .string()
       .min(5, t("startup-form-required-field")),
-    quantityOdsGoals: z.coerce
-      .number()
-      .min(0, t("startup-form-required-field")),
+    quantityOdsGoals: z.string().min(0, t("startup-form-required-field")),
   });
 
 export const DataAboutTeam = (t: (arg: string) => string) =>
@@ -155,9 +151,7 @@ export const DataAboutGovernance = (t: (arg: string) => string) =>
 
 export const DataAboutFinanceAndMarket = (t: (arg: string) => string) =>
   z.object({
-    customersQuantity: z.coerce
-      .number()
-      .min(0, t("startup-form-required-field")),
+    customersQuantity: z.string().min(0, t("startup-form-required-field")),
     lastRevenue: z.string().min(1, t("startup-form-required-field")),
     lastSixMonthsRevenue: z.string().min(1, t("startup-form-required-field")),
     lastTwelveMonthsRevenue: z

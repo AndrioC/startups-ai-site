@@ -65,6 +65,29 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     handleBack();
   }
 
+  const customersQuantityData = [
+    {
+      id: 1,
+      value: "0 - 50",
+      label: "0-50",
+    },
+    {
+      id: 2,
+      value: "50 - 100",
+      label: "50-100",
+    },
+    {
+      id: 3,
+      value: "100 - 500",
+      label: "100-500",
+    },
+    {
+      id: 4,
+      value: "500 & above",
+      label: `500 ${t("startup-customers-quantity-option")}`,
+    },
+  ];
+
   const lastRevenueData = [
     {
       id: 1,
@@ -161,12 +184,19 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
-        <input
-          id="customersQuantity"
-          type="number"
-          className="h-11 px-4 border rounded-md"
-          {...register("customersQuantity")}
-        />
+        {customersQuantityData.map((item) => (
+          <div key={item.id}>
+            <input
+              type="radio"
+              id={item.value}
+              value={item.value}
+              {...register("customersQuantity")}
+            />
+            <label htmlFor={item.value} className="ml-2">
+              {item.label}
+            </label>
+          </div>
+        ))}
         {errors.customersQuantity?.message && (
           <p className="mt-2 text-sm text-red-400">
             {errors.customersQuantity.message}
