@@ -221,7 +221,7 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
               type="radio"
               id={item.value}
               value={item.value}
-              {...register("lastRevenue")}
+              {...register("lastSixMonthsRevenue")}
             />
             <label htmlFor={item.value} className="ml-2">
               {item.label}
@@ -253,7 +253,7 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
               type="radio"
               id={item.value}
               value={item.value}
-              {...register("lastRevenue")}
+              {...register("lastTwelveMonthsRevenue")}
             />
             <label htmlFor={item.value} className="ml-2">
               {item.label}
