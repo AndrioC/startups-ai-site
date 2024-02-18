@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
           partners_quantity: data.partnersQuantity,
           partners_position_relation: data.partnersPositionRelation,
           exclusive_dedication_partner: data.exclusiveDedicationPartner,
-          employees_quantity: Number(data.employeesQuantity),
+          employees_quantity: data.employeesQuantity,
           fulltime_employees_quantity: Number(data.fullTimeEmployeesQuantity),
           business_model_id: Number(data.businessModel),
           operation_stage_id: Number(data.operationalStage),
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
           competitors: data.competitors,
           competitive_differentiator_en: data.competitiveDifferentiator,
           competitive_differentiator_pt: data.competitiveDifferentiator,
-          quantity_ods_goals: Number(data.quantityOdsGoals),
+          quantity_ods_goals: data.quantityOdsGoals,
           partners_have_already_been_in_other_business:
             data.partnersHaveAlreadyBeenInOtherBusiness,
           partners_have_complementary_area_of_activity:
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
           have_accounting_advice: data.haveAccountingConsultancy,
           relationships_registered_in_contract:
             data.relationshipsRegisteredInContract,
-          customers_quantity: Number(data.customersQuantity),
+          customers_quantity: data.customersQuantity,
           last_revenue: data.lastRevenue,
           last_six_months_revenue: data.lastSixMonthsRevenue,
           last_twelve_months_revenue: data.lastTwelveMonthsRevenue,
