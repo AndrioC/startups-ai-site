@@ -1,6 +1,6 @@
 import { z } from "zod";
-const MAX_FILE_SIZE = 4 * 1024 * 1024;
-const MAX_IMAGE_FILE = 2 * 1024 * 1024;
+const MAX_FILE_SIZE = 3 * 1024 * 1024;
+const MAX_IMAGE_FILE = 1024 * 1024;
 export const DataSignUpSchema = (t: (arg: string) => string) =>
   z
     .object({
