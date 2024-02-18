@@ -158,13 +158,11 @@ export const DataAboutFinanceAndMarket = (t: (arg: string) => string) =>
     customersQuantity: z.coerce
       .number()
       .min(0, t("startup-form-required-field")),
-    lastRevenue: z.coerce.number().min(0, t("startup-form-required-field")),
-    lastSixMonthsRevenue: z.coerce
-      .number()
-      .min(0, t("startup-form-required-field")),
-    lastTwelveMonthsRevenue: z.coerce
-      .number()
-      .min(0, t("startup-form-required-field")),
+    lastRevenue: z.string().min(1, t("startup-form-required-field")),
+    lastSixMonthsRevenue: z.string().min(1, t("startup-form-required-field")),
+    lastTwelveMonthsRevenue: z
+      .string()
+      .min(1, t("startup-form-required-field")),
     alreadyRaisedInvestment: z
       .string()
       .min(1, t("startup-form-required-field")),

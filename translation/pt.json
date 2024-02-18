@@ -333,6 +333,7 @@
     "startup-form-start-button": "Iniciar",
     "startup-form-finish-button": "Finalizar",
     "startup-form-email-already-exists": "Email já existe",
+    "startup-form-revenue-above-text": "Acima de",
     "finished-form-congrats-text": "Parabéns!",
     "finished-form-text-first-part": "Obrigado por enviar a inscrição da sua startup!",
     "finished-form-text-second-part": "Agradecemos o seu interesse em se juntar à nossa plataforma. Fique tranquilo que revisaremos cuidadosamente a sua submissão. Em breve entraremos em contato para discutir os próximos passos, incluindo o acesso à nossa plataforma. Se você tiver alguma dúvida urgente, sinta-se à vontade para nos contatar.",
@@ -454,7 +455,7 @@
       "question-43": "43. Todas as relações com Clientes, Fornecedores, Parceiros e Funcionários estão devidamente registrados em contrato?"
     },
     "startup-form-data-about-finance-and-market": {
-      "question-american-dollar-text": "Converta o valor em dólar americano",
+      "question-american-dollar-text": "Valor em dólar americano",
       "title": "Sobre os dados financeiros e mercado",
       "question-44": "44. Quantos clientes possui a Startup?",
       "question-45": "45. Qual foi o faturamento do último mês?",

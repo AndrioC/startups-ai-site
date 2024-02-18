@@ -45,9 +45,9 @@ export interface FormData {
   haveAccountingConsultancy: string;
   relationshipsRegisteredInContract: string;
   customersQuantity: number;
-  lastRevenue: number;
-  lastSixMonthsRevenue: number;
-  lastTwelveMonthsRevenue: number;
+  lastRevenue: string;
+  lastSixMonthsRevenue: string;
+  lastTwelveMonthsRevenue: string;
   alreadyRaisedInvestment: string;
   amountRaised: number;
   howMuchEquityWasDistributed: string;
@@ -115,9 +115,9 @@ export const initialFormData: FormData = {
   haveAccountingConsultancy: "",
   relationshipsRegisteredInContract: "",
   customersQuantity: 0,
-  lastRevenue: 0,
-  lastSixMonthsRevenue: 0,
-  lastTwelveMonthsRevenue: 0,
+  lastRevenue: "",
+  lastSixMonthsRevenue: "",
+  lastTwelveMonthsRevenue: "",
   alreadyRaisedInvestment: "",
   amountRaised: 0,
   howMuchEquityWasDistributed: "",

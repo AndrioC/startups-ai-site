@@ -327,6 +327,7 @@
     "startup-form-start-button": "Start",
     "startup-form-finish-button": "Finish",
     "startup-form-email-already-exists": "Email already exists",
+    "startup-form-revenue-above-text": "Over",
     "finished-form-congrats-text": "Congratulations!",
     "finished-form-text-first-part": "Thank you for submitting your startup application!",
     "finished-form-text-second-part": "We appreciate your interest in joining our platform. Rest assured that we will carefully review your submission. We'll be in touch shortly to discuss further steps, including access to our platform. If you have any urgent inquiries, feel free to reach out to us.",
@@ -449,7 +450,7 @@
       "question-43": "43. Are all relationships with clients, suppliers, partners, and employees properly documented in contracts?"
     },
     "startup-form-data-about-finance-and-market": {
-      "question-american-dollar-text": "Convert the value to US dollars",
+      "question-american-dollar-text": "Value in US dollars",
       "title": "About Financial and Market Data",
       "question-44": "44. How many customers does the startup have?",
       "question-45": "45. What was the revenue for the last month?",

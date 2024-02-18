@@ -65,6 +65,90 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     handleBack();
   }
 
+  const lastRevenueData = [
+    {
+      id: 1,
+      value: "$0,00 - $20.000,00",
+      label: "$0,00 - $20.000,00",
+    },
+    {
+      id: 2,
+      value: "$20.000,00 - $50.000,00",
+      label: "$20.000,00 - $50.000,00",
+    },
+    {
+      id: 3,
+      value: "$50.000,00 - $100.000,00",
+      label: "$50.000,00 - $100.000,00",
+    },
+    {
+      id: 4,
+      value: "$100.000,00 - $500.000,00",
+      label: "$100.000,00 - $500.000,00",
+    },
+    {
+      id: 5,
+      value: `${t("startup-form-revenue-above-text")} $500.000,00`,
+      label: `${t("startup-form-revenue-above-text")} $500.000,00`,
+    },
+  ];
+
+  const lastSixRevenueData = [
+    {
+      id: 1,
+      value: "$0,00 - $120.000,00",
+      label: "$0,00 - $120.000,00",
+    },
+    {
+      id: 2,
+      value: "$120.000,00 - $300.000,00",
+      label: "$120.000,00 - $300.000,00",
+    },
+    {
+      id: 3,
+      value: "$300.000,00 - $600.000,00",
+      label: "$300.000,00 - $600.000,00",
+    },
+    {
+      id: 4,
+      value: "$600.000,00 - $3.000.000,00",
+      label: "$600.000,00 - $3.000.000,00",
+    },
+    {
+      id: 5,
+      value: `${t("startup-form-revenue-above-text")} $3.000.000,00`,
+      label: `${t("startup-form-revenue-above-text")} $3.000.000,00`,
+    },
+  ];
+
+  const lastTwelveRevenueData = [
+    {
+      id: 1,
+      value: "$0,00 - $720.000,00",
+      label: "$0,00 - $720.000,00",
+    },
+    {
+      id: 2,
+      value: "$720.000,00 - $1.800.000,00",
+      label: "$720.000,00 - $1.800.000,00",
+    },
+    {
+      id: 3,
+      value: "$1.800.000,00 - $3.600.000,00",
+      label: "$1.800.000,00 - $3.600.000,00",
+    },
+    {
+      id: 4,
+      value: "$3.600.000,00 - $18.000.000,00",
+      label: "$3.600.000,00 - $18.000.000,00",
+    },
+    {
+      id: 5,
+      value: `${t("startup-form-revenue-above-text")} $18.000.000,00`,
+      label: `${t("startup-form-revenue-above-text")} $18.000.000,00`,
+    },
+  ];
+
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
@@ -99,12 +183,19 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
             "startup-form-data-about-finance-and-market.question-american-dollar-text"
           )}
         </p>
-        <input
-          id="lastRevenue"
-          type="number"
-          className="h-11 px-4 border rounded-md"
-          {...register("lastRevenue")}
-        />
+        {lastRevenueData.map((item) => (
+          <div key={item.id}>
+            <input
+              type="radio"
+              id={item.value}
+              value={item.value}
+              {...register("lastRevenue")}
+            />
+            <label htmlFor={item.value} className="ml-2">
+              {item.label}
+            </label>
+          </div>
+        ))}
         {errors.lastRevenue?.message && (
           <p className="mt-2 text-sm text-red-400">
             {errors.lastRevenue.message}
@@ -124,12 +215,19 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
             "startup-form-data-about-finance-and-market.question-american-dollar-text"
           )}
         </p>
-        <input
-          id="lastSixMonthsRevenue"
-          type="number"
-          className="h-11 px-4 border rounded-md"
-          {...register("lastSixMonthsRevenue")}
-        />
+        {lastSixRevenueData.map((item) => (
+          <div key={item.id}>
+            <input
+              type="radio"
+              id={item.value}
+              value={item.value}
+              {...register("lastRevenue")}
+            />
+            <label htmlFor={item.value} className="ml-2">
+              {item.label}
+            </label>
+          </div>
+        ))}
         {errors.lastSixMonthsRevenue?.message && (
           <p className="mt-2 text-sm text-red-400">
             {errors.lastSixMonthsRevenue.message}
@@ -149,12 +247,19 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
             "startup-form-data-about-finance-and-market.question-american-dollar-text"
           )}
         </p>
-        <input
-          id="lastTwelveMonthsRevenue"
-          type="number"
-          className="h-11 px-4 border rounded-md"
-          {...register("lastTwelveMonthsRevenue")}
-        />
+        {lastTwelveRevenueData.map((item) => (
+          <div key={item.id}>
+            <input
+              type="radio"
+              id={item.value}
+              value={item.value}
+              {...register("lastRevenue")}
+            />
+            <label htmlFor={item.value} className="ml-2">
+              {item.label}
+            </label>
+          </div>
+        ))}
         {errors.lastTwelveMonthsRevenue?.message && (
           <p className="mt-2 text-sm text-red-400">
             {errors.lastTwelveMonthsRevenue.message}

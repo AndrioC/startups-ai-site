@@ -134,9 +134,9 @@ model startups {
   have_accounting_advice                       String?
   relationships_registered_in_contract         String?
   customers_quantity                           Int?
-  last_revenue                                 Float?
-  last_six_months_revenue                      Float?
-  last_twelve_months_revenue                   Float?
+  last_revenue                                 String?
+  last_six_months_revenue                      String?
+  last_twelve_months_revenue                   String?
   already_raised_investment                    String?
   amount_raised                                Float?
   how_much_equity_was_distributed              String?

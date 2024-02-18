@@ -82,9 +82,9 @@ export async function POST(request: NextRequest) {
           relationships_registered_in_contract:
             data.relationshipsRegisteredInContract,
           customers_quantity: Number(data.customersQuantity),
-          last_revenue: Number(data.lastRevenue),
-          last_six_months_revenue: Number(data.lastSixMonthsRevenue),
-          last_twelve_months_revenue: Number(data.lastTwelveMonthsRevenue),
+          last_revenue: data.lastRevenue,
+          last_six_months_revenue: data.lastSixMonthsRevenue,
+          last_twelve_months_revenue: data.lastTwelveMonthsRevenue,
           already_raised_investment: data.alreadyRaisedInvestment,
           amount_raised: Number(data.amountRaised),
           how_much_equity_was_distributed: data.howMuchEquityWasDistributed,
