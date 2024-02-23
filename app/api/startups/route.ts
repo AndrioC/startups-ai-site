@@ -54,6 +54,7 @@ export async function GET(
           },
         },
       },
+      where: { is_approved: true },
     })
     .then((startups) =>
       startups.map((startup) => ({
