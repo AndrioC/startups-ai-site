@@ -43,6 +43,19 @@ type InfoFlags = {
   [key: string]: string;
 };
 
+export interface BannersProps {
+  investors_banner_en: string;
+  investors_banner_pt: string;
+  main_banner_en: string;
+  main_banner_pt: string;
+  main_banner_mobile_en: string;
+  main_banner_mobile_pt: string;
+  mentors_banner_en: string;
+  mentors_banner_pt: string;
+  startups_banner_en: string;
+  startups_banner_pt: string;
+}
+
 export const startupsList: StartupProps[] = [
   {
     id: 1,
@@ -1755,3 +1768,16 @@ export const teamList: TeamProps[] = [
     photo: "/assets/team/10_anand.jpeg",
   },
 ];
+
+export const bannersList: BannersProps = {
+  investors_banner_en: "/assets/banners/investors_banner_en.png",
+  investors_banner_pt: "/assets/banners/investors_banner_en.png",
+  main_banner_en: "/assets/banners/main_banner_en.png",
+  main_banner_pt: "/assets/banners/main_banner_pt.png",
+  main_banner_mobile_en: "/assets/banners/main_banner_mobile_en.png",
+  main_banner_mobile_pt: "/assets/banners/main_banner_mobile_pt.png",
+  mentors_banner_en: "/assets/banners/mentors_banner_en.png",
+  mentors_banner_pt: "/assets/banners/mentors_banner_pt.png",
+  startups_banner_en: "/assets/banners/startups_banner_en.png",
+  startups_banner_pt: "/assets/banners/startups_banner_pt.png",
+};

@@ -1,40 +1,136 @@
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
-import expertImage from "@/assets/img/plans-expert-image.svg";
-import startupImage from "@/assets/img/plans-rocket-image.svg";
-import PricingCard from "@/components/site/plans/pricing-card";
+// import expertImage from "@/assets/img/plans-expert-image.svg";
+// import startupImage from "@/assets/img/plans-rocket-image.svg";
+// import PricingCard from "@/components/site/plans/pricing-card";
+import { bannersList } from "../../data";
 
 export default function PlansPage() {
   const t = useTranslations("Plans");
   const lang = useLocale();
 
-  const freePlanStartupsLink =
+  // const freePlanStartupsLink =
+  //   lang === "en"
+  //     ? "https://forms.gle/a7FCyM9LcFrbbcB8A"
+  //     : "https://forms.gle/49ge9iz3UpMXf9zRA";
+
+  // const freePlanExpertsLink =
+  //   lang === "en"
+  //     ? "https://forms.gle/7gqsjrRdi8bHxr3Q8"
+  //     : "https://forms.gle/kzmmzc89t7A23And7";
+
+  // const premiumPlanStartupsLink =
+  //   lang === "en"
+  //     ? "https://buy.stripe.com/14k8yr7fK3wr6VqfYZ"
+  //     : "https://buy.stripe.com/fZe3e743y8QL7Zu000?locale=pt";
+
+  // const premiumPlanExpertsLink =
+  //   lang === "en"
+  //     ? "https://buy.stripe.com/5kA7undE86ID3JefZ1"
+  //     : "https://buy.stripe.com/fZebKD57C6IDcfKbIK?locale=pt";
+
+  // const linkLearnMoreStartups = "plans/learn-more/startups";
+
+  // const linkLearnMoreExperts = "plans/learn-more/experts";
+
+  const mainBanner =
+    lang === "en" ? bannersList.main_banner_en : bannersList.main_banner_pt;
+  const mainBannerMobile =
     lang === "en"
-      ? "https://forms.gle/a7FCyM9LcFrbbcB8A"
-      : "https://forms.gle/49ge9iz3UpMXf9zRA";
-
-  const freePlanExpertsLink =
+      ? bannersList.main_banner_mobile_en
+      : bannersList.main_banner_mobile_pt;
+  const startupBanner =
     lang === "en"
-      ? "https://forms.gle/7gqsjrRdi8bHxr3Q8"
-      : "https://forms.gle/kzmmzc89t7A23And7";
-
-  const premiumPlanStartupsLink =
+      ? bannersList.startups_banner_en
+      : bannersList.startups_banner_pt;
+  const investorsBanner =
     lang === "en"
-      ? "https://buy.stripe.com/14k8yr7fK3wr6VqfYZ"
-      : "https://buy.stripe.com/fZe3e743y8QL7Zu000?locale=pt";
-
-  const premiumPlanExpertsLink =
+      ? bannersList.investors_banner_en
+      : bannersList.investors_banner_pt;
+  const mentorsBanner =
     lang === "en"
-      ? "https://buy.stripe.com/5kA7undE86ID3JefZ1"
-      : "https://buy.stripe.com/fZebKD57C6IDcfKbIK?locale=pt";
-
-  const linkLearnMoreStartups = "plans/learn-more/startups";
-
-  const linkLearnMoreExperts = "plans/learn-more/experts";
+      ? bannersList.mentors_banner_en
+      : bannersList.mentors_banner_pt;
 
   return (
     <main>
-      <div className="flex flex-col items-center mt-10">
+      {/* <div className="flex flex-col items-center mt-10 mb-10">
+        <Image
+          src={mainBanner}
+          alt="main-banner"
+          width={500}
+          height={400}
+          className="w-full h-[250px]"
+        />
+        <h1 className="text-lg lg:text-2xl uppercase text-gray-700">
+          {t("plan-title")}
+        </h1>
+      </div> */}
+
+      <div className="flex flex-col mb-10">
+        <div className="flex flex-col items-center mt-10 mb-10 relative w-full h-[400px]">
+          <Image
+            src={mainBanner}
+            alt="main-banner"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="hidden lg:block"
+            priority
+          />
+          <Image
+            src={mainBannerMobile}
+            alt="main-banner-mobile"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="sm:block lg:hidden"
+            priority
+          />
+        </div>
+        <div className="flex flex-col items-center">
+          <h1 className="text-lg lg:text-2xl uppercase text-gray-700">
+            {t("plan-free-subscription-offer")}
+          </h1>
+          <div className="flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
+            <div className="w-[300px] lg:w-[400px]">
+              <Image
+                src={startupBanner}
+                alt="startup-banner"
+                objectPosition="center"
+                layout="responsive"
+                width={400}
+                height={400}
+                className="w-[300px] h-auto lg:w-full lg:h-auto"
+              />
+            </div>
+            <div className="w-[300px] lg:w-[400px]">
+              <Image
+                src={investorsBanner}
+                alt="investor-banner"
+                objectPosition="center"
+                layout="responsive"
+                width={400}
+                height={400}
+                className="w-[300px] h-auto lg:w-full lg:h-auto"
+              />
+            </div>
+            <div className="w-[300px] lg:w-[400px]">
+              <Image
+                src={mentorsBanner}
+                alt="mentor-banner"
+                objectPosition="center"
+                layout="responsive"
+                width={400}
+                height={400}
+                className="w-[300px] h-auto lg:w-full lg:h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div className="flex flex-col items-center mt-10">
         <h1 className="text-lg lg:text-2xl uppercase text-gray-700">
           {t("plan-title")}
         </h1>
@@ -85,7 +181,7 @@ export default function PlansPage() {
             ]}
           />
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
