@@ -142,6 +142,7 @@ model startups {
   how_much_equity_was_distributed              String?
   plan                                         String    @default("free")
   is_deleted                                   Boolean   @default(false)
+  is_approved                                  Boolean   @default(false)
   is_blocked                                   Boolean   @default(false)
   created_at                                   DateTime  @default(now())
   updated_at                                   DateTime  @default(now())
