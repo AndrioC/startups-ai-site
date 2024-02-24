@@ -1,4 +1,5 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { UserType } from "@prisma/client";
 import bcryptjs from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -99,6 +100,7 @@ export async function POST(request: NextRequest) {
           name: data.fullNameSignUp,
           email: data.emailSignUp,
           hashed_password: hashedPassword,
+          type: UserType.STARTUP,
         },
       });
 

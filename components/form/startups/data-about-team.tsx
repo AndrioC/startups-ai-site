@@ -7,7 +7,7 @@ import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
-import { DataAboutTeam } from "@/lib/schema";
+import { DataAboutTeam } from "@/lib/schema-startups";
 
 interface Props {
   is_review?: boolean;
@@ -42,14 +42,16 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
-        {t("startup-form-data-about-team.title")}
+        {t("startups-form.startup-form-data-about-team.title")}
       </h1>
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label
           htmlFor="partnersHaveAlreadyBeenInOtherBusiness"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-35")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-team.question-35")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -57,9 +59,15 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
           {...register("partnersHaveAlreadyBeenInOtherBusiness")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.partnersHaveAlreadyBeenInOtherBusiness?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -70,7 +78,9 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
           htmlFor="parnertsHaveComplementaryAreaOfActivity"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-36")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-team.question-36")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -78,11 +88,17 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
           {...register("parnertsHaveComplementaryAreaOfActivity")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
           <option value="partially">
-            {t("startup-form-question-partially-text")}
+            {t("startups-form.startup-form-question-partially-text")}
           </option>
         </select>
         {errors.parnertsHaveComplementaryAreaOfActivity?.message && (
@@ -94,7 +110,9 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
           htmlFor="oneOrMoreDedicationPartner"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-37")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-team.question-37")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -102,9 +120,15 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
           {...register("oneOrMoreDedicationPartner")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.oneOrMoreDedicationPartner?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -115,7 +139,9 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
           htmlFor="oneOrMorePartnersHasProvenExperience"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-team.question-38")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-team.question-38")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -123,11 +149,17 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
           {...register("oneOrMorePartnersHasProvenExperience")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
           <option value="partially">
-            {t("startup-form-question-partially-text")}
+            {t("startups-form.startup-form-question-partially-text")}
           </option>
         </select>
         {errors.oneOrMorePartnersHasProvenExperience?.message && (
@@ -143,10 +175,10 @@ export default function DataAboutTeamPage({ is_review = false }: Props) {
             onClick={onHandleBack}
             className="px-6 text-white rounded-md"
           >
-            {t("startup-form-previous-button")}
+            {t("startups-form.startup-form-previous-button")}
           </Button>
           <Button variant="blue" className="px-6 text-white rounded-md">
-            {t("startup-form-next-button")}
+            {t("startups-form.startup-form-next-button")}
           </Button>
         </div>
       )}

@@ -11,6 +11,7 @@ export async function GET() {
   const operational_stage = await prisma.operational_stage.findMany();
   const service_products = await prisma.service_products.findMany();
   const vertical = await prisma.vertical.findMany();
+  const investiment_stages = await prisma.investiment_stages.findMany();
 
   const data = {
     challenges,
@@ -21,6 +22,7 @@ export async function GET() {
     operational_stage,
     service_products,
     vertical,
+    investiment_stages,
   };
 
   return NextResponse.json(data, { status: 201 });

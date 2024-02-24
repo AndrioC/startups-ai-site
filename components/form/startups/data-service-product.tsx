@@ -8,7 +8,7 @@ import { z } from "zod";
 import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
 import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
-import { DataServiceProductSchema } from "@/lib/schema";
+import { DataServiceProductSchema } from "@/lib/schema-startups";
 
 interface ValueProps {
   id: number;
@@ -74,31 +74,33 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
     {
       id: 1,
       value: "none",
-      label: t("startup-form-sgd-option-one"),
+      label: t("startups-form.startup-form-sgd-option-one"),
     },
     {
       id: 2,
       value: "1 or more",
-      label: t("startup-form-sgd-option-two"),
+      label: t("startups-form.startup-form-sgd-option-two"),
     },
     {
       id: 3,
       value: "i don't know",
-      label: t("startup-form-sgd-option-three"),
+      label: t("startups-form.startup-form-sgd-option-three"),
     },
   ];
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
-        {t("startup-form-data-service-product.title")}
+        {t("startups-form.startup-form-data-service-product.title")}
       </h1>
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label
           htmlFor="startupProductService"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-service-product.question-30")}</span>
+          <span>
+            {t("startups-form.startup-form-data-service-product.question-30")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         {sortedServiceProduct.map((option: any) => (
@@ -126,7 +128,11 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
         <label htmlFor="problemThatIsSolved" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-service-product.question-31")}</span>
+              <span>
+                {t(
+                  "startups-form.startup-form-data-service-product.question-31"
+                )}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
           </div>
@@ -143,7 +149,9 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
           </p>
         )}
         <label htmlFor="competitors" className="flex items-center mt-5">
-          <span>{t("startup-form-data-service-product.question-32")}</span>
+          <span>
+            {t("startups-form.startup-form-data-service-product.question-32")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea
@@ -162,7 +170,9 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
           htmlFor="competitiveDifferentiator"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-service-product.question-33")}</span>
+          <span>
+            {t("startups-form.startup-form-data-service-product.question-33")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea
@@ -177,7 +187,9 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
           </p>
         )}
         <label htmlFor="quantityOdsGoals" className="flex items-center mt-5">
-          <span>{t("startup-form-data-service-product.question-34")}</span>
+          <span>
+            {t("startups-form.startup-form-data-service-product.question-34")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         {sdgoals.map((item) => (
@@ -206,10 +218,10 @@ export default function DataServiceProduct({ is_review = false, data }: Props) {
             onClick={onHandleBack}
             className="px-6 text-white rounded-md"
           >
-            {t("startup-form-previous-button")}
+            {t("startups-form.startup-form-previous-button")}
           </Button>
           <Button variant="blue" className="px-6 text-white rounded-md">
-            {t("startup-form-next-button")}
+            {t("startups-form.startup-form-next-button")}
           </Button>
         </div>
       )}

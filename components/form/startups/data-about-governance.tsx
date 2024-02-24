@@ -7,7 +7,7 @@ import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
-import { DataAboutGovernance } from "@/lib/schema";
+import { DataAboutGovernance } from "@/lib/schema-startups";
 
 interface Props {
   is_review?: boolean;
@@ -43,20 +43,26 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
-        {t("startup-form-data-governance.title")}
+        {t("startups-form.startup-form-data-governance.title")}
       </h1>
       <p className="text-gray-500 font-light text-xs lg:text-sm">
-        {t("startup-form-data-governance.explain-text-first-part")}
+        {t(
+          "startups-form.startup-form-data-governance.explain-text-first-part"
+        )}
       </p>
       <p className="text-gray-500 font-light text-xs lg:text-sm">
-        {t("startup-form-data-governance.explain-text-second-part")}
+        {t(
+          "startups-form.startup-form-data-governance.explain-text-second-part"
+        )}
       </p>
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label
           htmlFor="isStartupOfficiallyRegistered"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-39")}</span>
+          <span>
+            {t("startups-form.startup-form-data-governance.question-39")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -64,9 +70,15 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           {...register("isStartupOfficiallyRegistered")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.isStartupOfficiallyRegistered?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -77,18 +89,26 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           htmlFor="isTherePartnersAgreementSigned"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-40")}</span>
+          <span>
+            {t("startups-form.startup-form-data-governance.question-40")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <div className="flex flex-col gap-5 mb-3">
           <p className="text-gray-500 font-light text-sm">
-            {t("startup-form-data-governance.question-40-text-first-part")}
+            {t(
+              "startups-form.startup-form-data-governance.question-40-text-first-part"
+            )}
           </p>
           <p className="text-gray-500 font-light text-sm">
-            {t("startup-form-data-governance.question-40-text-second-part")}
+            {t(
+              "startups-form.startup-form-data-governance.question-40-text-second-part"
+            )}
           </p>
           <p className="text-gray-500 font-light text-sm">
-            {t("startup-form-data-governance.question-40-text-third-part")}
+            {t(
+              "startups-form.startup-form-data-governance.question-40-text-third-part"
+            )}
           </p>
         </div>
         <select
@@ -96,10 +116,18 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           {...register("isTherePartnersAgreementSigned")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
-          <option value="maybe">{t("startup-form-question-maybe-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
+          <option value="maybe">
+            {t("startups-form.startup-form-question-maybe-text")}
+          </option>
         </select>
         {errors.isTherePartnersAgreementSigned?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -107,7 +135,9 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           </p>
         )}
         <label htmlFor="haveLegalAdvice" className="flex items-center mt-5">
-          <span>{t("startup-form-data-governance.question-41")}</span>
+          <span>
+            {t("startups-form.startup-form-data-governance.question-41")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -115,9 +145,15 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           {...register("haveLegalAdvice")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.haveLegalAdvice?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -128,7 +164,9 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           htmlFor="haveAccountingConsultancy"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-42")}</span>
+          <span>
+            {t("startups-form.startup-form-data-governance.question-42")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -136,9 +174,15 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           {...register("haveAccountingConsultancy")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.haveAccountingConsultancy?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -149,7 +193,9 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           htmlFor="relationshipsRegisteredInContract"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-governance.question-43")}</span>
+          <span>
+            {t("startups-form.startup-form-data-governance.question-43")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -157,9 +203,15 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
           {...register("relationshipsRegisteredInContract")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.relationshipsRegisteredInContract?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -174,10 +226,10 @@ export default function DataAboutGovernancePage({ is_review }: Props) {
             onClick={onHandleBack}
             className="px-6 text-white rounded-md"
           >
-            {t("startup-form-previous-button")}
+            {t("startups-form.startup-form-previous-button")}
           </Button>
           <Button variant="blue" className="px-6 text-white rounded-md">
-            {t("startup-form-next-button")}
+            {t("startups-form.startup-form-next-button")}
           </Button>
         </div>
       )}

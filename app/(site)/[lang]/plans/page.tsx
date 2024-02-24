@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
 // import expertImage from "@/assets/img/plans-expert-image.svg";
@@ -53,6 +54,17 @@ export default function PlansPage() {
       ? bannersList.mentors_banner_en
       : bannersList.mentors_banner_pt;
 
+  const linkStartupForm =
+    lang === "en" ? "/en/form/startups" : "/pt/form/startups";
+
+  const freePlanExpertsLink =
+    lang === "en"
+      ? "https://forms.gle/7gqsjrRdi8bHxr3Q8"
+      : "https://forms.gle/kzmmzc89t7A23And7";
+
+  const investorForm =
+    lang === "en" ? "/en/form/investors" : "/pt/form/investors";
+
   return (
     <main>
       {/* <div className="flex flex-col items-center mt-10 mb-10">
@@ -67,7 +79,6 @@ export default function PlansPage() {
           {t("plan-title")}
         </h1>
       </div> */}
-
       <div className="flex flex-col mb-10">
         <div className="flex flex-col items-center mt-10 mb-10 relative w-full h-[400px]">
           <Image
@@ -95,37 +106,43 @@ export default function PlansPage() {
           </h1>
           <div className="flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
             <div className="w-[300px] lg:w-[400px]">
-              <Image
-                src={startupBanner}
-                alt="startup-banner"
-                objectPosition="center"
-                layout="responsive"
-                width={400}
-                height={400}
-                className="w-[300px] h-auto lg:w-full lg:h-auto"
-              />
+              <Link href={linkStartupForm}>
+                <Image
+                  src={startupBanner}
+                  alt="startup-banner"
+                  objectPosition="center"
+                  layout="responsive"
+                  width={400}
+                  height={400}
+                  className="w-[300px] h-auto lg:w-full lg:h-auto"
+                />
+              </Link>
             </div>
             <div className="w-[300px] lg:w-[400px]">
-              <Image
-                src={investorsBanner}
-                alt="investor-banner"
-                objectPosition="center"
-                layout="responsive"
-                width={400}
-                height={400}
-                className="w-[300px] h-auto lg:w-full lg:h-auto"
-              />
+              <Link href={investorForm}>
+                <Image
+                  src={investorsBanner}
+                  alt="investor-banner"
+                  objectPosition="center"
+                  layout="responsive"
+                  width={400}
+                  height={400}
+                  className="w-[300px] h-auto lg:w-full lg:h-auto"
+                />
+              </Link>
             </div>
             <div className="w-[300px] lg:w-[400px]">
-              <Image
-                src={mentorsBanner}
-                alt="mentor-banner"
-                objectPosition="center"
-                layout="responsive"
-                width={400}
-                height={400}
-                className="w-[300px] h-auto lg:w-full lg:h-auto"
-              />
+              <a href={freePlanExpertsLink} target="_blank" rel="noreferrer">
+                <Image
+                  src={mentorsBanner}
+                  alt="mentor-banner"
+                  objectPosition="center"
+                  layout="responsive"
+                  width={400}
+                  height={400}
+                  className="w-[300px] h-auto lg:w-full lg:h-auto"
+                />
+              </a>
             </div>
           </div>
         </div>

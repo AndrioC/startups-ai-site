@@ -4,13 +4,11 @@ import DataAboutGovernancePage from "@/components/form/startups/data-about-gover
 import DataAboutStartupsForm from "@/components/form/startups/data-about-startups-form";
 import DataAboutTeam from "@/components/form/startups/data-about-team";
 import DataMaturationLevelDeepTechForm from "@/components/form/startups/data-maturation-level-deep-tech";
-import DataReview from "@/components/form/startups/data-review";
 import DataServiceProduct from "@/components/form/startups/data-service-product";
 import DataSignUpUser from "@/components/form/startups/data-sign-up-user";
+import FinishedForm from "@/components/form/startups/finished-form";
 import FormAboutTheProgram from "@/components/form/startups/form-about-the-program";
 import { useFormState } from "@/contexts/FormContext";
-
-import FinishedForm from "./finished-form";
 
 interface Props {
   data: SelectDataProps;
@@ -36,8 +34,6 @@ export default function FormStep({ data }: Props) {
       return <DataAboutGovernancePage />;
     case 7:
       return <DataAboutFinanceAndMarketPage />;
-    // case 8:
-    //   return <DataReview data={data} />;
     case 8:
       return <FinishedForm />;
     default:

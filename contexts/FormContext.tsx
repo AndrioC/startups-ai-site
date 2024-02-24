@@ -1,6 +1,10 @@
 import { createContext, useContext, useState } from "react";
 
 export interface FormData {
+  fullNameSignUp: string;
+  emailSignUp: string;
+  passwordSignUp: string;
+  confirmPasswordSignUp: string;
   startupName: string;
   vertical: string;
   foundationDate: Date;
@@ -51,10 +55,6 @@ export interface FormData {
   alreadyRaisedInvestment: string;
   amountRaised: number;
   howMuchEquityWasDistributed: string;
-  fullNameSignUp: string;
-  emailSignUp: string;
-  passwordSignUp: string;
-  confirmPasswordSignUp: string;
 }
 interface FormContext {
   handleNext: () => void;
@@ -71,6 +71,10 @@ interface FormContext {
 }
 
 export const initialFormData: FormData = {
+  fullNameSignUp: "",
+  emailSignUp: "",
+  passwordSignUp: "",
+  confirmPasswordSignUp: "",
   startupName: "",
   vertical: "",
   foundationDate: new Date(),
@@ -121,10 +125,6 @@ export const initialFormData: FormData = {
   alreadyRaisedInvestment: "",
   amountRaised: 0,
   howMuchEquityWasDistributed: "",
-  fullNameSignUp: "",
-  emailSignUp: "",
-  passwordSignUp: "",
-  confirmPasswordSignUp: "",
 };
 
 const FormContext = createContext<FormContext>({
@@ -158,17 +158,6 @@ export function FormProvider({ children }: Props) {
   function handleBack() {
     setStep((prevStep) => prevStep - 1);
   }
-
-  // function handleStepChange(step: number) {
-  //   setStep(step);
-  // }
-
-  // function updateFormData(data: Partial<FormData>) {
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     ...data,
-  //   }));
-  // }
 
   return (
     <FormContext.Provider

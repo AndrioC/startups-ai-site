@@ -11,15 +11,16 @@ import { z } from "zod";
 import { checkEmailExists } from "@/actions/check-email-exists";
 import { FormError } from "@/components/form/form-error";
 import { Button } from "@/components/ui/button";
-import { useFormState } from "@/contexts/FormContext";
-import { DataSignUpSchema } from "@/lib/schema-startups";
+import { useFormInvestorState } from "@/contexts/FormInvestorContext";
+import { DataInvestorsSignUpSchema } from "@/lib/schema-investors";
 
 interface Props {
   is_review?: boolean;
 }
 
-export default function DataSignUpUser({ is_review = false }: Props) {
-  const { handleNext, handleBack, setFormData, formData } = useFormState();
+export default function DataInvestorsSignUpUser({ is_review = false }: Props) {
+  const { handleNext, handleBack, setFormData, formData } =
+    useFormInvestorState();
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | undefined>("");
   const [iconPassword, setIconPassword] = useState(<EyeOffIcon />);
@@ -30,7 +31,7 @@ export default function DataSignUpUser({ is_review = false }: Props) {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const t = useTranslations("Form");
 
-  const formSchema = DataSignUpSchema(t);
+  const formSchema = DataInvestorsSignUpSchema(t);
 
   const {
     register,
@@ -48,8 +49,8 @@ export default function DataSignUpUser({ is_review = false }: Props) {
     startTransition(() => {
       checkEmailExists(
         data.emailSignUp,
-        t("startups-form.startup-form-email-already-exists"),
-        UserType.STARTUP
+        t("investors-form.investor-form-email-already-exists"),
+        UserType.INVESTOR
       )
         .then((values) => {
           if (!values.error) {
@@ -89,13 +90,15 @@ export default function DataSignUpUser({ is_review = false }: Props) {
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
-        {t("startups-form.startup-form-sign-up.title")}
+        {t("investors-form.investor-form-sign-up.title")}
       </h1>
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="fullNameSignUp" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startups-form.startup-form-sign-up.name-field")}</span>
+              <span>
+                {t("investors-form.investor-form-sign-up.name-field")}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
           </div>
@@ -115,7 +118,9 @@ export default function DataSignUpUser({ is_review = false }: Props) {
         <label htmlFor="emailSignUp" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startups-form.startup-form-sign-up.email-field")}</span>
+              <span>
+                {t("investors-form.investor-form-sign-up.email-field")}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
           </div>
@@ -135,7 +140,7 @@ export default function DataSignUpUser({ is_review = false }: Props) {
           <div className="flex flex-col">
             <div>
               <span>
-                {t("startups-form.startup-form-sign-up.password-field")}
+                {t("investors-form.investor-form-sign-up.password-field")}
               </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
@@ -173,7 +178,9 @@ export default function DataSignUpUser({ is_review = false }: Props) {
           <div className="flex flex-col">
             <div>
               <span>
-                {t("startups-form.startup-form-sign-up.confirm-password-field")}
+                {t(
+                  "investors-form.investor-form-sign-up.confirm-password-field"
+                )}
               </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
@@ -213,14 +220,14 @@ export default function DataSignUpUser({ is_review = false }: Props) {
             onClick={() => onHandleBack()}
             className="px-6 text-white rounded-md"
           >
-            {t("startups-form.startup-form-previous-button")}
+            {t("investors-form.investor-form-previous-button")}
           </Button>
           <Button
             disabled={isPending}
             variant="blue"
             className="px-6 text-white rounded-md"
           >
-            {t("startups-form.startup-form-next-button")}
+            {t("investors-form.investor-form-next-button")}
           </Button>
         </div>
       )}

@@ -11,31 +11,34 @@ datasource db {
 }
 
 model organizations {
-  id             Int        @id @default(autoincrement())
+  id             Int         @id @default(autoincrement())
   name           String
-  slug           String     @default("")
-  payment_needed Boolean    @default(false)
+  slug           String      @default("")
+  payment_needed Boolean     @default(false)
   logo_img       String?
-  created_at     DateTime   @default(now())
-  updated_at     DateTime   @default(now())
+  created_at     DateTime    @default(now())
+  updated_at     DateTime    @default(now())
   user           user[]
   startups       startups[]
   ebooks         ebooks[]
+  investors      investors[]
 }
 
 model vertical {
-  id       Int        @id @default(autoincrement())
-  code     String
-  name_en  String
-  name_pt  String
-  startups startups[]
+  id                Int                 @id @default(autoincrement())
+  code              String
+  name_en           String
+  name_pt           String
+  startups          startups[]
+  investor_vertical investor_vertical[]
 }
 
 model business_model {
-  id       Int        @id @default(autoincrement())
-  code     String
-  name     String
-  startups startups[]
+  id                      Int                       @id @default(autoincrement())
+  code                    String
+  name                    String
+  startups                startups[]
+  investor_business_model investor_business_model[]
 }
 
 model operational_stage {
@@ -55,11 +58,12 @@ model challenges {
 }
 
 model maturity_level {
-  id       Int        @id @default(autoincrement())
-  code     String
-  name_en  String
-  name_pt  String
-  startups startups[]
+  id                      Int                       @id @default(autoincrement())
+  code                    String
+  name_en                 String
+  name_pt                 String
+  startups                startups[]
+  investor_maturity_level investor_maturity_level[]
 }
 
 model service_products {
@@ -71,19 +75,28 @@ model service_products {
 }
 
 model country {
-  id       Int        @id @default(autoincrement())
-  code     String
-  name_en  String
-  name_pt  String
-  startups startups[]
+  id        Int         @id @default(autoincrement())
+  code      String
+  name_en   String
+  name_pt   String
+  startups  startups[]
+  investors investors[]
 }
 
 model objectives {
-  id                 Int                  @id @default(autoincrement())
-  code               String
-  name_en            String
-  name_pt            String
-  startup_objectives startup_objectives[]
+  id                          Int                           @id @default(autoincrement())
+  code                        String
+  name_en                     String
+  name_pt                     String
+  startup_objectives          startup_objectives[]
+  investor_investiment_stages investor_investiment_stages[]
+}
+
+model investiment_stages {
+  id      Int    @id @default(autoincrement())
+  code    String
+  name_en String
+  name_pt String
 }
 
 model startups {
@@ -162,10 +175,18 @@ model startups {
   startup_objectives       startup_objectives[]
 }
 
+enum UserType {
+  STARTUP
+  EXPERT
+  INVESTOR
+}
+
 model user {
   id              Int      @id @default(autoincrement())
   organization_id Int
-  startup_id      Int
+  startup_id      Int?
+  investor_id     Int?
+  type            UserType
   name            String
   email           String
   hashed_password String
@@ -176,6 +197,7 @@ model user {
   //relacionamentos
   organizations organizations? @relation(fields: [organization_id], references: [id])
   startups      startups?      @relation(fields: [startup_id], references: [id])
+  investors     investors?     @relation(fields: [investor_id], references: [id])
 
   @@unique([email, organization_id])
 }
@@ -211,6 +233,96 @@ model startup_objectives {
   objectives objectives @relation(fields: [objective_id], references: [id])
 
   @@unique([startup_id, objective_id])
+}
+
+model investors {
+  id                                          Int                           @id @default(autoincrement())
+  name                                        String
+  organization_id                             Int
+  foundation_date                             DateTime
+  country_id                                  Int
+  state_city                                  String
+  contact_name                                String
+  contact_email                               String
+  contact_number                              String
+  website                                     String
+  linkedin                                    String
+  minimal_investment                          String
+  average_investiment                         String
+  maximum_investiment                         String
+  pre_requisite_team                          String?
+  only_investing_startup_origin_country       String
+  logo_img                                    String
+  mini_description                            String
+  investiment_text                            String
+  example_invested_startups                   String?
+  is_patent_required                          String
+  in_case_of_deep_tech                        String?
+  main_criteria_evaluating_startup            String
+  added_values_to_startups                    String
+  expectations_investiment_return             String
+  open_to_co_invest_with_other_funds          String?
+  have_international_experience_with_startups String
+  plan                                        String                        @default("free")
+  is_deleted                                  Boolean                       @default(false)
+  is_approved                                 Boolean                       @default(false)
+  is_blocked                                  Boolean                       @default(false)
+  created_at                                  DateTime                      @default(now())
+  updated_at                                  DateTime                      @default(now())
+  deleted_at                                  DateTime?
+  deleted_by                                  Int?
+  investor_investiment_stages                 investor_investiment_stages[]
+  investor_vertical                           investor_vertical[]
+  investor_business_model                     investor_business_model[]
+  investor_maturity_level                     investor_maturity_level[]
+  user                                        user[]
+
+  organizations organizations? @relation(fields: [organization_id], references: [id])
+  country       country?       @relation(fields: [country_id], references: [id])
+}
+
+model investor_investiment_stages {
+  id                  Int @id @default(autoincrement())
+  investor_id         Int
+  investment_stage_id Int
+
+  investor          investors  @relation(fields: [investor_id], references: [id])
+  investment_stages objectives @relation(fields: [investment_stage_id], references: [id])
+
+  @@unique([investor_id, investment_stage_id])
+}
+
+model investor_vertical {
+  id          Int @id @default(autoincrement())
+  investor_id Int
+  vertical_id Int
+
+  investor investors @relation(fields: [investor_id], references: [id])
+  vertical vertical  @relation(fields: [vertical_id], references: [id])
+
+  @@unique([investor_id, vertical_id])
+}
+
+model investor_business_model {
+  id          Int @id @default(autoincrement())
+  investor_id Int
+  business_id Int
+
+  investor       investors      @relation(fields: [investor_id], references: [id])
+  business_model business_model @relation(fields: [business_id], references: [id])
+
+  @@unique([investor_id, business_id])
+}
+
+model investor_maturity_level {
+  id                Int @id @default(autoincrement())
+  investor_id       Int
+  maturity_level_id Int
+
+  investor       investors      @relation(fields: [investor_id], references: [id])
+  maturity_level maturity_level @relation(fields: [maturity_level_id], references: [id])
+
+  @@unique([investor_id, maturity_level_id])
 }
 
 enum EbookType {

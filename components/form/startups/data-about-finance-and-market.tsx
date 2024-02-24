@@ -10,7 +10,7 @@ import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import { useFormState } from "@/contexts/FormContext";
-import { DataAboutFinanceAndMarket } from "@/lib/schema";
+import { DataAboutFinanceAndMarket } from "@/lib/schema-startups";
 
 interface Props {
   is_review?: boolean;
@@ -54,7 +54,7 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
         return;
       }
     } catch (error) {
-      toast(t("error-when-finished-form"));
+      toast(t("startups-form.error-when-finished-form"));
     }
     setIsSubmiting(false);
   }
@@ -84,7 +84,7 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     {
       id: 4,
       value: "500 & above",
-      label: `500 ${t("startup-customers-quantity-option")}`,
+      label: `500 ${t("startups-form.startup-customers-quantity-option")}`,
     },
   ];
 
@@ -111,8 +111,12 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     },
     {
       id: 5,
-      value: `${t("startup-form-revenue-above-text")} $500.000,00`,
-      label: `${t("startup-form-revenue-above-text")} $500.000,00`,
+      value: `${t(
+        "startups-form.startup-form-revenue-above-text"
+      )} $500.000,00`,
+      label: `${t(
+        "startups-form.startup-form-revenue-above-text"
+      )} $500.000,00`,
     },
   ];
 
@@ -139,8 +143,12 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     },
     {
       id: 5,
-      value: `${t("startup-form-revenue-above-text")} $3.000.000,00`,
-      label: `${t("startup-form-revenue-above-text")} $3.000.000,00`,
+      value: `${t(
+        "startups-form.startup-form-revenue-above-text"
+      )} $3.000.000,00`,
+      label: `${t(
+        "startups-form.startup-form-revenue-above-text"
+      )} $3.000.000,00`,
     },
   ];
 
@@ -167,20 +175,26 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
     },
     {
       id: 5,
-      value: `${t("startup-form-revenue-above-text")} $18.000.000,00`,
-      label: `${t("startup-form-revenue-above-text")} $18.000.000,00`,
+      value: `${t(
+        "startups-form.startup-form-revenue-above-text"
+      )} $18.000.000,00`,
+      label: `${t(
+        "startups-form.startup-form-revenue-above-text"
+      )} $18.000.000,00`,
     },
   ];
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
-        {t("startup-form-data-about-finance-and-market.title")}
+        {t("startups-form.startup-form-data-about-finance-and-market.title")}
       </h1>
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="customersQuantity" className="flex items-center mt-5">
           <span>
-            {t("startup-form-data-about-finance-and-market.question-44")}
+            {t(
+              "startups-form.startup-form-data-about-finance-and-market.question-44"
+            )}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
@@ -204,13 +218,15 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
         )}
         <label htmlFor="lastRevenue" className="flex items-center mt-5">
           <span>
-            {t("startup-form-data-about-finance-and-market.question-45")}
+            {t(
+              "startups-form.startup-form-data-about-finance-and-market.question-45"
+            )}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <p className="text-gray-500 font-light text-sm">
           {t(
-            "startup-form-data-about-finance-and-market.question-american-dollar-text"
+            "startups-form.startup-form-data-about-finance-and-market.question-american-dollar-text"
           )}
         </p>
         {lastRevenueData.map((item) => (
@@ -236,13 +252,15 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-46")}
+            {t(
+              "startups-form.startup-form-data-about-finance-and-market.question-46"
+            )}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <p className="text-gray-500 font-light text-sm">
           {t(
-            "startup-form-data-about-finance-and-market.question-american-dollar-text"
+            "startups-form.startup-form-data-about-finance-and-market.question-american-dollar-text"
           )}
         </p>
         {lastSixRevenueData.map((item) => (
@@ -268,13 +286,15 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-47")}
+            {t(
+              "startups-form.startup-form-data-about-finance-and-market.question-47"
+            )}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <p className="text-gray-500 font-light text-sm">
           {t(
-            "startup-form-data-about-finance-and-market.question-american-dollar-text"
+            "startups-form.startup-form-data-about-finance-and-market.question-american-dollar-text"
           )}
         </p>
         {lastTwelveRevenueData.map((item) => (
@@ -300,7 +320,9 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-48")}
+            {t(
+              "startups-form.startup-form-data-about-finance-and-market.question-48"
+            )}
           </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
@@ -309,9 +331,15 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
           {...register("alreadyRaisedInvestment")}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.alreadyRaisedInvestment?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -320,12 +348,14 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
         )}
         <label htmlFor="amountRaised" className="flex items-center mt-5">
           <span>
-            {t("startup-form-data-about-finance-and-market.question-49")}
+            {t(
+              "startups-form.startup-form-data-about-finance-and-market.question-49"
+            )}
           </span>
         </label>
         <p className="text-gray-500 font-light text-sm">
           {t(
-            "startup-form-data-about-finance-and-market.question-american-dollar-text"
+            "startups-form.startup-form-data-about-finance-and-market.question-american-dollar-text"
           )}
         </p>
         <input
@@ -344,7 +374,9 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
           className="flex items-center mt-5"
         >
           <span>
-            {t("startup-form-data-about-finance-and-market.question-50")}
+            {t(
+              "startups-form.startup-form-data-about-finance-and-market.question-50"
+            )}
           </span>
         </label>
         <input
@@ -367,14 +399,14 @@ export default function DataAboutFinanceAndMarketPage({ is_review }: Props) {
             disabled={isSubmiting}
             className="px-6 text-white rounded-md"
           >
-            {t("startup-form-previous-button")}
+            {t("startups-form.startup-form-previous-button")}
           </Button>
           <Button
             variant="blue"
             disabled={isSubmiting}
             className="px-6 text-white rounded-md"
           >
-            {t("startup-form-finish-button")}
+            {t("startups-form.startup-form-finish-button")}
           </Button>
         </div>
       )}

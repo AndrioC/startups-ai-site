@@ -9,7 +9,7 @@ import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
 import { Button } from "@/components/ui/button";
 import { DatePicker } from "@/components/ui/date-picker";
 import { useFormState } from "@/contexts/FormContext";
-import { DataAboutStartupsSchema } from "@/lib/schema";
+import { DataAboutStartupsSchema } from "@/lib/schema-startups";
 
 interface ValueProps {
   id: number;
@@ -187,27 +187,35 @@ export default function DataAboutStartupsForm({
     {
       id: 1,
       value: "1 - 5",
-      label: `1 ${t("startup-form-employees-quantity-text-option")} 5`,
+      label: `1 ${t(
+        "startups-form.startup-form-employees-quantity-text-option"
+      )} 5`,
     },
     {
       id: 2,
       value: "6 - 10",
-      label: `6 ${t("startup-form-employees-quantity-text-option")} 10`,
+      label: `6 ${t(
+        "startups-form.startup-form-employees-quantity-text-option"
+      )} 10`,
     },
     {
       id: 3,
       value: "11 - 30",
-      label: `11 ${t("startup-form-employees-quantity-text-option")} 30`,
+      label: `11 ${t(
+        "startups-form.startup-form-employees-quantity-text-option"
+      )} 30`,
     },
     {
       id: 4,
       value: "31 - 50",
-      label: `31 ${t("startup-form-employees-quantity-text-option")} 50`,
+      label: `31 ${t(
+        "startups-form.startup-form-employees-quantity-text-option"
+      )} 50`,
     },
     {
       id: 5,
       value: "more than 50",
-      label: `${t("startup-form-employees-more-than-option")} 50`,
+      label: `${t("startups-form.startup-form-employees-more-than-option")} 50`,
     },
   ];
 
@@ -246,11 +254,13 @@ export default function DataAboutStartupsForm({
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h1 className="text-sm lg:text-xl font-semibold uppercase">
-        {t("startup-form-data-about-startups.title")}
+        {t("startups-form.startup-form-data-about-startups.title")}
       </h1>
       <div className="flex flex-col gap-1 text-xs lg:text-base">
         <label htmlFor="startupName" className="flex items-center">
-          <span>{t("startup-form-data-about-startups.question-01")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-01")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -266,7 +276,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="vertical" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-02")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-02")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -275,7 +287,9 @@ export default function DataAboutStartupsForm({
           //onChange={(e) => updateFormData({ vertical: e.target.value })}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
           {sortedVerticalData.map((option: any) => (
             <option key={option.id} value={String(option.id)}>
               {option.label}
@@ -286,7 +300,9 @@ export default function DataAboutStartupsForm({
           <p className="mt-2 text-sm text-red-400">{errors.vertical.message}</p>
         )}
         <label htmlFor="foundationDate" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-03")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-03")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <Controller
@@ -310,11 +326,17 @@ export default function DataAboutStartupsForm({
         <label htmlFor="subscriptionNumber" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-about-startups.question-04")}</span>
+              <span>
+                {t(
+                  "startups-form.startup-form-data-about-startups.question-04"
+                )}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
             <p className="text-xs mt-1">
-              {t("startup-form-data-about-startups.question-04-text")}
+              {t(
+                "startups-form.startup-form-data-about-startups.question-04-text"
+              )}
             </p>
           </div>
         </label>
@@ -333,7 +355,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="referenceLink" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-05")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-05")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -349,7 +373,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="country" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-06")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-06")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -358,7 +384,9 @@ export default function DataAboutStartupsForm({
           //onChange={(e) => updateFormData({ country: e.target.value })}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
           {sortedCountriesData.map((option: any) => (
             <option key={option.id} value={option.id}>
               {option.label}
@@ -369,7 +397,9 @@ export default function DataAboutStartupsForm({
           <p className="mt-2 text-sm text-red-400">{errors.country.message}</p>
         )}
         <label htmlFor="stateAndCity" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-07")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-07")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -385,7 +415,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="mainResponsibleName" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-08")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-08")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -406,7 +438,9 @@ export default function DataAboutStartupsForm({
           htmlFor="mainResponsibleLinkedin"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-startups.question-09")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-09")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -424,7 +458,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="contactNumber" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-10")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-10")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -443,7 +479,9 @@ export default function DataAboutStartupsForm({
           htmlFor="mainResponsibleEmail"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-startups.question-11")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-11")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -461,7 +499,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="startupObjectives" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-12")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-12")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         {sortedStartupsObjectives.map((option: any) => (
@@ -491,7 +531,9 @@ export default function DataAboutStartupsForm({
           htmlFor="connectionsOnlyOnStartupCountryOrigin"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-startups.question-13")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-13")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -504,9 +546,15 @@ export default function DataAboutStartupsForm({
           // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.connectionsOnlyOnStartupCountryOrigin?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -514,7 +562,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="partnersQuantity" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-14")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-14")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -539,11 +589,17 @@ export default function DataAboutStartupsForm({
         >
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-about-startups.question-15")}</span>
+              <span>
+                {t(
+                  "startups-form.startup-form-data-about-startups.question-15"
+                )}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
             <p className="text-xs">
-              {t("startup-form-data-about-startups.question-15-text")}
+              {t(
+                "startups-form.startup-form-data-about-startups.question-15-text"
+              )}
             </p>
           </div>
         </label>
@@ -567,7 +623,9 @@ export default function DataAboutStartupsForm({
           htmlFor="exclusiveDedicationPartner"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-startups.question-16")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-16")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -580,9 +638,15 @@ export default function DataAboutStartupsForm({
           // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.exclusiveDedicationPartner?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -590,7 +654,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="employeesQuantity" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-17")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-17")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         {employeesQuantityData.map((item) => (
@@ -615,7 +681,9 @@ export default function DataAboutStartupsForm({
           htmlFor="fullTimeEmployeesQuantity"
           className="flex items-center mt-5"
         >
-          <span>{t("startup-form-data-about-startups.question-18")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-18")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <input
@@ -635,7 +703,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="businessModel" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-19")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-19")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -648,7 +718,9 @@ export default function DataAboutStartupsForm({
           // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
           {sortedBusinessModel.map((option) => (
             <option key={option.id} value={Number(option.id)}>
               {option.name}
@@ -661,7 +733,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="operationalStage" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-20")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-20")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <select
@@ -674,7 +748,9 @@ export default function DataAboutStartupsForm({
           // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
           {sortedOperationalStage.map((option: any) => (
             <option key={option.id} value={Number(option.id)}>
               {option.label}
@@ -687,7 +763,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="startupChallenges" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-21")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-21")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         {sortedStartupsChallenges.map((option: any) => (
@@ -716,11 +794,17 @@ export default function DataAboutStartupsForm({
         <label htmlFor="isDeepTech" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-about-startups.question-22")}</span>
+              <span>
+                {t(
+                  "startups-form.startup-form-data-about-startups.question-22"
+                )}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
             <p className="text-xs mt-1">
-              {t("startup-form-data-about-startups.question-22-text")}
+              {t(
+                "startups-form.startup-form-data-about-startups.question-22-text"
+              )}
             </p>
           </div>
         </label>
@@ -734,9 +818,15 @@ export default function DataAboutStartupsForm({
           // }
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs text-xs lg:text-base sm:leading-6"
         >
-          <option value="">{t("startup-form-question-select-text")}</option>
-          <option value="yes">{t("startup-form-question-yes-text")}</option>
-          <option value="no">{t("startup-form-question-no-text")}</option>
+          <option value="">
+            {t("startups-form.startup-form-question-select-text")}
+          </option>
+          <option value="yes">
+            {t("startups-form.startup-form-question-yes-text")}
+          </option>
+          <option value="no">
+            {t("startups-form.startup-form-question-no-text")}
+          </option>
         </select>
         {errors.isDeepTech?.message && (
           <p className="mt-2 text-sm text-red-400">
@@ -746,10 +836,16 @@ export default function DataAboutStartupsForm({
         <label htmlFor="loadPitchDeck" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-about-startups.question-23")}</span>
+              <span>
+                {t(
+                  "startups-form.startup-form-data-about-startups.question-23"
+                )}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
-            <p className="text-xs mt-1">{t("error-when-file-is-too-large")}</p>
+            <p className="text-xs mt-1">
+              {t("startups-form.error-when-file-is-too-large")}
+            </p>
           </div>
         </label>
         <Controller
@@ -761,7 +857,7 @@ export default function DataAboutStartupsForm({
                 htmlFor={name}
                 className="bg-blue-500 px-4 py-2 text-white rounded-md cursor-pointer"
               >
-                {t("startup-select-file-text")}
+                {t("startups-form.startup-select-file-text")}
               </label>
               <input
                 type="file"
@@ -790,10 +886,16 @@ export default function DataAboutStartupsForm({
         <label htmlFor="loadLogo" className="flex items-center mt-5">
           <div className="flex flex-col">
             <div>
-              <span>{t("startup-form-data-about-startups.question-24")}</span>
+              <span>
+                {t(
+                  "startups-form.startup-form-data-about-startups.question-24"
+                )}
+              </span>
               <span className="text-red-500 ml-1">*</span>
             </div>
-            <p className="text-xs mt-1">{t("error-when-image-is-too-large")}</p>
+            <p className="text-xs mt-1">
+              {t("startups-form.error-when-image-is-too-large")}
+            </p>
           </div>
         </label>
         <Controller
@@ -805,7 +907,7 @@ export default function DataAboutStartupsForm({
                 htmlFor={name}
                 className="bg-blue-500 px-4 py-2 text-white rounded-md cursor-pointer"
               >
-                {t("startup-select-file-text")}
+                {t("startups-form.startup-select-file-text")}
               </label>
               <input
                 type="file"
@@ -830,7 +932,9 @@ export default function DataAboutStartupsForm({
           <p className="mt-2 text-sm text-red-400">{errors.loadLogo.message}</p>
         )}
         <label htmlFor="shortDescription" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-25")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-25")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea
@@ -850,7 +954,9 @@ export default function DataAboutStartupsForm({
           </p>
         )}
         <label htmlFor="valueProposal" className="flex items-center mt-5">
-          <span>{t("startup-form-data-about-startups.question-26")}</span>
+          <span>
+            {t("startups-form.startup-form-data-about-startups.question-26")}
+          </span>
           <span className="text-red-500 ml-1">*</span>
         </label>
         <textarea
@@ -877,10 +983,10 @@ export default function DataAboutStartupsForm({
             onClick={onHandleBack}
             className="px-6 text-white rounded-md"
           >
-            {t("startup-form-previous-button")}
+            {t("startups-form.startup-form-previous-button")}
           </Button>
           <Button variant="blue" className="px-6 text-white rounded-md">
-            {t("startup-form-next-button")}
+            {t("startups-form.startup-form-next-button")}
           </Button>
         </div>
       )}
