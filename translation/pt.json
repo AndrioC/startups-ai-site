@@ -559,6 +559,86 @@
         "question-28": "28. Você está aberto a co-investir com outros fundos?",
         "question-29": "29. Você tem alguma experiência específica com startups internacionais?"
       }
+    },
+
+    "experts-form": {
+      "experts-form-next-button": "Próximo",
+      "experts-form-previous-button": "Voltar",
+      "experts-form-start-button": "Iniciar",
+      "experts-form-finish-button": "Finalizar",
+      "experts-form-email-already-exists": "Email já existe",
+      "finished-form-congrats-text": "Parabéns!",
+      "finished-form-text-first-part": "Obrigado por enviar a sua inscrição!",
+      "finished-form-text-second-part": "Agradecemos o seu interesse em se juntar à nossa plataforma. Fique tranquilo que revisaremos cuidadosamente a sua submissão. Em breve entraremos em contato para discutir os próximos passos, incluindo o acesso à nossa plataforma. Se você tiver alguma dúvida urgente, sinta-se à vontade para nos contatar.",
+      "finished-form-text-third-part": "Estamos ansiosos para potencialmente trabalharmos juntos!",
+      "error-when-finished-form": "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.",
+      "error-when-image-is-too-large": "Tamanho máximo de arquivo é de 1Mb",
+      "experts-form-presentation": {
+        "title": "Sobre o programa",
+        "text-01": "Olá caro candidato a Especialista em negócios do 'Programa IFIA-ABIPIR de conexões globais para Startups', seja muito bem-vindo ao Departamento de Startups da international Federation of Inventors' Association - IFIA!",
+        "text-02": "Nosso principal objetivo é ajudar as Startups a alavancarem os seus negócios conectando-as à potenciais investidores, clientes e parceiros comerciais nos mais de 70 países em que a IFIA está representada.",
+        "text-03": "Alinhado a esse propósito, criamos o 'Programa IFIA-ABIPIR de conexões globais para Startups' que é o Programa coordenado pela IFIA e pela ABIPIR (Associação Brasil Internacional de Inventores, Cientistas e Empreendedores Inovadores) e consiste na aceleração internacional e conexões globais de Startups obtendo vantagem da poderosa rede de conexões internacionais da IFIA. O programa será coordenado pelo Escritório Latino Americano da IFIA-ABIPIR, sessão São Paulo.",
+        "text-04": "A operação do Programa ficará a cargo da Startup Brasileira credenciada pela IFIA, a 'Startups Global Link'",
+        "text-05": "Contamos com o apoio institucional do Hub Inovativa que é responsável pela coordenação dos maiores e mais importantes programas de aceleração de Startups da América Latina, o Inovativa Brasil e o Inovativa de Impacto, realizados pelo Ministério do Desenvolvimento, Indústria, Comércio e Serviços do Governo Brasileiro e Sebrae Nacional e executados pela Fundação CERTI em coexecução da ABStartups e Impact Hub e também com do Founders Institute, o maior programa de aceleração pré-seed do mundo, tendo sido criado no Vale do Silício",
+        "text-06": "A IFIA possui uma enorme rede qualificada de associados, incluindo Universidades, Centros Tecnológicos e Hubs de inovação presente em mais de 70 países e pode ajudar as Startups a atingirem seus objetivos e tornar o mundo um lugar melhor usando suas tecnologias inovadoras para solucionar ou mitigar desafios e, simultaneamente, contribuir para o crescimento da economia local, aumentando empregos, renda e dando às pessoas a possibilidade de ter uma melhor qualidade de vida.",
+        "text-07": "As Startups do Brasil e do exterior serão selecionadas após o preenchimento do formulário de inscrição e as respostas serem analisadas por membros da equipe de especialistas do Departamento de Startups da IFIA quanto aos critérios técnicos, e, uma vez aprovado o perfill a Startup receberá um certificado do primeiro estágio da 'Jornada do Programa Startups Global Link' como 'Membro Júnior da Comunidade SGL'. A medida que a Startup for cumprindo as missões que serão definidas pela Coordenação do Programa ela poderá avançar de estágio passando pelas fases de 'Membro Pleno', 'Membro Senior' e 'Membro Master'.",
+        "text-08": "Além destas certificações  agregarem muito valor ao negócio facilitando o acesso aos investidores, a Startup será incluída nos processos de business matchmaking com potenciais investidores, Startups que podem se tornar parceiros de negócios e clientes prospectados pela Departamento de 'Global Innovation Scouting' da Coordenação do Programa em diversos Países.",
+        "text-09": "Para tornar o processo de 'business-matchmaking' mais preciso e facilitar a geração de negócios, captação de investimentos e parcerias contamos com recursos avançados de Inteligência Artificial, fato que nos concede um diferencial competitivo em relação à iniciativas semelhantes no mercado além, evidentemente, do nosso alcance internacional.",
+        "text-10": "Para atingirmos estes objetivos contamos abrimos a oportunidade para especialistas em negócios de Startups do Brasil e de outros países em diversas áreas  que tenham interesse em participar do Programa ajudando as Startups a escalarem e internacionalizarem os seus negócios e, simultaneamente, gerando oportunidades de comercializar suas consultorias para  estas.",
+        "text-11": "Você poderá aderir ao plano 'Free' no qual o seu nome, contatos e áreas de expertise serão divulgados na plataforma do Programa de forma 100% gratuita, podendo ser contactado por Startups Brasileiras e internacionais interessadas na consultoria ou ao plano 'Premium', no qual mediante o pagamento de uma mensalidade você terá prioridade e terá o nome indicado para a Startup que solicitar suporte à Coordenação do Programa.",
+        "text-12": "Os Especialistas que optarem pelo plano 'Premium' serão admitidos na 'Jornada do Programa Startups Global Link' que consiste em 4 estágios (Júnior, Pleno, Senior e Master) que serão gradativamente atingidos de acordo com as missões estabelecidas pela coordenação do Programa.",
+        "text-13": "Os Especialistas que aderirem à jornada receberão  um certificado internacional chancelado pela IFIA e ABIPIR que será atualizado à medida que estes atingirem uma graduação superior.",
+        "text-14": "É importante lembrar que os seus dados estarão protegidos com o sigilo e confidencialidade estabelecidos pelo Lei Geral de Proteção de Dados, e que os mesmos só serão utilizados com o propósito principal do Programa que é o de buscar oportunidades para as Startups participantes a partir do cruzamento de dados (business matchmaking).",
+        "text-15": "Ao enviar o formulário você automaticamente nos concede a permissão de utilizar os seus dados para a finalidade de conectá-la(o) às Startups, pois oque queremos é ajudar a leva-las para um patamar de excelência.",
+        "text-16": "Conheça mais o Programa visitando nossa página: https://www.ifia.com/startups-department/",
+        "text-17": "Desde já agradecemos o interesse em fazer parte como Especialista em Negócios do maior Ecossistema de Startups do mundo!"
+      },
+      "experts-form-sign-up": {
+        "title": "Cadastro de usuário",
+        "name-field": "Nome completo",
+        "email-field": "Email",
+        "password-field": "Senha",
+        "confirm-password-field": "Confirmar senha",
+        "password-does-not-match": "Senhas não coincidem"
+      },
+      "experts-form-password-field": "Senha deve ter no mínimo 6 caracteres",
+      "experts-form-required-field": "Este campo é obrigatório!",
+      "experts-form-email-field": "E-mail não é válido!",
+      "experts-form-select-at-least-one-field": "Selecione pelo menos um campo",
+      "experts-form-convert-value-to-dollar": "Preencha o valor, convetendo para dólar americano",
+      "experts-form-question-select-text": "Selecione uma opção",
+      "experts-form-question-yes-text": "Sim",
+      "experts-form-question-no-text": "Não",
+      "experts-form-question-maybe-text": "Talvez",
+      "experts-form-data-personal-data": {
+        "title": "Dados pessoais",
+        "question-01": "1. Nome",
+        "question-02": "2. Sexo",
+        "question-03": "3. Data de nascimento",
+        "question-04": "4. País",
+        "question-05": "5. Cidade/Estado",
+        "question-06": "6. Link para o perfil no LinkedIn ou outra rede social ou página com mais informações sobre o candidato",
+        "question-07": "7. Telefone com código do país, de preferência que tenha acesso ao WhatsApp.",
+        "question-07-text": "Ex. 55 (Brasil)",
+        "question-08": "8. E-mail",
+        "question-09": "9. Qual seu grau de escolaridade?",
+        "question-10": "10. Faça upload de uma foto sua para divulgarmos em nosso programa caso tenha o perfil aprovado (preferencialmente no formato .svg)"
+      },
+      "experts-form-data-professional-data": {
+        "title": "Dados profissionais",
+        "question-11": "11. Qual a melhor ocupação abaixo descreve você neste momento?",
+        "question-12": "12. Empresa ou instituição em que trabalha",
+        "question-13": "13. Cargo ocupado",
+        "question-14": "14. Qual seu tempo de experiência?"
+      },
+      "experts-form-data-consultancy-for-startups-data": {
+        "title": "Dados sobre a consultoria para startups",
+        "question-15": "15. Nos conte um pouco sobre sua experiência na área de consultor de negócios e especificamente com Startups",
+        "question-16": "16. Em quais idiomas você é fluente ou consegue comunicar bem para realizar mentorias?",
+        "question-17": "17. Já participou de algum programa de aceleração, missão técnica ou outra iniciativa internacional envolvendo Startups? Caso positivo, descreva os nomes dos programas abaixo",
+        "question-18": "18. Informe suas principais áreas de expertise para prestar consultorias às Startups",
+        "question-19": "19. Selecione as verticais de Startups que você gostaria de prestar consultoria"
+      }
     }
   }
 }

@@ -57,10 +57,8 @@ export default function PlansPage() {
   const linkStartupForm =
     lang === "en" ? "/en/form/startups" : "/pt/form/startups";
 
-  const freePlanExpertsLink =
-    lang === "en"
-      ? "https://forms.gle/7gqsjrRdi8bHxr3Q8"
-      : "https://forms.gle/kzmmzc89t7A23And7";
+  const linkExpertForm =
+    lang === "en" ? "/en/form/experts" : "/pt/form/experts";
 
   const investorForm =
     lang === "en" ? "/en/form/investors" : "/pt/form/investors";
@@ -124,7 +122,7 @@ export default function PlansPage() {
               </Link>
             </div>
             <div className="w-[300px] lg:w-[400px]">
-              <a href={freePlanExpertsLink} target="_blank" rel="noreferrer">
+              <Link href={linkExpertForm}>
                 <Image
                   src={mentorsBanner}
                   alt="mentor-banner"
@@ -132,7 +130,7 @@ export default function PlansPage() {
                   height={400}
                   className="w-[300px] h-auto lg:w-full lg:h-auto"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

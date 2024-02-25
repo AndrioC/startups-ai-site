@@ -13,6 +13,19 @@ export async function GET() {
   const vertical = await prisma.vertical.findMany();
   const investiment_stages = await prisma.investiment_stages.findMany();
 
+  const level_of_education = await prisma.level_of_education.findMany();
+  const occupation = await prisma.occupation.findMany();
+  const experience_time = await prisma.experience_time.findMany();
+  const languages = await prisma.languages.findMany();
+  const gender = await prisma.gender.findMany();
+
+  try {
+    const gender = await prisma.gender.findMany();
+    console.log("GENDER", gender);
+  } catch (error) {
+    console.log("ERROR: gender ", error);
+  }
+
   const data = {
     challenges,
     country,
@@ -23,6 +36,11 @@ export async function GET() {
     service_products,
     vertical,
     investiment_stages,
+    level_of_education,
+    experience_time,
+    languages,
+    gender,
+    occupation,
   };
 
   return NextResponse.json(data, { status: 201 });
