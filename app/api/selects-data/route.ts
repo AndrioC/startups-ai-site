@@ -19,13 +19,6 @@ export async function GET() {
   const languages = await prisma.languages.findMany();
   const gender = await prisma.gender.findMany();
 
-  try {
-    const gender = await prisma.gender.findMany();
-    console.log("GENDER", gender);
-  } catch (error) {
-    console.log("ERROR: gender ", error);
-  }
-
   const data = {
     challenges,
     country,
