@@ -4,6 +4,7 @@ import bcryptjs from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 
 import { FormData } from "@/contexts/FormContext";
+import { calculateFreeSubscriptionExpirationDate } from "@/lib/free-subscription";
 import prisma from "@/prisma/client";
 
 const s3Client = new S3Client({
@@ -89,6 +90,8 @@ export async function POST(request: NextRequest) {
           already_raised_investment: data.alreadyRaisedInvestment,
           amount_raised: Number(data.amountRaised),
           how_much_equity_was_distributed: data.howMuchEquityWasDistributed,
+          free_subscription_expires_at:
+            calculateFreeSubscriptionExpirationDate(),
         },
       });
 

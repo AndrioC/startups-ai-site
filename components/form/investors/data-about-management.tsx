@@ -43,8 +43,6 @@ export default function DataAboutManagement({ data }: Props) {
     resolver: zodResolver(formSchema),
   });
 
-  console.log("errors", errors);
-
   const investimentStagesData: ValueProps[] = data.investiment_stages.map(
     (value) => ({
       ...value,

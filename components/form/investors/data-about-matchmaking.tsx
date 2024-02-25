@@ -37,7 +37,6 @@ export default function DataAboutMatchingMaking() {
     const sendFormData = new FormData();
     sendFormData.append("file-logo", formData.loadInvestorLogo!);
     sendFormData.append("data", JSON.stringify(currentFormData));
-    console.log("currentFormData", currentFormData);
     try {
       setIsSubmiting(true);
       const response = await axios.post("/api/investors-form", sendFormData, {

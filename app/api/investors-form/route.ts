@@ -4,6 +4,7 @@ import bcryptjs from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 
 import { FormInvestorData } from "@/contexts/FormInvestorContext";
+import { calculateFreeSubscriptionExpirationDate } from "@/lib/free-subscription";
 import prisma from "@/prisma/client";
 
 const s3Client = new S3Client({
@@ -23,8 +24,6 @@ export async function POST(request: NextRequest) {
     const dataString = formData.get("data") as string;
     const data = JSON.parse(dataString) as FormInvestorData;
     const fileLogo = formData.get("file-logo") as unknown as File;
-
-    console.log("data", data);
 
     // Iniciar transação Prisma
     const createdInvestor = await prisma.$transaction(async (prisma) => {
@@ -58,10 +57,10 @@ export async function POST(request: NextRequest) {
           open_to_co_invest_with_other_funds: data.openToCoInvestWithOtherFunds,
           have_international_experience_with_startups:
             data.haveInternationalExperienceWithStartups,
+          free_subscription_expires_at:
+            calculateFreeSubscriptionExpirationDate(),
         },
       });
-
-      console.log("PASSOU 01");
 
       const hashedPassword = await bcryptjs.hash(data.passwordSignUp, 10);
       await prisma.user.create({
@@ -74,8 +73,6 @@ export async function POST(request: NextRequest) {
           type: UserType.INVESTOR,
         },
       });
-
-      console.log("PASSOU 02");
 
       const investimentStagesData = data.investimentStages.map((value) => ({
         investor_id: investor.id,
@@ -104,19 +101,19 @@ export async function POST(request: NextRequest) {
       await prisma.investor_investiment_stages.createMany({
         data: investimentStagesData,
       });
-      console.log("PASSOU 03");
+
       await prisma.investor_vertical.createMany({
         data: techOfInterestData,
       });
-      console.log("PASSOU 04");
+
       await prisma.investor_business_model.createMany({
         data: businessModelOfInterest,
       });
-      console.log("PASSOU 05");
+
       await prisma.investor_maturity_level.createMany({
         data: operationalStagesOfInterest,
       });
-      console.log("PASSOU 06");
+
       return investor;
     });
 
@@ -133,8 +130,6 @@ export async function POST(request: NextRequest) {
         logo_img: logoImageFileName,
       },
     });
-
-    console.log("PASSOU 07");
 
     return NextResponse.json({ status: 201 });
   } catch (error) {

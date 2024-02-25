@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 // import expertImage from "@/assets/img/plans-expert-image.svg";
 // import startupImage from "@/assets/img/plans-rocket-image.svg";
 // import PricingCard from "@/components/site/plans/pricing-card";
-import { bannersList } from "../../data";
+import { bannersList } from "@/app/(site)/data";
 
 export default function PlansPage() {
   const t = useTranslations("Plans");
@@ -84,18 +84,14 @@ export default function PlansPage() {
           <Image
             src={mainBanner}
             alt="main-banner"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
             className="hidden lg:block"
             priority
           />
           <Image
             src={mainBannerMobile}
             alt="main-banner-mobile"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
             className="sm:block lg:hidden"
             priority
           />
@@ -110,8 +106,6 @@ export default function PlansPage() {
                 <Image
                   src={startupBanner}
                   alt="startup-banner"
-                  objectPosition="center"
-                  layout="responsive"
                   width={400}
                   height={400}
                   className="w-[300px] h-auto lg:w-full lg:h-auto"
@@ -123,8 +117,6 @@ export default function PlansPage() {
                 <Image
                   src={investorsBanner}
                   alt="investor-banner"
-                  objectPosition="center"
-                  layout="responsive"
                   width={400}
                   height={400}
                   className="w-[300px] h-auto lg:w-full lg:h-auto"
@@ -136,8 +128,6 @@ export default function PlansPage() {
                 <Image
                   src={mentorsBanner}
                   alt="mentor-banner"
-                  objectPosition="center"
-                  layout="responsive"
                   width={400}
                   height={400}
                   className="w-[300px] h-auto lg:w-full lg:h-auto"

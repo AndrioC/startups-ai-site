@@ -161,6 +161,7 @@ model startups {
   updated_at                                   DateTime  @default(now())
   deleted_at                                   DateTime?
   deleted_by                                   Int?
+  free_subscription_expires_at                 DateTime?
   user                                         user[]
 
   //relacionamentos
@@ -270,6 +271,7 @@ model investors {
   created_at                                  DateTime                      @default(now())
   updated_at                                  DateTime                      @default(now())
   deleted_at                                  DateTime?
+  free_subscription_expires_at                DateTime?
   deleted_by                                  Int?
   investor_investiment_stages                 investor_investiment_stages[]
   investor_vertical                           investor_vertical[]
