@@ -101,10 +101,10 @@ export async function POST(request: NextRequest) {
       EXPERTS_LOGO_BUCKET
     );
 
-    await prisma.investors.update({
+    await prisma.experts.update({
       where: { id: createdExpert.id },
       data: {
-        logo_img: logoImageFileName,
+        picture_img: logoImageFileName,
       },
     });
 

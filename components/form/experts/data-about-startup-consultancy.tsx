@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { SelectDataProps } from "@/app/(site)/[lang]/form/experts/page";
@@ -21,6 +24,7 @@ interface Props {
 export default function DataAboutStartupConsultancy({ data }: Props) {
   const { handleNext, handleBack, setFormData, formData } =
     useFormExpertState();
+  const [isSubmiting, setIsSubmiting] = useState(false);
 
   const t = useTranslations("Form");
   const lang = useLocale();
@@ -97,9 +101,29 @@ export default function DataAboutStartupConsultancy({ data }: Props) {
     return 0;
   });
 
-  function onHandleFormSubmit(data: z.infer<typeof formSchema>) {
-    setFormData((prevFormData) => ({ ...prevFormData, ...data }));
-    handleNext();
+  async function onHandleFormSubmit() {
+    const currentFormData = watch();
+    setFormData((prevFormData) => ({ ...prevFormData, ...currentFormData }));
+    const sendFormData = new FormData();
+    sendFormData.append("file-logo", formData.expertPictureImage!);
+    sendFormData.append("data", JSON.stringify(currentFormData));
+    try {
+      setIsSubmiting(true);
+      const response = await axios.post("/api/experts-form", sendFormData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      if (response.data.status === 201) {
+        setIsSubmiting(false);
+        handleNext();
+        return;
+      }
+    } catch (error) {
+      toast(t("experts-form.error-when-finished-form"));
+    }
+    setIsSubmiting(false);
   }
 
   function onHandleBack() {
@@ -252,11 +276,16 @@ export default function DataAboutStartupConsultancy({ data }: Props) {
         <Button
           variant="blue"
           onClick={onHandleBack}
+          disabled={isSubmiting}
           className="px-6 text-white rounded-md"
         >
           {t("startups-form.startup-form-previous-button")}
         </Button>
-        <Button variant="blue" className="px-6 text-white rounded-md">
+        <Button
+          variant="blue"
+          disabled={isSubmiting}
+          className="px-6 text-white rounded-md"
+        >
           {t("startups-form.startup-form-next-button")}
         </Button>
       </div>

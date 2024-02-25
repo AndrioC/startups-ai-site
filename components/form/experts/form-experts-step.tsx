@@ -15,11 +15,11 @@ export default function FormExpertsStep({ data }: Props) {
   const { step } = useFormExpertState();
 
   switch (step) {
-    case 2:
+    case 0:
       return <FormExpertsAboutTheProgram />;
     case 1:
       return <DataExpertsSignUpUser />;
-    case 0:
+    case 2:
       return <DataAboutPersonalData data={data} />;
     case 3:
       return <DataAboutProfessionalData data={data} />;
