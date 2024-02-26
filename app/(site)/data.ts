@@ -1771,7 +1771,7 @@ export const teamList: TeamProps[] = [
 
 export const bannersList: BannersProps = {
   investors_banner_en: "/assets/banners/investors_banner_en.png",
-  investors_banner_pt: "/assets/banners/investors_banner_en.png",
+  investors_banner_pt: "/assets/banners/investors_banner_pt.png",
   main_banner_en: "/assets/banners/main_banner_en.png",
   main_banner_pt: "/assets/banners/main_banner_pt.png",
   main_banner_mobile_en: "/assets/banners/main_banner_mobile_en.png",
