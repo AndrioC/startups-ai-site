@@ -150,10 +150,10 @@ export default function DataAboutStartupConsultancy({ data }: Props) {
             )}
           </span>
         </label>
-        <input
+        <textarea
           id="experienceWithStartups"
-          type="text"
-          className="h-8 lg:h-11 px-4 border rounded-md"
+          rows={4}
+          className="px-4 border rounded-md resize-none h-[120px]"
           {...register("experienceWithStartups")}
         />
         {errors.experienceWithStartups?.message && (
