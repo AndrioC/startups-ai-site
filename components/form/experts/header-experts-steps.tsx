@@ -5,9 +5,9 @@ import { useFormExpertState } from "@/contexts/FormExpertContext";
 export default function HeaderExpertsSteps() {
   const { step } = useFormExpertState();
 
-  const steps = ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5"];
+  const steps = ["Step 1", "Step 2", "Step 3", "Step 4"];
 
-  if (step === 0 || step === 6) {
+  if (step === 0 || step === 5) {
     return null;
   }
 
