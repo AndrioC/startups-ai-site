@@ -39,9 +39,6 @@ export interface TeamProps {
   position_en: string;
   photo: string;
 }
-type InfoFlags = {
-  [key: string]: string;
-};
 
 export interface BannersProps {
   investors_banner_en: string;
@@ -1013,14 +1010,6 @@ export const startupsList: StartupProps[] = [
     flag: "india",
   },
 ];
-
-export const infoFlags: InfoFlags = {
-  brazil: "/assets/flags/brazil.svg",
-  colombia: "/assets/flags/colombia.svg",
-  finland: "/assets/flags/finland.svg",
-  india: "/assets/flags/india.svg",
-  usa: "/assets/flags/usa.svg",
-};
 
 export const expertsList: ExpertProps[] = [
   {

@@ -1,6 +1,9 @@
-import { useTranslations } from "next-intl";
+"use client";
 
-import { expertsList, infoFlags, startupsList } from "@/app/(site)/data";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { useLocale, useTranslations } from "next-intl";
+
 import globeImage from "@/assets/img/globe-image.svg";
 import expertImage from "@/assets/img/plans-expert-image.svg";
 import startupImage from "@/assets/img/plans-rocket-image.svg";
@@ -14,9 +17,14 @@ import Section from "@/components/site/home/section";
 import Subscription from "@/components/site/home/subscription";
 import WhyChooseUs from "@/components/site/home/why-choose-us";
 
+import { InitialCardValues } from "../../api/initial-card-values/route";
+
 export default function Home() {
-  const infoFlagsLength = Object.entries(infoFlags).length;
+  const lang = useLocale();
   const t = useTranslations("Home");
+
+  const { data: initialCardValuesData } = useInitialCardValues(lang);
+
   return (
     <main>
       <Hero />
@@ -24,17 +32,17 @@ export default function Home() {
         <CountUpNumbers
           title={t("countup-startup-title")}
           img={startupImage}
-          value={startupsList.length}
+          value={initialCardValuesData?.startups_quantity!}
         />
         <CountUpNumbers
           title={t("countup-experts-title")}
           img={expertImage}
-          value={expertsList.length}
+          value={initialCardValuesData?.experts_quantity!}
         />
         <CountUpNumbers
           title={t("countup-country-title")}
           img={globeImage}
-          value={infoFlagsLength}
+          value={initialCardValuesData?.countries_quantity!}
         />
       </div>
       <Section>
@@ -58,3 +66,12 @@ export default function Home() {
     </main>
   );
 }
+
+const useInitialCardValues = (lang: string) =>
+  useQuery<InitialCardValues>({
+    queryKey: ["initial-card-data", lang],
+    queryFn: () =>
+      axios.get("/api/initial-card-values").then((res) => {
+        return res.data;
+      }),
+  });

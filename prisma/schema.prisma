@@ -129,7 +129,8 @@ model experience_time {
 
 model languages {
   id                Int                 @id @default(autoincrement())
-  code              String
+  code_en           String?
+  code_pt           String?
   name_en           String
   name_pt           String
   experts_languages experts_languages[]
@@ -390,7 +391,8 @@ model experts {
   company                            String
   position_held                      String
   experience_time_id                 Int
-  experience_with_startups           String?
+  experience_with_startups_pt        String?
+  experience_with_startups_en        String?
   participation_acceleration_program String
   plan                               String               @default("free")
   is_deleted                         Boolean              @default(false)

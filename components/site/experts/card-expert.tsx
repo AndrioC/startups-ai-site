@@ -3,15 +3,13 @@ import { TbMessage2 } from "react-icons/tb";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { infoFlags } from "@/app/(site)/data";
 import userPlaceHolder from "@/assets/user-placeholder.jpeg";
 
 export interface CardExpertProps {
   name: string;
-  last_name: string;
   linkedin: string;
   description: string | null;
-  languages: string;
+  languages: string[];
   work_field: string[];
   country: string;
   photo: string | null;
@@ -20,7 +18,6 @@ export interface CardExpertProps {
 
 export default function CardExpert({
   name,
-  last_name,
   linkedin,
   description,
   languages,
@@ -30,6 +27,11 @@ export default function CardExpert({
   flag,
 }: CardExpertProps) {
   const t = useTranslations("Expert");
+  let newLink = linkedin;
+
+  if (!/^https?:\/\//i.test(linkedin)) {
+    newLink = "https://" + linkedin;
+  }
 
   return (
     <div className="border-4 border-gray-200 p-4 w-[370px] rounded-[100px] lg:h-[550px] flex flex-col justify-center">
@@ -46,9 +48,7 @@ export default function CardExpert({
               />
             </div>
             <div className="flex mt-2">
-              <span className="text-xs font-semibold">
-                {name + " " + last_name}
-              </span>
+              <span className="text-xs font-semibold">{name}</span>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function CardExpert({
             <Image
               width={25}
               height={25}
-              src={infoFlags[flag]}
+              src={flag}
               alt={country}
               style={{ width: "25px", height: "25px" }}
             />
@@ -65,9 +65,9 @@ export default function CardExpert({
           </div>
           <div className="flex items-center">
             <TbMessage2 size={30} className="text-gray-500 -ml-0.5" />
-            <span className="ml-2">{languages}</span>
+            <span className="ml-2">{languages.join(" - ")}</span>
           </div>
-          <a href={linkedin} target="_blank" rel="noreferrer">
+          <a href={newLink} target="_blank" rel="noreferrer">
             <SiLinkedin size={30} className="text-blue-500" />
           </a>
         </div>

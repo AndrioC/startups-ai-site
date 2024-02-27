@@ -2,40 +2,28 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
-import { ExpertProps, expertsList } from "@/app/(site)/data";
 import { ExpertsEbooksProps } from "@/app/api/ebooks/experts/route";
+import { ExpertSummary } from "@/app/api/experts/route";
 import CardExpert from "@/components/site/experts/card-expert";
 import EbookView from "@/components/site/experts/ebook-view";
-import HeaderExpertsFilter, {
-  HeaderExpertsFiltersProps,
-} from "@/components/site/experts/header-experts-filter";
+import HeaderExpertsFilter from "@/components/site/experts/header-experts-filter";
 import NotFoundExperts from "@/components/site/experts/not-found-experts";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 interface Props {
+  data: ExpertSummary[];
   dataEbooks: ExpertsEbooksProps[];
 }
 
-export default function ExpertPageComponent({ dataEbooks }: Props) {
+export default function ExpertPageComponent({ data, dataEbooks }: Props) {
   const t = useTranslations("Expert");
-  const lang = useLocale();
-  const [filteredData, setFilteredData] = useState(expertsList);
+  const [filteredData, setFilteredData] = useState(data);
   const [isLoading, setIsLoading] = useState(true);
 
-  const dataExperts: HeaderExpertsFiltersProps[] = expertsList.map((value) => ({
-    ...value,
-    description: lang === "en" ? value.description_en : value.description_pt,
-    languages: lang === "en" ? value.languages_en : value.languages_pt,
-    languages_array:
-      lang === "en" ? value.languages_en_array : value.languages_pt_array,
-    work_field: lang === "en" ? value.work_field_en : value.work_field_pt,
-    country: lang === "en" ? value.country_en : value.country_pt,
-  }));
-
-  const handleFilterChange = async (filteredData: ExpertProps[]) => {
+  const handleFilterChange = async (filteredData: ExpertSummary[]) => {
     setIsLoading(true);
     await new Promise((resolve) => setTimeout(resolve, 500));
     setFilteredData(filteredData);
@@ -68,7 +56,7 @@ export default function ExpertPageComponent({ dataEbooks }: Props) {
           </Link>
         </div>
         <HeaderExpertsFilter
-          dataSource={dataExperts}
+          dataSource={data}
           setFilteredData={handleFilterChange}
         />
       </div>
@@ -126,20 +114,13 @@ export default function ExpertPageComponent({ dataEbooks }: Props) {
                 <CardExpert
                   key={value.id}
                   name={value.name}
-                  last_name={value.last_name}
                   linkedin={value.linkedin}
-                  description={
-                    lang === "en" ? value.description_en : value.description_pt
-                  }
-                  languages={
-                    lang === "en" ? value.languages_en : value.languages_pt
-                  }
-                  work_field={
-                    lang === "en" ? value.work_field_en : value.work_field_pt
-                  }
-                  country={lang === "en" ? value.country_en : value.country_pt}
-                  photo={value.photo}
-                  flag={value.flag}
+                  description={value.description}
+                  languages={value.languages_code}
+                  work_field={value.work_field}
+                  country={value.country}
+                  photo={value.picture_img_url}
+                  flag={value.country_flag}
                 />
               ))}
             </div>
