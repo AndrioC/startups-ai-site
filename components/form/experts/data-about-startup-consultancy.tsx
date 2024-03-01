@@ -286,7 +286,7 @@ export default function DataAboutStartupConsultancy({ data }: Props) {
           disabled={isSubmiting}
           className="px-6 text-white rounded-md"
         >
-          {t("startups-form.startup-form-next-button")}
+          {t("startups-form.startup-form-finish-button")}
         </Button>
       </div>
     </form>

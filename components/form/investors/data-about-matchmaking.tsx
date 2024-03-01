@@ -198,7 +198,7 @@ export default function DataAboutMatchingMaking() {
           disabled={isSubmiting}
           className="px-6 text-white rounded-md"
         >
-          {t("investors-form.investor-form-next-button")}
+          {t("investors-form.investor-form-finish-button")}
         </Button>
       </div>
     </form>
