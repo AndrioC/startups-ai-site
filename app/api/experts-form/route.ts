@@ -44,7 +44,8 @@ export async function POST(request: NextRequest) {
           company: data.company,
           position_held: data.positionHeld,
           experience_time_id: Number(data.experienceTime),
-          experience_with_startups: data.experienceWithStartups,
+          experience_with_startups_pt: data.experienceWithStartups,
+          experience_with_startups_en: data.experienceWithStartups,
           participation_acceleration_program:
             data.participationAccelerationProgram,
           free_subscription_expires_at:
