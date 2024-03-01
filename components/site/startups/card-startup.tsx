@@ -64,7 +64,16 @@ export default function CardStartup({
         </div>
       </div>
       <div className="px-5">
-        <p className="font-normal text-xs text-gray-500">{value_proposal}</p>
+        <p
+          className="font-normal text-xs text-gray-500 text-ellipsis overflow-hidden"
+          style={{
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+          }}
+        >
+          {value_proposal}
+        </p>
       </div>
       <div
         id="footer"
