@@ -67,19 +67,13 @@ export default function Home() {
   );
 }
 
-const useInitialCardValues = (lang: string) => {
-  const cacheBuster = Date.now();
-
-  return useQuery<InitialCardValues>({
-    queryKey: ["initial-card-data", lang, cacheBuster],
+const useInitialCardValues = (lang: string) =>
+  useQuery<InitialCardValues>({
+    queryKey: ["initial-card-data", lang],
     queryFn: () =>
-      axios
-        .get("/api/initial-card-values", { params: { cacheBuster } })
-        .then((res) => {
-          return res.data;
-        }),
-    refetchOnMount: false,
-    refetchOnWindowFocus: false,
+      axios.get("/api/initial-card-values").then((res) => {
+        return res.data;
+      }),
+    refetchOnMount: true,
     staleTime: 0,
   });
-};
