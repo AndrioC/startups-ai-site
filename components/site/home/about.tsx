@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 
 import abipirLogo from "@/assets/img/logos/abipir-logo.svg";
