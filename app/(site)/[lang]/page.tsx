@@ -26,7 +26,7 @@ export default function Home() {
 
   console.log("lang", lang);
 
-  const { data: initialCardValuesData } = useInitialCardValues(lang);
+  const { data: initialCardValuesData } = useInitialCardValues();
   const { data, isLoading: isLoadingStartups } = useStartups(lang);
   console.log("HERE: ", initialCardValuesData);
 
@@ -37,7 +37,7 @@ export default function Home() {
         <CountUpNumbers
           title={t("countup-startup-title")}
           img={startupImage}
-          value={data?.length!}
+          value={initialCardValuesData?.startups_quantity!}
         />
         <CountUpNumbers
           title={t("countup-experts-title")}
@@ -72,18 +72,13 @@ export default function Home() {
   );
 }
 
-const useInitialCardValues = (lang: string) =>
+const useInitialCardValues = () =>
   useQuery<InitialCardValues>({
-    queryKey: ["initial-card-data", lang],
+    queryKey: ["initial-card-data"],
     queryFn: () =>
-      fetch("/api/initial-card-values").then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
+      axios.get("/api/initial-card-values").then((res) => {
+        return res.data;
       }),
-    staleTime: 0,
-    refetchOnMount: "always",
   });
 
 const useStartups = (lang: string) =>
