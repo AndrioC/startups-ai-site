@@ -69,7 +69,7 @@ export default function Home() {
 
 const useInitialCardValues = (lang: string) =>
   useQuery<InitialCardValues>({
-    queryKey: ["initial-card-data", lang],
+    queryKey: ["initial-card-data"],
     queryFn: () =>
       axios.get("/api/initial-card-values").then((res) => {
         return res.data;
