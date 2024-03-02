@@ -40,11 +40,14 @@ export default function CountUpComponent({ data }: Props) {
   );
 }
 
-const useInitialCardValues = (lang: string) =>
-  useQuery<InitialCardValues>({
+const useInitialCardValues = (lang: string) => {
+  console.log("Chave de consulta:", ["initial-card-data", lang]); // Adicione esta linha aqui
+
+  return useQuery<InitialCardValues>({
     queryKey: ["initial-card-data", lang],
     queryFn: () =>
       axios.get("/api/initial-card-values").then((res) => {
         return res.data;
       }),
   });
+};
