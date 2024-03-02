@@ -18,6 +18,7 @@ import Subscription from "@/components/site/home/subscription";
 import WhyChooseUs from "@/components/site/home/why-choose-us";
 
 import { InitialCardValues } from "../../api/initial-card-values/route";
+import { StartupSummary } from "../../api/startups/route";
 
 export default function Home() {
   const lang = useLocale();
@@ -26,6 +27,7 @@ export default function Home() {
   console.log("lang", lang);
 
   const { data: initialCardValuesData } = useInitialCardValues(lang);
+  const { data, isLoading: isLoadingStartups } = useStartups(lang);
   console.log("HERE: ", initialCardValuesData);
 
   return (
@@ -35,7 +37,7 @@ export default function Home() {
         <CountUpNumbers
           title={t("countup-startup-title")}
           img={startupImage}
-          value={initialCardValuesData?.startups_quantity!}
+          value={data?.length!}
         />
         <CountUpNumbers
           title={t("countup-experts-title")}
@@ -82,4 +84,13 @@ const useInitialCardValues = (lang: string) =>
       }),
     staleTime: 0,
     refetchOnMount: "always",
+  });
+
+const useStartups = (lang: string) =>
+  useQuery<StartupSummary[]>({
+    queryKey: ["startups-data", lang],
+    queryFn: () =>
+      axios.get(`/api/startups?lang=${lang}`).then((res) => {
+        return res.data;
+      }),
   });
