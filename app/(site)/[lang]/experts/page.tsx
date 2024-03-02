@@ -13,8 +13,6 @@ export default function ExpertPage() {
 
   const { data: expertsData, isLoading: isLoadingExperts } = useExperts(lang);
 
-  console.log("expertsData", expertsData);
-
   const { data: expertsEbooksData, isLoading: isExpertsEbooks } =
     useEbooksExperts(lang);
 
