@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -16,6 +16,10 @@ interface Props {
 export default function CountUpComponent({ data }: Props) {
   const t = useTranslations("Home");
   const lang = useLocale();
+
+  const queryClient = useQueryClient();
+
+  queryClient.invalidateQueries({ queryKey: ["initial-card-data", lang] });
 
   const { data: initialCardValuesData } = useInitialCardValues(lang);
 
