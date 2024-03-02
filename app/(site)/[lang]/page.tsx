@@ -70,14 +70,11 @@ export default function Home() {
 
 const useInitialCardValues = (lang: string) =>
   useQuery<InitialCardValues>({
-    queryKey: ["initial-card-data"],
+    queryKey: ["initial-card-data", lang],
     queryFn: () =>
-      axios
-        .get("/api/initial-card-values", {
-          headers: { "Cache-Control": "no-cache" },
-        })
-        .then((res) => {
-          return res.data;
-        }),
+      axios.get("/api/initial-card-values").then((res) => {
+        return res.data;
+      }),
     staleTime: 0,
+    refetchOnMount: "always",
   });
