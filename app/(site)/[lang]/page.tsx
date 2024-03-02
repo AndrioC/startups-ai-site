@@ -75,5 +75,5 @@ const useInitialCardValues = (lang: string) =>
       axios.get("/api/initial-card-values").then((res) => {
         return res.data;
       }),
-    refetchOnMount: "always",
+    staleTime: 0,
   });
