@@ -16,7 +16,7 @@ export default async function Home() {
     },
   });
 
-  const expertsQuantity = await prisma.startups.count({
+  const expertsQuantity = await prisma.experts.count({
     where: {
       is_approved: true,
     },
