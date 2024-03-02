@@ -1,4 +1,5 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -9,19 +10,15 @@ import startupImage from "@/assets/img/plans-rocket-image.svg";
 
 import CountUpNumbers from "./countup-numbers";
 
-interface Props {
-  data?: InitialCardValues;
-}
-
-export default function CountUpComponent({ data }: Props) {
+export default function CountUpComponent() {
   const t = useTranslations("Home");
   const lang = useLocale();
 
-  const queryClient = useQueryClient();
+  const { data: initialCardValuesData, refetch } = useInitialCardValues(lang);
 
-  queryClient.invalidateQueries({ queryKey: ["initial-card-data", lang] });
-
-  const { data: initialCardValuesData } = useInitialCardValues(lang);
+  useEffect(() => {
+    refetch();
+  }, [lang]);
 
   return (
     <div className="container grid sm:grid-cols-1 md:grid-cols-3 w-[300px] md:w-[500px] gap-y-3 place-items-center">
@@ -44,14 +41,11 @@ export default function CountUpComponent({ data }: Props) {
   );
 }
 
-const useInitialCardValues = (lang: string) => {
-  console.log("Chave de consulta:", ["initial-card-data", lang]); // Adicione esta linha aqui
-
-  return useQuery<InitialCardValues>({
+const useInitialCardValues = (lang: string) =>
+  useQuery<InitialCardValues>({
     queryKey: ["initial-card-data", lang],
     queryFn: () =>
       axios.get("/api/initial-card-values").then((res) => {
         return res.data;
       }),
   });
-};
