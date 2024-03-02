@@ -72,8 +72,12 @@ const useInitialCardValues = (lang: string) =>
   useQuery<InitialCardValues>({
     queryKey: ["initial-card-data"],
     queryFn: () =>
-      axios.get("/api/initial-card-values").then((res) => {
-        return res.data;
-      }),
+      axios
+        .get("/api/initial-card-values", {
+          headers: { "Cache-Control": "no-cache" },
+        })
+        .then((res) => {
+          return res.data;
+        }),
     staleTime: 0,
   });
