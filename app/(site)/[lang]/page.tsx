@@ -24,6 +24,7 @@ export default function Home() {
   const t = useTranslations("Home");
 
   const { data: initialCardValuesData } = useInitialCardValues(lang);
+  console.log("HERE: ", initialCardValuesData);
 
   return (
     <main>
