@@ -23,6 +23,8 @@ export default function Home() {
   const lang = useLocale();
   const t = useTranslations("Home");
 
+  console.log("lang", lang);
+
   const { data: initialCardValuesData } = useInitialCardValues(lang);
   console.log("HERE: ", initialCardValuesData);
 
@@ -72,8 +74,11 @@ const useInitialCardValues = (lang: string) =>
   useQuery<InitialCardValues>({
     queryKey: ["initial-card-data", lang],
     queryFn: () =>
-      axios.get("/api/initial-card-values").then((res) => {
-        return res.data;
+      fetch("/api/initial-card-values").then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
       }),
     staleTime: 0,
     refetchOnMount: "always",
