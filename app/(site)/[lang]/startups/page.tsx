@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 
 import { StartupsEbooksProps } from "@/app/api/ebooks/startups/route";
 import { StartupSummary } from "@/app/api/startups/route";
-import StartuPageComponent from "@/components/site/startups/startup-page";
+import StartupPageComponent from "@/components/site/startups/startup-page";
 
 export default function StartupsPage() {
   const lang = useLocale();
@@ -23,7 +23,7 @@ export default function StartupsPage() {
 
   return (
     <main>
-      <StartuPageComponent
+      <StartupPageComponent
         data={data!}
         ebooksStartupsData={ebooksStartupsData!}
       />

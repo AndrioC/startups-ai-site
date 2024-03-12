@@ -46,7 +46,8 @@ export async function POST(request: NextRequest) {
           only_investing_startup_origin_country:
             data.onlyInvestingStartupOriginCountry,
           logo_img: "",
-          mini_description: data.miniDescription,
+          mini_description_en: data.miniDescription,
+          mini_description_pt: data.miniDescription,
           investiment_text: data.investimentText,
           example_invested_startups: data.exampleInvestedStartups,
           is_patent_required: data.isPatentRequired,

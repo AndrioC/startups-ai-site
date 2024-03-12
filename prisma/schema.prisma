@@ -301,7 +301,8 @@ model investors {
   pre_requisite_team                          String?
   only_investing_startup_origin_country       String
   logo_img                                    String
-  mini_description                            String
+  mini_description_en                         String
+  mini_description_pt                         String
   investiment_text                            String
   example_invested_startups                   String?
   is_patent_required                          String

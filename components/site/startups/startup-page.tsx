@@ -19,7 +19,7 @@ interface Props {
   ebooksStartupsData: StartupsEbooksProps[];
 }
 
-export default function StartuPageComponent({
+export default function StartupPageComponent({
   data,
   ebooksStartupsData,
 }: Props) {
