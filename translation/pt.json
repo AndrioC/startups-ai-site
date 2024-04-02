@@ -2,7 +2,7 @@
   "Home": {
     "nav-title-plans": "Planos",
     "nav-title-investors": "Investidores",
-    "nav-title-experts": "Especialistas",
+    "nav-title-experts": "Mentores",
     "nav-title-about": "Sobre",
 
     "hero-sub-title": "Plataforma de negócios para Startups com Inteligência Artificial.",
@@ -11,7 +11,7 @@
     "hero-button-subscription": "Inscrição",
 
     "countup-startup-title": "Startups",
-    "countup-experts-title": "Especialistas",
+    "countup-experts-title": "Mentores",
     "countup-country-title": "Países",
     "countup-matches-title": "Matches",
 
@@ -32,7 +32,7 @@
     "subscription-second-text": "As Startups qualificadas passarão a integrar o plano 'Free' que lhes darão o direito de exibirem os seus dados na plataforma e receberem um 'Certificado de Membro Júnior' e daí continuarão a sua jornada.",
     "subscription-startups-subscription-button": "Inscrição para Startups",
     "subscription-investors-subscription-button": "Inscrição para Investidores",
-    "subscription-experts-subscription-button": "Inscrição para Especialistas",
+    "subscription-experts-subscription-button": "Inscrição para Mentores",
 
     "our-solutions-title": "SOBRE O PROGRAMA",
     "our-solutions-first-text": "O propósito do Programa é de contribuir para o aumento das taxas de sobrevivência das Startups por propiciar às mesmas realizar conexões de valor para o crescimento e escalabilidade do seu negócio.",
@@ -111,7 +111,7 @@
   },
 
   "Expert": {
-    "expert-header-learn-more-text": "Saiba mais sobre o nosso programa para Especialistas",
+    "expert-header-learn-more-text": "Saiba mais sobre o nosso programa para Mentores",
     "expert-header-subscription-button-text": "Fazer meu cadastro",
 
     "header-filter-language": "Idioma",
@@ -119,7 +119,7 @@
     "header-filter-clear": "Limpar filtros",
 
     "search-found-text-first": "Foram encontrados",
-    "search-found-experts-text": "especialistas",
+    "search-found-experts-text": "mentores",
     "search-found-text-second": "com base nos filtros acima",
 
     "no-description-card-text": "Sem descrição",
@@ -143,7 +143,7 @@
         "third-paragraph": "T&C dão a você, como proprietário do site, a possibilidade de se proteger contra possíveis exposições jurídicas. Porém, isso pode diferir de jurisdição para jurisdição, então procure orientação jurídica local se pretender se proteger de exposição jurídica."
       },
       "third-term-title": "O que inclui o programa de aceleração",
-      "third-term-text": "O programa de aceleração pode incluir uma variedade de recursos e benefícios para ajudar as startups a crescerem e terem sucesso. Isso pode incluir mentoria de especialistas do setor, acesso a investidores e clientes em todo o mundo, suporte técnico e recursos financeiros. Cada programa de aceleração é único e pode oferecer recursos diferentes. Para saber mais sobre o que o programa de aceleração Startups Global Link oferece, visite a nossa página de recursos.",
+      "third-term-text": "O programa de aceleração pode incluir uma variedade de recursos e benefícios para ajudar as startups a crescerem e terem sucesso. Isso pode incluir mentoria de mentor do setor, acesso a investidores e clientes em todo o mundo, suporte técnico e recursos financeiros. Cada programa de aceleração é único e pode oferecer recursos diferentes. Para saber mais sobre o que o programa de aceleração Startups Global Link oferece, visite a nossa página de recursos.",
       "last-update": "Última atualização: 02 de Dezembro de 2023"
     },
     "privacy-policy": {
@@ -276,7 +276,7 @@
     "plan-startup-fourth-feature-premium": "Descontos nas consultorias, curso e eventos",
     "plan-startup-fifth-feature-premium": "Descontos exclusivos oferecidos por empresas parceiras",
 
-    "plan-expert-title": "Especialista",
+    "plan-expert-title": "Mentor",
 
     "plan-expert-price-free": "R$ 0",
     "plan-expert-price-premium": "R$ 99",
@@ -320,9 +320,9 @@
     "plan-startups-subscription-free-plan-text": "Inscreva-se no plano free",
     "plan-startups-subscription-premium-plan-text": "Assinar o plano premium",
 
-    "plan-learn-more-experts-title": "SEJA UM ESPECIALISTA DE NEGÓCIOS DE STARTUPS",
+    "plan-learn-more-experts-title": "SEJA UM MENTOR DE NEGÓCIOS DE STARTUPS",
     "plan-learn-more-experts-first-text": "O objetivo do nosso Programa é ajudar as Startups a sobreviverem mais tempo, criando oportunidades para ela se conectar com pessoas e empresas que podem ajudá-las a crescerem e escalarem seus negócios.",
-    "plan-learn-more-experts-second-text": "E você pode ser o Especialista de Negócios de Startups que elas precisam.",
+    "plan-learn-more-experts-second-text": "E você pode ser o Mentor de Negócios de Startups que elas precisam.",
 
     "plan-learn-more-experts-first-section-title": "CONHEÇA O PLANO FREE",
     "plan-learn-more-experts-first-section-first-text": "Neste plano, você terá os seguintes benefícios:",
@@ -333,7 +333,7 @@
     "plan-learn-more-experts-second-section-second-text": "Neste plano, você terá os seguintes benefícios:",
 
     "plan-learn-more-experts-second-section-first-bullet": "Todos os benefícios do plano free",
-    "plan-learn-more-experts-second-section-second-bullet": "Certificado Internacional de Especialista de Negócio em Startups, credeciado pela IFIA.",
+    "plan-learn-more-experts-second-section-second-bullet": "Certificado Internacional de Mentor de Negócio em Startups, credeciado pela IFIA.",
     "plan-learn-more-experts-second-section-third-bullet": "Prospecção global, com uso de Inteligência Artificial, em mais de 80 países no mundo",
     "plan-learn-more-experts-second-section-fourth-bullet": "Você poderá ser conectado com Startups, Empresas e Governos para prestar seus serviços de consultorias ou mentorias, conforme a demanada.",
 
@@ -369,10 +369,10 @@
         "text-03": "Alinhado neste propósito, criamos o Programa IFIA-ABIPIR de Conexões Globais de Startups, que visa conectar startups com potenciais investidores, parceiros comerciais como inventores, pesquisadores acadêmicos e outras startups e clientes.",
         "text-04": "Temos o apoio do maior e mais importante programa de aceleração para startups da América Latina, o InovativaHub, criado pelo Ministério do Desenvolvimento, Indústria, Comércio e Serviços do Governo Brasileiro e também do Founder Institute, o maior programa de aceleração de Startups no estágio pré-seed do mundo, tendo sido criado no Vale do Silício.",
         "text-05": "A IFIA possui uma rede enorme e qualificada presente em mais de 70 países e pode ajudá-lo a alcançar seus objetivos e ajudar o mundo a ser um lugar melhor, usando suas soluções para resolver desafios e, simultaneamente, contribuindo para o crescimento da economia local, aumentando empregos, receitas e oferecendo às pessoas a possibilidade de ter uma melhor qualidade de vida.",
-        "text-06": "As Startups do Brasil e do exterior serão selecionadas após o preenchimento do formulário de inscrição e as respostas serem analisadas por membros da equipe de especialistas do Departamento de Startups da IFIA quanto aos critérios técnicos, e, uma vez aprovado o perfill a Startup receberá um certificado do primeiro estágio da 'Jornada do Programa Startups Global Link' como 'Membro Júnior da Comunidade SGL'. A medida que a Startup for cumprindo as missões que serão definidas pela Coordenação do Programa ela poderá avançar de estágio passando pelas fases de 'Membro Pleno', 'Membro Senior' e 'Membro Master'.",
+        "text-06": "As Startups do Brasil e do exterior serão selecionadas após o preenchimento do formulário de inscrição e as respostas serem analisadas por membros da equipe de experts do Departamento de Startups da IFIA quanto aos critérios técnicos, e, uma vez aprovado o perfill a Startup receberá um certificado do primeiro estágio da 'Jornada do Programa Startups Global Link' como 'Membro Júnior da Comunidade SGL'. A medida que a Startup for cumprindo as missões que serão definidas pela Coordenação do Programa ela poderá avançar de estágio passando pelas fases de 'Membro Pleno', 'Membro Senior' e 'Membro Master'.",
         "text-07": "Além destas certificações  agregarem muito valor ao negócio facilitando o acesso aos investidores, a Startup será incluída nos processos de business matchmaking com potenciais investidores, Startups que podem se tornar parceiros de negócios e clientes prospectados pela Departamento de 'Global Innovation Scouting' da Coordenação do Programa em diversos Países.",
         "text-08": "Além desta certificação agregar muito valor ao seu negócio, facilitando o acesso a investidores, sua startup será incluída nos processos de matchmaking de negócios com potenciais investidores, parceiros comerciais e clientes prospectados pela equipe da IFIA em vários países.",
-        "text-09": "Além da possibilidade de conexão com estes atores acima mencionados, a sua Startup poderá se conectar com os especialistas credenciados pelo Programa que poderão a alavancar o seu negócio em diversas áreas de acordo com a necessidade do seu negócio.",
+        "text-09": "Além da possibilidade de conexão com estes atores acima mencionados, a sua Startup poderá se conectar com os mentores credenciados pelo Programa que poderão a alavancar o seu negócio em diversas áreas de acordo com a necessidade do seu negócio.",
         "text-10": "Uma vez identificada uma potencial correspondência, a equipe da IFIA entrará em contato com o responsável pela sua startup para confirmar o interesse e, caso seja validado, será assinado um contrato de representação comercial baseado em resultados entre as partes.",
         "text-11": "É importante lembrar que seus dados serão protegidos com sigilo e confidencialidade mantidos pela Lei Geral de Proteção de Dados Pessoais do Brasil, e que serão utilizados com o objetivo principal do Programa, que é buscar oportunidades para as startups participantes a partir do cruzamento de dados (business matchmaking). Ao enviar o formulário, você automaticamente nos concede permissão para usar seus dados para este fim, pois o que queremos é ajudar a levar seu negócio a um nível de excelência.",
         "text-12": "Pedimos a sua compreensão e paciência para responder a este questionário que pode parecer um pouco longo mas isso é para o próprio bem da Startup, visto que, quanto mais informações o nosso time de 'Global Innovation Scouting' tiver acesso, mais fácil, rápida e assertiva será a conexão com potenciais parceiros de negócios (Startups), Investidores e clientes.",
@@ -505,7 +505,7 @@
         "text-01": "Olá caro investidor(a), bem-vindo à rede de investidores Startups Global Link!",
         "text-02": "A Startups Global Link é a Startup Brasileira responsável pela execução do “Programa IFIA-ABIPIR de Conexões Globais de Startups” que tem como propósito contribuir para a redução das altíssimas taxas de mortalidade de Startups no Brasil e em outros países (Saiba mais: https://www.ifia.com/startups-department/).",
         "text-03": "A International Federation of Inventors Association - IFIA possui uma rede enorme e qualificada presente em mais de 70 países e pode ajudá-lo a alcançar seus objetivos e ajudar o mundo a ser um lugar melhor, usando suas soluções para resolver desafios e, simultaneamente, contribuindo para o crescimento da economia local, aumentando empregos, receitas e oferecendo às pessoas a possibilidade de ter uma melhor qualidade de vida.",
-        "text-04": "A estratégia utilizada para alcançar este objetivo consiste na criação de conexões de valor das Startups potenciais clientes, investidores, parceiros comerciais (Startups e Pesquisadores Acadêmicos) e Especialistas em negócios de Startups.",
+        "text-04": "A estratégia utilizada para alcançar este objetivo consiste na criação de conexões de valor das Startups potenciais clientes, investidores, parceiros comerciais (Startups e Pesquisadores Acadêmicos) e Mentores em negócios de Startups.",
         "text-05": "Nosso principal objetivo é selecionar Startups, por meio do nosso serviço de prospecção com Inteligência Artificial, que atendam à sua tese de investimentos tanto no Brasil quanto nos mais de 70 países em que a IFIA está representada, caso o seu fundo tenha Startups internacionais como tese de investimento.",
         "text-06": "Temos o apoio do maior e mais importante programa de aceleração para startups da América Latina, o Inovativa Hub, criado pelo Ministério do Desenvolvimento, Indústria, Comércio e Serviços do Governo Brasileiro e também do Founder Institute, o maior programa de aceleração de Startups no estágio pré-seed do mundo, tendo sido criado no Vale do Silício.",
         "text-07": "Uma vez identificada uma potencial correspondência, a equipe do Programa da IFIA entrará em contato com o responsável pela startup para confirmar o interesse e, caso seja validado, será assinado um contrato de intermediação estratégica de negócios baseado em resultados entre as partes.",
@@ -587,23 +587,23 @@
       "error-when-image-is-too-large": "Tamanho máximo de arquivo é de 1Mb",
       "experts-form-presentation": {
         "title": "Sobre o programa",
-        "text-01": "Olá caro candidato a Especialista em negócios do 'Programa IFIA-ABIPIR de conexões globais para Startups', seja muito bem-vindo ao Departamento de Startups da international Federation of Inventors' Association - IFIA!",
+        "text-01": "Olá caro candidato a Mentor em negócios do 'Programa IFIA-ABIPIR de conexões globais para Startups', seja muito bem-vindo ao Departamento de Startups da international Federation of Inventors' Association - IFIA!",
         "text-02": "Nosso principal objetivo é ajudar as Startups a alavancarem os seus negócios conectando-as à potenciais investidores, clientes e parceiros comerciais nos mais de 70 países em que a IFIA está representada.",
         "text-03": "Alinhado a esse propósito, criamos o 'Programa IFIA-ABIPIR de conexões globais para Startups' que é o Programa coordenado pela IFIA e pela ABIPIR (Associação Brasil Internacional de Inventores, Cientistas e Empreendedores Inovadores) e consiste na aceleração internacional e conexões globais de Startups obtendo vantagem da poderosa rede de conexões internacionais da IFIA. O programa será coordenado pelo Escritório Latino Americano da IFIA-ABIPIR, sessão São Paulo.",
         "text-04": "A operação do Programa ficará a cargo da Startup Brasileira credenciada pela IFIA, a 'Startups Global Link'",
         "text-05": "Contamos com o apoio institucional do Hub Inovativa que é responsável pela coordenação dos maiores e mais importantes programas de aceleração de Startups da América Latina, o Inovativa Brasil e o Inovativa de Impacto, realizados pelo Ministério do Desenvolvimento, Indústria, Comércio e Serviços do Governo Brasileiro e Sebrae Nacional e executados pela Fundação CERTI em coexecução da ABStartups e Impact Hub e também com do Founders Institute, o maior programa de aceleração pré-seed do mundo, tendo sido criado no Vale do Silício",
         "text-06": "A IFIA possui uma enorme rede qualificada de associados, incluindo Universidades, Centros Tecnológicos e Hubs de inovação presente em mais de 70 países e pode ajudar as Startups a atingirem seus objetivos e tornar o mundo um lugar melhor usando suas tecnologias inovadoras para solucionar ou mitigar desafios e, simultaneamente, contribuir para o crescimento da economia local, aumentando empregos, renda e dando às pessoas a possibilidade de ter uma melhor qualidade de vida.",
-        "text-07": "As Startups do Brasil e do exterior serão selecionadas após o preenchimento do formulário de inscrição e as respostas serem analisadas por membros da equipe de especialistas do Departamento de Startups da IFIA quanto aos critérios técnicos, e, uma vez aprovado o perfill a Startup receberá um certificado do primeiro estágio da 'Jornada do Programa Startups Global Link' como 'Membro Júnior da Comunidade SGL'. A medida que a Startup for cumprindo as missões que serão definidas pela Coordenação do Programa ela poderá avançar de estágio passando pelas fases de 'Membro Pleno', 'Membro Senior' e 'Membro Master'.",
+        "text-07": "As Startups do Brasil e do exterior serão selecionadas após o preenchimento do formulário de inscrição e as respostas serem analisadas por membros da equipe de experts do Departamento de Startups da IFIA quanto aos critérios técnicos, e, uma vez aprovado o perfill a Startup receberá um certificado do primeiro estágio da 'Jornada do Programa Startups Global Link' como 'Membro Júnior da Comunidade SGL'. A medida que a Startup for cumprindo as missões que serão definidas pela Coordenação do Programa ela poderá avançar de estágio passando pelas fases de 'Membro Pleno', 'Membro Senior' e 'Membro Master'.",
         "text-08": "Além destas certificações  agregarem muito valor ao negócio facilitando o acesso aos investidores, a Startup será incluída nos processos de business matchmaking com potenciais investidores, Startups que podem se tornar parceiros de negócios e clientes prospectados pela Departamento de 'Global Innovation Scouting' da Coordenação do Programa em diversos Países.",
         "text-09": "Para tornar o processo de 'business-matchmaking' mais preciso e facilitar a geração de negócios, captação de investimentos e parcerias contamos com recursos avançados de Inteligência Artificial, fato que nos concede um diferencial competitivo em relação à iniciativas semelhantes no mercado além, evidentemente, do nosso alcance internacional.",
-        "text-10": "Para atingirmos estes objetivos contamos abrimos a oportunidade para especialistas em negócios de Startups do Brasil e de outros países em diversas áreas  que tenham interesse em participar do Programa ajudando as Startups a escalarem e internacionalizarem os seus negócios e, simultaneamente, gerando oportunidades de comercializar suas consultorias para  estas.",
+        "text-10": "Para atingirmos estes objetivos contamos abrimos a oportunidade para mentores em negócios de Startups do Brasil e de outros países em diversas áreas  que tenham interesse em participar do Programa ajudando as Startups a escalarem e internacionalizarem os seus negócios e, simultaneamente, gerando oportunidades de comercializar suas consultorias para  estas.",
         "text-11": "Você poderá aderir ao plano 'Free' no qual o seu nome, contatos e áreas de expertise serão divulgados na plataforma do Programa de forma 100% gratuita, podendo ser contactado por Startups Brasileiras e internacionais interessadas na consultoria ou ao plano 'Premium', no qual mediante o pagamento de uma mensalidade você terá prioridade e terá o nome indicado para a Startup que solicitar suporte à Coordenação do Programa.",
-        "text-12": "Os Especialistas que optarem pelo plano 'Premium' serão admitidos na 'Jornada do Programa Startups Global Link' que consiste em 4 estágios (Júnior, Pleno, Senior e Master) que serão gradativamente atingidos de acordo com as missões estabelecidas pela coordenação do Programa.",
-        "text-13": "Os Especialistas que aderirem à jornada receberão  um certificado internacional chancelado pela IFIA e ABIPIR que será atualizado à medida que estes atingirem uma graduação superior.",
+        "text-12": "Os Mentores que optarem pelo plano 'Premium' serão admitidos na 'Jornada do Programa Startups Global Link' que consiste em 4 estágios (Júnior, Pleno, Senior e Master) que serão gradativamente atingidos de acordo com as missões estabelecidas pela coordenação do Programa.",
+        "text-13": "Os Mentores que aderirem à jornada receberão  um certificado internacional chancelado pela IFIA e ABIPIR que será atualizado à medida que estes atingirem uma graduação superior.",
         "text-14": "É importante lembrar que os seus dados estarão protegidos com o sigilo e confidencialidade estabelecidos pelo Lei Geral de Proteção de Dados, e que os mesmos só serão utilizados com o propósito principal do Programa que é o de buscar oportunidades para as Startups participantes a partir do cruzamento de dados (business matchmaking).",
         "text-15": "Ao enviar o formulário você automaticamente nos concede a permissão de utilizar os seus dados para a finalidade de conectá-la(o) às Startups, pois oque queremos é ajudar a leva-las para um patamar de excelência.",
         "text-16": "Conheça mais o Programa visitando nossa página: https://www.ifia.com/startups-department/",
-        "text-17": "Desde já agradecemos o interesse em fazer parte como Especialista em Negócios do maior Ecossistema de Startups do mundo!"
+        "text-17": "Desde já agradecemos o interesse em fazer parte como Mentor em Negócios do maior Ecossistema de Startups do mundo!"
       },
       "experts-form-sign-up": {
         "title": "Cadastro de usuário",

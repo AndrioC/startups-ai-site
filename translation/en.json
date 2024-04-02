@@ -2,7 +2,7 @@
   "Home": {
     "nav-title-plans": "Plans",
     "nav-title-investors": "Investors",
-    "nav-title-experts": "Experts",
+    "nav-title-experts": "Mentors",
     "nav-title-about": "About",
 
     "hero-sub-title": "Business platform for Startups with Artificial Intelligence.",
@@ -11,7 +11,7 @@
     "hero-button-subscription": "Subscription",
 
     "countup-startup-title": "Startups",
-    "countup-experts-title": "Experts",
+    "countup-experts-title": "Mentors",
     "countup-country-title": "Countries",
     "countup-matches-title": "Matches",
 
@@ -38,7 +38,7 @@
     "subscription-second-text": "Qualified startups will become part of the 'Free' plan, which grants them the right to showcase their data on the platform, receive a 'Junior Member Certificate,' and then continue their journey.",
     "subscription-startups-subscription-button": "Startup Subscription",
     "subscription-investors-subscription-button": "Investors Subscription",
-    "subscription-experts-subscription-button": "Expert Subscription",
+    "subscription-experts-subscription-button": "Mentor Subscription",
 
     "about-title-first": "ABOUT",
     "about-title-second": "US",
@@ -111,7 +111,7 @@
   },
 
   "Expert": {
-    "expert-header-learn-more-text": "Learn more about our program for Experts",
+    "expert-header-learn-more-text": "Learn more about our program for Mentors",
     "expert-header-subscription-button-text": "Register my profile",
 
     "header-filter-language": "Language",
@@ -272,7 +272,7 @@
     "plan-startup-fourth-feature-premium": "Discounts on consultations, courses, and events",
     "plan-startup-fifth-feature-premium": "Exclusive discounts offered by partner companies",
 
-    "plan-expert-title": "Expert",
+    "plan-expert-title": "Mentor",
 
     "plan-expert-price-free": "$ 0",
     "plan-expert-price-premium": "$ 19",
@@ -317,7 +317,7 @@
 
     "plan-learn-more-experts-title": "BECOME A STARTUP BUSINESS EXPERT",
     "plan-learn-more-experts-first-text": "The goal of our Program is to help startups survive longer, creating opportunities for them to connect with people and companies that can help them grow and scale their businesses.",
-    "plan-learn-more-experts-second-text": "And you can be the Startup Business Expert they need.",
+    "plan-learn-more-experts-second-text": "And you can be the Startup Business Mentor they need.",
 
     "plan-learn-more-experts-first-section-title": "DISCOVER THE FREE PLAN",
     "plan-learn-more-experts-first-section-first-text": "In this plan, you will have the following benefits:",
@@ -328,7 +328,7 @@
     "plan-learn-more-experts-second-section-second-text": "In this plan, you will have the following benefits:",
 
     "plan-learn-more-experts-second-section-first-bullet": "All the benefits of the free plan",
-    "plan-learn-more-experts-second-section-second-bullet": "International Certification as a Startup Business Expert, accredited by IFIA.",
+    "plan-learn-more-experts-second-section-second-bullet": "International Certification as a Startup Business Mentor, accredited by IFIA.",
     "plan-learn-more-experts-second-section-third-bullet": "Global prospecting, using Artificial Intelligence, in over 80 countries worldwide",
     "plan-learn-more-experts-second-section-fourth-bullet": "You may be connected with startups, companies, and governments to provide your consultancy or mentoring services, as needed.",
 
