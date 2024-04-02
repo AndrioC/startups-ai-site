@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 
 import globeImage from "@/assets/img/globe-image.svg";
+import matchesImage from "@/assets/img/matches-count.svg";
 import expertImage from "@/assets/img/plans-expert-image.svg";
 import startupImage from "@/assets/img/plans-rocket-image.svg";
 
@@ -22,7 +23,7 @@ export default function CountUpComponent({
   const t = useTranslations("Home");
 
   return (
-    <div className="container grid sm:grid-cols-1 md:grid-cols-3 w-[300px] md:w-[500px] gap-y-3 place-items-center">
+    <div className="container grid sm:grid-cols-2 md:grid-cols-4 w-[200px] md:w-[650px] gap-y-4 place-items-center">
       <CountUpNumbers
         title={t("countup-startup-title")}
         img={startupImage}
@@ -37,6 +38,11 @@ export default function CountUpComponent({
         title={t("countup-country-title")}
         img={globeImage}
         value={countriesQuantity}
+      />
+      <CountUpNumbers
+        title={t("countup-matches-title")}
+        img={matchesImage}
+        value={startupsQuantity - 68}
       />
     </div>
   );
