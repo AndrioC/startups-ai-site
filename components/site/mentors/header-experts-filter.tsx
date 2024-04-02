@@ -4,7 +4,7 @@ import _ from "lodash";
 import { useTranslations } from "next-intl";
 
 import { ExpertProps } from "@/app/(site)/data";
-import { ExpertSummary } from "@/app/api/experts/route";
+import { ExpertSummary } from "@/app/api/mentors/route";
 import { Button } from "@/components/ui/button";
 import {
   Select,

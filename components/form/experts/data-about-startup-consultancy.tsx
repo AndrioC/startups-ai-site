@@ -8,7 +8,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { SelectDataProps } from "@/app/(site)/[lang]/form/experts/page";
+import { SelectDataProps } from "@/app/(site)/[lang]/form/mentors/page";
 import { Button } from "@/components/ui/button";
 import { useFormExpertState } from "@/contexts/FormExpertContext";
 import { DataStartupsConsultancySchema } from "@/lib/schema-experts";
@@ -109,7 +109,7 @@ export default function DataAboutStartupConsultancy({ data }: Props) {
     sendFormData.append("data", JSON.stringify(currentFormData));
     try {
       setIsSubmiting(true);
-      const response = await axios.post("/api/experts-form", sendFormData, {
+      const response = await axios.post("/api/mentors-form", sendFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

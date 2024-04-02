@@ -58,7 +58,7 @@ export default function PlansPage() {
     lang === "en" ? "/en/form/startups" : "/pt/form/startups";
 
   const linkExpertForm =
-    lang === "en" ? "/en/form/experts" : "/pt/form/experts";
+    lang === "en" ? "/en/form/mentors" : "/pt/form/mentors";
 
   const investorForm =
     lang === "en" ? "/en/form/investors" : "/pt/form/investors";

@@ -4,7 +4,7 @@ import prisma from "@/prisma/client";
 
 const BUCKET_SGL_EBOOKS = process.env.S3_SGL_EBOOKS;
 
-export type ExpertsEbooksProps = {
+export type MentorsEbooksProps = {
   id: number;
   title: string;
   img: string;
@@ -13,10 +13,10 @@ export type ExpertsEbooksProps = {
 
 export async function GET(
   req: NextRequest
-): Promise<NextResponse<ExpertsEbooksProps[]>> {
+): Promise<NextResponse<MentorsEbooksProps[]>> {
   const url = new URL(req.url);
   const lang = url.searchParams.get("lang");
-  const expertsEbooks: ExpertsEbooksProps[] = await prisma.ebooks
+  const mentorsEbooks: MentorsEbooksProps[] = await prisma.ebooks
     .findMany({
       select: {
         id: true,
@@ -29,17 +29,17 @@ export async function GET(
       },
       where: { type: "EXPERT" },
     })
-    .then((expertsEbooks) =>
-      expertsEbooks.map((expertEbook) => {
+    .then((mentorsEbooks) =>
+      mentorsEbooks.map((mentorEbook) => {
         const ebookTitle =
-          lang === "en" ? expertEbook.title_en : expertEbook.title_pt;
+          lang === "en" ? mentorEbook.title_en : mentorEbook.title_pt;
         const ebookImage =
-          lang === "en" ? expertEbook.img_en : expertEbook.img_pt;
+          lang === "en" ? mentorEbook.img_en : mentorEbook.img_pt;
 
         const ebookLink =
-          lang === "en" ? expertEbook.link_en : expertEbook.link_pt;
+          lang === "en" ? mentorEbook.link_en : mentorEbook.link_pt;
         return {
-          id: expertEbook.id,
+          id: mentorEbook.id,
           title: ebookTitle,
           img: `https://${BUCKET_SGL_EBOOKS}.s3.amazonaws.com/${ebookImage}`,
           link: `https://${BUCKET_SGL_EBOOKS}.s3.amazonaws.com/${ebookLink}`,
@@ -47,5 +47,5 @@ export async function GET(
       })
     );
 
-  return NextResponse.json(expertsEbooks, { status: 201 });
+  return NextResponse.json(mentorsEbooks, { status: 201 });
 }

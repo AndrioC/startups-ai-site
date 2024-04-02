@@ -28,7 +28,7 @@ export interface SelectDataProps {
   gender: gender[];
 }
 
-export default function FormExpertsPage() {
+export default function FormMentorsPage() {
   const { data, isLoading } = useSelectData();
 
   if (isLoading)

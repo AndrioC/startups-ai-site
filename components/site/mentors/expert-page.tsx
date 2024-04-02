@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { ExpertsEbooksProps } from "@/app/api/ebooks/experts/route";
-import { ExpertSummary } from "@/app/api/experts/route";
-import CardExpert from "@/components/site/experts/card-expert";
-import EbookView from "@/components/site/experts/ebook-view";
-import HeaderExpertsFilter from "@/components/site/experts/header-experts-filter";
-import NotFoundExperts from "@/components/site/experts/not-found-experts";
+import { ExpertsEbooksProps } from "@/app/api/ebooks/mentors/route";
+import { ExpertSummary } from "@/app/api/mentors/route";
+import CardExpert from "@/components/site/mentors/card-expert";
+import EbookView from "@/components/site/mentors/ebook-view";
+import HeaderExpertsFilter from "@/components/site/mentors/header-experts-filter";
+import NotFoundExperts from "@/components/site/mentors/not-found-experts";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 

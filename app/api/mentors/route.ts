@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 import prisma from "@/prisma/client";
 
-export type ExpertSummary = {
+export type MentorSummary = {
   id: number;
   name: string;
   country: string;
@@ -20,10 +20,10 @@ const BUCKET_FLAGS_NAME = process.env.S3_STARTUP_COUNTRY_FLAGS;
 
 export async function GET(
   req: NextRequest
-): Promise<NextResponse<ExpertSummary[]>> {
+): Promise<NextResponse<MentorSummary[]>> {
   const url = new URL(req.url);
   const lang = url.searchParams.get("lang");
-  const experts: ExpertSummary[] = await prisma.experts
+  const mentors: MentorSummary[] = await prisma.experts
     .findMany({
       select: {
         id: true,
@@ -47,32 +47,32 @@ export async function GET(
       },
       where: { is_approved: true },
     })
-    .then((experts) =>
-      experts.map((expert) => ({
-        id: expert.id,
-        name: expert.name,
+    .then((mentors) =>
+      mentors.map((mentor) => ({
+        id: mentor.id,
+        name: mentor.name,
         country:
           lang === "en"
-            ? expert.country?.name_en || "-"
-            : expert.country?.name_pt || "-",
-        country_flag: `https://${BUCKET_FLAGS_NAME}.s3.amazonaws.com/${expert.country?.code}.svg`,
-        linkedin: expert.linkedin,
-        picture_img_url: `https://${BUCKET_EXPERTS_LOGO}.s3.amazonaws.com/${expert.picture_img}`,
+            ? mentor.country?.name_en || "-"
+            : mentor.country?.name_pt || "-",
+        country_flag: `https://${BUCKET_FLAGS_NAME}.s3.amazonaws.com/${mentor.country?.code}.svg`,
+        linkedin: mentor.linkedin,
+        picture_img_url: `https://${BUCKET_EXPERTS_LOGO}.s3.amazonaws.com/${mentor.picture_img}`,
         description:
           lang === "en"
-            ? expert.experience_with_startups_en || "-"
-            : expert.experience_with_startups_pt || "-",
-        languages: expert.experts_languages?.map((language) =>
+            ? mentor.experience_with_startups_en || "-"
+            : mentor.experience_with_startups_pt || "-",
+        languages: mentor.experts_languages?.map((language) =>
           lang === "en"
             ? language.languages.name_en
             : language.languages.name_pt
         ),
-        languages_code: expert.experts_languages?.map((language) =>
+        languages_code: mentor.experts_languages?.map((language) =>
           lang === "en"
             ? language.languages?.code_en || "-"
             : language.languages?.code_pt || "-"
         ),
-        work_field: expert.experts_challenges?.map((language) =>
+        work_field: mentor.experts_challenges?.map((language) =>
           lang === "en"
             ? language.challenges.name_en
             : language.challenges.name_pt
@@ -80,5 +80,5 @@ export async function GET(
       }))
     );
 
-  return NextResponse.json(experts, { status: 201 });
+  return NextResponse.json(mentors, { status: 201 });
 }

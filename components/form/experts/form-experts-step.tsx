@@ -1,4 +1,4 @@
-import { SelectDataProps } from "@/app/(site)/[lang]/form/experts/page";
+import { SelectDataProps } from "@/app/(site)/[lang]/form/mentors/page";
 import DataAboutPersonalData from "@/components/form/experts/data-about-personal-data";
 import DataAboutProfessionalData from "@/components/form/experts/data-about-professional-data";
 import DataAboutStartupConsultancy from "@/components/form/experts/data-about-startup-consultancy";
