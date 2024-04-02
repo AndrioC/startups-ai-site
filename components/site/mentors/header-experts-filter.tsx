@@ -4,7 +4,7 @@ import _ from "lodash";
 import { useTranslations } from "next-intl";
 
 import { ExpertProps } from "@/app/(site)/data";
-import { ExpertSummary } from "@/app/api/mentors/route";
+import { MentorSummary } from "@/app/api/mentors/route";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -23,8 +23,8 @@ export interface HeaderExpertsFiltersProps extends ExpertProps {
 }
 
 interface Props {
-  dataSource: ExpertSummary[];
-  setFilteredData(data: ExpertSummary[]): void;
+  dataSource: MentorSummary[];
+  setFilteredData(data: MentorSummary[]): void;
 }
 
 export default function HeaderExpertsFilter({
@@ -126,7 +126,7 @@ export default function HeaderExpertsFilter({
   );
 }
 
-function setFilter(dataSource: ExpertSummary[]) {
+function setFilter(dataSource: MentorSummary[]) {
   const uniqueLanguages = _.uniq(
     dataSource.flatMap((language) => language.languages)
   );

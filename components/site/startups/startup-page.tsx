@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 
 import { StartupsEbooksProps } from "@/app/api/ebooks/startups/route";
 import { StartupSummary } from "@/app/api/startups/route";
-import EbookView from "@/components/site/mentors/ebook-view";
 import Container from "@/components/site/home/container";
+import EbookView from "@/components/site/mentors/ebook-view";
 import CardStartup from "@/components/site/startups/card-startup";
 import HeaderStartupsFilter from "@/components/site/startups/header-startups-filter";
 import NotFoundStartups from "@/components/site/startups/not-found-startups";

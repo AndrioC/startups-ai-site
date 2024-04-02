@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 
 import { MentorsEbooksProps } from "@/app/api/ebooks/mentors/route";
 import { MentorSummary } from "@/app/api/mentors/route";
-import ExpertPageComponent from "@/components/site/mentors/expert-page";
+import ExpertPageComponent from "@/components/site/mentors/mentor-page";
 
 export default function MentorPage() {
   const lang = useLocale();

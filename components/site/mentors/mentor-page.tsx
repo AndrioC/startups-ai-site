@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { ExpertsEbooksProps } from "@/app/api/ebooks/mentors/route";
-import { ExpertSummary } from "@/app/api/mentors/route";
+import { MentorsEbooksProps } from "@/app/api/ebooks/mentors/route";
+import { MentorSummary } from "@/app/api/mentors/route";
 import CardExpert from "@/components/site/mentors/card-expert";
 import EbookView from "@/components/site/mentors/ebook-view";
 import HeaderExpertsFilter from "@/components/site/mentors/header-experts-filter";
@@ -14,16 +14,16 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 interface Props {
-  data: ExpertSummary[];
-  dataEbooks: ExpertsEbooksProps[];
+  data: MentorSummary[];
+  dataEbooks: MentorsEbooksProps[];
 }
 
-export default function ExpertPageComponent({ data, dataEbooks }: Props) {
+export default function MentorPageComponent({ data, dataEbooks }: Props) {
   const t = useTranslations("Expert");
   const [filteredData, setFilteredData] = useState(data);
   const [isLoading, setIsLoading] = useState(true);
 
-  const handleFilterChange = async (filteredData: ExpertSummary[]) => {
+  const handleFilterChange = async (filteredData: MentorSummary[]) => {
     setIsLoading(true);
     await new Promise((resolve) => setTimeout(resolve, 500));
     setFilteredData(filteredData);
