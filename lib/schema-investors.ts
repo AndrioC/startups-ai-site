@@ -85,9 +85,7 @@ export const DataAboutManegamentSchema = (t: (arg: string) => string) =>
     maximumInvestiment: z
       .string()
       .min(1, t("investors-form.investor-form-required-field")),
-    preRequisiteTeam: z
-      .string()
-      .min(1, t("investors-form.investor-form-required-field")),
+    preRequisiteTeam: z.string(),
     onlyInvestingStartupOriginCountry: z
       .string()
       .min(1, t("investors-form.investor-form-required-field")),

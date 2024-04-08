@@ -533,7 +533,7 @@ export default function DataAboutManagement({ data }: Props) {
         <label htmlFor="inCaseOfDeepTech" className="flex items-center mt-5">
           <span>
             {t(
-              "investors-form.investor-form-data-about-management.question-22"
+              "investors-form.investor-form-data-about-management.question-24"
             )}
           </span>
         </label>
