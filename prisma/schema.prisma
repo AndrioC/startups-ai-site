@@ -152,7 +152,7 @@ model startups {
   foundation_date                              DateTime?
   subscription_number                          String?
   reference_link                               String?
-  country_id                                   Int
+  country_id                                   Int?
   state_city                                   String?
   main_responsible_name                        String?
   main_responsible_linkedin                    String?

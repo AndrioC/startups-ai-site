@@ -26,9 +26,13 @@ export default async function Home() {
     select: {
       country_id: true,
     },
+    where: {
+      country_id: {
+        not: null,
+      },
+    },
     distinct: ["country_id"],
   });
-
   return (
     <main>
       <Hero />
