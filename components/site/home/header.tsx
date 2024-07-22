@@ -24,10 +24,11 @@ export default function Header() {
   const navData = [
     { _id: 101, title: "Home", href: "/" },
     { _id: 102, title: t("nav-title-plans"), href: "/plans" },
-    { _id: 103, title: "Startups", href: "/startups" },
-    { _id: 104, title: t("nav-title-investors"), href: "/investors" },
-    { _id: 105, title: t("nav-title-experts"), href: "/mentors" },
-    { _id: 106, title: t("nav-title-about"), href: "/about" },
+    { _id: 103, title: t("nav-title-programs"), href: "/programs" },
+    // { _id: 103, title: "Startups", href: "/startups" },
+    // { _id: 104, title: t("nav-title-investors"), href: "/investors" },
+    // { _id: 105, title: t("nav-title-experts"), href: "/mentors" },
+    { _id: 104, title: t("nav-title-about"), href: "/about" },
   ];
 
   return (

@@ -4,11 +4,12 @@
     "nav-title-investors": "Investors",
     "nav-title-experts": "Mentors",
     "nav-title-about": "About",
+    "nav-title-programs": "Programs",
 
     "hero-sub-title": "Artificial Intelligence Platform for Startup Businesses",
     "hero-first-li": "National and International Connections",
     "hero-second-li": "Business prospecting with AI",
-    "hero-button-subscription": "Subscription",
+    "hero-button-get-to-know-plans": "Discover our plans",
 
     "countup-startup-title": "Startups",
     "countup-experts-title": "Mentors",
@@ -32,13 +33,6 @@
     "our-solutions-second-text": "The program will be open for participation from startups in all countries where IFIA has institutional representation.",
 
     "our-partners-title": "OUR PARTNERS",
-
-    "subscription-title": "SIGN UP NOW",
-    "subscription-first-text": "Startups apply and undergo an evaluation process by the Program Coordination based on various eligibility criteria for inclusion in the 'SGL Journey,' such as being in the stage of recurring operation or traction, having a physical or digital product already being marketed, and having recurring traction, among other criteria mentioned earlier.",
-    "subscription-second-text": "Qualified startups will become part of the 'Free' plan, which grants them the right to showcase their data on the platform, receive a 'Junior Member Certificate,' and then continue their journey.",
-    "subscription-startups-subscription-button": "Startup Subscription",
-    "subscription-investors-subscription-button": "Investors Subscription",
-    "subscription-experts-subscription-button": "Mentor Subscription",
 
     "about-title-first": "ABOUT",
     "about-title-second": "US",
@@ -82,6 +76,14 @@
     "footer-support-fourth-text": "Exchange, Return, and Refund Policy for Digital Products",
 
     "footer-social-title": "Social Media"
+  },
+
+  "Programs": {
+    "programs-title-first": "Get to know the",
+    "programs-title-second": "Programs",
+    "programs-subtitle": "Get to know the programs that use Startups Global Link",
+    "programs-plans-text": "Choose the plan that best suits your innovation program.",
+    "programs-plans-button-text": "Choose plan"
   },
 
   "Startup": {
@@ -335,6 +337,24 @@
     "plan-experts-subscription-free-plan-text": "Subscribe to the free plan",
     "plan-experts-subscription-premium-plan-text": "Subscribe to the premium plan"
   },
+
+  "PlansPrograms": {
+    "plans-programs-title-first": "Choose",
+    "plans-programs-title-second": "Your Plan",
+    "plans-programs-subtitle": "Choose the plan that best meets your needs and those of your team.",
+    "plans-billing-info": "per month, billed annually",
+    "plans-billing-info-hover-first": "or",
+    "plans-billing-info-hover-second": "billed monthly",
+    "plans-i-want-this-plan-button": "I want this plan",
+    "plans-bullet-user-text": "user",
+    "plans-bullet-unlimited-text": "unlimited",
+    "plans-bullet-investors-text": "investors",
+    "plans-bullet-mentors-text": "mentors",
+    "plans-bullet-sponsors-text": "sponsors",
+    "plans-bullet-credits-text": "monthly credits for Business Matchmaking with AI",
+    "plans-functionality-not-available": "Functionality not available yet"
+  },
+
   "Form": {
     "startups-form": {
       "startup-form-next-button": "Next",

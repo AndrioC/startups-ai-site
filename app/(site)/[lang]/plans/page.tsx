@@ -1,192 +1,153 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
-// import expertImage from "@/assets/img/plans-expert-image.svg";
-// import startupImage from "@/assets/img/plans-rocket-image.svg";
-// import PricingCard from "@/components/site/plans/pricing-card";
-import { bannersList } from "@/app/(site)/data";
+import plansBgImage from "@/assets/img/plans-bg.svg";
+import PlanCard from "@/components/site/plans/programs-plan";
 
 export default function PlansPage() {
-  const t = useTranslations("Plans");
+  const t = useTranslations("PlansPrograms");
   const lang = useLocale();
 
-  // const freePlanStartupsLink =
-  //   lang === "en"
-  //     ? "https://forms.gle/a7FCyM9LcFrbbcB8A"
-  //     : "https://forms.gle/49ge9iz3UpMXf9zRA";
-
-  // const freePlanExpertsLink =
-  //   lang === "en"
-  //     ? "https://forms.gle/7gqsjrRdi8bHxr3Q8"
-  //     : "https://forms.gle/kzmmzc89t7A23And7";
-
-  // const premiumPlanStartupsLink =
-  //   lang === "en"
-  //     ? "https://buy.stripe.com/14k8yr7fK3wr6VqfYZ"
-  //     : "https://buy.stripe.com/fZe3e743y8QL7Zu000?locale=pt";
-
-  // const premiumPlanExpertsLink =
-  //   lang === "en"
-  //     ? "https://buy.stripe.com/5kA7undE86ID3JefZ1"
-  //     : "https://buy.stripe.com/fZebKD57C6IDcfKbIK?locale=pt";
-
-  // const linkLearnMoreStartups = "plans/learn-more/startups";
-
-  // const linkLearnMoreExperts = "plans/learn-more/experts";
-
-  const mainBanner =
-    lang === "en" ? bannersList.main_banner_en : bannersList.main_banner_pt;
-  const mainBannerMobile =
-    lang === "en"
-      ? bannersList.main_banner_mobile_en
-      : bannersList.main_banner_mobile_pt;
-  const startupBanner =
-    lang === "en"
-      ? bannersList.startups_banner_en
-      : bannersList.startups_banner_pt;
-  const investorsBanner =
-    lang === "en"
-      ? bannersList.investors_banner_en
-      : bannersList.investors_banner_pt;
-  const mentorsBanner =
-    lang === "en"
-      ? bannersList.mentors_banner_en
-      : bannersList.mentors_banner_pt;
-
-  const linkStartupForm =
-    lang === "en" ? "/en/form/startups" : "/pt/form/startups";
-
-  const linkExpertForm =
-    lang === "en" ? "/en/form/mentors" : "/pt/form/mentors";
-
-  const investorForm =
-    lang === "en" ? "/en/form/investors" : "/pt/form/investors";
-
   return (
-    <main>
-      {/* <div className="flex flex-col items-center mt-10 mb-10">
+    <div className="relative flex flex-col items-center min-h-screen bg-gray-100">
+      <div className="relative w-full h-[300px] md:h-[500px]">
         <Image
-          src={mainBanner}
-          alt="main-banner"
-          width={500}
-          height={400}
-          className="w-full h-[250px]"
+          src={plansBgImage}
+          alt="Background Image"
+          layout="fill"
+          objectFit="cover"
+          className="absolute top-0 left-0 w-full h-full"
         />
-        <h1 className="text-lg lg:text-2xl uppercase text-gray-700">
-          {t("plan-title")}
-        </h1>
-      </div> */}
-      <div className="flex flex-col mb-10">
-        <div className="flex flex-col items-center mt-10 mb-10 relative w-full h-[400px]">
-          <Image
-            src={mainBanner}
-            alt="main-banner"
-            fill
-            className="hidden lg:block"
-            priority
-          />
-          <Image
-            src={mainBannerMobile}
-            alt="main-banner-mobile"
-            fill
-            className="sm:block lg:hidden"
-            priority
-          />
-        </div>
-        <div className="flex flex-col items-center">
-          <h1 className="text-lg lg:text-2xl uppercase text-gray-700">
-            {t("plan-free-subscription-offer")}
-          </h1>
-          <div className="flex flex-col lg:flex-row justify-center items-center mt-10 gap-5">
-            <div className="w-[300px] lg:w-[400px]">
-              <Link href={linkStartupForm}>
-                <Image
-                  src={startupBanner}
-                  alt="startup-banner"
-                  width={400}
-                  height={400}
-                  className="w-[300px] h-auto lg:w-full lg:h-auto"
-                />
-              </Link>
-            </div>
-            <div className="w-[300px] lg:w-[400px]">
-              <Link href={investorForm}>
-                <Image
-                  src={investorsBanner}
-                  alt="investor-banner"
-                  width={400}
-                  height={400}
-                  className="w-[300px] h-auto lg:w-full lg:h-auto"
-                />
-              </Link>
-            </div>
-            <div className="w-[300px] lg:w-[400px]">
-              <Link href={linkExpertForm}>
-                <Image
-                  src={mentorsBanner}
-                  alt="mentor-banner"
-                  width={400}
-                  height={400}
-                  className="w-[300px] h-auto lg:w-full lg:h-auto"
-                />
-              </Link>
-            </div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
+        <div className="relative z-10 flex flex-col items-center h-full text-center mt-10 px-4">
+          <div className="flex flex-col items-center justify-center w-full max-w-4xl h-auto bg-white rounded-[25px] shadow-lg opacity-80 px-4 py-6">
+            <h1 className="text-2xl md:text-4xl font-light mb-5 opacity-100">
+              {t("plans-programs-title-first")}{" "}
+              <span className="font-bold">
+                {t("plans-programs-title-second")}
+              </span>
+            </h1>
+            <p className="text-base md:text-lg font-light">
+              {t("plans-programs-subtitle")}
+            </p>
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col items-center mt-10">
-        <h1 className="text-lg lg:text-2xl uppercase text-gray-700">
-          {t("plan-title")}
-        </h1>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-4 place-items-center mt-10 mb-10">
-          <PricingCard
-            plan_name={t("plan-startup-title")}
-            premium={false}
-            price={t("plan-startup-price-free")}
-            img={startupImage}
-            link={freePlanStartupsLink}
-            learn_more_link={linkLearnMoreStartups}
-            features={[t("plan-startup-first-feature-free")]}
-          />
-          <PricingCard
-            plan_name={t("plan-startup-title")}
-            premium={true}
-            price={t("plan-startup-price-premium")}
-            img={startupImage}
-            link={premiumPlanStartupsLink}
-            learn_more_link={linkLearnMoreStartups}
-            features={[
-              t("plan-startup-first-feature-premium"),
-              t("plan-startup-second-feature-premium"),
-              t("plan-startup-third-feature-premium"),
-              t("plan-startup-fourth-feature-premium"),
-              t("plan-startup-fifth-feature-premium"),
-            ]}
-          />
-          <PricingCard
-            plan_name={t("plan-expert-title")}
-            premium={false}
-            price={t("plan-expert-price-free")}
-            img={expertImage}
-            link={freePlanExpertsLink}
-            learn_more_link={linkLearnMoreExperts}
-            features={[t("plan-expert-first-feature-free")]}
-          />
-          <PricingCard
-            plan_name={t("plan-expert-title")}
-            premium={true}
-            price={t("plan-expert-price-premium")}
-            img={expertImage}
-            link={premiumPlanExpertsLink}
-            learn_more_link={linkLearnMoreExperts}
-            features={[
-              t("plan-expert-first-feature-premium"),
-              t("plan-expert-second-feature-premium"),
-            ]}
-          />
+      <div className="relative z-20 flex flex-col items-center w-full px-4 mt-[-150px] md:mt-[-300px]">
+        <div className="flex flex-wrap justify-center gap-4">
+          {plans.map((plan, index) => (
+            <PlanCard
+              key={index}
+              title={plan.title}
+              price={lang === "en" ? plan.price_en : plan.price_pt}
+              original_price={
+                lang === "en" ? plan.original_price_en : plan.original_price_pt
+              }
+              features={lang === "en" ? plan.features_en : plan.features_pt}
+              buttonText={plan.buttonText}
+            />
+          ))}
         </div>
-      </div> */}
-    </main>
+      </div>
+    </div>
   );
 }
+
+const plans = [
+  {
+    title: "Basic",
+    price_pt: "159,9",
+    price_en: "159.9",
+    original_price_pt: "179,9",
+    original_price_en: "179.9",
+    features_pt: [
+      "1 usuário",
+      "200 startups",
+      "10 investidores",
+      "10 mentores",
+      "30 patrocinadores",
+      "100 créditos mensal para Business Matchmaking com IA",
+    ],
+    features_en: [
+      "1 user",
+      "200 startups",
+      "10 investors",
+      "10 mentors",
+      "30 sponsors",
+      "100 monthly credits for Business Matchmaking with AI",
+    ],
+    buttonText: "Quero este plano",
+  },
+  {
+    title: "Standard",
+    price_pt: "279,9",
+    price_en: "279.9",
+    original_price_pt: "299,9",
+    original_price_en: "299.9",
+    features_pt: [
+      "2 usuários",
+      "400 startups",
+      "20 investidores",
+      "20 mentores",
+      "60 patrocinadores",
+      "200 créditos mensal para Business Matchmaking com IA",
+    ],
+    features_en: [
+      "2 users",
+      "400 startups",
+      "20 investors",
+      "20 mentors",
+      "60 sponsors",
+      "200 monthly credits for Business Matchmaking with AI",
+    ],
+    buttonText: "Quero este plano",
+  },
+  {
+    title: "Advanced",
+    price_pt: "579,9",
+    price_en: "579.9",
+    original_price_pt: "599,9",
+    original_price_en: "599.9",
+    features_pt: [
+      "5 usuários",
+      "600 startups",
+      "40 investidores",
+      "40 mentores",
+      "100 patrocinadores",
+      "400 créditos mensal para Business Matchmaking com IA",
+    ],
+    features_en: [
+      "5 users",
+      "600 startups",
+      "40 investors",
+      "40 mentors",
+      "100 sponsors",
+      "400 monthly credits for Business Matchmaking with AI",
+    ],
+    buttonText: "Quero este plano",
+  },
+  {
+    title: "Unlimited",
+    price_pt: "1399,9",
+    price_en: "1399.9",
+    original_price_pt: "1599,9",
+    original_price_en: "1599.9",
+    features_pt: [
+      "Usuários ilimitados",
+      "Startups ilimitadas",
+      "Investidores ilimitados",
+      "Mentores ilimitados",
+      "Patrocinadores ilimitados",
+      "1000 créditos mensal para Business Matchmaking com IA",
+    ],
+    features_en: [
+      "Unlimited users",
+      "Unlimited startups",
+      "Unlimited investors",
+      "Unlimited mentors",
+      "Unlimited sponsors",
+      "1000 monthly credits for Business Matchmaking with AI",
+    ],
+    buttonText: "Quero este plano",
+  },
+];

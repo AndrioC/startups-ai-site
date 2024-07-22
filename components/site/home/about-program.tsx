@@ -1,21 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import portfImage01 from "@/assets/img/portf-img01.svg";
 import portfImage02 from "@/assets/img/portf-img02.svg";
 import portfImage03 from "@/assets/img/portf-img03.svg";
 import portfImage04 from "@/assets/img/portf-img04.svg";
 
-import Button from "./button";
 import Container from "./container";
 
 export default function OurSolutions() {
   const t = useTranslations("Home");
 
-  const lang = useLocale();
   return (
     <section id="OUR-SOLUTIONS" className="py-20 sm:py-32 lg:pb-5 xl:pb-5">
       <Container className="-mt-20">
@@ -59,23 +56,6 @@ export default function OurSolutions() {
             alt="port-image-04"
             className="w-96 lg:w-auto"
           />
-        </div>
-        <div className="flex items-center justify-center lg:gap-20 gap-3">
-          <Link href={`${lang}/plans`}>
-            <Button variant="solid" color="blue" className="mt-10">
-              {t("subscription-startups-subscription-button")}
-            </Button>
-          </Link>
-          <Link href={`${lang}/plans`}>
-            <Button variant="solid" color="blue" className="mt-10">
-              {t("subscription-investors-subscription-button")}
-            </Button>
-          </Link>
-          <Link href={`${lang}/plans`}>
-            <Button variant="solid" color="blue" className="mt-10">
-              {t("subscription-experts-subscription-button")}
-            </Button>
-          </Link>
         </div>
       </Container>
     </section>

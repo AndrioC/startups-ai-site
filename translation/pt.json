@@ -4,11 +4,12 @@
     "nav-title-investors": "Investidores",
     "nav-title-experts": "Mentores",
     "nav-title-about": "Sobre",
+    "nav-title-programs": "Programas",
 
     "hero-sub-title": "Plataforma de Inteligência Artificial para Negócios de Startups",
     "hero-first-li": "Conexões Nacionais e Internacionais",
     "hero-second-li": "Prospecção de negócios com IA",
-    "hero-button-subscription": "Inscrição",
+    "hero-button-get-to-know-plans": "Conheça nossos planos",
 
     "countup-startup-title": "Startups",
     "countup-experts-title": "Mentores",
@@ -26,13 +27,6 @@
     "why-choose-us-fourth-sub-title": "Nós o conectamos com potenciais parceiros comerciais (Startups).",
     "why-choose-us-fifth-title": "Consultorias especializadas",
     "why-choose-us-fifth-sub-title": "Consultores profissionais de diversos países que podem ajudar a alcançar o sucesso.",
-
-    "subscription-title": "INSCREVA-SE AGORA",
-    "subscription-first-text": "Startups se inscrevem e passam por um processo de análise pela Coordenação do Programa quanto à diversos critérios de elegibilidade para inclusão na 'Jornada SGL' tais como, encontrarem-se no estágio de operação ou tração recorrente, com um produto físico ou digital já sendo comercializado e com tração recorrente entre outros citados anteriormente.",
-    "subscription-second-text": "As Startups qualificadas passarão a integrar o plano 'Free' que lhes darão o direito de exibirem os seus dados na plataforma e receberem um 'Certificado de Membro Júnior' e daí continuarão a sua jornada.",
-    "subscription-startups-subscription-button": "Inscrição para Startups",
-    "subscription-investors-subscription-button": "Inscrição para Investidores",
-    "subscription-experts-subscription-button": "Inscrição para Mentores",
 
     "our-solutions-title": "SOBRE O PROGRAMA",
     "our-solutions-first-text": "O propósito do Programa é de contribuir para o aumento das taxas de sobrevivência das Startups por propiciar às mesmas realizar conexões de valor para o crescimento e escalabilidade do seu negócio.",
@@ -82,6 +76,14 @@
     "footer-support-fourth-text": "Política de Troca, Devolução e Reembolso para Produtos Digitais",
 
     "footer-social-title": "Redes Sociais"
+  },
+
+  "Programs": {
+    "programs-title-first": "Conheça os",
+    "programs-title-second": "Programas",
+    "programs-subtitle": "Conheça os programas que utilizam a Startups Global Link",
+    "programs-plans-text": "Escolha o plano que melhor atende seu programa de inovação.",
+    "programs-plans-button-text": "Escolher Plano"
   },
 
   "Startup": {
@@ -339,6 +341,23 @@
 
     "plan-experts-subscription-free-plan-text": "Inscreva-se no plano free",
     "plan-experts-subscription-premium-plan-text": "Assinar o plano premium"
+  },
+
+  "PlansPrograms": {
+    "plans-programs-title-first": "Escolha",
+    "plans-programs-title-second": "Seu Plano",
+    "plans-programs-subtitle": "Escolha o plano que melhor atenda às suas necessidades e às da sua equipe.",
+    "plans-billing-info": "por mês, cobrado anualmente",
+    "plans-billing-info-hover-first": "ou",
+    "plans-billing-info-hover-second": "cobrado mensalmente",
+    "plans-i-want-this-plan-button": "Quero este plano",
+    "plans-bullet-user-text": "usuário",
+    "plans-bullet-unlimited-text": "ilimitados",
+    "plans-bullet-investors-text": "investidores",
+    "plans-bullet-mentors-text": "mentores",
+    "plans-bullet-sponsors-text": "patrocinadores",
+    "plans-bullet-credits-text": "créditos mensal para Business Matchmakin com IA",
+    "plans-functionality-not-available": "Funcionalidade ainda não disponível"
   },
 
   "Form": {

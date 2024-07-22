@@ -48,7 +48,7 @@ export default function Hero() {
               </ul>
               <Link href={`${lang}/plans`}>
                 <Button variant="solid" color="blue" className="mt-10">
-                  {t("hero-button-subscription")}
+                  {t("hero-button-get-to-know-plans")}
                 </Button>
               </Link>
             </div>
