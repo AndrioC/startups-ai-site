@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 
-import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
+import { SelectDataProps } from "@/app/(site)/[lang]/__oldform__/startups/page";
 import { Button } from "@/components/ui/button";
 import { DatePicker } from "@/components/ui/date-picker";
 import { useFormState } from "@/contexts/FormContext";

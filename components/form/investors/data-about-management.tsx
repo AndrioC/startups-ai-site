@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 
-import { SelectDataProps } from "@/app/(site)/[lang]/form/investors/page";
+import { SelectDataProps } from "@/app/(site)/[lang]/__oldform__/investors/page";
 import { Button } from "@/components/ui/button";
 import { useFormInvestorState } from "@/contexts/FormInvestorContext";
 import { DataAboutManegamentSchema } from "@/lib/schema-investors";

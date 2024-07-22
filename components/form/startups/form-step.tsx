@@ -1,4 +1,4 @@
-import { SelectDataProps } from "@/app/(site)/[lang]/form/startups/page";
+import { SelectDataProps } from "@/app/(site)/[lang]/__oldform__/startups/page";
 import DataAboutFinanceAndMarketPage from "@/components/form/startups/data-about-finance-and-market";
 import DataAboutGovernancePage from "@/components/form/startups/data-about-governance";
 import DataAboutStartupsForm from "@/components/form/startups/data-about-startups-form";
