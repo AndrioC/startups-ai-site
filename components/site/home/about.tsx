@@ -20,7 +20,7 @@ export default function About() {
             <span style={{ color: "#2594EA" }}>{t("about-title-second")}</span>
           </h2>
           <div className="flex flex-col gap-3 lg:flex-row">
-            <AboutInfoCard src={globalLinkLogo} alt="startups-global-link-logo">
+            <AboutInfoCard src={globalLinkLogo} alt="startups-ai-link-logo">
               <p className="mt-6 w-72 text-lg text-gray-500 font-light">
                 {t("about-global-first-text")}
               </p>
@@ -31,7 +31,7 @@ export default function About() {
                 {t("about-global-third-text")}
               </p>
             </AboutInfoCard>
-            <AboutInfoCard src={ifiaLogo} alt="startups-global-link-logo">
+            <AboutInfoCard src={ifiaLogo} alt="startups-ai-link-logo">
               <p className="mt-6 w-72 text-lg text-gray-500 font-light">
                 {t("about-ifia-first-text")}
               </p>
@@ -53,7 +53,7 @@ export default function About() {
                 {t("about-ifia-third-text")}
               </p>
             </AboutInfoCard>
-            <AboutInfoCard src={abipirLogo} alt="startups-global-link-logo">
+            <AboutInfoCard src={abipirLogo} alt="startups-ai-link-logo">
               <ul className="list-disc ml-10">
                 <li className="mt-6 w-72 text-lg text-gray-500 font-light">
                   {t("about-abipir-first-bullet")}

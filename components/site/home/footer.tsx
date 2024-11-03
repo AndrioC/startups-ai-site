@@ -9,16 +9,16 @@ export default function Footer() {
       <div className="flex flex-col text-sm items-center justify-between text-center px-40 py-10 gap-10 lg:h-80 lg:flex-row lg:text-base lg:text-left lg:gap-36 bg-dark-blue">
         <div className="flex flex-col gap-3 h-full">
           <span className="font-medium" style={{ color: "#2594EA" }}>
-            STARTUPS GLOBAL LINK
+            STARTUPS AI
           </span>
           <p className="text-sm text-gray-300">
-            &copy; {new Date().getFullYear()} - Startups Global Link
+            &copy; {new Date().getFullYear()} - Startups AI
           </p>
           <p className="text-sm text-gray-300 w-[320px]">
             {t("footer-address")}
           </p>
           <p className="text-sm text-gray-300">{t("footer-zip-code")}</p>
-          <p className="text-sm text-gray-300">startups-globallink@gmail.com</p>
+          <p className="text-sm text-gray-300">startupsai@gmail.com</p>
         </div>
         <div className="flex flex-col gap-3 h-full">
           <span className="font-medium text-purple-500">
@@ -56,14 +56,14 @@ export default function Footer() {
           <ul className="text-gray-300">
             <li className="mb-4 font-semibold">
               <a
-                href="https://www.linkedin.com/company/startups-global-link"
+                href="https://www.linkedin.com/company/startupsartificialintelligence/"
                 target="_blank"
                 rel="noreferrer"
               >
                 Linkedin
               </a>
             </li>
-            <li className="mb-4 font-semibold">
+            {/* <li className="mb-4 font-semibold">
               <a
                 href="https://www.youtube.com/@StartupsGlobalLink-fy2te"
                 target="_blank"
@@ -71,7 +71,7 @@ export default function Footer() {
               >
                 Youtube
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

@@ -26,7 +26,7 @@ export default function Hero() {
               className="text-3xl md:text-5xl lg:text-6xl font-bold"
               style={{ width: "560px" }}
             >
-              STARTUPS <span style={{ color: "#2594EA" }}>GLOBAL</span> LINK
+              STARTUPS <span style={{ color: "#2594EA" }}>AI</span>
             </h2>
             <p className="mt-6 w-96 md:w-5/6 lg:w-11/12 text-lg md:text-2xl lg:text-2xl text-gray-500">
               {t("hero-sub-title")}

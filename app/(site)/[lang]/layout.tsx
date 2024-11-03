@@ -18,7 +18,7 @@ import "@/app/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Startups Global Link",
+  title: "Startups AI",
   description: "The path for leaders who want to connect with the world",
   icons: {
     icon: "/favicon.svg",

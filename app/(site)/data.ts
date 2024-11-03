@@ -1231,9 +1231,9 @@ export const expertsList: ExpertProps[] = [
     last_name: "Grossi",
     linkedin: "https://www.linkedin.com/in/rodrigogrossi/",
     description_en:
-      "I am Rodrigo, Founder of STARTUPS GLOBAL LINK, partner and Chief Technology Officer at 2mi Group, Startup Manager in the International Startup Program at IFIA, Advisor to two Startups, and Official Mentor of Inovativa Brasil. I founded TeamHub and bring valuable experience from ideation to exit. I was CTO at SOLIDES, and I also have experience in renowned corporations such as TOTVS and FCA.",
+      "I am Rodrigo, Founder of STARTUPS AI, partner and Chief Technology Officer at 2mi Group, Startup Manager in the International Startup Program at IFIA, Advisor to two Startups, and Official Mentor of Inovativa Brasil. I founded TeamHub and bring valuable experience from ideation to exit. I was CTO at SOLIDES, and I also have experience in renowned corporations such as TOTVS and FCA.",
     description_pt:
-      "Eu sou Rodrigo, sou Founder da STARTUPS GLOBAL LINK, sócio e Diretor Executivo de Tecnologia no grupo 2mi, Startup Manager no programa Internacional de Startups da IFIA, Advisor em duas Startups e Mentor Oficial do Inovativa Brasil. Fundei a TeamHub, e trago comigo a valiosa vivência desde a ideação até o exit. Fui CTO na SOLIDES, além de ter experiência em renomadas corporações como TOTVS e FCA.",
+      "Eu sou Rodrigo, sou Founder da STARTUPS AI, sócio e Diretor Executivo de Tecnologia no grupo 2mi, Startup Manager no programa Internacional de Startups da IFIA, Advisor em duas Startups e Mentor Oficial do Inovativa Brasil. Fundei a TeamHub, e trago comigo a valiosa vivência desde a ideação até o exit. Fui CTO na SOLIDES, além de ter experiência em renomadas corporações como TOTVS e FCA.",
     languages_en: "pt - en",
     languages_pt: "pt - in",
     languages_en_array: ["Portuguese", "English"],
