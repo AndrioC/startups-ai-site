@@ -3,8 +3,8 @@
 import { useTranslations } from "next-intl";
 
 import abipirLogo from "@/assets/img/logos/abipir-logo.svg";
-import globalLinkLogo from "@/assets/img/logos/global-link-logo.svg";
 import ifiaLogo from "@/assets/img/logos/ifia-logo.svg";
+import startupsAiLogo from "@/assets/img/logos/startups-ai-logo.svg";
 
 import AboutInfoCard from "./about-info-card";
 import Container from "./container";
@@ -20,7 +20,7 @@ export default function About() {
             <span style={{ color: "#2594EA" }}>{t("about-title-second")}</span>
           </h2>
           <div className="flex flex-col gap-3 lg:flex-row">
-            <AboutInfoCard src={globalLinkLogo} alt="startups-ai-link-logo">
+            <AboutInfoCard src={startupsAiLogo} alt="startups-ai-link-logo">
               <p className="mt-6 w-72 text-lg text-gray-500 font-light">
                 {t("about-global-first-text")}
               </p>

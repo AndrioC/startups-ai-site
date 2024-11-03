@@ -1733,14 +1733,6 @@ export const teamList: TeamProps[] = [
     photo: "/assets/team/07_marcos.jpeg",
   },
   {
-    id: 8,
-    name: "Danilo Melo",
-    linkedin: "https://www.linkedin.com/in/danilo-melo-bb8586202/",
-    position_pt: "Advisor de Estratégia",
-    position_en: "Strategy Advisor",
-    photo: "/assets/team/08_danilo.jpeg",
-  },
-  {
     id: 9,
     name: "Marco de Biasi",
     linkedin: "https://www.linkedin.com/in/debiasimarco/",

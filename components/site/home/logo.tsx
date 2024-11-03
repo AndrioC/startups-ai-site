@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
-import LogoImage from "@/assets/img/logos/global-link-logo.svg";
+import LogoImage from "@/assets/img/logos/startups-ai-logo.svg";
 
 type ContainerProps = React.HTMLAttributes<HTMLDivElement> & {
   className?: string;

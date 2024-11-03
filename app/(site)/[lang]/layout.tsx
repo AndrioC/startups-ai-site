@@ -10,8 +10,6 @@ import Footer from "@/components/site/home/footer";
 import Header from "@/components/site/home/header";
 import { Toaster } from "@/components/ui/sonner";
 
-import QueryClientProvider from "./QueryClientProvider";
-
 import "@radix-ui/themes/styles.css";
 import "@/app/globals.css";
 
@@ -42,19 +40,17 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body className={inter.className}>
-        <QueryClientProvider>
-          <NextIntlClientProvider messages={messages}>
-            <Theme>
-              <main className="min-h-screen flex flex-col">
-                <Header />
-                {children}
-                <SpeedInsights />
-                <Footer />
-              </main>
-              <Toaster position="bottom-center" />
-            </Theme>
-          </NextIntlClientProvider>
-        </QueryClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          <Theme>
+            <main className="min-h-screen flex flex-col">
+              <Header />
+              {children}
+              <SpeedInsights />
+              <Footer />
+            </main>
+            <Toaster position="bottom-center" />
+          </Theme>
+        </NextIntlClientProvider>
         {process.env.GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.GOOGLE_ANALYTICS} />
         ) : null}
