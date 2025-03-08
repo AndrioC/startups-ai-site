@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="Contact" className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <section id="contact" className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container className="-mt-20">
         <div className="w-full flex flex-col items-center gap-10">
           <div className="flex flex-col justify-center items-center">

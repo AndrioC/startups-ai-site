@@ -1,19 +1,19 @@
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
-import { teamList } from "@/app/(site)/data";
+// import { teamList } from "@/app/(site)/data";
 import aboutUsTopImage from "@/assets/img/about-top-image.svg";
-import TeamCard from "@/components/site/about/team-card";
+// import TeamCard from "@/components/site/about/team-card";
 import Section from "@/components/site/home/section";
 
 export default function PlansPage() {
   const t = useTranslations("About");
-  const lang = useLocale();
+  //const lang = useLocale();
 
-  const data = teamList.map((value) => ({
-    ...value,
-    position: lang === "en" ? value.position_en : value.position_pt,
-  }));
+  // const data = teamList.map((value) => ({
+  //   ...value,
+  //   position: lang === "en" ? value.position_en : value.position_pt,
+  // }));
   return (
     <main>
       <div className="flex flex-col items-center mt-10">
@@ -81,7 +81,7 @@ export default function PlansPage() {
             </Section>
           </div>
         </div>
-        <Section>
+        {/* <Section>
           <div className="flex flex-col items-center gap-10 mb-10 w-[350px] lg:w-full">
             <h1 className="text-4xl uppercase text-gray-700">
               {t("about-our-team-title")}
@@ -98,7 +98,7 @@ export default function PlansPage() {
               ))}
             </div>
           </div>
-        </Section>
+        </Section> */}
       </div>
     </main>
   );
