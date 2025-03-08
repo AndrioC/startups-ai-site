@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
 import GoogleAnalytics from "@/components/site/google-analytics";
@@ -39,6 +40,13 @@ export default function RootLayout({
   const messages = useMessages();
   return (
     <html lang={lang}>
+      <head>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="d3d178ed-3b46-4223-a614-e8f7f959fd8b"
+        />
+      </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <Theme>
